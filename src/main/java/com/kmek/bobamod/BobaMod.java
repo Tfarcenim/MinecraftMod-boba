@@ -3,7 +3,10 @@ package com.kmek.bobamod;
 import com.kmek.bobamod.init.ItemInit;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,6 +38,14 @@ public class BobaMod {
 //    // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
 //    public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
 
+//    public static final CreativeModeTab TAB = new CreativeModeTab(MODID) {
+//        @Override
+//        public ItemStack makeIcon() {
+//            return new ItemStack(ItemInit.BROWN_SUGAR_MILK_TEA.get());
+//        }
+//    };
+    CreativeModeTab bobaTab;
+
     public BobaMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ItemInit.ITEMS.register(modEventBus);
@@ -52,6 +63,7 @@ public class BobaMod {
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(this::registerTabs);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -60,10 +72,24 @@ public class BobaMod {
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
     }
 
+    // todo bug: this tab has no title
+    private void registerTabs(CreativeModeTabEvent.Register event) {
+         bobaTab = event.registerCreativeModeTab(new ResourceLocation(MODID, "bobamod"), builder -> builder
+                .icon(() -> new ItemStack(ItemInit.BROWN_SUGAR_MILK_TEA.get()))
+                .displayItems((featureFlags, output, hasOp) -> {
+                    output.accept(ItemInit.TAPIOCA_BALLS.get());
+                    output.accept(ItemInit.MILK_TEA_CUP.get());
+                    output.accept(ItemInit.BROWN_SUGAR_MILK_TEA.get());
+                    output.accept(ItemInit.PUMPKIN_SPICE_MILK_TEA.get());
+                    output.accept(ItemInit.APPLE_MILK_TEA.get());
+                    output.accept(ItemInit.WATERMELON_MILK_TEA.get());
+                    output.accept(ItemInit.ROSE_MILK_TEA.get());
+                })
+        );
+    }
+
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
-            event.accept(ItemInit.TAPIOCA_BALLS);
-            event.accept(ItemInit.MILK_TEA_CUP);
             event.accept(ItemInit.BROWN_SUGAR_MILK_TEA);
             event.accept(ItemInit.PUMPKIN_SPICE_MILK_TEA);
             event.accept(ItemInit.APPLE_MILK_TEA);
