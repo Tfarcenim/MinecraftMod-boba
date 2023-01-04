@@ -45,8 +45,7 @@ public class ItemInit {
     public static final RegistryObject<Item> LAVENDER_MILK_TEA = ITEMS.register("lavender_milk_tea", () -> new MilkTeaItem(2, 0.5f));
     // Misc
     public static final RegistryObject<Item> THAI_MILK_TEA = ITEMS.register("thai_milk_tea", () -> new MilkTeaItem(4, 2f));
-    // todo taro
     // todo beetroot
     // todo carrot
-    // todo kelp
+    public static final RegistryObject<Item> KELP_MILK_TEA = ITEMS.register("kelp_milk_tea", () -> new MilkTeaItem(4, 2f));
 }
