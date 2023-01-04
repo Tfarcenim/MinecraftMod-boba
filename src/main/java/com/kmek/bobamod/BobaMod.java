@@ -60,6 +60,7 @@ public class BobaMod {
                     output.accept(ItemInit.TAPIOCA_BALLS.get());
                     output.accept(ItemInit.MILK_TEA_CUP.get());
                     output.accept(ItemInit.BROWN_SUGAR_MILK_TEA.get());
+                    output.accept(ItemInit.TIGER_MILK_TEA.get());
                     output.accept(ItemInit.HONEY_MILK_TEA.get());
                     output.accept(ItemInit.CHOCOLATE_MILK_TEA.get());
                     output.accept(ItemInit.VANILLA_MILK_TEA.get());
@@ -79,6 +80,7 @@ public class BobaMod {
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ItemInit.BROWN_SUGAR_MILK_TEA);
+            event.accept(ItemInit.TIGER_MILK_TEA);
             event.accept(ItemInit.HONEY_MILK_TEA);
             event.accept(ItemInit.CHOCOLATE_MILK_TEA);
             event.accept(ItemInit.VANILLA_MILK_TEA);

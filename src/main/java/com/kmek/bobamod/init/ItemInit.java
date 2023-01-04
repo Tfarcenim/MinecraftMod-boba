@@ -24,7 +24,7 @@ public class ItemInit {
      */
     // Very sweet
     public static final RegistryObject<Item> BROWN_SUGAR_MILK_TEA = ITEMS.register("brown_sugar_milk_tea", () -> new MilkTeaItem(2, 0.5f));
-    // todo tiger milk tea
+    public static final RegistryObject<Item> TIGER_MILK_TEA = ITEMS.register("tiger_milk_tea", () -> new MilkTeaItem(2, 0.5f));
     public static final RegistryObject<Item> HONEY_MILK_TEA = ITEMS.register("honey_milk_tea", () -> new MilkTeaItem(2, 0.5f));
     public static final RegistryObject<Item> CHOCOLATE_MILK_TEA = ITEMS.register("chocolate_milk_tea", () -> new MilkTeaItem(2, 0.5f));
     public static final RegistryObject<Item> VANILLA_MILK_TEA = ITEMS.register("vanilla_milk_tea", () -> new MilkTeaItem(2, 0.5f));
