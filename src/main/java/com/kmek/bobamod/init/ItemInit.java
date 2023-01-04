@@ -24,26 +24,27 @@ public class ItemInit {
      */
     // Very sweet
     public static final RegistryObject<Item> BROWN_SUGAR_MILK_TEA = ITEMS.register("brown_sugar_milk_tea", () -> new MilkTeaItem(2, 0.5f));
+    // todo tiger milk tea
     public static final RegistryObject<Item> HONEY_MILK_TEA = ITEMS.register("honey_milk_tea", () -> new MilkTeaItem(2, 0.5f));
     public static final RegistryObject<Item> CHOCOLATE_MILK_TEA = ITEMS.register("chocolate_milk_tea", () -> new MilkTeaItem(2, 0.5f));
     public static final RegistryObject<Item> VANILLA_MILK_TEA = ITEMS.register("vanilla_milk_tea", () -> new MilkTeaItem(2, 0.5f));
-    // todo egg pudding
-    // todo cookie
-    // todo cake
+    public static final RegistryObject<Item> EGG_CUSTARD_MILK_TEA = ITEMS.register("egg_custard_milk_tea", () -> new MilkTeaItem(2, 0.5f));
+    public static final RegistryObject<Item> COOKIE_MILK_TEA = ITEMS.register("cookie_milk_tea", () -> new MilkTeaItem(2, 0.5f));
+    public static final RegistryObject<Item> CAKE_MILK_TEA = ITEMS.register("cake_milk_tea", () -> new MilkTeaItem(2, 0.5f));
     public static final RegistryObject<Item> PUMPKIN_SPICE_MILK_TEA = ITEMS.register("pumpkin_spice_milk_tea", () -> new MilkTeaItem(4, 2f));
     // Fruit teas
     public static final RegistryObject<Item> APPLE_MILK_TEA = ITEMS.register("apple_milk_tea", () -> new MilkTeaItem(4, 2f));
     // todo sweet berry
     public static final RegistryObject<Item> WATERMELON_MILK_TEA = ITEMS.register("watermelon_milk_tea", () -> new MilkTeaItem(4, 2f));
     // todo glow berry
-    // todo chorus fruit
+    public static final RegistryObject<Item> CHORUS_FRUIT_MILK_TEA = ITEMS.register("chorus_fruit_milk_tea", () -> new MilkTeaItem(4, 2f));
     // Floral
     public static final RegistryObject<Item> ROSE_MILK_TEA = ITEMS.register("rose_milk_tea", () -> new MilkTeaItem(4, 2f));
     // todo butterfly pea flower
     // todo matcha
     // todo lavender
     // Misc
-    // todo thai
+    public static final RegistryObject<Item> THAI_MILK_TEA = ITEMS.register("thai_milk_tea", () -> new MilkTeaItem(4, 2f));
     // todo taro
     // todo beetroot
     // todo carrot

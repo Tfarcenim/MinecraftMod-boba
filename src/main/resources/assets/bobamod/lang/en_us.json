@@ -5,10 +5,15 @@
   "item.bobamod.honey_milk_tea": "Honey Milk Tea",
   "item.bobamod.chocolate_milk_tea": "Chocolate Milk Tea",
   "item.bobamod.vanilla_milk_tea": "Vanilla Milk Tea",
+  "item.bobamod.egg_custard_milk_tea": "Egg Custard Milk Tea",
+  "item.bobamod.cookie_milk_tea": "Cookie Milk Tea",
+  "item.bobamod.cake_milk_tea": "Cake Milk Tea",
   "item.bobamod.pumpkin_spice_milk_tea": "Pumpkin Spice Milk Tea",
   "item.bobamod.apple_milk_tea": "Apple Milk Tea",
   "item.bobamod.watermelon_milk_tea": "Watermelon Milk Tea",
+  "item.bobamod.chorus_fruit_milk_tea": "Chorus Fruit Milk Tea",
   "item.bobamod.rose_milk_tea": "Rose Milk Tea",
+  "item.bobamod.thai_milk_tea": "Thai Milk Tea",
 
   "itemGroup.bobamod": "Boba Milk Tea why is this not the title"
 }
