@@ -40,7 +40,7 @@ public class ItemInit {
     public static final RegistryObject<Item> CHORUS_FRUIT_MILK_TEA = ITEMS.register("chorus_fruit_milk_tea", () -> new MilkTeaItem(4, 2f));
     // Floral
     public static final RegistryObject<Item> ROSE_MILK_TEA = ITEMS.register("rose_milk_tea", () -> new MilkTeaItem(4, 2f));
-    // todo butterfly pea flower
+    public static final RegistryObject<Item> BUTTERFLY_PEA_FLOWER_MILK_TEA = ITEMS.register("butterfly_pea_flower_milk_tea", () -> new MilkTeaItem(4, 2f));
     // todo matcha
     // todo lavender
     // Misc

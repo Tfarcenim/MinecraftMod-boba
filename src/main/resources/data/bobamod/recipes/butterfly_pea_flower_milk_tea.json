@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "minecraft:milk_bucket"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "B": {
+      "item": "bobamod:tapioca_balls"
+    },
+    "C": {
+      "item": "bobamod:milk_tea_cup"
+    },
+    "F": {
+      "item": "minecraft:blue_orchid"
+    }
+  },
+  "pattern": [
+    "MS",
+    "BF",
+    "C "
+  ],
+  "result": {
+    "item": "bobamod:butterfly_pea_flower_milk_tea"
+  }
+}
