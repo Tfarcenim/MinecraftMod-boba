@@ -42,7 +42,7 @@ public class ItemInit {
     public static final RegistryObject<Item> ROSE_MILK_TEA = ITEMS.register("rose_milk_tea", () -> new MilkTeaItem(4, 2f));
     public static final RegistryObject<Item> BUTTERFLY_PEA_FLOWER_MILK_TEA = ITEMS.register("butterfly_pea_flower_milk_tea", () -> new MilkTeaItem(4, 2f));
     public static final RegistryObject<Item> MATCHA_MILK_TEA = ITEMS.register("matcha_milk_tea", () -> new MilkTeaItem(2, 0.5f));
-    // todo lavender
+    public static final RegistryObject<Item> LAVENDER_MILK_TEA = ITEMS.register("lavender_milk_tea", () -> new MilkTeaItem(2, 0.5f));
     // Misc
     public static final RegistryObject<Item> THAI_MILK_TEA = ITEMS.register("thai_milk_tea", () -> new MilkTeaItem(4, 2f));
     // todo taro
