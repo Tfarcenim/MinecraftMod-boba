@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "minecraft:milk_bucket"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "B": {
+      "item": "bobamod:tapioca_balls"
+    },
+    "C": {
+      "item": "bobamod:milk_tea_cup"
+    },
+    "F": {
+      "item": "minecraft:glow_berries"
+    }
+  },
+  "pattern": [
+    "MS",
+    "BF",
+    "C "
+  ],
+  "result": {
+    "item": "bobamod:glow_berry_milk_tea"
+  }
+}

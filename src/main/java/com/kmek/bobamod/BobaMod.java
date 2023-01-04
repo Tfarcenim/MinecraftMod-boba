@@ -70,6 +70,7 @@ public class BobaMod {
                     output.accept(ItemInit.PUMPKIN_SPICE_MILK_TEA.get());
                     output.accept(ItemInit.APPLE_MILK_TEA.get());
                     output.accept(ItemInit.WATERMELON_MILK_TEA.get());
+                    output.accept(ItemInit.GLOW_BERRY_MILK_TEA.get());
                     output.accept(ItemInit.CHORUS_FRUIT_MILK_TEA.get());
                     output.accept(ItemInit.ROSE_MILK_TEA.get());
                     output.accept(ItemInit.THAI_MILK_TEA.get());
@@ -90,6 +91,7 @@ public class BobaMod {
             event.accept(ItemInit.PUMPKIN_SPICE_MILK_TEA);
             event.accept(ItemInit.APPLE_MILK_TEA);
             event.accept(ItemInit.WATERMELON_MILK_TEA);
+            event.accept(ItemInit.GLOW_BERRY_MILK_TEA);
             event.accept(ItemInit.CHORUS_FRUIT_MILK_TEA);
             event.accept(ItemInit.ROSE_MILK_TEA);
             event.accept(ItemInit.THAI_MILK_TEA);
