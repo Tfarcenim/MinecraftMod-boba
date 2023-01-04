@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "bobamod:item/brown_sugar_milk_tea"
+  }
+}

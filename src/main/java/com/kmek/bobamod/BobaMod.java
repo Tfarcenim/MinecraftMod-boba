@@ -64,8 +64,11 @@ public class BobaMod {
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
-        if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS)
+        if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ItemInit.TAPIOCA_BALLS);
+            event.accept(ItemInit.MILK_TEA_CUP);
+            event.accept(ItemInit.BROWN_SUGAR_MILK_TEA);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
