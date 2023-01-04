@@ -74,6 +74,7 @@ public class BobaMod {
                     output.accept(ItemInit.CHORUS_FRUIT_MILK_TEA.get());
                     output.accept(ItemInit.ROSE_MILK_TEA.get());
                     output.accept(ItemInit.BUTTERFLY_PEA_FLOWER_MILK_TEA.get());
+                    output.accept(ItemInit.MATCHA_MILK_TEA.get());
                     output.accept(ItemInit.THAI_MILK_TEA.get());
                 })
         );
@@ -96,6 +97,7 @@ public class BobaMod {
             event.accept(ItemInit.CHORUS_FRUIT_MILK_TEA);
             event.accept(ItemInit.ROSE_MILK_TEA);
             event.accept(ItemInit.BUTTERFLY_PEA_FLOWER_MILK_TEA);
+            event.accept(ItemInit.MATCHA_MILK_TEA);
             event.accept(ItemInit.THAI_MILK_TEA);
         }
     }
