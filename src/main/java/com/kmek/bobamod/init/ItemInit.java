@@ -25,7 +25,7 @@ public class ItemInit {
     // Very sweet
     public static final RegistryObject<Item> BROWN_SUGAR_MILK_TEA = ITEMS.register("brown_sugar_milk_tea", () -> new MilkTeaItem(2, 0.5f));
     // todo honey
-    // todo chocolate
+    public static final RegistryObject<Item> CHOCOLATE_MILK_TEA = ITEMS.register("chocolate_milk_tea", () -> new MilkTeaItem(2, 0.5f));
     // todo vanilla
     // todo egg pudding
     // todo cookie
