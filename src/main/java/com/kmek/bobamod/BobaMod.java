@@ -28,22 +28,7 @@ public class BobaMod {
     public static final String MODID = "bobamod";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
-//    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
-//    // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
-//    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-//
-//    // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
-//    public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
-//    // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
-//    public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
 
-//    public static final CreativeModeTab TAB = new CreativeModeTab(MODID) {
-//        @Override
-//        public ItemStack makeIcon() {
-//            return new ItemStack(ItemInit.BROWN_SUGAR_MILK_TEA.get());
-//        }
-//    };
     CreativeModeTab bobaTab;
 
     public BobaMod() {
@@ -52,11 +37,6 @@ public class BobaMod {
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-
-//        // Register the Deferred Register to the mod event bus so blocks get registered
-//        BLOCKS.register(modEventBus);
-//        // Register the Deferred Register to the mod event bus so items get registered
-//        ITEMS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -80,7 +60,9 @@ public class BobaMod {
                     output.accept(ItemInit.TAPIOCA_BALLS.get());
                     output.accept(ItemInit.MILK_TEA_CUP.get());
                     output.accept(ItemInit.BROWN_SUGAR_MILK_TEA.get());
+                    output.accept(ItemInit.HONEY_MILK_TEA.get());
                     output.accept(ItemInit.CHOCOLATE_MILK_TEA.get());
+                    output.accept(ItemInit.VANILLA_MILK_TEA.get());
                     output.accept(ItemInit.PUMPKIN_SPICE_MILK_TEA.get());
                     output.accept(ItemInit.APPLE_MILK_TEA.get());
                     output.accept(ItemInit.WATERMELON_MILK_TEA.get());
@@ -92,7 +74,9 @@ public class BobaMod {
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ItemInit.BROWN_SUGAR_MILK_TEA);
+            event.accept(ItemInit.HONEY_MILK_TEA);
             event.accept(ItemInit.CHOCOLATE_MILK_TEA);
+            event.accept(ItemInit.VANILLA_MILK_TEA);
             event.accept(ItemInit.PUMPKIN_SPICE_MILK_TEA);
             event.accept(ItemInit.APPLE_MILK_TEA);
             event.accept(ItemInit.WATERMELON_MILK_TEA);
