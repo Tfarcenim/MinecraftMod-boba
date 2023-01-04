@@ -1,6 +1,7 @@
 package com.kmek.bobamod.init;
 
 import com.kmek.bobamod.BobaMod;
+import com.kmek.bobamod.teas.MilkTeaItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,5 +15,5 @@ public class ItemInit {
     public static final RegistryObject<Item> MILK_TEA_CUP = ITEMS.register("milk_tea_cup", () -> new Item(new Item.Properties()));
 
     // Bubble Milk Teas
-    public static final RegistryObject<Item> BROWN_SUGAR_MILK_TEA = ITEMS.register("brown_sugar_milk_tea", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BROWN_SUGAR_MILK_TEA = ITEMS.register("brown_sugar_milk_tea", () -> new MilkTeaItem(2, 0.4f));
 }
