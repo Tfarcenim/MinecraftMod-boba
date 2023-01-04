@@ -65,7 +65,9 @@ public class BobaMod {
             event.accept(ItemInit.TAPIOCA_BALLS);
             event.accept(ItemInit.MILK_TEA_CUP);
             event.accept(ItemInit.BROWN_SUGAR_MILK_TEA);
+            event.accept(ItemInit.PUMPKIN_SPICE_MILK_TEA);
             event.accept(ItemInit.APPLE_MILK_TEA);
+            event.accept(ItemInit.WATERMELON_MILK_TEA);
             event.accept(ItemInit.ROSE_MILK_TEA);
         }
     }

@@ -1,4 +1,4 @@
-package com.kmek.bobamod.teas;
+package com.kmek.bobamod.food;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -16,6 +16,8 @@ public class MilkTeaItem extends Item {
                         .saturationMod(saturation)
                         .build()));
     }
+
+    // todo return cup after drinking
 
     // todo future idea: cure all harmful potions the same way milk does
 

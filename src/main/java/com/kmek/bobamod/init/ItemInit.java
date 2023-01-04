@@ -1,7 +1,7 @@
 package com.kmek.bobamod.init;
 
 import com.kmek.bobamod.BobaMod;
-import com.kmek.bobamod.teas.MilkTeaItem;
+import com.kmek.bobamod.food.MilkTeaItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -30,11 +30,11 @@ public class ItemInit {
     // todo egg pudding
     // todo cookie
     // todo cake
-    // todo pumpkin spice
+    public static final RegistryObject<Item> PUMPKIN_SPICE_MILK_TEA = ITEMS.register("pumpkin_spice_milk_tea", () -> new MilkTeaItem(4, 2f));
     // Fruit teas
     public static final RegistryObject<Item> APPLE_MILK_TEA = ITEMS.register("apple_milk_tea", () -> new MilkTeaItem(4, 2f));
     // todo sweet berry
-    // todo watermelon
+    public static final RegistryObject<Item> WATERMELON_MILK_TEA = ITEMS.register("watermelon_milk_tea", () -> new MilkTeaItem(4, 2f));
     // todo glow berry
     // todo chorus fruit
     // Floral
