@@ -34,7 +34,7 @@ public class ItemInit {
     public static final RegistryObject<Item> PUMPKIN_SPICE_MILK_TEA = ITEMS.register("pumpkin_spice_milk_tea", () -> new MilkTeaItem(4, 2f));
     // Fruit teas
     public static final RegistryObject<Item> APPLE_MILK_TEA = ITEMS.register("apple_milk_tea", () -> new MilkTeaItem(4, 2f));
-    // todo sweet berry
+    public static final RegistryObject<Item> SWEET_BERRY_MILK_TEA = ITEMS.register("sweet_berry_milk_tea", () -> new MilkTeaItem(2, 0.5f));
     public static final RegistryObject<Item> WATERMELON_MILK_TEA = ITEMS.register("watermelon_milk_tea", () -> new MilkTeaItem(4, 2f));
     public static final RegistryObject<Item> GLOW_BERRY_MILK_TEA = ITEMS.register("glow_berry_milk_tea", () -> new MilkTeaItem(2, 0.5f));
     public static final RegistryObject<Item> CHORUS_FRUIT_MILK_TEA = ITEMS.register("chorus_fruit_milk_tea", () -> new MilkTeaItem(4, 2f));
