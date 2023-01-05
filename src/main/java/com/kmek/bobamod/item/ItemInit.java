@@ -1,7 +1,6 @@
-package com.kmek.bobamod.init;
+package com.kmek.bobamod.item;
 
 import com.kmek.bobamod.BobaMod;
-import com.kmek.bobamod.food.MilkTeaItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
@@ -26,6 +25,7 @@ public class ItemInit {
      */
     public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(2).saturationMod(0.5f).build())));
+    // todo eventually don't consume mold on crafting
 
     /**
      * Bubble Milk Teas

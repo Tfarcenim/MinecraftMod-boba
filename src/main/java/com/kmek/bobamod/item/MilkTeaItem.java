@@ -1,6 +1,5 @@
-package com.kmek.bobamod.food;
+package com.kmek.bobamod.item;
 
-import com.kmek.bobamod.init.ItemInit;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.LivingEntity;
@@ -23,18 +22,18 @@ public class MilkTeaItem extends Item {
 
     // Eat item and then return cup
     @Override
-    public ItemStack finishUsingItem(ItemStack p_42923_, Level p_42924_, LivingEntity p_42925_) {
-        if (p_42925_ instanceof Player player) {
+    public @NotNull ItemStack finishUsingItem(@NotNull ItemStack itemStack, @NotNull Level level, @NotNull LivingEntity livingEntity) {
+        if (livingEntity instanceof Player player) {
             player.addItem(new ItemStack(ItemInit.MILK_TEA_CUP.get()));
         }
 
-        return p_42925_.eat(p_42924_, p_42923_);
+        return livingEntity.eat(level, itemStack);
     }
 
     // todo future idea: cure all harmful potions the same way milk does
 
     @Override
-    public @NotNull UseAnim getUseAnimation(ItemStack p_42931_) {
+    public @NotNull UseAnim getUseAnimation(ItemStack itemStack) {
         return UseAnim.DRINK;
     }
 
