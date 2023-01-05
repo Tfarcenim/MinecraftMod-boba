@@ -2,6 +2,7 @@ package com.kmek.bobamod.init;
 
 import com.kmek.bobamod.BobaMod;
 import com.kmek.bobamod.food.MilkTeaItem;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,6 +19,13 @@ public class ItemInit {
      */
     public static final RegistryObject<Item> TAPIOCA_BALLS = ITEMS.register("tapioca_balls", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MILK_TEA_CUP = ITEMS.register("milk_tea_cup", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new Item(new Item.Properties()));
+
+    /**
+     * Food Snacks
+     */
+    public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(2).saturationMod(0.5f).build())));
 
     /**
      * Bubble Milk Teas
