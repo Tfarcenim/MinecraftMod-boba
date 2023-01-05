@@ -77,6 +77,7 @@ public class BobaMod {
                     output.accept(ItemInit.MATCHA_MILK_TEA.get());
                     output.accept(ItemInit.LAVENDER_MILK_TEA.get());
                     output.accept(ItemInit.THAI_MILK_TEA.get());
+                    output.accept(ItemInit.CARROT_MILK_TEA.get());
                     output.accept(ItemInit.KELP_MILK_TEA.get());
                 })
         );
@@ -102,6 +103,7 @@ public class BobaMod {
             event.accept(ItemInit.MATCHA_MILK_TEA);
             event.accept(ItemInit.LAVENDER_MILK_TEA);
             event.accept(ItemInit.THAI_MILK_TEA);
+            event.accept(ItemInit.CARROT_MILK_TEA);
             event.accept(ItemInit.KELP_MILK_TEA);
         }
     }
