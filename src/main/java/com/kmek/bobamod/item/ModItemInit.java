@@ -32,14 +32,13 @@ public class ModItemInit {
      */
     public static final RegistryObject<Item> TAPIOCA_BALLS = ITEMS.register("tapioca_balls", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MILK_TEA_CUP = ITEMS.register("milk_tea_cup", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new MoldItem());
 
     /**
      * Food Snacks
      */
     public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(2).saturationMod(0.5f).build())));
-    // todo eventually don't consume mold on crafting
 
     /**
      * Bubble Milk Teas
