@@ -45,7 +45,10 @@ authors="Kmek" #optional
 description='''
 A mod that adds boba milk tea to minecraft.
 
-Adds 22 different craftable Bubble Milk Teas.
+- 22 different craftable Bubble Milk Teas
+- Cassava Crop
+- Taiyaki mold and food
+- 5 Boba themed paintings
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.bobamod]] #optional
