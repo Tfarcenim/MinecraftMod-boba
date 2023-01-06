@@ -1,17 +1,28 @@
 package com.kmek.bobamod.item;
 
 import com.kmek.bobamod.BobaMod;
+import com.kmek.bobamod.block.ModBlocksInit;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ItemInit {
+public class ModItemInit {
     /**
      * Registry
      */
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BobaMod.MODID);
+
+    /**
+     * Cassava Crop
+     */
+    public static final RegistryObject<Item> CASSAVA_CUTTING = ITEMS.register("cassava_cutting",
+            () -> new ItemNameBlockItem(ModBlocksInit.CASSAVA_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CASSAVA = ITEMS.register("cassava", () -> new Item(new Item.Properties()));
+    // todo make poisonous
 
     /**
      * Crafting Ingredients
@@ -56,4 +67,12 @@ public class ItemInit {
     public static final RegistryObject<Item> BEETROOT_MILK_TEA = ITEMS.register("beetroot_milk_tea", () -> new MilkTeaItem(3, 2f));
     public static final RegistryObject<Item> CARROT_MILK_TEA = ITEMS.register("carrot_milk_tea", () -> new MilkTeaItem(4, 2f));
     public static final RegistryObject<Item> KELP_MILK_TEA = ITEMS.register("kelp_milk_tea", () -> new MilkTeaItem(4, 2f));
+
+    /**
+     * Registering the event bus
+     */
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
+    }
+
 }

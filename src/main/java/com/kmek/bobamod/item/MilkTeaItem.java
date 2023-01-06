@@ -24,7 +24,7 @@ public class MilkTeaItem extends Item {
     @Override
     public @NotNull ItemStack finishUsingItem(@NotNull ItemStack itemStack, @NotNull Level level, @NotNull LivingEntity livingEntity) {
         if (livingEntity instanceof Player player) {
-            player.addItem(new ItemStack(ItemInit.MILK_TEA_CUP.get()));
+            player.addItem(new ItemStack(ModItemInit.MILK_TEA_CUP.get()));
         }
 
         return livingEntity.eat(level, itemStack);

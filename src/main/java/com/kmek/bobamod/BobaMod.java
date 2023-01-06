@@ -1,8 +1,11 @@
 package com.kmek.bobamod;
 
-import com.kmek.bobamod.item.ItemInit;
+import com.kmek.bobamod.block.ModBlocksInit;
+import com.kmek.bobamod.item.ModItemInit;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -27,13 +30,14 @@ public class BobaMod {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "bobamod";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     CreativeModeTab bobaTab;
 
     public BobaMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        ItemInit.ITEMS.register(modEventBus);
+        ModItemInit.register(modEventBus);
+        ModBlocksInit.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -55,63 +59,65 @@ public class BobaMod {
     // todo bug: this tab has no title
     private void registerTabs(CreativeModeTabEvent.Register event) {
          bobaTab = event.registerCreativeModeTab(new ResourceLocation(MODID, "bobamod"), builder -> builder
-                .icon(() -> new ItemStack(ItemInit.BROWN_SUGAR_MILK_TEA.get()))
+                .icon(() -> new ItemStack(ModItemInit.BROWN_SUGAR_MILK_TEA.get()))
                 .displayItems((featureFlags, output, hasOp) -> {
-                    output.accept(ItemInit.TAPIOCA_BALLS.get());
-                    output.accept(ItemInit.MILK_TEA_CUP.get());
-                    output.accept(ItemInit.BROWN_SUGAR_MILK_TEA.get());
-                    output.accept(ItemInit.TIGER_MILK_TEA.get());
-                    output.accept(ItemInit.HONEY_MILK_TEA.get());
-                    output.accept(ItemInit.CHOCOLATE_MILK_TEA.get());
-                    output.accept(ItemInit.VANILLA_MILK_TEA.get());
-                    output.accept(ItemInit.EGG_CUSTARD_MILK_TEA.get());
-                    output.accept(ItemInit.COOKIE_MILK_TEA.get());
-                    output.accept(ItemInit.CAKE_MILK_TEA.get());
-                    output.accept(ItemInit.PUMPKIN_SPICE_MILK_TEA.get());
-                    output.accept(ItemInit.APPLE_MILK_TEA.get());
-                    output.accept(ItemInit.SWEET_BERRY_MILK_TEA.get());
-                    output.accept(ItemInit.WATERMELON_MILK_TEA.get());
-                    output.accept(ItemInit.GLOW_BERRY_MILK_TEA.get());
-                    output.accept(ItemInit.CHORUS_FRUIT_MILK_TEA.get());
-                    output.accept(ItemInit.ROSE_MILK_TEA.get());
-                    output.accept(ItemInit.BUTTERFLY_PEA_FLOWER_MILK_TEA.get());
-                    output.accept(ItemInit.MATCHA_MILK_TEA.get());
-                    output.accept(ItemInit.LAVENDER_MILK_TEA.get());
-                    output.accept(ItemInit.THAI_MILK_TEA.get());
-                    output.accept(ItemInit.BEETROOT_MILK_TEA.get());
-                    output.accept(ItemInit.CARROT_MILK_TEA.get());
-                    output.accept(ItemInit.KELP_MILK_TEA.get());
-                    output.accept(ItemInit.TAIYAKI_MOLD.get());
-                    output.accept(ItemInit.TAIYAKI.get());
+                    output.accept(ModItemInit.CASSAVA_CUTTING.get());
+                    output.accept(ModItemInit.CASSAVA.get());
+                    output.accept(ModItemInit.TAPIOCA_BALLS.get());
+                    output.accept(ModItemInit.MILK_TEA_CUP.get());
+                    output.accept(ModItemInit.BROWN_SUGAR_MILK_TEA.get());
+                    output.accept(ModItemInit.TIGER_MILK_TEA.get());
+                    output.accept(ModItemInit.HONEY_MILK_TEA.get());
+                    output.accept(ModItemInit.CHOCOLATE_MILK_TEA.get());
+                    output.accept(ModItemInit.VANILLA_MILK_TEA.get());
+                    output.accept(ModItemInit.EGG_CUSTARD_MILK_TEA.get());
+                    output.accept(ModItemInit.COOKIE_MILK_TEA.get());
+                    output.accept(ModItemInit.CAKE_MILK_TEA.get());
+                    output.accept(ModItemInit.PUMPKIN_SPICE_MILK_TEA.get());
+                    output.accept(ModItemInit.APPLE_MILK_TEA.get());
+                    output.accept(ModItemInit.SWEET_BERRY_MILK_TEA.get());
+                    output.accept(ModItemInit.WATERMELON_MILK_TEA.get());
+                    output.accept(ModItemInit.GLOW_BERRY_MILK_TEA.get());
+                    output.accept(ModItemInit.CHORUS_FRUIT_MILK_TEA.get());
+                    output.accept(ModItemInit.ROSE_MILK_TEA.get());
+                    output.accept(ModItemInit.BUTTERFLY_PEA_FLOWER_MILK_TEA.get());
+                    output.accept(ModItemInit.MATCHA_MILK_TEA.get());
+                    output.accept(ModItemInit.LAVENDER_MILK_TEA.get());
+                    output.accept(ModItemInit.THAI_MILK_TEA.get());
+                    output.accept(ModItemInit.BEETROOT_MILK_TEA.get());
+                    output.accept(ModItemInit.CARROT_MILK_TEA.get());
+                    output.accept(ModItemInit.KELP_MILK_TEA.get());
+                    output.accept(ModItemInit.TAIYAKI_MOLD.get());
+                    output.accept(ModItemInit.TAIYAKI.get());
                 })
         );
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
-            event.accept(ItemInit.BROWN_SUGAR_MILK_TEA);
-            event.accept(ItemInit.TIGER_MILK_TEA);
-            event.accept(ItemInit.HONEY_MILK_TEA);
-            event.accept(ItemInit.CHOCOLATE_MILK_TEA);
-            event.accept(ItemInit.VANILLA_MILK_TEA);
-            event.accept(ItemInit.EGG_CUSTARD_MILK_TEA);
-            event.accept(ItemInit.COOKIE_MILK_TEA);
-            event.accept(ItemInit.CAKE_MILK_TEA);
-            event.accept(ItemInit.PUMPKIN_SPICE_MILK_TEA);
-            event.accept(ItemInit.APPLE_MILK_TEA);
-            event.accept(ItemInit.SWEET_BERRY_MILK_TEA);
-            event.accept(ItemInit.WATERMELON_MILK_TEA);
-            event.accept(ItemInit.GLOW_BERRY_MILK_TEA);
-            event.accept(ItemInit.CHORUS_FRUIT_MILK_TEA);
-            event.accept(ItemInit.ROSE_MILK_TEA);
-            event.accept(ItemInit.BUTTERFLY_PEA_FLOWER_MILK_TEA);
-            event.accept(ItemInit.MATCHA_MILK_TEA);
-            event.accept(ItemInit.LAVENDER_MILK_TEA);
-            event.accept(ItemInit.THAI_MILK_TEA);
-            event.accept(ItemInit.BEETROOT_MILK_TEA);
-            event.accept(ItemInit.CARROT_MILK_TEA);
-            event.accept(ItemInit.KELP_MILK_TEA);
-            event.accept(ItemInit.TAIYAKI);
+            event.accept(ModItemInit.BROWN_SUGAR_MILK_TEA);
+            event.accept(ModItemInit.TIGER_MILK_TEA);
+            event.accept(ModItemInit.HONEY_MILK_TEA);
+            event.accept(ModItemInit.CHOCOLATE_MILK_TEA);
+            event.accept(ModItemInit.VANILLA_MILK_TEA);
+            event.accept(ModItemInit.EGG_CUSTARD_MILK_TEA);
+            event.accept(ModItemInit.COOKIE_MILK_TEA);
+            event.accept(ModItemInit.CAKE_MILK_TEA);
+            event.accept(ModItemInit.PUMPKIN_SPICE_MILK_TEA);
+            event.accept(ModItemInit.APPLE_MILK_TEA);
+            event.accept(ModItemInit.SWEET_BERRY_MILK_TEA);
+            event.accept(ModItemInit.WATERMELON_MILK_TEA);
+            event.accept(ModItemInit.GLOW_BERRY_MILK_TEA);
+            event.accept(ModItemInit.CHORUS_FRUIT_MILK_TEA);
+            event.accept(ModItemInit.ROSE_MILK_TEA);
+            event.accept(ModItemInit.BUTTERFLY_PEA_FLOWER_MILK_TEA);
+            event.accept(ModItemInit.MATCHA_MILK_TEA);
+            event.accept(ModItemInit.LAVENDER_MILK_TEA);
+            event.accept(ModItemInit.THAI_MILK_TEA);
+            event.accept(ModItemInit.BEETROOT_MILK_TEA);
+            event.accept(ModItemInit.CARROT_MILK_TEA);
+            event.accept(ModItemInit.KELP_MILK_TEA);
+            event.accept(ModItemInit.TAIYAKI);
         }
     }
 
@@ -131,6 +137,7 @@ public class BobaMod {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASSAVA_CROP.get(), RenderType.cutout());
         }
     }
 }
