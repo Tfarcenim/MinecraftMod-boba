@@ -1,0 +1,10 @@
+{
+  "type": "bobamod:add_item_tenth_chance",
+  "conditions": [
+    {
+      "condition": "block_state_property",
+      "block": "minecraft:grass"
+    }
+  ],
+  "item": "bobamod:cassava_cutting"
+}

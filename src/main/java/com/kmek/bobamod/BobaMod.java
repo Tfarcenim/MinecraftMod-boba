@@ -2,6 +2,7 @@ package com.kmek.bobamod;
 
 import com.kmek.bobamod.block.ModBlocksInit;
 import com.kmek.bobamod.item.ModItemInit;
+import com.kmek.bobamod.loot.ModLootModifiers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -36,8 +37,11 @@ public class BobaMod {
 
     public BobaMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
         ModItemInit.register(modEventBus);
         ModBlocksInit.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
