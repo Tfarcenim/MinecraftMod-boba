@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "C": {
+      "item": "bobamod:cassava"
+    }
+  },
+  "pattern": [
+    "S",
+    "C",
+    "W"
+  ],
+  "result": {
+    "item": "bobamod:tapioca_balls"
+  }
+}

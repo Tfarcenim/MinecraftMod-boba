@@ -2,6 +2,8 @@ package com.kmek.bobamod.item;
 
 import com.kmek.bobamod.BobaMod;
 import com.kmek.bobamod.block.ModBlocksInit;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -21,8 +23,9 @@ public class ModItemInit {
      */
     public static final RegistryObject<Item> CASSAVA_CUTTING = ITEMS.register("cassava_cutting",
             () -> new ItemNameBlockItem(ModBlocksInit.CASSAVA_CROP.get(), new Item.Properties()));
-    public static final RegistryObject<Item> CASSAVA = ITEMS.register("cassava", () -> new Item(new Item.Properties()));
-    // todo make poisonous
+    public static final RegistryObject<Item> CASSAVA = ITEMS.register("cassava", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.1f)
+                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 1.0f).build())));
 
     /**
      * Crafting Ingredients

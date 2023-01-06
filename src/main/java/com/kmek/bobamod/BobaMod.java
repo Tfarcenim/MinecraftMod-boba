@@ -95,6 +95,7 @@ public class BobaMod {
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItemInit.CASSAVA);
             event.accept(ModItemInit.BROWN_SUGAR_MILK_TEA);
             event.accept(ModItemInit.TIGER_MILK_TEA);
             event.accept(ModItemInit.HONEY_MILK_TEA);
