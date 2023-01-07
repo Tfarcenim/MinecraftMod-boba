@@ -119,7 +119,14 @@ public class ModItemInit {
                             .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 1000, 0), 1.0f)
                             .build()),
                     Component.literal("A good pick-me-up in the morning").withStyle(ChatFormatting.YELLOW)));
-//    public static final RegistryObject<Item> BLAZING_MILK_TEA (fire resistance)
+    public static final RegistryObject<Item> BLAZING_MILK_TEA = ITEMS.register("blazing_milk_tea",
+            () -> new MilkTeaItem(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(0).saturationMod(0f)
+                            .alwaysEat()
+                            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0), 1.0f)
+                            .build()),
+                    Component.literal("Now with authentic firey taste").withStyle(ChatFormatting.YELLOW)));
+//    (fire resistance)
 //    public static final RegistryObject<Item> ENDER_MILK_TEA (teleports you randomly? use ChorusFruitItem)
 //    public static final RegistryObject<Item> DARKSIDE_MILK_TEA (no vision)
 //    public static final RegistryObject<Item> WET_MILK_TEA (underwater breathing, conduit power)
