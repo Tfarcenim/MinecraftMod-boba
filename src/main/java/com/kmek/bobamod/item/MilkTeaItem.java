@@ -12,6 +12,11 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
 public class MilkTeaItem extends Item {
+
+    public MilkTeaItem(Item.Properties properties) {
+        super(properties);
+    }
+
     public MilkTeaItem(int nutrition, float saturation) {
         super(new Item.Properties().food(
                 new FoodProperties.Builder()

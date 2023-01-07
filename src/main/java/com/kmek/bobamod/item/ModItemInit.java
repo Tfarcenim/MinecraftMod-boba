@@ -26,8 +26,9 @@ public class ModItemInit {
     public static final RegistryObject<Item> CASSAVA = ITEMS.register("cassava", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.1f)
                     .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 1.0f)
-                    .effect(() -> new MobEffectInstance(MobEffects.WEAKNESS, 100, 0), 1.0f)
-                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 200, 0), 1.0f).build())));
+                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 0), 1.0f)
+                    .effect(() -> new MobEffectInstance(MobEffects.WEAKNESS, 600, 0), 1.0f)
+                    .build())));
 
     /**
      * Crafting Ingredients
@@ -49,7 +50,11 @@ public class ModItemInit {
     public static final RegistryObject<Item> BROWN_SUGAR_MILK_TEA = ITEMS.register("brown_sugar_milk_tea",
             () -> new MilkTeaItem(2, 0.5f));
     public static final RegistryObject<Item> TIGER_MILK_TEA = ITEMS.register("tiger_milk_tea",
-            () -> new MilkTeaItem(2, 0.5f));
+            () -> new MilkTeaItem(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(2).saturationMod(0.5f)
+                            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 500, 0), 1.0f)
+                            .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 500, 0), 1.0f)
+                            .build())));
     public static final RegistryObject<Item> HONEY_MILK_TEA = ITEMS.register("honey_milk_tea",
             () -> new MilkTeaItem(6, 0.5f));
     public static final RegistryObject<Item> CHOCOLATE_MILK_TEA = ITEMS.register("chocolate_milk_tea",
@@ -72,7 +77,10 @@ public class ModItemInit {
     public static final RegistryObject<Item> WATERMELON_MILK_TEA = ITEMS.register("watermelon_milk_tea",
             () -> new MilkTeaItem(2, 1.5f));
     public static final RegistryObject<Item> GLOW_BERRY_MILK_TEA = ITEMS.register("glow_berry_milk_tea",
-            () -> new MilkTeaItem(2, 0.5f));
+            () -> new MilkTeaItem(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(2).saturationMod(0.5f)
+                            .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 600, 0), 1.0f)
+                            .build())));
     public static final RegistryObject<Item> CHORUS_FRUIT_MILK_TEA = ITEMS.register("chorus_fruit_milk_tea",
             () -> new MilkTeaItem(4, 2.5f));
     // Floral
@@ -100,5 +108,4 @@ public class ModItemInit {
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
-
 }
