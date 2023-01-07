@@ -26,7 +26,7 @@ public class ModItemInit {
     public static final RegistryObject<Item> CASSAVA_CUTTING = ITEMS.register("cassava_cutting",
             () -> new ItemNameBlockItem(ModBlocksInit.CASSAVA_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> CASSAVA = ITEMS.register("cassava", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.1f)
+            new FoodProperties.Builder().nutrition(0).saturationMod(0f)
                     .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 1.0f)
                     .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 0), 1.0f)
                     .effect(() -> new MobEffectInstance(MobEffects.WEAKNESS, 600, 0), 1.0f)
@@ -124,7 +124,13 @@ public class ModItemInit {
 //    public static final RegistryObject<Item> DARKSIDE_MILK_TEA (no vision)
 //    public static final RegistryObject<Item> WET_MILK_TEA (underwater breathing, conduit power)
 //    public static final RegistryObject<Item> TWITCHY_MILK_TEA (jump boost, speed)
-//    public static final RegistryObject<Item> IMAGINARY_MILK_TEA (invisibility)
+    public static final RegistryObject<Item> IMAGINARY_MILK_TEA = ITEMS.register("imaginary_milk_tea",
+        () -> new MilkTeaItem(new Item.Properties().food(
+                new FoodProperties.Builder().nutrition(0).saturationMod(0f)
+                        .alwaysEat()
+                        .effect(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 800, 0), 1.0f)
+                        .build()),
+                Component.literal("It's there, I promise!").withStyle(ChatFormatting.YELLOW)));
 
     /**
      * Registering the event bus
