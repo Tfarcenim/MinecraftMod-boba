@@ -2,6 +2,8 @@ package com.kmek.bobamod.item;
 
 import com.kmek.bobamod.BobaMod;
 import com.kmek.bobamod.block.ModBlocksInit;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -54,7 +56,8 @@ public class ModItemInit {
                     new FoodProperties.Builder().nutrition(2).saturationMod(0.5f)
                             .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 500, 0), 1.0f)
                             .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 500, 0), 1.0f)
-                            .build())));
+                            .build()),
+                    Component.literal("Move like a tiger!").withStyle(ChatFormatting.YELLOW)));
     public static final RegistryObject<Item> HONEY_MILK_TEA = ITEMS.register("honey_milk_tea",
             () -> new MilkTeaItem(6, 0.5f));
     public static final RegistryObject<Item> CHOCOLATE_MILK_TEA = ITEMS.register("chocolate_milk_tea",
@@ -80,7 +83,9 @@ public class ModItemInit {
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(2).saturationMod(0.5f)
                             .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 600, 0), 1.0f)
-                            .build())));
+                            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300, 0), 1.0f)
+                            .build()),
+                    Component.literal("Glowing!").withStyle(ChatFormatting.YELLOW)));
     public static final RegistryObject<Item> CHORUS_FRUIT_MILK_TEA = ITEMS.register("chorus_fruit_milk_tea",
             () -> new MilkTeaItem(4, 2.5f));
     // Floral
@@ -92,15 +97,34 @@ public class ModItemInit {
             () -> new MilkTeaItem(3, 1f));
     public static final RegistryObject<Item> LAVENDER_MILK_TEA = ITEMS.register("lavender_milk_tea",
             () -> new MilkTeaItem(3, 0.6f));
-    // Misc
+    // Misc normal food tea flavors
     public static final RegistryObject<Item> THAI_MILK_TEA = ITEMS.register("thai_milk_tea",
             () -> new MilkTeaItem(2, 0.6f));
     public static final RegistryObject<Item> BEETROOT_MILK_TEA = ITEMS.register("beetroot_milk_tea",
             () -> new MilkTeaItem(1, 1.5f));
     public static final RegistryObject<Item> CARROT_MILK_TEA = ITEMS.register("carrot_milk_tea",
-            () -> new MilkTeaItem(4, 3.8f));
+            () -> new MilkTeaItem(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(4).saturationMod(3.8f)
+                            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 600, 0), 1.0f)
+                            .build()),
+                    Component.literal("Good for your eyes").withStyle(ChatFormatting.YELLOW)));
     public static final RegistryObject<Item> KELP_MILK_TEA = ITEMS.register("kelp_milk_tea",
             () -> new MilkTeaItem(1, 1f));
+    // Funky tea flavors with effects
+    public static final RegistryObject<Item> PHANTOM_MILK_TEA = ITEMS.register("phantom_milk_tea",
+            () -> new MilkTeaItem(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(1).saturationMod(0.4f)
+                            .alwaysEat()
+                            .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 700, 0), 1.0f)
+                            .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 1000, 0), 1.0f)
+                            .build()),
+                    Component.literal("A good pick-me-up in the morning").withStyle(ChatFormatting.YELLOW)));
+//    public static final RegistryObject<Item> BLAZING_MILK_TEA (fire resistance)
+//    public static final RegistryObject<Item> ENDER_MILK_TEA (teleports you randomly? use ChorusFruitItem)
+//    public static final RegistryObject<Item> DARKSIDE_MILK_TEA (no vision)
+//    public static final RegistryObject<Item> WET_MILK_TEA (underwater breathing, conduit power)
+//    public static final RegistryObject<Item> TWITCHY_MILK_TEA (jump boost, speed)
+//    public static final RegistryObject<Item> IMAGINARY_MILK_TEA (invisibility)
 
     /**
      * Registering the event bus

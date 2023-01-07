@@ -94,6 +94,7 @@ public class BobaMod {
                     output.accept(ModItemInit.BEETROOT_MILK_TEA.get());
                     output.accept(ModItemInit.CARROT_MILK_TEA.get());
                     output.accept(ModItemInit.KELP_MILK_TEA.get());
+                    output.accept(ModItemInit.PHANTOM_MILK_TEA.get());
                     output.accept(ModItemInit.TAIYAKI_MOLD.get());
                     output.accept(ModItemInit.TAIYAKI.get());
                 })
@@ -125,6 +126,7 @@ public class BobaMod {
             event.accept(ModItemInit.BEETROOT_MILK_TEA);
             event.accept(ModItemInit.CARROT_MILK_TEA);
             event.accept(ModItemInit.KELP_MILK_TEA);
+            event.accept(ModItemInit.PHANTOM_MILK_TEA);
             event.accept(ModItemInit.TAIYAKI);
         }
     }
