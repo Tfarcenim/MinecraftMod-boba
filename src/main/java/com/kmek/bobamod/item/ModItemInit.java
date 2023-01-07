@@ -133,7 +133,15 @@ public class ModItemInit {
                             .effect(() -> new MobEffectInstance(MobEffects.DARKNESS, 800, 0), 1.0f)
                             .build()),
                     Component.literal("Join the dark side").withStyle(ChatFormatting.YELLOW)));
-//    public static final RegistryObject<Item> WET_MILK_TEA (underwater breathing, conduit power)
+    public static final RegistryObject<Item> WET_MILK_TEA = ITEMS.register("wet_milk_tea",
+            () -> new MilkTeaItem(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(0).saturationMod(0f)
+                            .alwaysEat()
+                            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 800, 0), 1.0f)
+                            .effect(() -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 800, 0), 1.0f)
+                            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300, 0), 1.0f)
+                            .build()),
+                    Component.literal("Underwater vibes").withStyle(ChatFormatting.YELLOW)));
 //    public static final RegistryObject<Item> TWITCHY_MILK_TEA (jump boost, speed)
     public static final RegistryObject<Item> IMAGINARY_MILK_TEA = ITEMS.register("imaginary_milk_tea",
         () -> new MilkTeaItem(new Item.Properties().food(

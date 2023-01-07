@@ -97,6 +97,7 @@ public class BobaMod {
                     output.accept(ModItemInit.PHANTOM_MILK_TEA.get());
                     output.accept(ModItemInit.BLAZING_MILK_TEA.get());
                     output.accept(ModItemInit.DARKSIDE_MILK_TEA.get());
+                    output.accept(ModItemInit.WET_MILK_TEA.get());
                     output.accept(ModItemInit.IMAGINARY_MILK_TEA.get());
                     output.accept(ModItemInit.TAIYAKI_MOLD.get());
                     output.accept(ModItemInit.TAIYAKI.get());
@@ -132,6 +133,7 @@ public class BobaMod {
             event.accept(ModItemInit.PHANTOM_MILK_TEA);
             event.accept(ModItemInit.BLAZING_MILK_TEA);
             event.accept(ModItemInit.DARKSIDE_MILK_TEA);
+            event.accept(ModItemInit.WET_MILK_TEA);
             event.accept(ModItemInit.IMAGINARY_MILK_TEA);
             event.accept(ModItemInit.TAIYAKI);
         }
