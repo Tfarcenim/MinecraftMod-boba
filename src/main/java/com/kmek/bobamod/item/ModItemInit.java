@@ -126,9 +126,13 @@ public class ModItemInit {
                             .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0), 1.0f)
                             .build()),
                     Component.literal("Now with authentic firey taste").withStyle(ChatFormatting.YELLOW)));
-//    (fire resistance)
-//    public static final RegistryObject<Item> ENDER_MILK_TEA (teleports you randomly? use ChorusFruitItem)
-//    public static final RegistryObject<Item> DARKSIDE_MILK_TEA (no vision)
+    public static final RegistryObject<Item> DARKSIDE_MILK_TEA = ITEMS.register("darkside_milk_tea",
+            () -> new MilkTeaItem(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(0).saturationMod(0f)
+                            .alwaysEat()
+                            .effect(() -> new MobEffectInstance(MobEffects.DARKNESS, 800, 0), 1.0f)
+                            .build()),
+                    Component.literal("Join the dark side").withStyle(ChatFormatting.YELLOW)));
 //    public static final RegistryObject<Item> WET_MILK_TEA (underwater breathing, conduit power)
 //    public static final RegistryObject<Item> TWITCHY_MILK_TEA (jump boost, speed)
     public static final RegistryObject<Item> IMAGINARY_MILK_TEA = ITEMS.register("imaginary_milk_tea",
@@ -138,6 +142,7 @@ public class ModItemInit {
                         .effect(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 800, 0), 1.0f)
                         .build()),
                 Component.literal("It's there, I promise!").withStyle(ChatFormatting.YELLOW)));
+//    public static final RegistryObject<Item> ENDER_MILK_TEA (teleports you randomly? use ChorusFruitItem)
 
     /**
      * Registering the event bus
