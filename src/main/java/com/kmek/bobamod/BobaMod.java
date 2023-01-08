@@ -70,8 +70,10 @@ public class BobaMod {
                 .displayItems((featureFlags, output, hasOp) -> {
                     output.accept(ModItemInit.CASSAVA_CUTTING.get());
                     output.accept(ModItemInit.CASSAVA.get());
+
                     output.accept(ModItemInit.TAPIOCA_BALLS.get());
                     output.accept(ModItemInit.TAPIOCA_PUDDING.get());
+
                     output.accept(ModItemInit.MILK_TEA_CUP.get());
                     output.accept(ModItemInit.BROWN_SUGAR_MILK_TEA.get());
                     output.accept(ModItemInit.TIGER_MILK_TEA.get());
@@ -100,10 +102,13 @@ public class BobaMod {
                     output.accept(ModItemInit.DARKSIDE_MILK_TEA.get());
                     output.accept(ModItemInit.WET_MILK_TEA.get());
                     output.accept(ModItemInit.IMAGINARY_MILK_TEA.get());
+
                     output.accept(ModItemInit.TAIYAKI_MOLD.get());
                     output.accept(ModItemInit.TAIYAKI.get());
                     output.accept(ModItemInit.EGG_WAFFLE_MOLD.get());
                     output.accept(ModItemInit.EGG_WAFFLE.get());
+                    output.accept(ModItemInit.PAW_WAFFLE_MOLD.get());
+                    output.accept(ModItemInit.PAW_WAFFLE.get());
                 })
         );
     }
@@ -112,6 +117,7 @@ public class BobaMod {
         if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItemInit.CASSAVA);
             event.accept(ModItemInit.TAPIOCA_PUDDING);
+
             event.accept(ModItemInit.BROWN_SUGAR_MILK_TEA);
             event.accept(ModItemInit.TIGER_MILK_TEA);
             event.accept(ModItemInit.HONEY_MILK_TEA);
@@ -139,8 +145,10 @@ public class BobaMod {
             event.accept(ModItemInit.DARKSIDE_MILK_TEA);
             event.accept(ModItemInit.WET_MILK_TEA);
             event.accept(ModItemInit.IMAGINARY_MILK_TEA);
+
             event.accept(ModItemInit.TAIYAKI);
             event.accept(ModItemInit.EGG_WAFFLE);
+            event.accept(ModItemInit.PAW_WAFFLE);
         }
     }
 

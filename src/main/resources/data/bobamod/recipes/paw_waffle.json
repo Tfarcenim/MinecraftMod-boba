@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "item": "minecraft:wheat"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "M": {
+      "item": "bobamod:paw_waffle_mold"
+    }
+  },
+  "pattern": [
+    "WSW",
+    " M "
+  ],
+  "result": {
+    "item": "bobamod:paw_waffle"
+  }
+}
