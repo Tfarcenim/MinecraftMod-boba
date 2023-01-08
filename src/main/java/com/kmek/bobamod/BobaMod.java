@@ -71,6 +71,7 @@ public class BobaMod {
                     output.accept(ModItemInit.CASSAVA_CUTTING.get());
                     output.accept(ModItemInit.CASSAVA.get());
 
+                    output.accept(ModItemInit.CASSAVA_BIBINGKA.get());
                     output.accept(ModItemInit.TAPIOCA_BALLS.get());
                     output.accept(ModItemInit.TAPIOCA_PUDDING.get());
 
@@ -116,6 +117,7 @@ public class BobaMod {
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItemInit.CASSAVA);
+            event.accept(ModItemInit.CASSAVA_BIBINGKA);
             event.accept(ModItemInit.TAPIOCA_PUDDING);
 
             event.accept(ModItemInit.BROWN_SUGAR_MILK_TEA);
