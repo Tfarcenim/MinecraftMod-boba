@@ -70,6 +70,7 @@ public class BobaMod {
                 .displayItems((featureFlags, output, hasOp) -> {
                     output.accept(ModItemInit.CASSAVA_CUTTING.get());
                     output.accept(ModItemInit.CASSAVA.get());
+                    output.accept(ModItemInit.TAPIOCA_PUDDING.get());
                     output.accept(ModItemInit.TAPIOCA_BALLS.get());
                     output.accept(ModItemInit.MILK_TEA_CUP.get());
                     output.accept(ModItemInit.BROWN_SUGAR_MILK_TEA.get());
@@ -108,6 +109,7 @@ public class BobaMod {
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItemInit.CASSAVA);
+            event.accept(ModItemInit.TAPIOCA_PUDDING);
             event.accept(ModItemInit.BROWN_SUGAR_MILK_TEA);
             event.accept(ModItemInit.TIGER_MILK_TEA);
             event.accept(ModItemInit.HONEY_MILK_TEA);

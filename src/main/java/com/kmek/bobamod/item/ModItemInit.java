@@ -33,17 +33,23 @@ public class ModItemInit {
                     .build())));
 
     /**
-     * Crafting Ingredients
+     * Cassava-related Foods
+     */
+    public static final RegistryObject<Item> TAPIOCA_PUDDING = ITEMS.register("tapioca_pudding", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
+
+    /**
+     * Waffle Snacks
+     */
+    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new MoldItem());
+    public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
+
+    /**
+     * Tea Crafting Ingredients
      */
     public static final RegistryObject<Item> TAPIOCA_BALLS = ITEMS.register("tapioca_balls", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MILK_TEA_CUP = ITEMS.register("milk_tea_cup", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new MoldItem());
-
-    /**
-     * Food Snacks
-     */
-    public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
 
     /**
      * Bubble Milk Teas
@@ -88,6 +94,7 @@ public class ModItemInit {
                     Component.literal("Glowing!").withStyle(ChatFormatting.YELLOW)));
     public static final RegistryObject<Item> CHORUS_FRUIT_MILK_TEA = ITEMS.register("chorus_fruit_milk_tea",
             () -> new MilkTeaItem(4, 2.5f));
+//    todo (teleports you randomly? use ChorusFruitItem)
     // Floral
     public static final RegistryObject<Item> ROSE_MILK_TEA = ITEMS.register("rose_milk_tea",
             () -> new MilkTeaItem(3, 0.6f));
@@ -100,6 +107,7 @@ public class ModItemInit {
     // Misc normal food tea flavors
     public static final RegistryObject<Item> THAI_MILK_TEA = ITEMS.register("thai_milk_tea",
             () -> new MilkTeaItem(2, 0.6f));
+    // todo green tea (green dye)
     public static final RegistryObject<Item> BEETROOT_MILK_TEA = ITEMS.register("beetroot_milk_tea",
             () -> new MilkTeaItem(1, 1.5f));
     public static final RegistryObject<Item> CARROT_MILK_TEA = ITEMS.register("carrot_milk_tea",
@@ -142,7 +150,6 @@ public class ModItemInit {
                             .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300, 0), 1.0f)
                             .build()),
                     Component.literal("Underwater vibes").withStyle(ChatFormatting.YELLOW)));
-//    public static final RegistryObject<Item> TWITCHY_MILK_TEA (jump boost, speed)
     public static final RegistryObject<Item> IMAGINARY_MILK_TEA = ITEMS.register("imaginary_milk_tea",
         () -> new MilkTeaItem(new Item.Properties().food(
                 new FoodProperties.Builder().nutrition(0).saturationMod(0f)
@@ -150,7 +157,7 @@ public class ModItemInit {
                         .effect(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 800, 0), 1.0f)
                         .build()),
                 Component.literal("It's there, I promise!").withStyle(ChatFormatting.YELLOW)));
-//    public static final RegistryObject<Item> ENDER_MILK_TEA (teleports you randomly? use ChorusFruitItem)
+//    todo public static final RegistryObject<Item> ENDER_MILK_TEA
 
     /**
      * Registering the event bus
