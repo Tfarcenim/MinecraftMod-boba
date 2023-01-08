@@ -5,9 +5,6 @@
 
   "item.bobamod.tapioca_pudding": "Tapioca Pudding",
 
-  "item.bobamod.taiyaki_mold": "Taiyaki Mold",
-  "item.bobamod.taiyaki": "Taiyaki",
-
   "item.bobamod.tapioca_balls": "Boba Pearls",
   "item.bobamod.milk_tea_cup": "Milk Tea Cup",
 
@@ -38,6 +35,11 @@
   "item.bobamod.darkside_milk_tea": "Darkside Milk Tea",
   "item.bobamod.wet_milk_tea": "Wet Milk Tea",
   "item.bobamod.imaginary_milk_tea": "Imaginary Milk Tea",
+
+  "item.bobamod.taiyaki_mold": "Taiyaki Mold",
+  "item.bobamod.taiyaki": "Taiyaki",
+  "item.bobamod.egg_waffle_mold": "Egg Waffle Mold",
+  "item.bobamod.egg_waffle": "Egg Waffle",
 
   "itemGroup.bobamod": "Boba Milk Tea why is this not the title"
 }

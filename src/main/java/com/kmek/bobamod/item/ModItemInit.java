@@ -39,13 +39,6 @@ public class ModItemInit {
             new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
 
     /**
-     * Waffle Snacks
-     */
-    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new MoldItem());
-    public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
-
-    /**
      * Tea Crafting Ingredients
      */
     public static final RegistryObject<Item> TAPIOCA_BALLS = ITEMS.register("tapioca_balls", () -> new Item(new Item.Properties()));
@@ -158,6 +151,16 @@ public class ModItemInit {
                         .build()),
                 Component.literal("It's there, I promise!").withStyle(ChatFormatting.YELLOW)));
 //    todo public static final RegistryObject<Item> ENDER_MILK_TEA
+
+    /**
+     * Waffle Snacks
+     */
+    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new MoldItem());
+    public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
+    public static final RegistryObject<Item> EGG_WAFFLE_MOLD = ITEMS.register("egg_waffle_mold", () -> new MoldItem());
+    public static final RegistryObject<Item> EGG_WAFFLE = ITEMS.register("egg_waffle", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
 
     /**
      * Registering the event bus
