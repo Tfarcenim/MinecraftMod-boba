@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -157,6 +158,8 @@ public class ModItemInit {
     /**
      * Waffle Snacks
      */
+    public static final RegistryObject<BlockItem> WAFFLE_IRON_ITEM = ITEMS.register("waffle_iron",
+            () -> new BlockItem(ModBlocksInit.WAFFLE_IRON.get(), new Item.Properties()));
     public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new MoldItem());
     public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
@@ -166,6 +169,8 @@ public class ModItemInit {
     public static final RegistryObject<Item> PAW_WAFFLE_MOLD = ITEMS.register("paw_waffle_mold", () -> new MoldItem());
     public static final RegistryObject<Item> PAW_WAFFLE = ITEMS.register("paw_waffle", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
+
+    public static final RegistryObject<Item> CUBERRY = ITEMS.register("cuberry", () -> new Item(new Item.Properties()));
 
     /**
      * Registering the event bus

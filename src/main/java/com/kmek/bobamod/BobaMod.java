@@ -104,12 +104,15 @@ public class BobaMod {
                     output.accept(ModItemInit.WET_MILK_TEA.get());
                     output.accept(ModItemInit.IMAGINARY_MILK_TEA.get());
 
+                    output.accept(ModItemInit.WAFFLE_IRON_ITEM.get());
                     output.accept(ModItemInit.TAIYAKI_MOLD.get());
                     output.accept(ModItemInit.TAIYAKI.get());
                     output.accept(ModItemInit.EGG_WAFFLE_MOLD.get());
                     output.accept(ModItemInit.EGG_WAFFLE.get());
                     output.accept(ModItemInit.PAW_WAFFLE_MOLD.get());
                     output.accept(ModItemInit.PAW_WAFFLE.get());
+
+                    output.accept(ModItemInit.CUBERRY.get());
                 })
         );
     }
