@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "bobamod:block/waffle_iron"
+    },
+    "facing=south": {
+      "model": "bobamod:block/waffle_iron",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bobamod:block/waffle_iron",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "bobamod:block/waffle_iron",
+      "y": 90
     }
   }
 }

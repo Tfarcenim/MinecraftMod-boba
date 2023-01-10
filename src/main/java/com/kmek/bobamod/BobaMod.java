@@ -8,11 +8,14 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -111,8 +114,6 @@ public class BobaMod {
                     output.accept(ModItemInit.EGG_WAFFLE.get());
                     output.accept(ModItemInit.PAW_WAFFLE_MOLD.get());
                     output.accept(ModItemInit.PAW_WAFFLE.get());
-
-                    output.accept(ModItemInit.CUBERRY.get());
                 })
         );
     }
@@ -175,5 +176,23 @@ public class BobaMod {
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASSAVA_CROP.get(), RenderType.cutout());
         }
+    }
+
+    /**
+     * Helper Methods
+     */
+
+    public static VoxelShape calculateShapes(Direction to, VoxelShape shape) {
+        final VoxelShape[] buffer = { shape, Shapes.empty() };
+
+        final int times = (to.get2DDataValue() - Direction.NORTH.get2DDataValue() + 4) % 4;
+        for (int i = 0; i < times; i++) {
+            buffer[0].forAllBoxes((minX, minY, minZ, maxX, maxY, maxZ) -> buffer[1] = Shapes.or(buffer[1],
+                    Shapes.create(1 - maxZ, minY, minX, 1 - minZ, maxY, maxX)));
+            buffer[0] = buffer[1];
+            buffer[1] = Shapes.empty();
+        }
+
+        return buffer[0];
     }
 }

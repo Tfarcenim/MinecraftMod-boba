@@ -170,8 +170,6 @@ public class ModItemInit {
     public static final RegistryObject<Item> PAW_WAFFLE = ITEMS.register("paw_waffle", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
 
-    public static final RegistryObject<Item> CUBERRY = ITEMS.register("cuberry", () -> new Item(new Item.Properties()));
-
     /**
      * Registering the event bus
      */
