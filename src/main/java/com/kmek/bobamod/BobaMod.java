@@ -1,7 +1,7 @@
 package com.kmek.bobamod;
 
 import com.kmek.bobamod.block.ModBlocksInit;
-import com.kmek.bobamod.item.ModItemInit;
+import com.kmek.bobamod.item.ModItemsInit;
 import com.kmek.bobamod.loot.ModLootModifiers;
 import com.kmek.bobamod.painting.ModPaintingsInit;
 import com.mojang.logging.LogUtils;
@@ -42,7 +42,7 @@ public class BobaMod {
     public BobaMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItemInit.register(modEventBus);
+        ModItemsInit.register(modEventBus);
         ModBlocksInit.register(modEventBus);
 
         ModPaintingsInit.register(modEventBus);
@@ -69,92 +69,94 @@ public class BobaMod {
     // todo bug: this tab has no title
     private void registerTabs(CreativeModeTabEvent.Register event) {
          bobaTab = event.registerCreativeModeTab(new ResourceLocation(MODID, "bobamod"), builder -> builder
-                .icon(() -> new ItemStack(ModItemInit.BROWN_SUGAR_MILK_TEA.get()))
+                .icon(() -> new ItemStack(ModItemsInit.BROWN_SUGAR_MILK_TEA.get()))
                 .displayItems((featureFlags, output, hasOp) -> {
-                    output.accept(ModItemInit.CASSAVA_CUTTING.get());
-                    output.accept(ModItemInit.CASSAVA.get());
+                    output.accept(ModItemsInit.CASSAVA_CUTTING.get());
+                    output.accept(ModItemsInit.CASSAVA.get());
 
-                    output.accept(ModItemInit.CASSAVA_BIBINGKA.get());
-                    output.accept(ModItemInit.TAPIOCA_BALLS.get());
-                    output.accept(ModItemInit.TAPIOCA_PUDDING.get());
+                    output.accept(ModItemsInit.CASSAVA_BIBINGKA.get());
+                    output.accept(ModItemsInit.TAPIOCA_BALLS.get());
+                    output.accept(ModItemsInit.TAPIOCA_PUDDING.get());
 
-                    output.accept(ModItemInit.MILK_TEA_CUP.get());
-                    output.accept(ModItemInit.BROWN_SUGAR_MILK_TEA.get());
-                    output.accept(ModItemInit.TIGER_MILK_TEA.get());
-                    output.accept(ModItemInit.HONEY_MILK_TEA.get());
-                    output.accept(ModItemInit.CHOCOLATE_MILK_TEA.get());
-                    output.accept(ModItemInit.VANILLA_MILK_TEA.get());
-                    output.accept(ModItemInit.EGG_CUSTARD_MILK_TEA.get());
-                    output.accept(ModItemInit.COOKIE_MILK_TEA.get());
-                    output.accept(ModItemInit.CAKE_MILK_TEA.get());
-                    output.accept(ModItemInit.PUMPKIN_SPICE_MILK_TEA.get());
-                    output.accept(ModItemInit.APPLE_MILK_TEA.get());
-                    output.accept(ModItemInit.SWEET_BERRY_MILK_TEA.get());
-                    output.accept(ModItemInit.WATERMELON_MILK_TEA.get());
-                    output.accept(ModItemInit.GLOW_BERRY_MILK_TEA.get());
-                    output.accept(ModItemInit.CHORUS_FRUIT_MILK_TEA.get());
-                    output.accept(ModItemInit.ROSE_MILK_TEA.get());
-                    output.accept(ModItemInit.BUTTERFLY_PEA_FLOWER_MILK_TEA.get());
-                    output.accept(ModItemInit.MATCHA_MILK_TEA.get());
-                    output.accept(ModItemInit.LAVENDER_MILK_TEA.get());
-                    output.accept(ModItemInit.THAI_MILK_TEA.get());
-                    output.accept(ModItemInit.BEETROOT_MILK_TEA.get());
-                    output.accept(ModItemInit.CARROT_MILK_TEA.get());
-                    output.accept(ModItemInit.KELP_MILK_TEA.get());
-                    output.accept(ModItemInit.PHANTOM_MILK_TEA.get());
-                    output.accept(ModItemInit.BLAZING_MILK_TEA.get());
-                    output.accept(ModItemInit.DARKSIDE_MILK_TEA.get());
-                    output.accept(ModItemInit.WET_MILK_TEA.get());
-                    output.accept(ModItemInit.IMAGINARY_MILK_TEA.get());
+                    output.accept(ModItemsInit.MILK_TEA_CUP.get());
+                    output.accept(ModItemsInit.BROWN_SUGAR_MILK_TEA.get());
+                    output.accept(ModItemsInit.TIGER_MILK_TEA.get());
+                    output.accept(ModItemsInit.HONEY_MILK_TEA.get());
+                    output.accept(ModItemsInit.CHOCOLATE_MILK_TEA.get());
+                    output.accept(ModItemsInit.VANILLA_MILK_TEA.get());
+                    output.accept(ModItemsInit.EGG_CUSTARD_MILK_TEA.get());
+                    output.accept(ModItemsInit.COOKIE_MILK_TEA.get());
+                    output.accept(ModItemsInit.CAKE_MILK_TEA.get());
+                    output.accept(ModItemsInit.PUMPKIN_SPICE_MILK_TEA.get());
+                    output.accept(ModItemsInit.APPLE_MILK_TEA.get());
+                    output.accept(ModItemsInit.SWEET_BERRY_MILK_TEA.get());
+                    output.accept(ModItemsInit.WATERMELON_MILK_TEA.get());
+                    output.accept(ModItemsInit.GLOW_BERRY_MILK_TEA.get());
+                    output.accept(ModItemsInit.CHORUS_FRUIT_MILK_TEA.get());
+                    output.accept(ModItemsInit.ROSE_MILK_TEA.get());
+                    output.accept(ModItemsInit.BUTTERFLY_PEA_FLOWER_MILK_TEA.get());
+                    output.accept(ModItemsInit.MATCHA_MILK_TEA.get());
+                    output.accept(ModItemsInit.LAVENDER_MILK_TEA.get());
+                    output.accept(ModItemsInit.THAI_MILK_TEA.get());
+                    output.accept(ModItemsInit.BEETROOT_MILK_TEA.get());
+                    output.accept(ModItemsInit.CARROT_MILK_TEA.get());
+                    output.accept(ModItemsInit.KELP_MILK_TEA.get());
+                    output.accept(ModItemsInit.PHANTOM_MILK_TEA.get());
+                    output.accept(ModItemsInit.BLAZING_MILK_TEA.get());
+                    output.accept(ModItemsInit.DARKSIDE_MILK_TEA.get());
+                    output.accept(ModItemsInit.WET_MILK_TEA.get());
+                    output.accept(ModItemsInit.IMAGINARY_MILK_TEA.get());
 
-                    output.accept(ModItemInit.WAFFLE_IRON_ITEM.get());
-                    output.accept(ModItemInit.TAIYAKI_MOLD.get());
-                    output.accept(ModItemInit.TAIYAKI.get());
-                    output.accept(ModItemInit.EGG_WAFFLE_MOLD.get());
-                    output.accept(ModItemInit.EGG_WAFFLE.get());
-                    output.accept(ModItemInit.PAW_WAFFLE_MOLD.get());
-                    output.accept(ModItemInit.PAW_WAFFLE.get());
+                    output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
+                    output.accept(ModItemsInit.TAIYAKI_MOLD.get());
+                    output.accept(ModItemsInit.TAIYAKI.get());
+                    output.accept(ModItemsInit.EGG_WAFFLE_MOLD.get());
+                    output.accept(ModItemsInit.EGG_WAFFLE.get());
+                    output.accept(ModItemsInit.PAW_WAFFLE_MOLD.get());
+                    output.accept(ModItemsInit.PAW_WAFFLE.get());
+
+                    output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
                 })
         );
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
-            event.accept(ModItemInit.CASSAVA);
-            event.accept(ModItemInit.CASSAVA_BIBINGKA);
-            event.accept(ModItemInit.TAPIOCA_PUDDING);
+            event.accept(ModItemsInit.CASSAVA);
+            event.accept(ModItemsInit.CASSAVA_BIBINGKA);
+            event.accept(ModItemsInit.TAPIOCA_PUDDING);
 
-            event.accept(ModItemInit.BROWN_SUGAR_MILK_TEA);
-            event.accept(ModItemInit.TIGER_MILK_TEA);
-            event.accept(ModItemInit.HONEY_MILK_TEA);
-            event.accept(ModItemInit.CHOCOLATE_MILK_TEA);
-            event.accept(ModItemInit.VANILLA_MILK_TEA);
-            event.accept(ModItemInit.EGG_CUSTARD_MILK_TEA);
-            event.accept(ModItemInit.COOKIE_MILK_TEA);
-            event.accept(ModItemInit.CAKE_MILK_TEA);
-            event.accept(ModItemInit.PUMPKIN_SPICE_MILK_TEA);
-            event.accept(ModItemInit.APPLE_MILK_TEA);
-            event.accept(ModItemInit.SWEET_BERRY_MILK_TEA);
-            event.accept(ModItemInit.WATERMELON_MILK_TEA);
-            event.accept(ModItemInit.GLOW_BERRY_MILK_TEA);
-            event.accept(ModItemInit.CHORUS_FRUIT_MILK_TEA);
-            event.accept(ModItemInit.ROSE_MILK_TEA);
-            event.accept(ModItemInit.BUTTERFLY_PEA_FLOWER_MILK_TEA);
-            event.accept(ModItemInit.MATCHA_MILK_TEA);
-            event.accept(ModItemInit.LAVENDER_MILK_TEA);
-            event.accept(ModItemInit.THAI_MILK_TEA);
-            event.accept(ModItemInit.BEETROOT_MILK_TEA);
-            event.accept(ModItemInit.CARROT_MILK_TEA);
-            event.accept(ModItemInit.KELP_MILK_TEA);
-            event.accept(ModItemInit.PHANTOM_MILK_TEA);
-            event.accept(ModItemInit.BLAZING_MILK_TEA);
-            event.accept(ModItemInit.DARKSIDE_MILK_TEA);
-            event.accept(ModItemInit.WET_MILK_TEA);
-            event.accept(ModItemInit.IMAGINARY_MILK_TEA);
+            event.accept(ModItemsInit.BROWN_SUGAR_MILK_TEA);
+            event.accept(ModItemsInit.TIGER_MILK_TEA);
+            event.accept(ModItemsInit.HONEY_MILK_TEA);
+            event.accept(ModItemsInit.CHOCOLATE_MILK_TEA);
+            event.accept(ModItemsInit.VANILLA_MILK_TEA);
+            event.accept(ModItemsInit.EGG_CUSTARD_MILK_TEA);
+            event.accept(ModItemsInit.COOKIE_MILK_TEA);
+            event.accept(ModItemsInit.CAKE_MILK_TEA);
+            event.accept(ModItemsInit.PUMPKIN_SPICE_MILK_TEA);
+            event.accept(ModItemsInit.APPLE_MILK_TEA);
+            event.accept(ModItemsInit.SWEET_BERRY_MILK_TEA);
+            event.accept(ModItemsInit.WATERMELON_MILK_TEA);
+            event.accept(ModItemsInit.GLOW_BERRY_MILK_TEA);
+            event.accept(ModItemsInit.CHORUS_FRUIT_MILK_TEA);
+            event.accept(ModItemsInit.ROSE_MILK_TEA);
+            event.accept(ModItemsInit.BUTTERFLY_PEA_FLOWER_MILK_TEA);
+            event.accept(ModItemsInit.MATCHA_MILK_TEA);
+            event.accept(ModItemsInit.LAVENDER_MILK_TEA);
+            event.accept(ModItemsInit.THAI_MILK_TEA);
+            event.accept(ModItemsInit.BEETROOT_MILK_TEA);
+            event.accept(ModItemsInit.CARROT_MILK_TEA);
+            event.accept(ModItemsInit.KELP_MILK_TEA);
+            event.accept(ModItemsInit.PHANTOM_MILK_TEA);
+            event.accept(ModItemsInit.BLAZING_MILK_TEA);
+            event.accept(ModItemsInit.DARKSIDE_MILK_TEA);
+            event.accept(ModItemsInit.WET_MILK_TEA);
+            event.accept(ModItemsInit.IMAGINARY_MILK_TEA);
 
-            event.accept(ModItemInit.TAIYAKI);
-            event.accept(ModItemInit.EGG_WAFFLE);
-            event.accept(ModItemInit.PAW_WAFFLE);
+            event.accept(ModItemsInit.TAIYAKI);
+            event.accept(ModItemsInit.EGG_WAFFLE);
+            event.accept(ModItemsInit.PAW_WAFFLE);
         }
     }
 

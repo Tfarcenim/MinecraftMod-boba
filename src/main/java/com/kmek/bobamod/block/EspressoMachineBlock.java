@@ -20,19 +20,19 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import java.util.EnumMap;
 import java.util.Map;
 
-public class WaffleIronBlock extends HorizontalDirectionalBlock {
+public class EspressoMachineBlock extends HorizontalDirectionalBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     private static final Map<Direction, VoxelShape> SHAPES = new EnumMap<>(Direction.class);
     private static final VoxelShape SHAPE = makeShape();
 
     public static VoxelShape makeShape() {
         VoxelShape shape = Shapes.empty();
-        shape = Shapes.join(shape, Shapes.box(0.125, 0, 0.0625, 0.875, 0.1875, 0.875), BooleanOp.OR);
-        shape = Shapes.join(shape, Shapes.box(0.125, 0.1875, 0.75, 0.875, 0.9375, 0.875), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.125, 0, 0.0625, 0.875, 0.75, 0.9375), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.5, 0.75, 0.5625, 0.8125, 1, 0.875), BooleanOp.OR);
         return shape;
     }
 
-    public WaffleIronBlock(BlockBehaviour.Properties properties) {
+    public EspressoMachineBlock(BlockBehaviour.Properties properties) {
         super(properties);
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
         if (SHAPES.size() == 0)

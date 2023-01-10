@@ -5,7 +5,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class MoldItem extends Item {
     public MoldItem() {
-        super(new Item.Properties());
+        super(new Item.Properties().stacksTo(1));
     }
 
     @Override

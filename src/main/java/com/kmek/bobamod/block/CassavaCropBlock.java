@@ -1,6 +1,6 @@
 package com.kmek.bobamod.block;
 
-import com.kmek.bobamod.item.ModItemInit;
+import com.kmek.bobamod.item.ModItemsInit;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
@@ -18,7 +18,7 @@ public class CassavaCropBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItemInit.CASSAVA_CUTTING.get();
+        return ModItemsInit.CASSAVA_CUTTING.get();
     }
 
     @Override

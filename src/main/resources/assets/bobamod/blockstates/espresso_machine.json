@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bobamod:block/espresso_machine"
+    },
+    "facing=south": {
+      "model": "bobamod:block/espresso_machine",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bobamod:block/espresso_machine",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "bobamod:block/espresso_machine",
+      "y": 90
+    }
+  }
+}

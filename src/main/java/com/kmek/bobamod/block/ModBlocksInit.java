@@ -1,7 +1,7 @@
 package com.kmek.bobamod.block;
 
 import com.kmek.bobamod.BobaMod;
-import com.kmek.bobamod.item.ModItemInit;
+import com.kmek.bobamod.item.ModItemsInit;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -19,11 +19,19 @@ import java.util.function.Supplier;
 public class ModBlocksInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, BobaMod.MODID);
 
+    /**
+     * Crop Blocks
+     */
     public static final RegistryObject<Block> CASSAVA_CROP = BLOCKS.register("cassava_crop",
             () -> new CassavaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
+    /**
+     * Crafting Blocks
+     */
     public static final RegistryObject<Block> WAFFLE_IRON = BLOCKS.register("waffle_iron",
             () -> new WaffleIronBlock(BlockBehaviour.Properties.of(Material.DIRT).dynamicShape().noOcclusion()));
+    public static final RegistryObject<Block> ESPRESSO_MACHINE = BLOCKS.register("espresso_machine",
+            () -> new EspressoMachineBlock(BlockBehaviour.Properties.of(Material.DIRT).dynamicShape().noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -32,7 +40,7 @@ public class ModBlocksInit {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
-        return ModItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return ModItemsInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     /**
