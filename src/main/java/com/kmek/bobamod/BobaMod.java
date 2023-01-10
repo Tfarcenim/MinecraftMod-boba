@@ -73,7 +73,6 @@ public class BobaMod {
                 .displayItems((featureFlags, output, hasOp) -> {
                     output.accept(ModItemsInit.CASSAVA_CUTTING.get());
                     output.accept(ModItemsInit.CASSAVA.get());
-
                     output.accept(ModItemsInit.CASSAVA_BIBINGKA.get());
                     output.accept(ModItemsInit.TAPIOCA_BALLS.get());
                     output.accept(ModItemsInit.TAPIOCA_PUDDING.get());
@@ -114,6 +113,7 @@ public class BobaMod {
                     output.accept(ModItemsInit.EGG_WAFFLE.get());
                     output.accept(ModItemsInit.PAW_WAFFLE_MOLD.get());
                     output.accept(ModItemsInit.PAW_WAFFLE.get());
+                    output.accept(ModItemsInit.BURNT_CRISP.get());
 
                     output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
                 })
@@ -157,6 +157,12 @@ public class BobaMod {
             event.accept(ModItemsInit.TAIYAKI);
             event.accept(ModItemsInit.EGG_WAFFLE);
             event.accept(ModItemsInit.PAW_WAFFLE);
+            event.accept(ModItemsInit.BURNT_CRISP);
+        }
+
+        if (event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(ModItemsInit.WAFFLE_IRON_ITEM);
+            event.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM);
         }
     }
 

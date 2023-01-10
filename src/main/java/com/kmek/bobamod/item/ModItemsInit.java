@@ -169,6 +169,10 @@ public class ModItemsInit {
     public static final RegistryObject<Item> PAW_WAFFLE_MOLD = ITEMS.register("paw_waffle_mold", () -> new MoldItem());
     public static final RegistryObject<Item> PAW_WAFFLE = ITEMS.register("paw_waffle", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
+    public static final RegistryObject<Item> BURNT_CRISP = ITEMS.register("burnt_crisp", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f)
+                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 200, 0), 1.0f)
+                    .build())));
 
     /**
      * Coffee Stuff
