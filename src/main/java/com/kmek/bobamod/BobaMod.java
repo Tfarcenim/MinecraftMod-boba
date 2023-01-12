@@ -1,11 +1,15 @@
 package com.kmek.bobamod;
 
 import com.kmek.bobamod.block.ModBlocksInit;
+import com.kmek.bobamod.block.entity.ModBlockEntities;
 import com.kmek.bobamod.item.ModItemsInit;
 import com.kmek.bobamod.loot.ModLootModifiers;
 import com.kmek.bobamod.painting.ModPaintingsInit;
+import com.kmek.bobamod.screen.ModMenuTypes;
+import com.kmek.bobamod.screen.WaffleIronScreen;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Direction;
@@ -48,6 +52,9 @@ public class BobaMod {
         ModPaintingsInit.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -107,12 +114,15 @@ public class BobaMod {
                     output.accept(ModItemsInit.IMAGINARY_MILK_TEA.get());
 
                     output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
+                    output.accept(ModItemsInit.RAW_WAFFLE_BATTER.get());
                     output.accept(ModItemsInit.TAIYAKI_MOLD.get());
                     output.accept(ModItemsInit.TAIYAKI.get());
                     output.accept(ModItemsInit.EGG_WAFFLE_MOLD.get());
                     output.accept(ModItemsInit.EGG_WAFFLE.get());
                     output.accept(ModItemsInit.PAW_WAFFLE_MOLD.get());
                     output.accept(ModItemsInit.PAW_WAFFLE.get());
+
+                    output.accept(ModItemsInit.BATTER_MESS.get());
                     output.accept(ModItemsInit.BURNT_CRISP.get());
 
                     output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
@@ -154,9 +164,12 @@ public class BobaMod {
             event.accept(ModItemsInit.WET_MILK_TEA);
             event.accept(ModItemsInit.IMAGINARY_MILK_TEA);
 
+            event.accept(ModItemsInit.RAW_WAFFLE_BATTER);
             event.accept(ModItemsInit.TAIYAKI);
             event.accept(ModItemsInit.EGG_WAFFLE);
             event.accept(ModItemsInit.PAW_WAFFLE);
+
+            event.accept(ModItemsInit.BATTER_MESS);
             event.accept(ModItemsInit.BURNT_CRISP);
         }
 
@@ -183,6 +196,8 @@ public class BobaMod {
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASSAVA_CROP.get(), RenderType.cutout());
+
+            MenuScreens.register(ModMenuTypes.WAFFLE_IRON_MENU.get(), WaffleIronScreen::new);
         }
     }
 

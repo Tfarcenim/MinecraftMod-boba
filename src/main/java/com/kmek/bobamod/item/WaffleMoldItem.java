@@ -3,9 +3,12 @@ package com.kmek.bobamod.item;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-public class MoldItem extends Item {
-    public MoldItem() {
+public class WaffleMoldItem extends Item {
+    private final Item waffle;
+
+    public WaffleMoldItem(Item waffle) {
         super(new Item.Properties().stacksTo(1));
+        this.waffle = waffle;
     }
 
     @Override
@@ -16,5 +19,9 @@ public class MoldItem extends Item {
     @Override
     public boolean hasCraftingRemainingItem(ItemStack stack) {
         return true;
+    }
+
+    public Item getWaffle() {
+        return waffle;
     }
 }

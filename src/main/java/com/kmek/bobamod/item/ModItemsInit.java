@@ -160,15 +160,21 @@ public class ModItemsInit {
      */
     public static final RegistryObject<BlockItem> WAFFLE_IRON_ITEM = ITEMS.register("waffle_iron",
             () -> new BlockItem(ModBlocksInit.WAFFLE_IRON.get(), new Item.Properties()));
-    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new MoldItem());
+    public static final RegistryObject<Item> RAW_WAFFLE_BATTER = ITEMS.register("raw_waffle_batter", () -> new Item(new Item.Properties())); // todo flesh out item
     public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
-    public static final RegistryObject<Item> EGG_WAFFLE_MOLD = ITEMS.register("egg_waffle_mold", () -> new MoldItem());
+    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new WaffleMoldItem(TAIYAKI.get()));
     public static final RegistryObject<Item> EGG_WAFFLE = ITEMS.register("egg_waffle", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
-    public static final RegistryObject<Item> PAW_WAFFLE_MOLD = ITEMS.register("paw_waffle_mold", () -> new MoldItem());
+    public static final RegistryObject<Item> EGG_WAFFLE_MOLD = ITEMS.register("egg_waffle_mold", () -> new WaffleMoldItem(EGG_WAFFLE.get()));
     public static final RegistryObject<Item> PAW_WAFFLE = ITEMS.register("paw_waffle", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
+    public static final RegistryObject<Item> PAW_WAFFLE_MOLD = ITEMS.register("paw_waffle_mold", () -> new WaffleMoldItem(PAW_WAFFLE.get()));
+
+    public static final RegistryObject<Item> BATTER_MESS = ITEMS.register("batter_mess", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f)
+                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 1.0f)
+                    .build())));
     public static final RegistryObject<Item> BURNT_CRISP = ITEMS.register("burnt_crisp", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(1).saturationMod(0.5f)
                     .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 200, 0), 1.0f)
