@@ -116,10 +116,10 @@ public class BobaMod {
                     output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
                     output.accept(ModItemsInit.RAW_WAFFLE_BATTER.get());
                     output.accept(ModItemsInit.TAIYAKI_MOLD.get());
-                    output.accept(ModItemsInit.TAIYAKI.get());
                     output.accept(ModItemsInit.EGG_WAFFLE_MOLD.get());
-                    output.accept(ModItemsInit.EGG_WAFFLE.get());
                     output.accept(ModItemsInit.PAW_WAFFLE_MOLD.get());
+                    output.accept(ModItemsInit.TAIYAKI.get());
+                    output.accept(ModItemsInit.EGG_WAFFLE.get());
                     output.accept(ModItemsInit.PAW_WAFFLE.get());
 
                     output.accept(ModItemsInit.BATTER_MESS.get());

@@ -7,13 +7,15 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class ModItemsInit {
     /**
@@ -31,7 +33,13 @@ public class ModItemsInit {
                     .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 1.0f)
                     .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 0), 1.0f)
                     .effect(() -> new MobEffectInstance(MobEffects.WEAKNESS, 600, 0), 1.0f)
-                    .build())));
+                    .build())) {
+        @Override
+        public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+            components.add(Component.literal("Poisonous when raw").withStyle(ChatFormatting.YELLOW));
+            super.appendHoverText(stack, level, components, flag);
+        }
+    });
 
     /**
      * Cassava-related Foods
@@ -160,7 +168,16 @@ public class ModItemsInit {
      */
     public static final RegistryObject<BlockItem> WAFFLE_IRON_ITEM = ITEMS.register("waffle_iron",
             () -> new BlockItem(ModBlocksInit.WAFFLE_IRON.get(), new Item.Properties()));
-    public static final RegistryObject<Item> RAW_WAFFLE_BATTER = ITEMS.register("raw_waffle_batter", () -> new Item(new Item.Properties())); // todo flesh out item
+    public static final RegistryObject<Item> RAW_WAFFLE_BATTER = ITEMS.register("raw_waffle_batter", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0)
+                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 300, 0), 0.6f)
+                    .build())) {
+        @Override
+        public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+            components.add(Component.literal("Consume raw eggs at your own risk").withStyle(ChatFormatting.YELLOW));
+            super.appendHoverText(stack, level, components, flag);
+        }
+    });
     public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
     public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new WaffleMoldItem(TAIYAKI.get()));
@@ -172,9 +189,15 @@ public class ModItemsInit {
     public static final RegistryObject<Item> PAW_WAFFLE_MOLD = ITEMS.register("paw_waffle_mold", () -> new WaffleMoldItem(PAW_WAFFLE.get()));
 
     public static final RegistryObject<Item> BATTER_MESS = ITEMS.register("batter_mess", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f)
-                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 1.0f)
-                    .build())));
+            new FoodProperties.Builder().nutrition(0).saturationMod(0)
+                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 0.8f)
+                    .build())) {
+        @Override
+        public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+            components.add(Component.literal("Consume raw eggs at your own risk").withStyle(ChatFormatting.YELLOW));
+            super.appendHoverText(stack, level, components, flag);
+        }
+    });
     public static final RegistryObject<Item> BURNT_CRISP = ITEMS.register("burnt_crisp", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(1).saturationMod(0.5f)
                     .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 200, 0), 1.0f)
