@@ -2,8 +2,11 @@ package com.kmek.bobamod.block.entity;
 
 import com.kmek.bobamod.item.ModItemsInit;
 import com.kmek.bobamod.item.WaffleMoldItem;
+import com.kmek.bobamod.networking.ModMessages;
+import com.kmek.bobamod.networking.packet.ItemStackSyncS2CPacket;
 import com.kmek.bobamod.screen.WaffleIronMenu;
 import com.kmek.bobamod.tags.ModTags;
+import net.minecraft.client.renderer.blockentity.CampfireRenderer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -18,7 +21,9 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.CampfireBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
@@ -41,6 +46,9 @@ public class WaffleIronBlockEntity extends BlockEntity implements MenuProvider {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
+            if (!level.isClientSide) {
+                ModMessages.sendToClients(new ItemStackSyncS2CPacket(this, worldPosition));
+            }
         }
     };
 
@@ -83,6 +91,16 @@ public class WaffleIronBlockEntity extends BlockEntity implements MenuProvider {
     @Override
     public Component getDisplayName() {
         return Component.literal("Waffle Iron");
+    }
+
+    public ItemStack getRenderStack() {
+        return itemHandler.getStackInSlot(SLOT_MOLD);
+    }
+
+    public void setHandler(ItemStackHandler itemStackHandler) {
+        for (int i = 0; i < itemStackHandler.getSlots(); i++) {
+            itemHandler.setStackInSlot(i, itemStackHandler.getStackInSlot(i));
+        }
     }
 
     @Nullable
