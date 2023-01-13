@@ -29,9 +29,9 @@ public class ModBlocksInit {
      * Crafting Blocks
      */
     public static final RegistryObject<Block> WAFFLE_IRON = BLOCKS.register("waffle_iron",
-            () -> new WaffleIronBlock(BlockBehaviour.Properties.of(Material.DIRT).dynamicShape().noOcclusion()));
+            () -> new WaffleIronBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
     public static final RegistryObject<Block> ESPRESSO_MACHINE = BLOCKS.register("espresso_machine",
-            () -> new EspressoMachineBlock(BlockBehaviour.Properties.of(Material.DIRT).dynamicShape().noOcclusion()));
+            () -> new EspressoMachineBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
