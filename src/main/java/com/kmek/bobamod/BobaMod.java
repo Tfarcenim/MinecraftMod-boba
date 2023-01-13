@@ -4,6 +4,7 @@ import com.kmek.bobamod.block.ModBlocksInit;
 import com.kmek.bobamod.block.entity.ModBlockEntities;
 import com.kmek.bobamod.item.ModItemsInit;
 import com.kmek.bobamod.loot.ModLootModifiers;
+import com.kmek.bobamod.networking.ModMessages;
 import com.kmek.bobamod.painting.ModPaintingsInit;
 import com.kmek.bobamod.screen.ModMenuTypes;
 import com.kmek.bobamod.screen.WaffleIronScreen;
@@ -30,6 +31,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
@@ -71,6 +73,8 @@ public class BobaMod {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+
+        ModMessages.register();
     }
 
     // todo bug: this tab has no title

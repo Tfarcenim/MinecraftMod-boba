@@ -11,6 +11,7 @@ import net.minecraftforge.network.simple.SimpleChannel;
 
 public class ModMessages {
     private static SimpleChannel INSTANCE;
+    public static final String PROTOCOL_VERSION = "1.0";
 
     private static int packetId = 0;
     private static int id() {
@@ -18,20 +19,23 @@ public class ModMessages {
     }
 
     public static void register() {
+        if (INSTANCE != null)
+            throw new RuntimeException(ModMessages.class.getName() + ": register() called twice.");
+
         SimpleChannel net = NetworkRegistry.ChannelBuilder
                 .named(new ResourceLocation(BobaMod.MODID, "messages"))
-                .networkProtocolVersion(() -> "1.0")
+                .networkProtocolVersion(() -> PROTOCOL_VERSION)
                 .clientAcceptedVersions(s -> true)
                 .serverAcceptedVersions(s -> true)
                 .simpleChannel();
-
-        INSTANCE = net;
 
         net.messageBuilder(ItemStackSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
                 .decoder(ItemStackSyncS2CPacket::new)
                 .encoder(ItemStackSyncS2CPacket::toBytes)
                 .consumerMainThread(ItemStackSyncS2CPacket::handle)
                 .add();
+
+        INSTANCE = net;
     }
 
     public static <MSG> void sendToServer(MSG message) {
