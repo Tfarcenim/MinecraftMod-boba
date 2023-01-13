@@ -25,6 +25,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -168,8 +169,6 @@ public class WaffleIronBlockEntity extends BlockEntity implements MenuProvider {
             return;
         }
 
-        // todo eventually if "open" blockstate is true then return to not increment progress
-
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
@@ -179,20 +178,21 @@ public class WaffleIronBlockEntity extends BlockEntity implements MenuProvider {
             if (canMoveItem(inventory)) {
                 moveItem(entity);
                 entity.progress++;
+                blockState = blockState.setValue(BlockStateProperties.OPEN, false);
+                level.setBlock(blockPos, blockState, 3);
                 setChanged(level, blockPos, blockState);
             }
-//            else if (isCooking(inventory)) {
-//                // todo set entity progress
-//                entity.progress = getResumeProgress(inventory);
-//                cook(entity);
-//                setChanged(level, blockPos, blockState);
-//            }
         } else if (isCooking(inventory)) {
-            entity.progress++;
-            cook(entity);
-            setChanged(level, blockPos, blockState);
+            // todo eventually if "open" blockstate is true then return to not increment progress
+//            if (!entity.getBlockState().getValue(BlockStateProperties.OPEN)) {
+                entity.progress++;
+                cook(entity);
+                setChanged(level, blockPos, blockState);
+//            }
         } else {
             entity.resetProgress();
+            blockState = blockState.setValue(BlockStateProperties.OPEN, true);
+            level.setBlock(blockPos, blockState, 3);
             setChanged(level, blockPos, blockState);
         }
     }
@@ -223,18 +223,6 @@ public class WaffleIronBlockEntity extends BlockEntity implements MenuProvider {
     private static void moveItem(WaffleIronBlockEntity entity) {
         entity.itemHandler.setStackInSlot(SLOT_OUTPUT, entity.itemHandler.extractItem(SLOT_BATTER, 1, false));
     }
-
-//    private static int getResumeProgress(SimpleContainer inventory) {
-//        ItemStack itemStack = inventory.getItem(SLOT_OUTPUT);
-//        if (itemIsRawWaffleBatter(itemStack.getItem())) {
-//            return 0;
-//        } else if (itemIsBatterMess(itemStack.getItem())) {
-//            return batteredMessTime;
-//        } else if (itemIsWaffle(itemStack)) {
-//            return cookedTime;
-//        }
-//        return maxProgress;
-//    }
 
     private static boolean isCooking(SimpleContainer inventory) {
         ItemStack itemStack = inventory.getItem(SLOT_OUTPUT);

@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,open=true": {
       "model": "bobamod:block/waffle_iron"
     },
-    "facing=south": {
+    "facing=north,open=false": {
+      "model": "bobamod:block/waffle_iron_closed"
+    },
+    "facing=south,open=true": {
       "model": "bobamod:block/waffle_iron",
       "y": 180
     },
-    "facing=west": {
+    "facing=south,open=false": {
+      "model": "bobamod:block/waffle_iron_closed",
+      "y": 180
+    },
+    "facing=west,open=true": {
       "model": "bobamod:block/waffle_iron",
       "y": 270
     },
-    "facing=east": {
+    "facing=west,open=false": {
+      "model": "bobamod:block/waffle_iron_closed",
+      "y": 270
+    },
+    "facing=east,open=true": {
       "model": "bobamod:block/waffle_iron",
+      "y": 90
+    },
+    "facing=east,open=false": {
+      "model": "bobamod:block/waffle_iron_closed",
       "y": 90
     }
   }

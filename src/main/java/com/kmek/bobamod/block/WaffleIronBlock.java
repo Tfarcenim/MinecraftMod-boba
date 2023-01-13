@@ -22,6 +22,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
@@ -35,27 +36,38 @@ import java.util.EnumMap;
 import java.util.Map;
 
 public class WaffleIronBlock extends BaseEntityBlock {
+    public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    private static final Map<Direction, VoxelShape> SHAPES = new EnumMap<>(Direction.class);
-    private static final VoxelShape SHAPE = makeShape();
+    private static final Map<Direction, VoxelShape> SHAPES_OPEN = new EnumMap<>(Direction.class);
+    private static final Map<Direction, VoxelShape> SHAPES_CLOSED = new EnumMap<>(Direction.class);
+    private static final VoxelShape SHAPE = makeShapeOpen();
 
-    public static VoxelShape makeShape() {
+    public static VoxelShape makeShapeOpen() {
         VoxelShape shape = Shapes.empty();
         shape = Shapes.join(shape, Shapes.box(0.125, 0, 0.0625, 0.875, 0.1875, 0.875), BooleanOp.OR);
         shape = Shapes.join(shape, Shapes.box(0.125, 0.1875, 0.75, 0.875, 0.9375, 0.875), BooleanOp.OR);
         return shape;
     }
+    public static VoxelShape makeShapeClosed() {
+        VoxelShape shape = Shapes.empty();
+        shape = Shapes.join(shape, Shapes.box(0.125, 0, 0.0625, 0.875, 0.315625, 0.875), BooleanOp.OR);
+        return shape;
+    }
 
     public WaffleIronBlock(BlockBehaviour.Properties properties) {
         super(properties);
+        registerDefaultState(defaultBlockState().setValue(OPEN, true));
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
-        if (SHAPES.size() == 0)
+        if (SHAPES_OPEN.size() == 0)
             runCalculation(SHAPE);
     }
 
     protected void runCalculation(VoxelShape shape) {
-        for (Direction direction : Direction.values())
-            SHAPES.put(direction, BobaMod.calculateShapes(direction, shape));
+        VoxelShape closedShape = makeShapeClosed();
+        for (Direction direction : Direction.values()) {
+            SHAPES_OPEN.put(direction, BobaMod.calculateShapes(direction, shape));
+            SHAPES_CLOSED.put(direction, BobaMod.calculateShapes(direction, closedShape));
+        }
     }
 
     @Override
@@ -66,12 +78,16 @@ public class WaffleIronBlock extends BaseEntityBlock {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
+        builder.add(OPEN);
         builder.add(FACING);
     }
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPES.get(state.getValue(FACING));
+        if (state.getValue(OPEN))
+            return SHAPES_OPEN.get(state.getValue(FACING));
+        else
+            return SHAPES_CLOSED.get(state.getValue(FACING));
     }
 
     /**
