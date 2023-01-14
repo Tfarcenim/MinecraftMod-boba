@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bobamod:block/display_case_sharp"
+    },
+    "facing=south": {
+      "model": "bobamod:block/display_case_sharp",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bobamod:block/display_case_sharp",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "bobamod:block/display_case_sharp",
+      "y": 90
+    }
+  }
+}

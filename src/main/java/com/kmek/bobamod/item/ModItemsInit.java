@@ -217,6 +217,8 @@ public class ModItemsInit {
      */
     public static final RegistryObject<BlockItem> DISPLAY_CASE_CURVED_ITEM = ITEMS.register("display_case_curved",
             () -> new BlockItem(ModBlocksInit.DISPLAY_CASE_CURVED.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> DISPLAY_CASE_SHARP_ITEM = ITEMS.register("display_case_sharp",
+            () -> new BlockItem(ModBlocksInit.DISPLAY_CASE_SHARP.get(), new Item.Properties()));
 
     /**
      * Registering the event bus

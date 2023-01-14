@@ -84,6 +84,7 @@ public class BobaMod {
                     output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
                     output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
                     output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
+                    output.accept(ModItemsInit.DISPLAY_CASE_SHARP_ITEM.get());
 
                     output.accept(ModItemsInit.CASSAVA_CUTTING.get());
                     output.accept(ModItemsInit.CASSAVA.get());
@@ -201,6 +202,7 @@ public class BobaMod {
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASSAVA_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_CURVED.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_SHARP.get(), RenderType.translucent());
 
             MenuScreens.register(ModMenuTypes.WAFFLE_IRON_MENU.get(), WaffleIronScreen::new);
         }
