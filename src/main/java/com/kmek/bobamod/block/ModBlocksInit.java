@@ -41,6 +41,8 @@ public class ModBlocksInit {
             () -> new DisplayCaseBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
     public static final RegistryObject<Block> DISPLAY_CASE_SHARP = BLOCKS.register("display_case_sharp",
             () -> new DisplayCaseBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
+    public static final RegistryObject<Block> CAKE_STAND = BLOCKS.register("cake_stand",
+            () -> new CakeStand(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
 
 
     /**
