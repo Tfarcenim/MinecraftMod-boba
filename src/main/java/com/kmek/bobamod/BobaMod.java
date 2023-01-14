@@ -81,6 +81,10 @@ public class BobaMod {
          bobaTab = event.registerCreativeModeTab(new ResourceLocation(MODID, "bobamod"), builder -> builder
                 .icon(() -> new ItemStack(ModItemsInit.BROWN_SUGAR_MILK_TEA.get()))
                 .displayItems((featureFlags, output, hasOp) -> {
+                    output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
+                    output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
+                    output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
+
                     output.accept(ModItemsInit.CASSAVA_CUTTING.get());
                     output.accept(ModItemsInit.CASSAVA.get());
                     output.accept(ModItemsInit.CASSAVA_BIBINGKA.get());
@@ -116,7 +120,6 @@ public class BobaMod {
                     output.accept(ModItemsInit.WET_MILK_TEA.get());
                     output.accept(ModItemsInit.IMAGINARY_MILK_TEA.get());
 
-                    output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
                     output.accept(ModItemsInit.RAW_WAFFLE_BATTER.get());
                     output.accept(ModItemsInit.TAIYAKI_MOLD.get());
                     output.accept(ModItemsInit.EGG_WAFFLE_MOLD.get());
@@ -127,8 +130,6 @@ public class BobaMod {
 
                     output.accept(ModItemsInit.BATTER_MESS.get());
                     output.accept(ModItemsInit.BURNT_CRISP.get());
-
-                    output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
                 })
         );
     }
@@ -199,6 +200,7 @@ public class BobaMod {
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASSAVA_CROP.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_CURVED.get(), RenderType.translucent());
 
             MenuScreens.register(ModMenuTypes.WAFFLE_IRON_MENU.get(), WaffleIronScreen::new);
         }

@@ -1,6 +1,7 @@
 package com.kmek.bobamod.block;
 
 import com.kmek.bobamod.BobaMod;
+import com.kmek.bobamod.block.entity.DisplayCaseBlock;
 import com.kmek.bobamod.item.ModItemsInit;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -33,6 +34,16 @@ public class ModBlocksInit {
     public static final RegistryObject<Block> ESPRESSO_MACHINE = BLOCKS.register("espresso_machine",
             () -> new EspressoMachineBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
 
+    /**
+     * Display Blocks
+     */
+    public static final RegistryObject<Block> DISPLAY_CASE_CURVED = BLOCKS.register("display_case_curved",
+            () -> new DisplayCaseBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
+
+
+    /**
+     * Setup
+     */
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

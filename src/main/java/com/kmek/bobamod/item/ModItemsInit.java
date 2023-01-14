@@ -188,6 +188,9 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
     public static final RegistryObject<Item> PAW_WAFFLE_MOLD = ITEMS.register("paw_waffle_mold", () -> new WaffleMoldItem(PAW_WAFFLE.get()));
 
+    /**
+     * Misc Food
+     */
     public static final RegistryObject<Item> BATTER_MESS = ITEMS.register("batter_mess", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0)
                     .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 0.8f)
@@ -208,6 +211,12 @@ public class ModItemsInit {
      */
     public static final RegistryObject<BlockItem> ESPRESSO_MACHINE_ITEM = ITEMS.register("espresso_machine",
             () -> new BlockItem(ModBlocksInit.ESPRESSO_MACHINE.get(), new Item.Properties()));
+
+    /**
+     * Display Blocks
+     */
+    public static final RegistryObject<BlockItem> DISPLAY_CASE_CURVED_ITEM = ITEMS.register("display_case_curved",
+            () -> new BlockItem(ModBlocksInit.DISPLAY_CASE_CURVED.get(), new Item.Properties()));
 
     /**
      * Registering the event bus
