@@ -2,7 +2,7 @@ package com.kmek.bobamod.block.entity;
 
 import com.kmek.bobamod.networking.ModMessages;
 import com.kmek.bobamod.networking.packet.ItemStackSyncS2CPacket;
-import com.kmek.bobamod.screen.DisplayCaseMenu;
+import com.kmek.bobamod.screen.CakeStandMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -24,8 +24,8 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class DisplayCaseBlockEntity extends BlockEntity implements MenuProvider {
-    public static final int menuSlotCount = 16;
+public class CakeStandBlockEntity extends BlockEntity implements MenuProvider {
+    public static final int menuSlotCount = 1;
     public static final int dataFieldsCount = 2;
 
     private final ItemStackHandler itemHandler = new ItemStackHandler(menuSlotCount) {
@@ -53,8 +53,8 @@ public class DisplayCaseBlockEntity extends BlockEntity implements MenuProvider 
 
     protected final ContainerData data;
 
-    public DisplayCaseBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.DISPLAY_CASE.get(), pPos, pBlockState);
+    public CakeStandBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        super(ModBlockEntities.CAKE_STAND.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
@@ -83,7 +83,7 @@ public class DisplayCaseBlockEntity extends BlockEntity implements MenuProvider 
 
     @Override
     public Component getDisplayName() {
-        return Component.literal("Display Case");
+        return Component.literal("Cake Stand");
     }
 
     // For block entity rendering
@@ -99,7 +99,7 @@ public class DisplayCaseBlockEntity extends BlockEntity implements MenuProvider 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        return new DisplayCaseMenu(pContainerId, pPlayerInventory, this, this.data);
+        return new CakeStandMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
     @Override

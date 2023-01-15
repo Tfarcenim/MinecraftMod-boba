@@ -6,6 +6,7 @@ import com.kmek.bobamod.item.ModItemsInit;
 import com.kmek.bobamod.loot.ModLootModifiers;
 import com.kmek.bobamod.networking.ModMessages;
 import com.kmek.bobamod.painting.ModPaintingsInit;
+import com.kmek.bobamod.screen.CakeStandScreen;
 import com.kmek.bobamod.screen.DisplayCaseScreen;
 import com.kmek.bobamod.screen.ModMenuTypes;
 import com.kmek.bobamod.screen.WaffleIronScreen;
@@ -210,6 +211,7 @@ public class BobaMod {
 
             MenuScreens.register(ModMenuTypes.WAFFLE_IRON_MENU.get(), WaffleIronScreen::new);
             MenuScreens.register(ModMenuTypes.DISPLAY_CASE_MENU.get(), DisplayCaseScreen::new);
+            MenuScreens.register(ModMenuTypes.CAKE_STAND_MENU.get(), CakeStandScreen::new);
         }
     }
 

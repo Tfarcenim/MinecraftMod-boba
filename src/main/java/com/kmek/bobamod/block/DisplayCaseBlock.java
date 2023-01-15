@@ -82,10 +82,4 @@ public class DisplayCaseBlock extends BaseEntityBlock {
 
         return InteractionResult.sidedSuccess(pLevel.isClientSide());
     }
-
-//    @org.jetbrains.annotations.Nullable
-//    @Override
-//    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-//        return createTickerHelper(pBlockEntityType, ModBlockEntities.DISPLAY_CASE.get(), DisplayCaseBlockEntity::tick);
-//    }
 }

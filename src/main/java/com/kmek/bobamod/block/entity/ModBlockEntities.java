@@ -22,6 +22,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(DisplayCaseBlockEntity::new,
                             ModBlocksInit.DISPLAY_CASE_CURVED.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<CakeStandBlockEntity>> CAKE_STAND =
+            BLOCK_ENTITIES.register("cake_stand", () ->
+                    BlockEntityType.Builder.of(CakeStandBlockEntity::new,
+                            ModBlocksInit.CAKE_STAND.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

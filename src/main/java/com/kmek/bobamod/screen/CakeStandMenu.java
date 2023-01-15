@@ -1,6 +1,7 @@
 package com.kmek.bobamod.screen;
 
 import com.kmek.bobamod.block.ModBlocksInit;
+import com.kmek.bobamod.block.entity.CakeStandBlockEntity;
 import com.kmek.bobamod.block.entity.DisplayCaseBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
@@ -10,22 +11,21 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
-public class DisplayCaseMenu extends AbstractContainerMenu {
-    public final DisplayCaseBlockEntity blockEntity;
+public class CakeStandMenu extends AbstractContainerMenu {
+    public final CakeStandBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
-    public DisplayCaseMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+    public CakeStandMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
         this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(DisplayCaseBlockEntity.dataFieldsCount));
     }
 
-    public DisplayCaseMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(ModMenuTypes.DISPLAY_CASE_MENU.get(), id);
-        checkContainerSize(inv, DisplayCaseBlockEntity.menuSlotCount);
-        blockEntity = (DisplayCaseBlockEntity) entity;
+    public CakeStandMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
+        super(ModMenuTypes.CAKE_STAND_MENU.get(), id);
+        checkContainerSize(inv, CakeStandBlockEntity.menuSlotCount);
+        blockEntity = (CakeStandBlockEntity) entity;
         level = inv.player.level;
         this.data = data;
 
@@ -33,18 +33,9 @@ public class DisplayCaseMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            add4Slots(handler, 0, 99, 7);
-            add4Slots(handler, 4, 25, 17);
-            add4Slots(handler, 8, 17, 35);
-            add4Slots(handler, 12, 8, 53);
+            this.addSlot(new SlotItemHandler(handler, 0, 80, 27));
         });
         addDataSlots(data);
-    }
-
-    private void add4Slots(IItemHandler handler, int startIndex, int startX, int startY) {
-        for (int i = 0; i < 4; i++) {
-            this.addSlot(new SlotItemHandler(handler, i + startIndex, startX + (i * 18), startY));
-        }
     }
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
@@ -101,7 +92,7 @@ public class DisplayCaseMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                pPlayer, ModBlocksInit.DISPLAY_CASE_CURVED.get());
+                pPlayer, ModBlocksInit.CAKE_STAND.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {
