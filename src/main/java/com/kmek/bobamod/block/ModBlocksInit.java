@@ -1,7 +1,6 @@
 package com.kmek.bobamod.block;
 
 import com.kmek.bobamod.BobaMod;
-import com.kmek.bobamod.block.entity.DisplayCaseBlock;
 import com.kmek.bobamod.item.ModItemsInit;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -42,7 +41,7 @@ public class ModBlocksInit {
     public static final RegistryObject<Block> DISPLAY_CASE_SHARP = BLOCKS.register("display_case_sharp",
             () -> new DisplayCaseBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
     public static final RegistryObject<Block> CAKE_STAND = BLOCKS.register("cake_stand",
-            () -> new CakeStand(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
+            () -> new CakeStandBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
 
 
     /**

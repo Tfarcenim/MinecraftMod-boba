@@ -17,6 +17,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(WaffleIronBlockEntity::new,
                             ModBlocksInit.WAFFLE_IRON.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<DisplayCaseBlockEntity>> DISPLAY_CASE =
+            BLOCK_ENTITIES.register("display_case", () ->
+                    BlockEntityType.Builder.of(DisplayCaseBlockEntity::new,
+                            ModBlocksInit.DISPLAY_CASE_CURVED.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

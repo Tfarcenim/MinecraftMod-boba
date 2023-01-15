@@ -6,6 +6,7 @@ import com.kmek.bobamod.item.ModItemsInit;
 import com.kmek.bobamod.loot.ModLootModifiers;
 import com.kmek.bobamod.networking.ModMessages;
 import com.kmek.bobamod.painting.ModPaintingsInit;
+import com.kmek.bobamod.screen.DisplayCaseScreen;
 import com.kmek.bobamod.screen.ModMenuTypes;
 import com.kmek.bobamod.screen.WaffleIronScreen;
 import com.mojang.logging.LogUtils;
@@ -81,11 +82,11 @@ public class BobaMod {
          bobaTab = event.registerCreativeModeTab(new ResourceLocation(MODID, "bobamod"), builder -> builder
                 .icon(() -> new ItemStack(ModItemsInit.BROWN_SUGAR_MILK_TEA.get()))
                 .displayItems((featureFlags, output, hasOp) -> {
+                    output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
+//                    output.accept(ModItemsInit.DISPLAY_CASE_SHARP_ITEM.get());
+                    output.accept(ModItemsInit.CAKE_STAND_ITEM.get());
                     output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
                     output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
-                    output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
-                    output.accept(ModItemsInit.DISPLAY_CASE_SHARP_ITEM.get());
-                    output.accept(ModItemsInit.CAKE_STAND_ITEM.get());
 
                     output.accept(ModItemsInit.CASSAVA_CUTTING.get());
                     output.accept(ModItemsInit.CASSAVA.get());
@@ -180,6 +181,8 @@ public class BobaMod {
         }
 
         if (event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM);
+            event.accept(ModItemsInit.CAKE_STAND_ITEM);
             event.accept(ModItemsInit.WAFFLE_IRON_ITEM);
             event.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM);
         }
@@ -206,6 +209,7 @@ public class BobaMod {
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_SHARP.get(), RenderType.translucent());
 
             MenuScreens.register(ModMenuTypes.WAFFLE_IRON_MENU.get(), WaffleIronScreen::new);
+            MenuScreens.register(ModMenuTypes.DISPLAY_CASE_MENU.get(), DisplayCaseScreen::new);
         }
     }
 

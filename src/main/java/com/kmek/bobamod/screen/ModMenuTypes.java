@@ -17,6 +17,13 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<WaffleIronMenu>> WAFFLE_IRON_MENU =
             registerMenuType(WaffleIronMenu::new, "waffle_iron_menu");
 
+    public static final RegistryObject<MenuType<DisplayCaseMenu>> DISPLAY_CASE_MENU =
+            registerMenuType(DisplayCaseMenu::new, "display_case_menu");
+
+    /**
+     * Setup for menu registering
+     */
+
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>>
         registerMenuType(IContainerFactory<T> factory, String name) {
             return MENUS.register(name, () -> IForgeMenuType.create(factory));

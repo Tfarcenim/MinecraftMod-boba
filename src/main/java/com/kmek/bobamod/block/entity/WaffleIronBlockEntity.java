@@ -164,6 +164,10 @@ public class WaffleIronBlockEntity extends BlockEntity implements MenuProvider {
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
+    /**
+     * Tick progress stuff
+     */
+
     public static void tick(Level level, BlockPos blockPos, BlockState blockState, WaffleIronBlockEntity entity) {
         if (level.isClientSide) {
             return;

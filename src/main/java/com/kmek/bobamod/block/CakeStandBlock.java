@@ -16,7 +16,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class CakeStand extends HorizontalDirectionalBlock {
+public class CakeStandBlock extends HorizontalDirectionalBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     private static final VoxelShape SHAPE = makeShape();
 
@@ -27,7 +27,7 @@ public class CakeStand extends HorizontalDirectionalBlock {
         return shape;
     }
 
-    public CakeStand(BlockBehaviour.Properties properties) {
+    public CakeStandBlock(BlockBehaviour.Properties properties) {
         super(properties);
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
     }
