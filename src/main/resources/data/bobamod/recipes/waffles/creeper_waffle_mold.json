@@ -2,22 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "W": {
-      "tag": "bobamod:waffle_mold"
-    },
-    "C": {
-      "item": "minecraft:crafting_table"
+    "E": {
+      "item": "minecraft:creeper_head"
     },
     "I": {
       "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
-    " W ",
-    "ICI",
-    "III"
+    "E",
+    "I"
   ],
   "result": {
-    "item": "bobamod:waffle_iron"
+    "item": "bobamod:creeper_waffle_mold"
   }
 }
