@@ -7,6 +7,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -38,16 +41,16 @@ public class DisplayCaseBlockEntity extends BlockEntity implements MenuProvider 
         }
     };
 
-//    // Update block entity render on world load
-//    @Nullable
-//    @Override
-//    public Packet<ClientGamePacketListener> getUpdatePacket() {
-//        return ClientboundBlockEntityDataPacket.create(this);
-//    }
-//    @Override
-//    public CompoundTag getUpdateTag() {
-//        return this.saveWithoutMetadata();
-//    }
+    // Update block entity render on world load
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+    @Override
+    public CompoundTag getUpdateTag() {
+        return this.saveWithoutMetadata();
+    }
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
@@ -87,14 +90,14 @@ public class DisplayCaseBlockEntity extends BlockEntity implements MenuProvider 
     }
 
     // For block entity rendering
-//    public ItemStack getRenderStack() {
-//        return itemHandler.getStackInSlot(SLOT_MOLD);
-//    }
-//    public void setHandler(ItemStackHandler itemStackHandler) {
-//        for (int i = 0; i < itemStackHandler.getSlots(); i++) {
-//            itemHandler.setStackInSlot(i, itemStackHandler.getStackInSlot(i));
-//        }
-//    }
+    public ItemStackHandler getRenderStack() {
+        return itemHandler;
+    }
+    public void setHandler(ItemStackHandler itemStackHandler) {
+        for (int i = 0; i < itemStackHandler.getSlots(); i++) {
+            itemHandler.setStackInSlot(i, itemStackHandler.getStackInSlot(i));
+        }
+    }
 
     @Nullable
     @Override

@@ -3,6 +3,7 @@ package com.kmek.bobamod.event;
 import com.kmek.bobamod.BobaMod;
 import com.kmek.bobamod.block.entity.ModBlockEntities;
 import com.kmek.bobamod.block.entity.renderer.CakeStandBlockEntityRenderer;
+import com.kmek.bobamod.block.entity.renderer.DisplayCaseBlockEntityRenderer;
 import com.kmek.bobamod.block.entity.renderer.WaffleIronBlockEntityRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -16,6 +17,7 @@ public class ClientEvents {
         public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {
             event.registerBlockEntityRenderer(ModBlockEntities.WAFFLE_IRON.get(), WaffleIronBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.CAKE_STAND.get(), CakeStandBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.DISPLAY_CASE.get(), DisplayCaseBlockEntityRenderer::new);
         }
     }
 }
