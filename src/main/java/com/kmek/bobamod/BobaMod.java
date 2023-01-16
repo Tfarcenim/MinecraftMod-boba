@@ -85,7 +85,6 @@ public class BobaMod {
                 .displayItems((featureFlags, output, hasOp) -> {
                     output.accept(ModItemsInit.CAKE_STAND_ITEM.get());
                     output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
-//                    output.accept(ModItemsInit.DISPLAY_CASE_SHARP_ITEM.get());
                     output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
                     output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
 
@@ -182,8 +181,8 @@ public class BobaMod {
         }
 
         if (event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-            event.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM);
             event.accept(ModItemsInit.CAKE_STAND_ITEM);
+            event.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM);
             event.accept(ModItemsInit.WAFFLE_IRON_ITEM);
             event.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM);
         }
@@ -207,7 +206,6 @@ public class BobaMod {
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASSAVA_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_CURVED.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_SHARP.get(), RenderType.translucent());
 
             MenuScreens.register(ModMenuTypes.WAFFLE_IRON_MENU.get(), WaffleIronScreen::new);
             MenuScreens.register(ModMenuTypes.DISPLAY_CASE_MENU.get(), DisplayCaseScreen::new);
