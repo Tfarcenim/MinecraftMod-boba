@@ -3,9 +3,6 @@ package com.kmek.bobamod.item;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -22,15 +19,6 @@ public class WaffleItem extends Item {
 
     WaffleItem(int nut, float sat) {
         super(new Item.Properties().food(new FoodProperties.Builder().nutrition(nut).saturationMod(sat).build()));
-    }
-
-    // Erases tag
-    @Override
-    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
-        if(pPlayer.getItemInHand(pUsedHand).hasTag()) {
-            pPlayer.getItemInHand(pUsedHand).setTag(new CompoundTag());
-        }
-        return super.use(pLevel, pPlayer, pUsedHand);
     }
 
     // Don't stack tagged waffle items
@@ -57,10 +45,4 @@ public class WaffleItem extends Item {
         }
         super.appendHoverText(stack, level, components, flag);
     }
-
-//    // Enchantment glitter
-//    @Override
-//    public boolean isFoil(ItemStack pStack) {
-//        return pStack.hasTag();
-//    }
 }

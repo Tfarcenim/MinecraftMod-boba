@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "minecraft:leather"
+    },
+    "I": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "E",
+    "E",
+    "I"
+  ],
+  "result": {
+    "item": "bobamod:pastry_bag",
+    "count": 8
+  }
+}
