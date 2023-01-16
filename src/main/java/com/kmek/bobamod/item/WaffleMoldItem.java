@@ -4,11 +4,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 public class WaffleMoldItem extends Item {
-    private final Item waffle;
+    private final WaffleItem waffle;
 
     public WaffleMoldItem(Item waffle) {
         super(new Item.Properties().stacksTo(1));
-        this.waffle = waffle;
+        this.waffle = (WaffleItem) waffle;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class WaffleMoldItem extends Item {
         return true;
     }
 
-    public Item getWaffle() {
+    public WaffleItem getWaffle() {
         return waffle;
     }
 }

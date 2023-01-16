@@ -25,6 +25,7 @@ public class ModTags {
 
         public static final TagKey<Item> WAFFLE = tag("waffle");
         public static final TagKey<Item> WAFFLE_MOLD = tag("waffle_mold");
+        public static final TagKey<Item> WAFFLE_FILLING = tag("waffle_filling");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(BobaMod.MODID, name));

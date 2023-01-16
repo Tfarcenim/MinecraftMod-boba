@@ -149,6 +149,11 @@ public class BobaMod {
                     output.accept(ModItemsInit.PICKAXE_WAFFLE.get());
                     output.accept(ModItemsInit.SWORD_WAFFLE.get());
 
+                    output.accept(ModItemsInit.CHOCOLATE_CREME.get());
+                    output.accept(ModItemsInit.VANILLA_CREME.get());
+                    output.accept(ModItemsInit.MATCHA_CREME.get());
+                    output.accept(ModItemsInit.CUSTARD_FILLING.get());
+
                     output.accept(ModItemsInit.BATTER_MESS.get());
                     output.accept(ModItemsInit.BURNT_CRISP.get());
                 })
@@ -202,6 +207,11 @@ public class BobaMod {
             event.accept(ModItemsInit.DIAMOND_WAFFLE);
             event.accept(ModItemsInit.PICKAXE_WAFFLE);
             event.accept(ModItemsInit.SWORD_WAFFLE);
+
+            event.accept(ModItemsInit.CHOCOLATE_CREME);
+            event.accept(ModItemsInit.VANILLA_CREME);
+            event.accept(ModItemsInit.MATCHA_CREME);
+            event.accept(ModItemsInit.CUSTARD_FILLING);
 
             event.accept(ModItemsInit.BATTER_MESS);
             event.accept(ModItemsInit.BURNT_CRISP);

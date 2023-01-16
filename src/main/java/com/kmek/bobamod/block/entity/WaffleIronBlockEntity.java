@@ -1,11 +1,13 @@
 package com.kmek.bobamod.block.entity;
 
 import com.kmek.bobamod.item.ModItemsInit;
+import com.kmek.bobamod.item.WaffleItem;
 import com.kmek.bobamod.item.WaffleMoldItem;
 import com.kmek.bobamod.networking.ModMessages;
 import com.kmek.bobamod.networking.packet.ItemStackSyncS2CPacket;
 import com.kmek.bobamod.screen.WaffleIronMenu;
 import com.kmek.bobamod.tags.ModTags;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -218,6 +220,10 @@ public class WaffleIronBlockEntity extends BlockEntity implements MenuProvider {
                 && inventory.getItem(SLOT_MOLD).is(ModTags.Items.WAFFLE_MOLD);
     }
 
+    private static boolean itemIsWaffleFilling(ItemStack itemStack) {
+        return itemStack.is(ModTags.Items.WAFFLE_FILLING);
+    }
+
     private static boolean canMoveItem(SimpleContainer inventory) {
         return inventory.getItem(SLOT_OUTPUT).isEmpty()
                 && itemIsRawWaffleBatter(inventory.getItem(SLOT_BATTER).getItem())
@@ -240,8 +246,14 @@ public class WaffleIronBlockEntity extends BlockEntity implements MenuProvider {
         if (entity.progress == batteredMessTime) { // must be raw batter, turns to batter mess
             entity.itemHandler.setStackInSlot(SLOT_OUTPUT, new ItemStack(ModItemsInit.BATTER_MESS.get(), 1));
         } else if (entity.progress == cookedTime) { // must be batter mess, turns to waffle
-            entity.itemHandler.setStackInSlot(SLOT_OUTPUT,
-                    new ItemStack(((WaffleMoldItem) entity.itemHandler.getStackInSlot(SLOT_MOLD).getItem()).getWaffle(), 1));
+            WaffleItem waffle = ((WaffleMoldItem) entity.itemHandler.getStackInSlot(SLOT_MOLD).getItem()).getWaffle();
+            if (itemIsWaffleFilling(entity.itemHandler.getStackInSlot(SLOT_FILLING))) {
+                Item filling = entity.itemHandler.extractItem(SLOT_FILLING, 1, false).getItem();
+                ItemStack stack = waffle.addNbtDataFillingToItemStack(filling.getDescription().getString());
+                entity.itemHandler.setStackInSlot(SLOT_OUTPUT, stack);
+            } else {
+                entity.itemHandler.setStackInSlot(SLOT_OUTPUT, new ItemStack(waffle, 1));
+            }
         } else if (entity.progress >= maxProgress) { // must be waffle, burns
             entity.itemHandler.setStackInSlot(SLOT_OUTPUT, new ItemStack(ModItemsInit.BURNT_CRISP.get(), 1));
         }
