@@ -208,7 +208,9 @@ public class ModItemsInit {
     public static final RegistryObject<Item> DIAMOND_WAFFLE = ITEMS.register("diamond_waffle", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
     public static final RegistryObject<Item> DIAMOND_WAFFLE_MOLD = ITEMS.register("diamond_waffle_mold", () -> new WaffleMoldItem(DIAMOND_WAFFLE.get()));
-//    public static final RegistryObject<Item> PICKAXE_WAFFLE
+    public static final RegistryObject<Item> PICKAXE_WAFFLE = ITEMS.register("pickaxe_waffle", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
+    public static final RegistryObject<Item> PICKAXE_WAFFLE_MOLD = ITEMS.register("pickaxe_waffle_mold", () -> new WaffleMoldItem(PICKAXE_WAFFLE.get()));
 //    public static final RegistryObject<Item> SWORD_WAFFLE
 
 
