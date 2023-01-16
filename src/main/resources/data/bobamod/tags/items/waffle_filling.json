@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "bobamod:tapioca_balls",
     "bobamod:chocolate_cream",
     "bobamod:vanilla_cream",
     "bobamod:matcha_cream",
@@ -8,6 +9,10 @@
     "bobamod:rose_cream",
     "bobamod:marshmallow",
     "bobamod:custard",
-    "bobamod:tapioca_balls"
+    "bobamod:apple_jam",
+    "bobamod:chorus_fruit_jam",
+    "bobamod:glow_berry_jam",
+    "bobamod:sweet_berry_jam",
+    "bobamod:watermelon_jam"
   ]
 }

@@ -149,6 +149,9 @@ public class BobaMod {
                     output.accept(ModItemsInit.PICKAXE_WAFFLE.get());
                     output.accept(ModItemsInit.SWORD_WAFFLE.get());
 
+                    output.accept(ModItemsInit.BATTER_MESS.get());
+                    output.accept(ModItemsInit.BURNT_CRISP.get());
+
                     output.accept(ModItemsInit.CREAM.get());
                     output.accept(ModItemsInit.WHIPPED_CREAM.get());
                     output.accept(ModItemsInit.CHOCOLATE_CREAM.get());
@@ -160,10 +163,13 @@ public class BobaMod {
                     output.accept(ModItemsInit.MARSHMALLOWS.get());
                     output.accept(ModItemsInit.CUSTARD.get());
 
-//                    output.accept(ModItemsInit.PASTRY_BAG.get());
+                    output.accept(ModItemsInit.APPLE_JAM.get());
+                    output.accept(ModItemsInit.CHORUS_FRUIT_JAM.get());
+                    output.accept(ModItemsInit.GLOW_BERRY_JAM.get());
+                    output.accept(ModItemsInit.SWEET_BERRY_JAM.get());
+                    output.accept(ModItemsInit.WATERMELON_JAM.get());
 
-                    output.accept(ModItemsInit.BATTER_MESS.get());
-                    output.accept(ModItemsInit.BURNT_CRISP.get());
+//                    output.accept(ModItemsInit.PASTRY_BAG.get());
                 })
         );
     }
@@ -216,6 +222,9 @@ public class BobaMod {
             event.accept(ModItemsInit.PICKAXE_WAFFLE);
             event.accept(ModItemsInit.SWORD_WAFFLE);
 
+            event.accept(ModItemsInit.BATTER_MESS);
+            event.accept(ModItemsInit.BURNT_CRISP);
+
             event.accept(ModItemsInit.CREAM);
             event.accept(ModItemsInit.WHIPPED_CREAM);
             event.accept(ModItemsInit.CHOCOLATE_CREAM);
@@ -227,8 +236,11 @@ public class BobaMod {
             event.accept(ModItemsInit.MARSHMALLOWS);
             event.accept(ModItemsInit.CUSTARD);
 
-            event.accept(ModItemsInit.BATTER_MESS);
-            event.accept(ModItemsInit.BURNT_CRISP);
+            event.accept(ModItemsInit.APPLE_JAM);
+            event.accept(ModItemsInit.CHORUS_FRUIT_JAM);
+            event.accept(ModItemsInit.GLOW_BERRY_JAM);
+            event.accept(ModItemsInit.SWEET_BERRY_JAM);
+            event.accept(ModItemsInit.WATERMELON_JAM);
         }
 
         if (event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
