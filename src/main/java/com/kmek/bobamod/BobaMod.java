@@ -83,9 +83,9 @@ public class BobaMod {
          bobaTab = event.registerCreativeModeTab(new ResourceLocation(MODID, "bobamod"), builder -> builder
                 .icon(() -> new ItemStack(ModItemsInit.BROWN_SUGAR_MILK_TEA.get()))
                 .displayItems((featureFlags, output, hasOp) -> {
+                    output.accept(ModItemsInit.CAKE_STAND_ITEM.get());
                     output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
 //                    output.accept(ModItemsInit.DISPLAY_CASE_SHARP_ITEM.get());
-                    output.accept(ModItemsInit.CAKE_STAND_ITEM.get());
                     output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
                     output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
 
