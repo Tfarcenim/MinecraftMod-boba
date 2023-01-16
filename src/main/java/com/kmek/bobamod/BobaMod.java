@@ -83,17 +83,20 @@ public class BobaMod {
          bobaTab = event.registerCreativeModeTab(new ResourceLocation(MODID, "bobamod"), builder -> builder
                 .icon(() -> new ItemStack(ModItemsInit.BROWN_SUGAR_MILK_TEA.get()))
                 .displayItems((featureFlags, output, hasOp) -> {
+                    // Blocks
                     output.accept(ModItemsInit.CAKE_STAND_ITEM.get());
                     output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
                     output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
                     output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
 
+                    // Cassava crop + items
                     output.accept(ModItemsInit.CASSAVA_CUTTING.get());
                     output.accept(ModItemsInit.CASSAVA.get());
                     output.accept(ModItemsInit.CASSAVA_BIBINGKA.get());
                     output.accept(ModItemsInit.TAPIOCA_BALLS.get());
                     output.accept(ModItemsInit.TAPIOCA_PUDDING.get());
 
+                    // Milk Teas
                     output.accept(ModItemsInit.MILK_TEA_CUP.get());
                     output.accept(ModItemsInit.BROWN_SUGAR_MILK_TEA.get());
                     output.accept(ModItemsInit.TIGER_MILK_TEA.get());
@@ -123,6 +126,7 @@ public class BobaMod {
                     output.accept(ModItemsInit.WET_MILK_TEA.get());
                     output.accept(ModItemsInit.IMAGINARY_MILK_TEA.get());
 
+                    // Waffles
                     output.accept(ModItemsInit.RAW_WAFFLE_BATTER.get());
                     output.accept(ModItemsInit.TAIYAKI_MOLD.get());
                     output.accept(ModItemsInit.EGG_WAFFLE_MOLD.get());
@@ -152,6 +156,7 @@ public class BobaMod {
                     output.accept(ModItemsInit.BATTER_MESS.get());
                     output.accept(ModItemsInit.BURNT_CRISP.get());
 
+                    // Creams
                     output.accept(ModItemsInit.CREAM.get());
                     output.accept(ModItemsInit.WHIPPED_CREAM.get());
                     output.accept(ModItemsInit.CHOCOLATE_CREAM.get());
@@ -163,6 +168,7 @@ public class BobaMod {
                     output.accept(ModItemsInit.MARSHMALLOWS.get());
                     output.accept(ModItemsInit.CUSTARD.get());
 
+                    // Jams
                     output.accept(ModItemsInit.APPLE_JAM.get());
                     output.accept(ModItemsInit.CHORUS_FRUIT_JAM.get());
                     output.accept(ModItemsInit.GLOW_BERRY_JAM.get());
@@ -180,6 +186,7 @@ public class BobaMod {
             event.accept(ModItemsInit.CASSAVA_BIBINGKA);
             event.accept(ModItemsInit.TAPIOCA_PUDDING);
 
+            // Milk Teas
             event.accept(ModItemsInit.BROWN_SUGAR_MILK_TEA);
             event.accept(ModItemsInit.TIGER_MILK_TEA);
             event.accept(ModItemsInit.HONEY_MILK_TEA);
@@ -208,6 +215,7 @@ public class BobaMod {
             event.accept(ModItemsInit.WET_MILK_TEA);
             event.accept(ModItemsInit.IMAGINARY_MILK_TEA);
 
+            // Waffles
             event.accept(ModItemsInit.RAW_WAFFLE_BATTER);
             event.accept(ModItemsInit.TAIYAKI);
             event.accept(ModItemsInit.EGG_WAFFLE);
@@ -225,6 +233,7 @@ public class BobaMod {
             event.accept(ModItemsInit.BATTER_MESS);
             event.accept(ModItemsInit.BURNT_CRISP);
 
+            // Creams
             event.accept(ModItemsInit.CREAM);
             event.accept(ModItemsInit.WHIPPED_CREAM);
             event.accept(ModItemsInit.CHOCOLATE_CREAM);
@@ -236,6 +245,7 @@ public class BobaMod {
             event.accept(ModItemsInit.MARSHMALLOWS);
             event.accept(ModItemsInit.CUSTARD);
 
+            // Jams
             event.accept(ModItemsInit.APPLE_JAM);
             event.accept(ModItemsInit.CHORUS_FRUIT_JAM);
             event.accept(ModItemsInit.GLOW_BERRY_JAM);

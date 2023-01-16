@@ -71,9 +71,9 @@ public class WaffleIronBlockEntity extends BlockEntity implements MenuProvider {
     protected final ContainerData data;
 
     private int progress = 0;
-    private static final int batteredMessTime = 24; // 120
-    private static final int cookedTime = 48; // 240
-    private static final int maxProgress = 60; // 300
+    private static final int batteredMessTime = 500;
+    private static final int cookedTime = 1100;
+    private static final int maxProgress = 1200;
 
     public WaffleIronBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.WAFFLE_IRON.get(), pPos, pBlockState);
