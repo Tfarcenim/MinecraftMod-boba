@@ -42,12 +42,14 @@
   "item.bobamod.imaginary_milk_tea": "Imaginary Milk Tea",
 
   "item.bobamod.raw_waffle_batter": "Raw Waffle Batter",
-  "item.bobamod.taiyaki_mold": "Taiyaki Mold",
   "item.bobamod.taiyaki": "Taiyaki",
-  "item.bobamod.egg_waffle_mold": "Egg Waffle Mold",
+  "item.bobamod.taiyaki_mold": "Taiyaki Mold",
   "item.bobamod.egg_waffle": "Egg Waffle",
-  "item.bobamod.paw_waffle_mold": "Paw Waffle Mold",
+  "item.bobamod.egg_waffle_mold": "Egg Waffle Mold",
   "item.bobamod.paw_waffle": "Paw Waffle",
+  "item.bobamod.paw_waffle_mold": "Paw Waffle Mold",
+  "item.bobamod.classic_waffle": "Classic Waffle",
+  "item.bobamod.classic_waffle_mold": "Classic Waffle Mold",
 
   "item.bobamod.batter_mess": "Batter Mess",
   "item.bobamod.burnt_crisp": "Burnt Crisp",

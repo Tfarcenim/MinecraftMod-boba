@@ -187,6 +187,18 @@ public class ModItemsInit {
     public static final RegistryObject<Item> PAW_WAFFLE = ITEMS.register("paw_waffle", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
     public static final RegistryObject<Item> PAW_WAFFLE_MOLD = ITEMS.register("paw_waffle_mold", () -> new WaffleMoldItem(PAW_WAFFLE.get()));
+    public static final RegistryObject<Item> CLASSIC_WAFFLE = ITEMS.register("classic_waffle", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(2).saturationMod(0.8f).build())));
+    public static final RegistryObject<Item> CLASSIC_WAFFLE_MOLD = ITEMS.register("classic_waffle_mold", () -> new WaffleMoldItem(CLASSIC_WAFFLE.get()));
+//    public static final RegistryObject<Item> CREEPER_WAFFLE
+//    public static final RegistryObject<Item> PICKAXE_WAFFLE
+    //    public static final RegistryObject<Item> SWORD_WAFFLE
+    //    public static final RegistryObject<Item> DIAMOND_WAFFLE
+    //    public static final RegistryObject<Item> MUSHROOM_WAFFLE
+    //    public static final RegistryObject<Item> FLOWER_WAFFLE
+    //    public static final RegistryObject<Item> PUMPKIN_WAFFLE
+    //    public static final RegistryObject<Item> HEART_WAFFLE
+
 
     /**
      * Misc Food

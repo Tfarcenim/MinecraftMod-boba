@@ -127,9 +127,11 @@ public class BobaMod {
                     output.accept(ModItemsInit.TAIYAKI_MOLD.get());
                     output.accept(ModItemsInit.EGG_WAFFLE_MOLD.get());
                     output.accept(ModItemsInit.PAW_WAFFLE_MOLD.get());
+                    output.accept(ModItemsInit.CLASSIC_WAFFLE_MOLD.get());
                     output.accept(ModItemsInit.TAIYAKI.get());
                     output.accept(ModItemsInit.EGG_WAFFLE.get());
                     output.accept(ModItemsInit.PAW_WAFFLE.get());
+                    output.accept(ModItemsInit.CLASSIC_WAFFLE.get());
 
                     output.accept(ModItemsInit.BATTER_MESS.get());
                     output.accept(ModItemsInit.BURNT_CRISP.get());
@@ -175,6 +177,7 @@ public class BobaMod {
             event.accept(ModItemsInit.TAIYAKI);
             event.accept(ModItemsInit.EGG_WAFFLE);
             event.accept(ModItemsInit.PAW_WAFFLE);
+            event.accept(ModItemsInit.CLASSIC_WAFFLE);
 
             event.accept(ModItemsInit.BATTER_MESS);
             event.accept(ModItemsInit.BURNT_CRISP);
