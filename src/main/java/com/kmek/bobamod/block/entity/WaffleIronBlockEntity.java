@@ -249,7 +249,7 @@ public class WaffleIronBlockEntity extends BlockEntity implements MenuProvider {
             WaffleItem waffle = ((WaffleMoldItem) entity.itemHandler.getStackInSlot(SLOT_MOLD).getItem()).getWaffle();
             if (itemIsWaffleFilling(entity.itemHandler.getStackInSlot(SLOT_FILLING))) {
                 Item filling = entity.itemHandler.extractItem(SLOT_FILLING, 1, false).getItem();
-                ItemStack stack = waffle.addNbtDataFillingToItemStack(filling.getDescription().getString());
+                ItemStack stack = waffle.addNbtDataFillingToItemStack(filling.getDescription().getString() + " filling");
                 entity.itemHandler.setStackInSlot(SLOT_OUTPUT, stack);
             } else {
                 entity.itemHandler.setStackInSlot(SLOT_OUTPUT, new ItemStack(waffle, 1));

@@ -1,10 +1,13 @@
 {
   "replace": false,
   "values": [
-    "bobamod:chocolate_creme",
-    "bobamod:vanilla_creme",
-    "bobamod:matcha_creme",
+    "bobamod:chocolate_cream",
+    "bobamod:vanilla_cream",
+    "bobamod:matcha_cream",
+    "bobamod:honey_cream",
+    "bobamod:rose_cream",
     "bobamod:marshmallow",
-    "bobamod:custard"
+    "bobamod:custard",
+    "bobamod:tapioca_balls"
   ]
 }

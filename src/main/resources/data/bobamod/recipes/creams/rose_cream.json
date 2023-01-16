@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "F": {
-      "item": "minecraft:cocoa_beans"
+      "item": "minecraft:rose_bush"
     },
     "S": {
       "item": "minecraft:sugar"
@@ -16,6 +16,6 @@
     "SCF"
   ],
   "result": {
-    "item": "bobamod:chocolate_creme"
+    "item": "bobamod:rose_cream"
   }
 }

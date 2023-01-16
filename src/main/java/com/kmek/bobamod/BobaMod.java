@@ -151,9 +151,11 @@ public class BobaMod {
 
                     output.accept(ModItemsInit.CREAM.get());
                     output.accept(ModItemsInit.WHIPPED_CREAM.get());
-                    output.accept(ModItemsInit.CHOCOLATE_CREME.get());
-                    output.accept(ModItemsInit.VANILLA_CREME.get());
-                    output.accept(ModItemsInit.MATCHA_CREME.get());
+                    output.accept(ModItemsInit.CHOCOLATE_CREAM.get());
+                    output.accept(ModItemsInit.VANILLA_CREAM.get());
+                    output.accept(ModItemsInit.MATCHA_CREAM.get());
+                    output.accept(ModItemsInit.HONEY_CREAM.get());
+                    output.accept(ModItemsInit.ROSE_CREAM.get());
                     output.accept(ModItemsInit.MARSHMALLOW.get());
                     output.accept(ModItemsInit.MARSHMALLOWS.get());
                     output.accept(ModItemsInit.CUSTARD.get());
@@ -216,9 +218,11 @@ public class BobaMod {
 
             event.accept(ModItemsInit.CREAM);
             event.accept(ModItemsInit.WHIPPED_CREAM);
-            event.accept(ModItemsInit.CHOCOLATE_CREME);
-            event.accept(ModItemsInit.VANILLA_CREME);
-            event.accept(ModItemsInit.MATCHA_CREME);
+            event.accept(ModItemsInit.CHOCOLATE_CREAM);
+            event.accept(ModItemsInit.VANILLA_CREAM);
+            event.accept(ModItemsInit.MATCHA_CREAM);
+            event.accept(ModItemsInit.HONEY_CREAM);
+            event.accept(ModItemsInit.ROSE_CREAM);
             event.accept(ModItemsInit.MARSHMALLOW);
             event.accept(ModItemsInit.MARSHMALLOWS);
             event.accept(ModItemsInit.CUSTARD);
