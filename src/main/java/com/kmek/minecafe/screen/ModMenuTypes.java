@@ -21,6 +21,8 @@ public class ModMenuTypes {
             registerMenuType(DisplayCaseMenu::new, "display_case_menu");
     public static final RegistryObject<MenuType<CakeStandMenu>> CAKE_STAND_MENU =
             registerMenuType(CakeStandMenu::new, "cake_stand_menu");
+    public static final RegistryObject<MenuType<WallShelfMenu>> WALL_SHELF_MENU =
+            registerMenuType(WallShelfMenu::new, "wall_shelf_menu");
 
     /**
      * Setup for menu registering

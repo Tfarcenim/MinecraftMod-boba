@@ -24,6 +24,16 @@ public class ModItemsInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MineCafeMod.MODID);
 
     /**
+     * Display Blocks
+     */
+    public static final RegistryObject<BlockItem> DISPLAY_CASE_CURVED_ITEM = ITEMS.register("display_case_curved",
+            () -> new BlockItem(ModBlocksInit.DISPLAY_CASE_CURVED.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CAKE_STAND_ITEM = ITEMS.register("cake_stand",
+            () -> new BlockItem(ModBlocksInit.CAKE_STAND.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> OAK_WALL_SHELF_ITEM = ITEMS.register("oak_wall_shelf",
+            () -> new BlockItem(ModBlocksInit.OAK_WALL_SHELF.get(), new Item.Properties()));
+
+    /**
      * Cassava Crop
      */
     public static final RegistryObject<Item> CASSAVA_CUTTING = ITEMS.register("cassava_cutting",
@@ -270,14 +280,6 @@ public class ModItemsInit {
      */
     public static final RegistryObject<BlockItem> ESPRESSO_MACHINE_ITEM = ITEMS.register("espresso_machine",
             () -> new BlockItem(ModBlocksInit.ESPRESSO_MACHINE.get(), new Item.Properties()));
-
-    /**
-     * Display Blocks
-     */
-    public static final RegistryObject<BlockItem> DISPLAY_CASE_CURVED_ITEM = ITEMS.register("display_case_curved",
-            () -> new BlockItem(ModBlocksInit.DISPLAY_CASE_CURVED.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CAKE_STAND_ITEM = ITEMS.register("cake_stand",
-            () -> new BlockItem(ModBlocksInit.CAKE_STAND.get(), new Item.Properties()));
 
     /**
      * Registering the event bus

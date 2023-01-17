@@ -6,10 +6,7 @@ import com.kmek.minecafe.item.ModItemsInit;
 import com.kmek.minecafe.loot.ModLootModifiers;
 import com.kmek.minecafe.networking.ModMessages;
 import com.kmek.minecafe.painting.ModPaintingsInit;
-import com.kmek.minecafe.screen.CakeStandScreen;
-import com.kmek.minecafe.screen.DisplayCaseScreen;
-import com.kmek.minecafe.screen.ModMenuTypes;
-import com.kmek.minecafe.screen.WaffleIronScreen;
+import com.kmek.minecafe.screen.*;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -86,6 +83,7 @@ public class MineCafeMod {
                     // Blocks
                     output.accept(ModItemsInit.CAKE_STAND_ITEM.get());
                     output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
+                    output.accept(ModItemsInit.OAK_WALL_SHELF_ITEM.get());
                     output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
                     output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
 
@@ -257,6 +255,7 @@ public class MineCafeMod {
         if (event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(ModItemsInit.CAKE_STAND_ITEM);
             event.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM);
+            event.accept(ModItemsInit.OAK_WALL_SHELF_ITEM);
             event.accept(ModItemsInit.WAFFLE_IRON_ITEM);
             event.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM);
         }
@@ -284,6 +283,7 @@ public class MineCafeMod {
             MenuScreens.register(ModMenuTypes.WAFFLE_IRON_MENU.get(), WaffleIronScreen::new);
             MenuScreens.register(ModMenuTypes.DISPLAY_CASE_MENU.get(), DisplayCaseScreen::new);
             MenuScreens.register(ModMenuTypes.CAKE_STAND_MENU.get(), CakeStandScreen::new);
+            MenuScreens.register(ModMenuTypes.WALL_SHELF_MENU.get(), WallShelfScreen::new);
         }
     }
 
