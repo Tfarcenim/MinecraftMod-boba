@@ -97,6 +97,7 @@ public class MineCafeMod {
                     output.accept(ModItemsInit.TAPIOCA_PUDDING.get());
 
                     // Milk Teas
+                    output.accept(ModItemsInit.MATCHA_POWDER.get());
                     output.accept(ModItemsInit.MILK_TEA_CUP.get());
                     output.accept(ModItemsInit.BROWN_SUGAR_MILK_TEA.get());
                     output.accept(ModItemsInit.TIGER_MILK_TEA.get());
