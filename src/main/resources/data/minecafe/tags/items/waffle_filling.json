@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "minecafe:tapioca_balls",
+    "minecafe:chocolate_cream",
+    "minecafe:vanilla_cream",
+    "minecafe:matcha_cream",
+    "minecafe:honey_cream",
+    "minecafe:rose_cream",
+    "minecafe:marshmallow",
+    "minecafe:custard",
+    "minecafe:apple_jam",
+    "minecafe:chorus_fruit_jam",
+    "minecafe:glow_berry_jam",
+    "minecafe:sweet_berry_jam",
+    "minecafe:watermelon_jam"
+  ]
+}

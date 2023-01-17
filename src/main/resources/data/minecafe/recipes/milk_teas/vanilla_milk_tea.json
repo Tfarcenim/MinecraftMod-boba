@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "minecraft:milk_bucket"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "B": {
+      "item": "minecafe:tapioca_balls"
+    },
+    "C": {
+      "item": "minecafe:milk_tea_cup"
+    },
+    "F": {
+      "item": "minecraft:azure_bluet"
+    }
+  },
+  "pattern": [
+    "MS",
+    "BF",
+    "C "
+  ],
+  "result": {
+    "item": "minecafe:vanilla_milk_tea"
+  }
+}
