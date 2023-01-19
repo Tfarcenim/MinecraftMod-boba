@@ -7,6 +7,8 @@
   "block.minecafe.coffee_machine": "Coffee Machine",
   "block.minecafe.espresso_machine": "Espresso Machine",
 
+  "item.minecafe.coffee_bucket": "Coffee Bucket",
+
   "item.minecafe.cassava_cutting": "Cassava Cutting",
   "item.minecafe.cassava": "Cassava",
 

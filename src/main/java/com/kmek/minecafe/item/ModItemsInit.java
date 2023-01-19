@@ -2,6 +2,7 @@ package com.kmek.minecafe.item;
 
 import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.block.ModBlocksInit;
+import com.kmek.minecafe.fluid.ModFluids;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -32,6 +33,12 @@ public class ModItemsInit {
             () -> new BlockItem(ModBlocksInit.CAKE_STAND.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> OAK_WALL_SHELF_ITEM = ITEMS.register("oak_wall_shelf",
             () -> new BlockItem(ModBlocksInit.OAK_WALL_SHELF.get(), new Item.Properties()));
+
+    /**
+     * Fun Blocks
+     */
+    public static final RegistryObject<Item> COFFEE_BUCKET = ITEMS.register("coffee_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_COFFEE_FLUID, new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET)));
 
     /**
      * Cassava Crop

@@ -1,12 +1,14 @@
 package com.kmek.minecafe.block;
 
 import com.kmek.minecafe.MineCafeMod;
+import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.ModItemsInit;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -44,6 +46,12 @@ public class ModBlocksInit {
             () -> new CakeStandBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
     public static final RegistryObject<Block> OAK_WALL_SHELF = BLOCKS.register("oak_wall_shelf",
             () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.6f).dynamicShape().noOcclusion()));
+
+    /**
+     * Fluids
+     */
+    public static final RegistryObject<LiquidBlock> COFFEE_FLUID_BLOCK = BLOCKS.register("coffee_fluid_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_COFFEE_FLUID, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     /**
      * Setup

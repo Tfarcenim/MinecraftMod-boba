@@ -2,6 +2,8 @@ package com.kmek.minecafe;
 
 import com.kmek.minecafe.block.ModBlocksInit;
 import com.kmek.minecafe.block.entity.ModBlockEntities;
+import com.kmek.minecafe.fluid.ModFluidTypes;
+import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.ModItemsInit;
 import com.kmek.minecafe.loot.ModLootModifiers;
 import com.kmek.minecafe.networking.ModMessages;
@@ -52,6 +54,9 @@ public class MineCafeMod {
 
         ModPaintingsInit.register(modEventBus);
 
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
+
         ModLootModifiers.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
@@ -91,6 +96,9 @@ public class MineCafeMod {
                     output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
                     output.accept(ModItemsInit.COFFEE_MACHINE_ITEM.get());
                     output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
+
+                    // Fun Blocks
+                    output.accept(ModItemsInit.COFFEE_BUCKET.get());
 
                     // Crops & seeds
                     output.accept(ModItemsInit.CASSAVA_CUTTING.get());
@@ -342,6 +350,8 @@ public class MineCafeMod {
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASSAVA_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_CURVED.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_COFFEE_FLUID.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_COFFEE_FLUID.get(), RenderType.translucent());
 
             MenuScreens.register(ModMenuTypes.WAFFLE_IRON_MENU.get(), WaffleIronScreen::new);
             MenuScreens.register(ModMenuTypes.COFFEE_MACHINE_MENU.get(), CoffeeMachineScreen::new);

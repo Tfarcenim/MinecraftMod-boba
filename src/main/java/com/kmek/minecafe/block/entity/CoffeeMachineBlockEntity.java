@@ -224,7 +224,7 @@ public class CoffeeMachineBlockEntity  extends BlockEntity implements MenuProvid
         if (entity.progress == waterTime + brewTime) {
             ItemStack grounds = entity.itemHandler.extractItem(SLOT_GROUNDS, 1, false);
             entity.itemHandler.setStackInSlot(SLOT_FILTER, new ItemStack(ModItemsInit.COFFEE_FILTER_USED.get()));
-            ItemStack coffee = new ItemStack(ModItemsInit.COFFEE_POT_LIGHT.get());
+            ItemStack coffee = new ItemStack(ModItemsInit.COFFEE_POT_LIGHT.get()); // todo fix for all 3 types
             entity.itemHandler.setStackInSlot(SLOT_OUTPUT, coffee);
         }
     }
