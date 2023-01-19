@@ -296,6 +296,13 @@ public class ModItemsInit {
     public static final RegistryObject<Item> COFFEE_GROUNDS_MEDIUM = ITEMS.register("coffee_grounds_medium", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_GROUNDS_DARK = ITEMS.register("coffee_grounds_dark", () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> MUG_ESPRESSO = ITEMS.register("mug_espresso", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MUG_CAFE_AU_LAIT = ITEMS.register("mug_cafe_au_lait", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MUG_AMERICANO = ITEMS.register("mug_americano", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MUG_FLAT_WHITE = ITEMS.register("mug_flat_white", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MUG_MACCHIATO = ITEMS.register("mug_macchiato", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MUG_CAPPUCCINO = ITEMS.register("mug_cappuccino", () -> new Item(new Item.Properties()));
+
     /**
      * Registering the event bus
      */

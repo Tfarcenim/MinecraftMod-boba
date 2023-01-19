@@ -18,6 +18,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.api.distmarker.Dist;
@@ -73,6 +74,9 @@ public class MineCafeMod {
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
 
         ModMessages.register();
+
+        ComposterBlock.COMPOSTABLES.put(ModItemsInit.CASSAVA.get(), 0.65F);
+        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_FILTER_USED.get(), 0.65F);
     }
 
     // todo bug: this tab has no title
@@ -192,6 +196,13 @@ public class MineCafeMod {
                     output.accept(ModItemsInit.COFFEE_POT.get());
                     output.accept(ModItemsInit.COFFEE_POT_FULL.get());
 
+                    output.accept(ModItemsInit.MUG_ESPRESSO.get());
+                    output.accept(ModItemsInit.MUG_CAFE_AU_LAIT.get());
+                    output.accept(ModItemsInit.MUG_AMERICANO.get());
+                    output.accept(ModItemsInit.MUG_FLAT_WHITE.get());
+                    output.accept(ModItemsInit.MUG_MACCHIATO.get());
+                    output.accept(ModItemsInit.MUG_CAPPUCCINO.get());
+
 //                    output.accept(ModItemsInit.PASTRY_BAG.get());
                 })
         );
@@ -271,6 +282,9 @@ public class MineCafeMod {
 
             // Coffee
 //            event.accept(ModItemsInit.COFFEE_CHERRIES);
+            event.accept(ModItemsInit.MUG_ESPRESSO);
+            event.accept(ModItemsInit.MUG_CAFE_AU_LAIT);
+            event.accept(ModItemsInit.MUG_AMERICANO);
         }
 
         if (event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {

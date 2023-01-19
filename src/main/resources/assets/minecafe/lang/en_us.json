@@ -106,5 +106,12 @@
   "item.minecafe.coffee_grounds_medium": "Medium Roast Coffee Grounds",
   "item.minecafe.coffee_grounds_dark": "Dark Roast Coffee Grounds",
 
+  "item.minecafe.mug_espresso": "Espresso",
+  "item.minecafe.mug_cafe_au_lait": "Cafe au lait",
+  "item.minecafe.mug_americano": "Americano",
+  "item.minecafe.mug_flat_white": "Flat White",
+  "item.minecafe.mug_macchiato": "Macchiato",
+  "item.minecafe.mug_cappuccino": "Cappuccino",
+
   "itemGroup.minecafe": "Boba Milk Tea why is this not the title"
 }
