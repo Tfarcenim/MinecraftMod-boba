@@ -92,45 +92,61 @@ public class MineCafeMod {
                     output.accept(ModItemsInit.COFFEE_MACHINE_ITEM.get());
                     output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
 
-                    // Crops
+                    // Crops & seeds
                     output.accept(ModItemsInit.CASSAVA_CUTTING.get());
                     output.accept(ModItemsInit.CASSAVA.get());
+                    output.accept(ModItemsInit.COFFEE_CHERRIES.get());
 
-                    // Misc Food
-                    output.accept(ModItemsInit.CASSAVA_BIBINGKA.get());
+                    // Creams
+                    output.accept(ModItemsInit.CREAM.get());
+                    output.accept(ModItemsInit.WHIPPED_CREAM.get());
+                    output.accept(ModItemsInit.CHOCOLATE_CREAM.get());
+                    output.accept(ModItemsInit.VANILLA_CREAM.get());
+                    output.accept(ModItemsInit.MATCHA_CREAM.get());
+                    output.accept(ModItemsInit.HONEY_CREAM.get());
+                    output.accept(ModItemsInit.ROSE_CREAM.get());
+                    output.accept(ModItemsInit.MARSHMALLOW.get());
+                    output.accept(ModItemsInit.MARSHMALLOWS.get());
+                    output.accept(ModItemsInit.CUSTARD.get());
+//                    output.accept(ModItemsInit.PASTRY_BAG.get());
+
+                    // Jams
+                    output.accept(ModItemsInit.APPLE_JAM.get());
+                    output.accept(ModItemsInit.CHORUS_FRUIT_JAM.get());
+                    output.accept(ModItemsInit.GLOW_BERRY_JAM.get());
+                    output.accept(ModItemsInit.SWEET_BERRY_JAM.get());
+                    output.accept(ModItemsInit.WATERMELON_JAM.get());
+
+                    // Milk Tea Ingredients
                     output.accept(ModItemsInit.TAPIOCA_BALLS.get());
-                    output.accept(ModItemsInit.TAPIOCA_PUDDING.get());
-
-                    // Milk Teas
                     output.accept(ModItemsInit.MATCHA_POWDER.get());
+
+                    // Coffee Crafting Items
+                    output.accept(ModItemsInit.COFFEE_BEANS_UNROASTED.get());
+                    output.accept(ModItemsInit.COFFEE_BEANS_LIGHT.get());
+                    output.accept(ModItemsInit.COFFEE_BEANS_MEDIUM.get());
+                    output.accept(ModItemsInit.COFFEE_BEANS_DARK.get());
+                    output.accept(ModItemsInit.COFFEE_GROUNDS_LIGHT.get());
+                    output.accept(ModItemsInit.COFFEE_GROUNDS_MEDIUM.get());
+                    output.accept(ModItemsInit.COFFEE_GROUNDS_DARK.get());
+                    output.accept(ModItemsInit.COFFEE_POT_LIGHT.get());
+                    output.accept(ModItemsInit.COFFEE_POT_MEDIUM.get());
+                    output.accept(ModItemsInit.COFFEE_POT_DARK.get());
+                    output.accept(ModItemsInit.COFFEE_FILTER.get());
+                    output.accept(ModItemsInit.COFFEE_FILTER_USED.get());
+                    output.accept(ModItemsInit.ICE_CUBES.get());
+                    output.accept(ModItemsInit.ESPRESSO_SHOT.get());
+                    output.accept(ModItemsInit.STEAMED_MILK.get());
+                    output.accept(ModItemsInit.MILK_FOAM.get());
+
+                    // Dishes
+//                    output.accept(ModItemsInit.PAPER_CUP.get());
+                    output.accept(ModItemsInit.COFFEE_POT.get());
+                    output.accept(ModItemsInit.MUG.get());
                     output.accept(ModItemsInit.MILK_TEA_CUP.get());
-                    output.accept(ModItemsInit.BROWN_SUGAR_MILK_TEA.get());
-                    output.accept(ModItemsInit.TIGER_MILK_TEA.get());
-                    output.accept(ModItemsInit.HONEY_MILK_TEA.get());
-                    output.accept(ModItemsInit.CHOCOLATE_MILK_TEA.get());
-                    output.accept(ModItemsInit.VANILLA_MILK_TEA.get());
-                    output.accept(ModItemsInit.EGG_CUSTARD_MILK_TEA.get());
-                    output.accept(ModItemsInit.COOKIE_MILK_TEA.get());
-                    output.accept(ModItemsInit.CAKE_MILK_TEA.get());
-                    output.accept(ModItemsInit.PUMPKIN_SPICE_MILK_TEA.get());
-                    output.accept(ModItemsInit.APPLE_MILK_TEA.get());
-                    output.accept(ModItemsInit.SWEET_BERRY_MILK_TEA.get());
-                    output.accept(ModItemsInit.WATERMELON_MILK_TEA.get());
-                    output.accept(ModItemsInit.GLOW_BERRY_MILK_TEA.get());
-                    output.accept(ModItemsInit.CHORUS_FRUIT_MILK_TEA.get());
-                    output.accept(ModItemsInit.ROSE_MILK_TEA.get());
-                    output.accept(ModItemsInit.BUTTERFLY_PEA_FLOWER_MILK_TEA.get());
-                    output.accept(ModItemsInit.MATCHA_MILK_TEA.get());
-                    output.accept(ModItemsInit.LAVENDER_MILK_TEA.get());
-                    output.accept(ModItemsInit.THAI_MILK_TEA.get());
-                    output.accept(ModItemsInit.BEETROOT_MILK_TEA.get());
-                    output.accept(ModItemsInit.CARROT_MILK_TEA.get());
-                    output.accept(ModItemsInit.KELP_MILK_TEA.get());
-                    output.accept(ModItemsInit.PHANTOM_MILK_TEA.get());
-                    output.accept(ModItemsInit.BLAZING_MILK_TEA.get());
-                    output.accept(ModItemsInit.DARKSIDE_MILK_TEA.get());
-                    output.accept(ModItemsInit.WET_MILK_TEA.get());
-                    output.accept(ModItemsInit.IMAGINARY_MILK_TEA.get());
+
+                    output.accept(ModItemsInit.BATTER_MESS.get());
+                    output.accept(ModItemsInit.BURNT_CRISP.get());
 
                     // Waffles
                     output.accept(ModItemsInit.RAW_WAFFLE_BATTER.get());
@@ -159,51 +175,62 @@ public class MineCafeMod {
                     output.accept(ModItemsInit.PICKAXE_WAFFLE.get());
                     output.accept(ModItemsInit.SWORD_WAFFLE.get());
 
-                    output.accept(ModItemsInit.BATTER_MESS.get());
-                    output.accept(ModItemsInit.BURNT_CRISP.get());
+                    // Misc Food
+                    output.accept(ModItemsInit.CASSAVA_BIBINGKA.get());
+                    output.accept(ModItemsInit.TAPIOCA_PUDDING.get());
+                    /*
+                    Brownies
+                    Cannoli
+                    Cookies
+                    Croissants
+                    Whoopie pie
+                     */
 
-                    // Creams
-                    output.accept(ModItemsInit.CREAM.get());
-                    output.accept(ModItemsInit.WHIPPED_CREAM.get());
-                    output.accept(ModItemsInit.CHOCOLATE_CREAM.get());
-                    output.accept(ModItemsInit.VANILLA_CREAM.get());
-                    output.accept(ModItemsInit.MATCHA_CREAM.get());
-                    output.accept(ModItemsInit.HONEY_CREAM.get());
-                    output.accept(ModItemsInit.ROSE_CREAM.get());
-                    output.accept(ModItemsInit.MARSHMALLOW.get());
-                    output.accept(ModItemsInit.MARSHMALLOWS.get());
-                    output.accept(ModItemsInit.CUSTARD.get());
-
-                    // Jams
-                    output.accept(ModItemsInit.APPLE_JAM.get());
-                    output.accept(ModItemsInit.CHORUS_FRUIT_JAM.get());
-                    output.accept(ModItemsInit.GLOW_BERRY_JAM.get());
-                    output.accept(ModItemsInit.SWEET_BERRY_JAM.get());
-                    output.accept(ModItemsInit.WATERMELON_JAM.get());
-
-                    // Coffee
-                    output.accept(ModItemsInit.COFFEE_CHERRIES.get());
-                    output.accept(ModItemsInit.COFFEE_BEANS_UNROASTED.get());
-                    output.accept(ModItemsInit.COFFEE_BEANS_LIGHT.get());
-                    output.accept(ModItemsInit.COFFEE_BEANS_MEDIUM.get());
-                    output.accept(ModItemsInit.COFFEE_BEANS_DARK.get());
-                    output.accept(ModItemsInit.COFFEE_GROUNDS_LIGHT.get());
-                    output.accept(ModItemsInit.COFFEE_GROUNDS_MEDIUM.get());
-                    output.accept(ModItemsInit.COFFEE_GROUNDS_DARK.get());
-                    output.accept(ModItemsInit.PAPER_CUP.get());
-                    output.accept(ModItemsInit.COFFEE_FILTER.get());
-                    output.accept(ModItemsInit.COFFEE_FILTER_USED.get());
-                    output.accept(ModItemsInit.COFFEE_POT.get());
-                    output.accept(ModItemsInit.COFFEE_POT_FULL.get());
-
+                    // Coffee Drinks
+                    output.accept(ModItemsInit.MUG_LIGHT_ROAST.get());
+                    output.accept(ModItemsInit.MUG_MEDIUM_ROAST.get());
+                    output.accept(ModItemsInit.MUG_DARK_ROAST.get());
                     output.accept(ModItemsInit.MUG_ESPRESSO.get());
                     output.accept(ModItemsInit.MUG_CAFE_AU_LAIT.get());
                     output.accept(ModItemsInit.MUG_AMERICANO.get());
                     output.accept(ModItemsInit.MUG_FLAT_WHITE.get());
                     output.accept(ModItemsInit.MUG_MACCHIATO.get());
                     output.accept(ModItemsInit.MUG_CAPPUCCINO.get());
+                    output.accept(ModItemsInit.MUG_MOCHA.get());
+                    output.accept(ModItemsInit.MUG_LATTE.get());
+                    output.accept(ModItemsInit.MUG_HOT_COCOA.get());
 
-//                    output.accept(ModItemsInit.PASTRY_BAG.get());
+                    // Teas
+                    output.accept(ModItemsInit.MATCHA_TEA.get());
+
+                    // Milk Teas
+                    output.accept(ModItemsInit.BROWN_SUGAR_MILK_TEA.get());
+                    output.accept(ModItemsInit.TIGER_MILK_TEA.get());
+                    output.accept(ModItemsInit.HONEY_MILK_TEA.get());
+                    output.accept(ModItemsInit.CHOCOLATE_MILK_TEA.get());
+                    output.accept(ModItemsInit.VANILLA_MILK_TEA.get());
+                    output.accept(ModItemsInit.EGG_CUSTARD_MILK_TEA.get());
+                    output.accept(ModItemsInit.COOKIE_MILK_TEA.get());
+                    output.accept(ModItemsInit.CAKE_MILK_TEA.get());
+                    output.accept(ModItemsInit.PUMPKIN_SPICE_MILK_TEA.get());
+                    output.accept(ModItemsInit.APPLE_MILK_TEA.get());
+                    output.accept(ModItemsInit.SWEET_BERRY_MILK_TEA.get());
+                    output.accept(ModItemsInit.WATERMELON_MILK_TEA.get());
+                    output.accept(ModItemsInit.GLOW_BERRY_MILK_TEA.get());
+                    output.accept(ModItemsInit.CHORUS_FRUIT_MILK_TEA.get());
+                    output.accept(ModItemsInit.ROSE_MILK_TEA.get());
+                    output.accept(ModItemsInit.BUTTERFLY_PEA_FLOWER_MILK_TEA.get());
+                    output.accept(ModItemsInit.MATCHA_MILK_TEA.get());
+                    output.accept(ModItemsInit.LAVENDER_MILK_TEA.get());
+                    output.accept(ModItemsInit.THAI_MILK_TEA.get());
+                    output.accept(ModItemsInit.BEETROOT_MILK_TEA.get());
+                    output.accept(ModItemsInit.CARROT_MILK_TEA.get());
+                    output.accept(ModItemsInit.KELP_MILK_TEA.get());
+                    output.accept(ModItemsInit.PHANTOM_MILK_TEA.get());
+                    output.accept(ModItemsInit.BLAZING_MILK_TEA.get());
+                    output.accept(ModItemsInit.DARKSIDE_MILK_TEA.get());
+                    output.accept(ModItemsInit.WET_MILK_TEA.get());
+                    output.accept(ModItemsInit.IMAGINARY_MILK_TEA.get());
                 })
         );
     }
