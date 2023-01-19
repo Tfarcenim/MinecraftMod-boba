@@ -16,6 +16,8 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<WaffleIronMenu>> WAFFLE_IRON_MENU =
             registerMenuType(WaffleIronMenu::new, "waffle_iron_menu");
+    public static final RegistryObject<MenuType<CoffeeMachineMenu>> COFFEE_MACHINE_MENU =
+            registerMenuType(CoffeeMachineMenu::new, "coffee_machine_menu");
 
     public static final RegistryObject<MenuType<DisplayCaseMenu>> DISPLAY_CASE_MENU =
             registerMenuType(DisplayCaseMenu::new, "display_case_menu");

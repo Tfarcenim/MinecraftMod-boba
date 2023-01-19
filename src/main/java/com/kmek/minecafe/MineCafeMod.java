@@ -85,11 +85,14 @@ public class MineCafeMod {
                     output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
                     output.accept(ModItemsInit.OAK_WALL_SHELF_ITEM.get());
                     output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
+                    output.accept(ModItemsInit.COFFEE_MACHINE_ITEM.get());
                     output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
 
-                    // Cassava crop + items
+                    // Crops
                     output.accept(ModItemsInit.CASSAVA_CUTTING.get());
                     output.accept(ModItemsInit.CASSAVA.get());
+
+                    // Misc Food
                     output.accept(ModItemsInit.CASSAVA_BIBINGKA.get());
                     output.accept(ModItemsInit.TAPIOCA_BALLS.get());
                     output.accept(ModItemsInit.TAPIOCA_PUDDING.get());
@@ -174,6 +177,21 @@ public class MineCafeMod {
                     output.accept(ModItemsInit.SWEET_BERRY_JAM.get());
                     output.accept(ModItemsInit.WATERMELON_JAM.get());
 
+                    // Coffee
+                    output.accept(ModItemsInit.COFFEE_CHERRIES.get());
+                    output.accept(ModItemsInit.COFFEE_BEANS_UNROASTED.get());
+                    output.accept(ModItemsInit.COFFEE_BEANS_LIGHT.get());
+                    output.accept(ModItemsInit.COFFEE_BEANS_MEDIUM.get());
+                    output.accept(ModItemsInit.COFFEE_BEANS_DARK.get());
+                    output.accept(ModItemsInit.COFFEE_GROUNDS_LIGHT.get());
+                    output.accept(ModItemsInit.COFFEE_GROUNDS_MEDIUM.get());
+                    output.accept(ModItemsInit.COFFEE_GROUNDS_DARK.get());
+                    output.accept(ModItemsInit.PAPER_CUP.get());
+                    output.accept(ModItemsInit.COFFEE_FILTER.get());
+                    output.accept(ModItemsInit.COFFEE_FILTER_USED.get());
+                    output.accept(ModItemsInit.COFFEE_POT.get());
+                    output.accept(ModItemsInit.COFFEE_POT_FULL.get());
+
 //                    output.accept(ModItemsInit.PASTRY_BAG.get());
                 })
         );
@@ -250,6 +268,9 @@ public class MineCafeMod {
             event.accept(ModItemsInit.GLOW_BERRY_JAM);
             event.accept(ModItemsInit.SWEET_BERRY_JAM);
             event.accept(ModItemsInit.WATERMELON_JAM);
+
+            // Coffee
+//            event.accept(ModItemsInit.COFFEE_CHERRIES);
         }
 
         if (event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
@@ -257,6 +278,7 @@ public class MineCafeMod {
             event.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM);
             event.accept(ModItemsInit.OAK_WALL_SHELF_ITEM);
             event.accept(ModItemsInit.WAFFLE_IRON_ITEM);
+            event.accept(ModItemsInit.COFFEE_MACHINE_ITEM);
             event.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM);
         }
     }
@@ -281,6 +303,7 @@ public class MineCafeMod {
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_CURVED.get(), RenderType.translucent());
 
             MenuScreens.register(ModMenuTypes.WAFFLE_IRON_MENU.get(), WaffleIronScreen::new);
+            MenuScreens.register(ModMenuTypes.COFFEE_MACHINE_MENU.get(), CoffeeMachineScreen::new);
             MenuScreens.register(ModMenuTypes.DISPLAY_CASE_MENU.get(), DisplayCaseScreen::new);
             MenuScreens.register(ModMenuTypes.CAKE_STAND_MENU.get(), CakeStandScreen::new);
             MenuScreens.register(ModMenuTypes.WALL_SHELF_MENU.get(), WallShelfScreen::new);

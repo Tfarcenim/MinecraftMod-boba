@@ -278,8 +278,23 @@ public class ModItemsInit {
     /**
      * Coffee Stuff
      */
+    public static final RegistryObject<BlockItem> COFFEE_MACHINE_ITEM = ITEMS.register("coffee_machine",
+            () -> new BlockItem(ModBlocksInit.COFFEE_MACHINE.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> ESPRESSO_MACHINE_ITEM = ITEMS.register("espresso_machine",
             () -> new BlockItem(ModBlocksInit.ESPRESSO_MACHINE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> PAPER_CUP = ITEMS.register("paper_cup", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_FILTER = ITEMS.register("coffee_filter", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_FILTER_USED = ITEMS.register("coffee_filter_used", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_POT = ITEMS.register("coffee_pot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_POT_FULL = ITEMS.register("coffee_pot_full", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_CHERRIES = ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_BEANS_UNROASTED = ITEMS.register("coffee_beans_unroasted", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_BEANS_LIGHT = ITEMS.register("coffee_beans_light", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_BEANS_MEDIUM = ITEMS.register("coffee_beans_medium", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_BEANS_DARK = ITEMS.register("coffee_beans_dark", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_GROUNDS_LIGHT = ITEMS.register("coffee_grounds_light", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_GROUNDS_MEDIUM = ITEMS.register("coffee_grounds_medium", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_GROUNDS_DARK = ITEMS.register("coffee_grounds_dark", () -> new Item(new Item.Properties()));
 
     /**
      * Registering the event bus

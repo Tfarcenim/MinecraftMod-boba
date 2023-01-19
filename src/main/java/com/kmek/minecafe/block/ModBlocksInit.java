@@ -30,6 +30,8 @@ public class ModBlocksInit {
      */
     public static final RegistryObject<Block> WAFFLE_IRON = BLOCKS.register("waffle_iron",
             () -> new WaffleIronBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
+    public static final RegistryObject<Block> COFFEE_MACHINE = BLOCKS.register("coffee_machine",
+            () -> new CoffeeMachineBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
     public static final RegistryObject<Block> ESPRESSO_MACHINE = BLOCKS.register("espresso_machine",
             () -> new EspressoMachineBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
 
