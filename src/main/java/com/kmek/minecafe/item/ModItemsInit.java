@@ -65,6 +65,7 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
     public static final RegistryObject<Item> TAPIOCA_PUDDING = ITEMS.register("tapioca_pudding", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
+    public static final RegistryObject<Item> CHOCOLATE = ITEMS.register("chocolate", () -> new Item(new Item.Properties()));
 
     /**
      * Tea Crafting Ingredients
@@ -247,6 +248,8 @@ public class ModItemsInit {
                     .build())));
     public static final RegistryObject<Item> CUSTARD = ITEMS.register("custard", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
+    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
 
     /**
      * Jams
@@ -313,17 +316,20 @@ public class ModItemsInit {
     public static final RegistryObject<Item> MUG_LIGHT_ROAST = ITEMS.register("mug_light_roast", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MUG_MEDIUM_ROAST = ITEMS.register("mug_medium_roast", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MUG_DARK_ROAST = ITEMS.register("mug_dark_roast", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MUG_ESPRESSO = ITEMS.register("mug_espresso", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MUG_CAFE_AU_LAIT = ITEMS.register("mug_cafe_au_lait", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MUG_AMERICANO = ITEMS.register("mug_americano", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MUG_FLAT_WHITE = ITEMS.register("mug_flat_white", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MUG_MACCHIATO = ITEMS.register("mug_macchiato", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MUG_CAPPUCCINO = ITEMS.register("mug_cappuccino", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MUG_MOCHA = ITEMS.register("mug_mocha", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MUG_LATTE = ITEMS.register("mug_latte", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MUG_HOT_COCOA = ITEMS.register("mug_hot_cocoa", () -> new Item(new Item.Properties()));
-    // Frappe
-    // The other ones?
+    public static final RegistryObject<Item> BUTTER_COFFEE = ITEMS.register("mug_butter_coffee", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ESPRESSO = ITEMS.register("mug_espresso", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CAFE_AU_LAIT = ITEMS.register("mug_cafe_au_lait", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> AMERICANO = ITEMS.register("mug_americano", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> FLAT_WHITE = ITEMS.register("mug_flat_white", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MACCHIATO = ITEMS.register("mug_macchiato", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CAPPUCCINO = ITEMS.register("mug_cappuccino", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MOCHA = ITEMS.register("mug_mocha", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LATTE = ITEMS.register("mug_latte", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_FRAPPE = ITEMS.register("coffee_frappe", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WHIPPED_COFFEE = ITEMS.register("whipped_coffee", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> HOT_COCOA = ITEMS.register("mug_hot_cocoa", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RED_EYE_COFFEE = ITEMS.register("red_eye_coffee", () -> new Item(new Item.Properties()));
+    // black eye, and dead eye coffee
 
     // Teas
     public static final RegistryObject<Item> MATCHA_TEA = ITEMS.register("matcha_tea", () -> new Item(new Item.Properties()));

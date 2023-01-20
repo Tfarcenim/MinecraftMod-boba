@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecafe:butter"
+    },
+    "C": {
+      "tag": "minecafe:drip_coffee"
+    }
+  },
+  "pattern": [
+    "B",
+    "C"
+  ],
+  "result": {
+    "item": "minecafe:mug_butter_coffee"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecafe:steamed_milk"
+    },
+    "O": {
+      "item": "minecafe:marshmallows"
+    },
+    "C": {
+      "item": "minecafe:chocolate"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "M": {
+      "item": "minecafe:mug"
+    }
+  },
+  "pattern": [
+    " O ",
+    "CIS",
+    " M "
+  ],
+  "result": {
+    "item": "minecafe:mug_hot_cocoa"
+  }
+}

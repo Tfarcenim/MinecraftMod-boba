@@ -14,9 +14,10 @@
 
   "item.minecafe.cassava_bibingka": "Cassava Cake",
   "item.minecafe.tapioca_pudding": "Tapioca Pudding",
+  "item.minecafe.chocolate": "Chocolate",
 
   "item.minecafe.tapioca_balls": "Boba Pearls",
-  "item.minecafe.milk_tea_cup": "Milk Tea Cup",
+  "item.minecafe.milk_tea_cup": "Glass Cup",
   "item.minecafe.matcha_powder": "Matcha Powder",
   "item.minecafe.brown_sugar_milk_tea": "Brown Sugar Milk Tea",
   "item.minecafe.tiger_milk_tea": "Tiger Milk Tea",
@@ -84,6 +85,7 @@
   "item.minecafe.marshmallow": "Marshmallow",
   "item.minecafe.marshmallows": "Marshmallows",
   "item.minecafe.custard": "Custard",
+  "item.minecafe.butter": "Butter",
 
   "item.minecafe.apple_jam": "Apple Jam",
   "item.minecafe.chorus_fruit_jam": "Chorus Fruit Jam",
@@ -117,9 +119,11 @@
   "item.minecafe.steamed_milk": "Steamed Milk",
   "item.minecafe.milk_foam": "Milk Foam",
 
+  "item.minecafe.mug_hot_cocoa": "Hot Cocoa",
   "item.minecafe.mug_light_roast": "Light Roast Coffee",
   "item.minecafe.mug_medium_roast": "Medium Roast Coffee",
   "item.minecafe.mug_dark_roast": "Dark Roast Coffee",
+  "item.minecafe.mug_butter_coffee": "Butter Coffee",
   "item.minecafe.mug_espresso": "Espresso",
   "item.minecafe.mug_cafe_au_lait": "Cafe au lait",
   "item.minecafe.mug_americano": "Americano",
@@ -128,7 +132,9 @@
   "item.minecafe.mug_cappuccino": "Cappuccino",
   "item.minecafe.mug_mocha": "Mocha",
   "item.minecafe.mug_latte": "Latte",
-  "item.minecafe.mug_hot_cocoa": "Hot Cocoa",
+  "item.minecafe.coffee_frappe": "Frappe Coffee",
+  "item.minecafe.whipped_coffee": "Whipped Coffee",
+  "item.minecafe.red_eye_coffee": "Red Eye Coffee",
 
   "itemGroup.minecafe": "Boba Milk Tea why is this not the title"
 }

@@ -2,14 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "E": {
+      "item": "minecafe:espresso_shot"
+    },
     "M": {
-      "item": "minecraft:milk_bucket"
+      "item": "minecafe:mug"
     }
   },
   "pattern": [
+    "E",
     "M"
   ],
   "result": {
-    "item": "minecafe:cream"
+    "item": "minecafe:mug_espresso"
   }
 }

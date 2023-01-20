@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "F": {
-      "item": "minecafe:chocolate"
+    "C": {
+      "item": "minecraft:cocoa_beans"
     },
     "S": {
       "item": "minecraft:sugar"
     },
-    "C": {
-      "item": "minecafe:cream"
+    "B": {
+      "item": "minecafe:butter"
     }
   },
   "pattern": [
-    "SCF"
+    "CBS"
   ],
   "result": {
-    "item": "minecafe:chocolate_cream"
+    "item": "minecafe:chocolate"
   }
 }

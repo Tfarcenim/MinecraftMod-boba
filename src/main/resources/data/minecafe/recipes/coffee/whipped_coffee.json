@@ -2,28 +2,28 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "M": {
+    "C": {
+      "tag": "minecafe:full_coffee_pot"
+    },
+    "I": {
+      "item": "minecafe:ice_cubes"
+    },
+    "K": {
       "item": "minecraft:milk_bucket"
     },
     "S": {
       "item": "minecraft:sugar"
     },
-    "B": {
-      "item": "minecafe:tapioca_balls"
-    },
-    "C": {
+    "M": {
       "item": "minecafe:milk_tea_cup"
-    },
-    "F": {
-      "item": "minecafe:chocolate"
     }
   },
   "pattern": [
-    "MS",
-    "BF",
-    "C "
+    " C ",
+    "IKS",
+    " M "
   ],
   "result": {
-    "item": "minecafe:chocolate_milk_tea"
+    "item": "minecafe:whipped_coffee"
   }
 }

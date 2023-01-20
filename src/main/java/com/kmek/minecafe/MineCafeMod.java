@@ -105,6 +105,13 @@ public class MineCafeMod {
                     output.accept(ModItemsInit.CASSAVA.get());
                     output.accept(ModItemsInit.COFFEE_CHERRIES.get());
 
+                    // Jams
+                    output.accept(ModItemsInit.APPLE_JAM.get());
+                    output.accept(ModItemsInit.CHORUS_FRUIT_JAM.get());
+                    output.accept(ModItemsInit.GLOW_BERRY_JAM.get());
+                    output.accept(ModItemsInit.SWEET_BERRY_JAM.get());
+                    output.accept(ModItemsInit.WATERMELON_JAM.get());
+
                     // Creams
                     output.accept(ModItemsInit.CREAM.get());
                     output.accept(ModItemsInit.WHIPPED_CREAM.get());
@@ -116,16 +123,11 @@ public class MineCafeMod {
                     output.accept(ModItemsInit.MARSHMALLOW.get());
                     output.accept(ModItemsInit.MARSHMALLOWS.get());
                     output.accept(ModItemsInit.CUSTARD.get());
+                    output.accept(ModItemsInit.BUTTER.get());
 //                    output.accept(ModItemsInit.PASTRY_BAG.get());
 
-                    // Jams
-                    output.accept(ModItemsInit.APPLE_JAM.get());
-                    output.accept(ModItemsInit.CHORUS_FRUIT_JAM.get());
-                    output.accept(ModItemsInit.GLOW_BERRY_JAM.get());
-                    output.accept(ModItemsInit.SWEET_BERRY_JAM.get());
-                    output.accept(ModItemsInit.WATERMELON_JAM.get());
-
                     // Milk Tea Ingredients
+                    output.accept(ModItemsInit.CHOCOLATE.get());
                     output.accept(ModItemsInit.TAPIOCA_BALLS.get());
                     output.accept(ModItemsInit.MATCHA_POWDER.get());
 
@@ -142,10 +144,10 @@ public class MineCafeMod {
                     output.accept(ModItemsInit.COFFEE_POT_DARK.get());
                     output.accept(ModItemsInit.COFFEE_FILTER.get());
                     output.accept(ModItemsInit.COFFEE_FILTER_USED.get());
-                    output.accept(ModItemsInit.ICE_CUBES.get());
                     output.accept(ModItemsInit.ESPRESSO_SHOT.get());
                     output.accept(ModItemsInit.STEAMED_MILK.get());
                     output.accept(ModItemsInit.MILK_FOAM.get());
+                    output.accept(ModItemsInit.ICE_CUBES.get());
 
                     // Dishes
 //                    output.accept(ModItemsInit.PAPER_CUP.get());
@@ -195,18 +197,22 @@ public class MineCafeMod {
                      */
 
                     // Coffee Drinks
+                    output.accept(ModItemsInit.HOT_COCOA.get());
                     output.accept(ModItemsInit.MUG_LIGHT_ROAST.get());
                     output.accept(ModItemsInit.MUG_MEDIUM_ROAST.get());
                     output.accept(ModItemsInit.MUG_DARK_ROAST.get());
-                    output.accept(ModItemsInit.MUG_ESPRESSO.get());
-                    output.accept(ModItemsInit.MUG_CAFE_AU_LAIT.get());
-                    output.accept(ModItemsInit.MUG_AMERICANO.get());
-                    output.accept(ModItemsInit.MUG_FLAT_WHITE.get());
-                    output.accept(ModItemsInit.MUG_MACCHIATO.get());
-                    output.accept(ModItemsInit.MUG_CAPPUCCINO.get());
-                    output.accept(ModItemsInit.MUG_MOCHA.get());
-                    output.accept(ModItemsInit.MUG_LATTE.get());
-                    output.accept(ModItemsInit.MUG_HOT_COCOA.get());
+                    output.accept(ModItemsInit.BUTTER_COFFEE.get());
+                    output.accept(ModItemsInit.ESPRESSO.get());
+                    output.accept(ModItemsInit.AMERICANO.get());
+                    output.accept(ModItemsInit.MACCHIATO.get());
+                    output.accept(ModItemsInit.MOCHA.get());
+                    output.accept(ModItemsInit.RED_EYE_COFFEE.get());
+                    output.accept(ModItemsInit.CAFE_AU_LAIT.get());
+                    output.accept(ModItemsInit.FLAT_WHITE.get());
+                    output.accept(ModItemsInit.CAPPUCCINO.get());
+                    output.accept(ModItemsInit.LATTE.get());
+                    output.accept(ModItemsInit.COFFEE_FRAPPE.get());
+                    output.accept(ModItemsInit.WHIPPED_COFFEE.get());
 
                     // Teas
                     output.accept(ModItemsInit.MATCHA_TEA.get());
@@ -317,9 +323,9 @@ public class MineCafeMod {
 
             // Coffee
 //            event.accept(ModItemsInit.COFFEE_CHERRIES);
-            event.accept(ModItemsInit.MUG_ESPRESSO);
-            event.accept(ModItemsInit.MUG_CAFE_AU_LAIT);
-            event.accept(ModItemsInit.MUG_AMERICANO);
+            event.accept(ModItemsInit.ESPRESSO);
+            event.accept(ModItemsInit.CAFE_AU_LAIT);
+            event.accept(ModItemsInit.AMERICANO);
         }
 
         if (event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
