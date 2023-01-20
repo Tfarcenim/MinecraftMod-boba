@@ -126,22 +126,13 @@ public class MineCafeMod {
                     output.accept(ModItemsInit.BUTTER.get());
 //                    output.accept(ModItemsInit.PASTRY_BAG.get());
 
-                    // Milk Tea Ingredients
                     output.accept(ModItemsInit.CHOCOLATE.get());
-                    output.accept(ModItemsInit.TAPIOCA_BALLS.get());
-                    output.accept(ModItemsInit.MATCHA_POWDER.get());
 
                     // Coffee Crafting Items
                     output.accept(ModItemsInit.COFFEE_BEANS_UNROASTED.get());
-                    output.accept(ModItemsInit.COFFEE_BEANS_LIGHT.get());
-                    output.accept(ModItemsInit.COFFEE_BEANS_MEDIUM.get());
-                    output.accept(ModItemsInit.COFFEE_BEANS_DARK.get());
-                    output.accept(ModItemsInit.COFFEE_GROUNDS_LIGHT.get());
-                    output.accept(ModItemsInit.COFFEE_GROUNDS_MEDIUM.get());
-                    output.accept(ModItemsInit.COFFEE_GROUNDS_DARK.get());
-                    output.accept(ModItemsInit.COFFEE_POT_LIGHT.get());
-                    output.accept(ModItemsInit.COFFEE_POT_MEDIUM.get());
-                    output.accept(ModItemsInit.COFFEE_POT_DARK.get());
+                    output.accept(ModItemsInit.COFFEE_BEANS_ROASTED.get());
+                    output.accept(ModItemsInit.COFFEE_GROUNDS.get());
+                    output.accept(ModItemsInit.COFFEE_POT_FULL.get());
                     output.accept(ModItemsInit.COFFEE_FILTER.get());
                     output.accept(ModItemsInit.COFFEE_FILTER_USED.get());
                     output.accept(ModItemsInit.ESPRESSO_SHOT.get());
@@ -149,11 +140,14 @@ public class MineCafeMod {
                     output.accept(ModItemsInit.MILK_FOAM.get());
                     output.accept(ModItemsInit.ICE_CUBES.get());
 
+                    output.accept(ModItemsInit.BOBA_PEARLS.get());
+                    output.accept(ModItemsInit.MATCHA_POWDER.get());
+
                     // Dishes
 //                    output.accept(ModItemsInit.PAPER_CUP.get());
                     output.accept(ModItemsInit.COFFEE_POT.get());
                     output.accept(ModItemsInit.MUG.get());
-                    output.accept(ModItemsInit.MILK_TEA_CUP.get());
+                    output.accept(ModItemsInit.CLEAR_CUP.get());
 
                     output.accept(ModItemsInit.BATTER_MESS.get());
                     output.accept(ModItemsInit.BURNT_CRISP.get());
@@ -198,21 +192,22 @@ public class MineCafeMod {
 
                     // Coffee Drinks
                     output.accept(ModItemsInit.HOT_COCOA.get());
-                    output.accept(ModItemsInit.MUG_LIGHT_ROAST.get());
-                    output.accept(ModItemsInit.MUG_MEDIUM_ROAST.get());
-                    output.accept(ModItemsInit.MUG_DARK_ROAST.get());
+                    output.accept(ModItemsInit.COFFEE.get());
                     output.accept(ModItemsInit.BUTTER_COFFEE.get());
                     output.accept(ModItemsInit.ESPRESSO.get());
+                    output.accept(ModItemsInit.RED_EYE_COFFEE.get());
+                    output.accept(ModItemsInit.BLACK_EYE_COFFEE.get());
+                    output.accept(ModItemsInit.DEAD_EYE_COFFEE.get());
                     output.accept(ModItemsInit.AMERICANO.get());
                     output.accept(ModItemsInit.MACCHIATO.get());
                     output.accept(ModItemsInit.MOCHA.get());
-                    output.accept(ModItemsInit.RED_EYE_COFFEE.get());
                     output.accept(ModItemsInit.CAFE_AU_LAIT.get());
                     output.accept(ModItemsInit.FLAT_WHITE.get());
                     output.accept(ModItemsInit.CAPPUCCINO.get());
                     output.accept(ModItemsInit.LATTE.get());
-                    output.accept(ModItemsInit.COFFEE_FRAPPE.get());
+                    output.accept(ModItemsInit.FRAPPE_COFFEE.get());
                     output.accept(ModItemsInit.WHIPPED_COFFEE.get());
+                    output.accept(ModItemsInit.ICED_COFFEE.get());
 
                     // Teas
                     output.accept(ModItemsInit.MATCHA_TEA.get());

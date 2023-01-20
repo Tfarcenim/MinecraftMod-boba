@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "C": {
-      "tag": "minecafe:full_coffee_pot"
+      "item": "minecafe:coffee_pot_full"
     },
     "B": {
       "item": "minecraft:bucket"

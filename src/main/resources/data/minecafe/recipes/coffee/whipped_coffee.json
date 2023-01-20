@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "C": {
-      "tag": "minecafe:full_coffee_pot"
+      "item": "minecafe:coffee_pot_full"
     },
     "I": {
       "item": "minecafe:ice_cubes"
@@ -15,7 +15,7 @@
       "item": "minecraft:sugar"
     },
     "M": {
-      "item": "minecafe:milk_tea_cup"
+      "item": "minecafe:clear_cup"
     }
   },
   "pattern": [
