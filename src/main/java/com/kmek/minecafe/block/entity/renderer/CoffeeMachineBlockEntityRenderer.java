@@ -1,6 +1,6 @@
 package com.kmek.minecafe.block.entity.renderer;
 
-import com.kmek.minecafe.block.entity.CakeStandBlockEntity;
+import com.kmek.minecafe.block.entity.CoffeeMachineBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
@@ -9,16 +9,16 @@ import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.world.item.ItemStack;
 
-public class CakeStandBlockEntityRenderer extends CustomBaseBlockEntityRenderer<CakeStandBlockEntity> {
-    public CakeStandBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
+public class CoffeeMachineBlockEntityRenderer extends CustomBaseBlockEntityRenderer<CoffeeMachineBlockEntity>{
+    public CoffeeMachineBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
         super(context);
     }
 
     @Override
-    protected void renderInner(ItemRenderer itemRenderer, CakeStandBlockEntity pBlockEntity, float pPartialTick, PoseStack pPoseStack, MultiBufferSource pBufferSource, int pPackedLight, int pPackedOverlay) {
+    protected void renderInner(ItemRenderer itemRenderer, CoffeeMachineBlockEntity pBlockEntity, float pPartialTick, PoseStack pPoseStack, MultiBufferSource pBufferSource, int pPackedLight, int pPackedOverlay) {
         centerAndRotateToFacing(pBlockEntity, pPoseStack);
-        pPoseStack.translate(0f, 0.15f, 0f);
-        pPoseStack.scale(0.7f, 0.7f, 0.7f);
+        pPoseStack.translate(0.025f, -0.15f, 0.24f);
+        pPoseStack.scale(0.65f, 0.65f, 0.65f);
 
         ItemStack itemStack = pBlockEntity.getRenderStack();
 

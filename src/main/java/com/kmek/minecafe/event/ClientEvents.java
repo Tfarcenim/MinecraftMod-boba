@@ -2,10 +2,7 @@ package com.kmek.minecafe.event;
 
 import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.block.entity.ModBlockEntities;
-import com.kmek.minecafe.block.entity.renderer.CakeStandBlockEntityRenderer;
-import com.kmek.minecafe.block.entity.renderer.DisplayCaseBlockEntityRenderer;
-import com.kmek.minecafe.block.entity.renderer.WaffleIronBlockEntityRenderer;
-import com.kmek.minecafe.block.entity.renderer.WallShelfBlockEntityRenderer;
+import com.kmek.minecafe.block.entity.renderer.*;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,6 +17,7 @@ public class ClientEvents {
             event.registerBlockEntityRenderer(ModBlockEntities.CAKE_STAND.get(), CakeStandBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.DISPLAY_CASE.get(), DisplayCaseBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.WALL_SHELF.get(), WallShelfBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.COFFEE_MACHINE.get(), CoffeeMachineBlockEntityRenderer::new);
         }
     }
 }

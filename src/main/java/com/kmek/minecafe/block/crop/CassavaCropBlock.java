@@ -1,4 +1,4 @@
-package com.kmek.minecafe.block;
+package com.kmek.minecafe.block.crop;
 
 import com.kmek.minecafe.item.ModItemsInit;
 import net.minecraft.world.level.ItemLike;

@@ -1,6 +1,7 @@
 package com.kmek.minecafe.block;
 
 import com.kmek.minecafe.MineCafeMod;
+import com.kmek.minecafe.block.crop.CassavaCropBlock;
 import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.ModItemsInit;
 import net.minecraft.world.item.BlockItem;

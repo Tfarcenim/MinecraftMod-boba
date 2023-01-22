@@ -1,26 +1,20 @@
 package com.kmek.minecafe.block.entity.renderer;
 
-import com.kmek.minecafe.block.WaffleIronBlock;
 import com.kmek.minecafe.block.entity.WaffleIronBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
-public class WaffleIronBlockEntityRenderer implements BlockEntityRenderer<WaffleIronBlockEntity> {
+public class WaffleIronBlockEntityRenderer extends CustomBaseBlockEntityRenderer<WaffleIronBlockEntity> {
     public WaffleIronBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
-
+        super(context);
     }
 
     @Override
@@ -33,15 +27,10 @@ public class WaffleIronBlockEntityRenderer implements BlockEntityRenderer<Waffle
             ItemStack itemStack = pBlockEntity.getRenderStack();
             pPoseStack.pushPose();
 
-            pPoseStack.translate(0.5f, 0.125f, 0.5f);
+            centerAndRotateToFacing(pBlockEntity, pPoseStack);
+            pPoseStack.translate(0f, -0.375f, 0f);
             pPoseStack.scale(0.65f, 0.65f, 0.65f);
             pPoseStack.mulPose(Axis.XP.rotationDegrees(-90.0F));
-            switch(pBlockEntity.getBlockState().getValue(WaffleIronBlock.FACING)) {
-                case NORTH -> pPoseStack.mulPose(Axis.ZP.rotationDegrees(180.f));
-                case EAST -> pPoseStack.mulPose(Axis.ZP.rotationDegrees(90.0F));
-                case SOUTH -> pPoseStack.mulPose(Axis.ZP.rotationDegrees(0.0F));
-                case WEST -> pPoseStack.mulPose(Axis.ZP.rotationDegrees(270.0F));
-            }
             pPoseStack.translate(0.0f, -0.1f, 0.0f);
 
             // Bottom Item
@@ -59,11 +48,5 @@ public class WaffleIronBlockEntityRenderer implements BlockEntityRenderer<Waffle
 
             pPoseStack.popPose();
         }
-    }
-
-    private int getLightLevel(Level level, BlockPos blockPos) {
-        int bLight = level.getBrightness(LightLayer.BLOCK, blockPos);
-        int sLight = level.getBrightness(LightLayer.SKY, blockPos);
-        return LightTexture.pack(bLight, sLight);
     }
 }
