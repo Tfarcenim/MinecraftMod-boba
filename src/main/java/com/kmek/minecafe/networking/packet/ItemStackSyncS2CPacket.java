@@ -1,5 +1,6 @@
 package com.kmek.minecafe.networking.packet;
 
+import com.kmek.minecafe.block.entity.CustomBaseBlockEntity;
 import com.kmek.minecafe.block.entity.WaffleIronBlockEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
@@ -45,7 +46,7 @@ public class ItemStackSyncS2CPacket {
     public boolean handle(Supplier<NetworkEvent.Context> supplier) {
         NetworkEvent.Context context = supplier.get();
         context.enqueueWork(() -> {
-            if(Minecraft.getInstance().level.getBlockEntity(pos) instanceof WaffleIronBlockEntity blockEntity) {
+            if(Minecraft.getInstance().level.getBlockEntity(pos) instanceof CustomBaseBlockEntity blockEntity) {
                 blockEntity.setHandler(this.itemStackHandler);
             }
         });
