@@ -64,6 +64,7 @@ public class ModCreativeTabInit {
     private void acceptCropsAndSeeds(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.CASSAVA_CUTTING.get());
         output.accept(ModItemsInit.CASSAVA.get());
+        output.accept(ModItemsInit.COFFEE_BEANS_UNROASTED.get());
         output.accept(ModItemsInit.COFFEE_CHERRIES.get());
     }
 
@@ -179,7 +180,6 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCoffeeIngredients(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.COFFEE_BEANS_UNROASTED.get());
         output.accept(ModItemsInit.COFFEE_BEANS_ROASTED.get());
         output.accept(ModItemsInit.COFFEE_GROUNDS.get());
         output.accept(ModItemsInit.COFFEE_POT_FULL.get());

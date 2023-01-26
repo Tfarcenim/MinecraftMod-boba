@@ -94,7 +94,10 @@ public class MineCafeMod {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASSAVA_CROP.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.COFFEE_CROP_BOTTOM.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.COFFEE_CROP_TOP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_CURVED.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_COFFEE_FLUID.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_COFFEE_FLUID.get(), RenderType.translucent());

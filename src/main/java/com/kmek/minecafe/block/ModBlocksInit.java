@@ -2,6 +2,8 @@ package com.kmek.minecafe.block;
 
 import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.block.crop.CassavaCropBlock;
+import com.kmek.minecafe.block.crop.CropTreeBottomBlock;
+import com.kmek.minecafe.block.crop.CropTreeTopBlock;
 import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.ModItemsInit;
 import net.minecraft.world.item.BlockItem;
@@ -10,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,8 +28,14 @@ public class ModBlocksInit {
     /**
      * Crop Blocks
      */
+    // Cassava
     public static final RegistryObject<Block> CASSAVA_CROP = BLOCKS.register("cassava_crop",
             () -> new CassavaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+    // Coffee
+    public static final RegistryObject<Block> COFFEE_CROP_BOTTOM = BLOCKS.register("coffee_crop_bottom",
+            () -> new CropTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> COFFEE_CROP_TOP = BLOCKS.register("coffee_crop_top",
+            () -> new CropTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
 
     /**
      * Crafting Blocks
