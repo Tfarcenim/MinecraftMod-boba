@@ -27,29 +27,8 @@ public class CustomBaseBlockEntityRenderer<T extends CustomBaseBlockEntity> impl
         ItemRenderer itemRenderer = Minecraft.getInstance().getItemRenderer();
 
         pPoseStack.pushPose();
-//        ItemStackHandler items = pBlockEntity.getRenderItemStackHandler();
 
         renderInner(itemRenderer, pBlockEntity, pPartialTick, pPoseStack, pBufferSource, pPackedLight, pPackedOverlay);
-
-//        pPoseStack.translate(0.5f, 1.1f, 0.5f);
-//        pPoseStack.scale(0.2f, 0.2f, 0.2f);
-//        switch(pBlockEntity.getBlockState().getValue(DisplayCaseBlock.FACING)) {
-//            case NORTH -> pPoseStack.mulPose(Axis.YP.rotationDegrees(180.f));
-//            case EAST -> pPoseStack.mulPose(Axis.YP.rotationDegrees(90.0F));
-//            case SOUTH -> pPoseStack.mulPose(Axis.YP.rotationDegrees(0.0F));
-//            case WEST -> pPoseStack.mulPose(Axis.YP.rotationDegrees(270.0F));
-//        }
-//
-//        pPoseStack.translate(0f, 0f, -1f);
-//
-//        // Render rows of 4
-//        renderRowOf4Slots(itemRenderer, pPoseStack, items, pBlockEntity, pBufferSource, 0);
-//        pPoseStack.translate(0.0f, -2.15f, 0f);
-//        renderRowOf4Slots(itemRenderer, pPoseStack, items, pBlockEntity, pBufferSource, 4);
-//        pPoseStack.translate(0.0f, -1.3f, 0.8f);
-//        renderRowOf4Slots(itemRenderer, pPoseStack, items, pBlockEntity, pBufferSource, 8);
-//        pPoseStack.translate(0.0f, -1.2f, 1.25f);
-//        renderRowOf4Slots(itemRenderer, pPoseStack, items, pBlockEntity, pBufferSource, 12);
 
         pPoseStack.popPose();
     }
