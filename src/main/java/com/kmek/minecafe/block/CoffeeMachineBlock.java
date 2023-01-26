@@ -20,12 +20,12 @@ public class CoffeeMachineBlock extends CustomVoxelMenuEntityBlock<CoffeeMachine
         super(properties, true);
     }
 
-        @Override
-        public VoxelShape makeShape() {
-            VoxelShape shape = Shapes.empty();
-            shape = Shapes.join(shape, Shapes.box(0.3125, 0, 0.125, 0.6875, 0.8125, 0.8125), BooleanOp.OR);
-            return shape;
-        }
+    @Override
+    public VoxelShape makeShape() {
+        VoxelShape shape = Shapes.empty();
+        shape = Shapes.join(shape, Shapes.box(0.3125, 0, 0.125, 0.6875, 0.8125, 0.8125), BooleanOp.OR);
+        return shape;
+    }
 
     /**
      * Block Entity Stuff
