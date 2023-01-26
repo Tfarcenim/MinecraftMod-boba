@@ -82,12 +82,16 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.WHIPPED_CREAM.get());
         output.accept(ModItemsInit.CHOCOLATE_CREAM.get());
         output.accept(ModItemsInit.VANILLA_CREAM.get());
+        output.accept(ModItemsInit.COFFEE_CREAM.get());
         output.accept(ModItemsInit.MATCHA_CREAM.get());
         output.accept(ModItemsInit.HONEY_CREAM.get());
         output.accept(ModItemsInit.ROSE_CREAM.get());
+
         output.accept(ModItemsInit.MARSHMALLOW.get());
         output.accept(ModItemsInit.MARSHMALLOWS.get());
+
         output.accept(ModItemsInit.CUSTARD.get());
+
         output.accept(ModItemsInit.BUTTER.get());
 
         output.accept(ModItemsInit.CHOCOLATE.get());
