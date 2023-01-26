@@ -94,13 +94,17 @@ public class MineCafeMod {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASSAVA_CROP.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.COFFEE_CROP_BOTTOM.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.COFFEE_CROP_TOP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_CURVED.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_COFFEE_FLUID.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_COFFEE_FLUID.get(), RenderType.translucent());
 
             MenuScreens.register(ModMenuTypes.WAFFLE_IRON_MENU.get(), WaffleIronScreen::new);
             MenuScreens.register(ModMenuTypes.COFFEE_MACHINE_MENU.get(), CoffeeMachineScreen::new);
+            MenuScreens.register(ModMenuTypes.ESPRESSO_MACHINE_MENU.get(), EspressoMachineScreen::new);
             MenuScreens.register(ModMenuTypes.DISPLAY_CASE_MENU.get(), DisplayCaseScreen::new);
             MenuScreens.register(ModMenuTypes.CAKE_STAND_MENU.get(), CakeStandScreen::new);
             MenuScreens.register(ModMenuTypes.WALL_SHELF_MENU.get(), WallShelfScreen::new);

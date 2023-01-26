@@ -53,6 +53,7 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.CAKE_STAND_ITEM.get());
         output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
         output.accept(ModItemsInit.OAK_WALL_SHELF_ITEM.get());
+//        output.accept(ModItemsInit.BIRCH_WALL_SHELF_ITEM.get());
         output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
         output.accept(ModItemsInit.COFFEE_MACHINE_ITEM.get());
         output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
@@ -64,6 +65,7 @@ public class ModCreativeTabInit {
     private void acceptCropsAndSeeds(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.CASSAVA_CUTTING.get());
         output.accept(ModItemsInit.CASSAVA.get());
+        output.accept(ModItemsInit.COFFEE_BEANS_UNROASTED.get());
         output.accept(ModItemsInit.COFFEE_CHERRIES.get());
     }
 
@@ -80,12 +82,16 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.WHIPPED_CREAM.get());
         output.accept(ModItemsInit.CHOCOLATE_CREAM.get());
         output.accept(ModItemsInit.VANILLA_CREAM.get());
+        output.accept(ModItemsInit.COFFEE_CREAM.get());
         output.accept(ModItemsInit.MATCHA_CREAM.get());
         output.accept(ModItemsInit.HONEY_CREAM.get());
         output.accept(ModItemsInit.ROSE_CREAM.get());
+
         output.accept(ModItemsInit.MARSHMALLOW.get());
         output.accept(ModItemsInit.MARSHMALLOWS.get());
+
         output.accept(ModItemsInit.CUSTARD.get());
+
         output.accept(ModItemsInit.BUTTER.get());
 
         output.accept(ModItemsInit.CHOCOLATE.get());
@@ -179,7 +185,6 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCoffeeIngredients(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.COFFEE_BEANS_UNROASTED.get());
         output.accept(ModItemsInit.COFFEE_BEANS_ROASTED.get());
         output.accept(ModItemsInit.COFFEE_GROUNDS.get());
         output.accept(ModItemsInit.COFFEE_POT_FULL.get());

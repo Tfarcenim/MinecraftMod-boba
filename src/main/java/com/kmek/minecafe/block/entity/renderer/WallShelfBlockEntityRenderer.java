@@ -17,24 +17,15 @@ public class WallShelfBlockEntityRenderer extends CustomBaseBlockEntityRenderer<
         centerAndRotateToFacing(pBlockEntity, pPoseStack);
         pPoseStack.translate(0f, 0.28f, 0f);
         pPoseStack.scale(0.2f, 0.2f, 0.2f);
-        pPoseStack.translate(0f, 0f, -0.9f);
+        pPoseStack.translate(0f, 0f, -1.5f);
 
         ItemStackHandler items = pBlockEntity.getRenderItemStackHandler();
 
         // Render front rows of 4
         renderRowOf4Slots(itemRenderer, pPoseStack, items, pBlockEntity, pBufferSource, 0);
         pPoseStack.translate(0f, -1.55f, 0f);
-        renderRowOf4Slots(itemRenderer, pPoseStack, items, pBlockEntity, pBufferSource, 8);
-        pPoseStack.translate(0f, -1.55f, 0f);
-        renderRowOf4Slots(itemRenderer, pPoseStack, items, pBlockEntity, pBufferSource, 16);
-
-        pPoseStack.translate(0f, 3.10f, -1.1f);
-
-        // Render Back rows of 4
         renderRowOf4Slots(itemRenderer, pPoseStack, items, pBlockEntity, pBufferSource, 4);
         pPoseStack.translate(0f, -1.55f, 0f);
-        renderRowOf4Slots(itemRenderer, pPoseStack, items, pBlockEntity, pBufferSource, 12);
-        pPoseStack.translate(0f, -1.55f, 0f);
-        renderRowOf4Slots(itemRenderer, pPoseStack, items, pBlockEntity, pBufferSource, 20);
+        renderRowOf4Slots(itemRenderer, pPoseStack, items, pBlockEntity, pBufferSource, 8);
     }
 }

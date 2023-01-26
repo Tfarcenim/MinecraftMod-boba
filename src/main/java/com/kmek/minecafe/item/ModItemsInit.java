@@ -33,6 +33,8 @@ public class ModItemsInit {
             () -> new BlockItem(ModBlocksInit.CAKE_STAND.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> OAK_WALL_SHELF_ITEM = ITEMS.register("oak_wall_shelf",
             () -> new BlockItem(ModBlocksInit.OAK_WALL_SHELF.get(), new Item.Properties()));
+//    public static final RegistryObject<BlockItem> BIRCH_WALL_SHELF_ITEM = ITEMS.register("birch_wall_shelf",
+//            () -> new BlockItem(ModBlocksInit.BIRCH_WALL_SHELF.get(), new Item.Properties()));
 
     /**
      * Fun Blocks
@@ -57,6 +59,13 @@ public class ModItemsInit {
             super.appendHoverText(stack, level, components, flag);
         }
     });
+
+    /**
+     * Coffee Crop
+     */
+    public static final RegistryObject<Item> COFFEE_BEANS_UNROASTED = ITEMS.register("coffee_beans_unroasted",
+            () -> new DoubleHighBlockItem(ModBlocksInit.COFFEE_CROP_BOTTOM.get(), new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_CHERRIES = ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties()));
 
     /**
      * Cassava-related Foods
@@ -233,6 +242,8 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
     public static final RegistryObject<Item> VANILLA_CREAM = ITEMS.register("vanilla_cream", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
+    public static final RegistryObject<Item> COFFEE_CREAM = ITEMS.register("coffee_cream", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
     public static final RegistryObject<Item> MATCHA_CREAM = ITEMS.register("matcha_cream", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
     public static final RegistryObject<Item> HONEY_CREAM = ITEMS.register("honey_cream", () -> new Item(new Item.Properties().food(
@@ -293,8 +304,6 @@ public class ModItemsInit {
     public static final RegistryObject<BlockItem> ESPRESSO_MACHINE_ITEM = ITEMS.register("espresso_machine",
             () -> new BlockItem(ModBlocksInit.ESPRESSO_MACHINE.get(), new Item.Properties()));
     public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COFFEE_CHERRIES = ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COFFEE_BEANS_UNROASTED = ITEMS.register("coffee_beans_unroasted", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_BEANS_ROASTED = ITEMS.register("coffee_beans_roasted", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_GROUNDS = ITEMS.register("coffee_grounds", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_FILTER = ITEMS.register("coffee_filter", () -> new Item(new Item.Properties()));
