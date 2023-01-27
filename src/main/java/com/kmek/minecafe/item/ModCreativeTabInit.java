@@ -50,10 +50,14 @@ public class ModCreativeTabInit {
     }
 
     private void acceptBlocks(CreativeModeTab.Output output) {
+        // Decorative blocks
         output.accept(ModItemsInit.CAKE_STAND_ITEM.get());
         output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
         output.accept(ModItemsInit.OAK_WALL_SHELF_ITEM.get());
 //        output.accept(ModItemsInit.BIRCH_WALL_SHELF_ITEM.get());
+        output.accept(ModItemsInit.VASE_ITEM.get());
+
+        // Crafting bench blocks
         output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
         output.accept(ModItemsInit.COFFEE_MACHINE_ITEM.get());
         output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());

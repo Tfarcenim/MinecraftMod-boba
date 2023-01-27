@@ -32,6 +32,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(WallShelfBlockEntity::new,
                             ModBlocksInit.OAK_WALL_SHELF.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<VaseBlockEntity>> VASE =
+            BLOCK_ENTITIES.register("vase", () ->
+                    BlockEntityType.Builder.of(VaseBlockEntity::new,
+                            ModBlocksInit.VASE.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<CoffeeMachineBlockEntity>> COFFEE_MACHINE =
             BLOCK_ENTITIES.register("coffee_machine", () ->
                     BlockEntityType.Builder.of(CoffeeMachineBlockEntity::new,

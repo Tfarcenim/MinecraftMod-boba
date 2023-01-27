@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "minecafe:block/vase"
+    },
+    "facing=south": {
+      "model": "minecafe:block/vase",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minecafe:block/vase",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "minecafe:block/vase",
+      "y": 90
+    }
+  }
+}

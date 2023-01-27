@@ -33,7 +33,7 @@ public class CustomBaseBlockEntity extends BlockEntity implements MenuProvider {
     public final int dataFieldsCount;
     private final String displayName;
 
-    protected final ItemStackHandler itemHandler;
+    protected ItemStackHandler itemHandler;
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 

@@ -35,6 +35,8 @@ public class ModItemsInit {
             () -> new BlockItem(ModBlocksInit.OAK_WALL_SHELF.get(), new Item.Properties()));
 //    public static final RegistryObject<BlockItem> BIRCH_WALL_SHELF_ITEM = ITEMS.register("birch_wall_shelf",
 //            () -> new BlockItem(ModBlocksInit.BIRCH_WALL_SHELF.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> VASE_ITEM = ITEMS.register("vase",
+        () -> new BlockItem(ModBlocksInit.VASE.get(), new Item.Properties()));
 
     /**
      * Fun Blocks
