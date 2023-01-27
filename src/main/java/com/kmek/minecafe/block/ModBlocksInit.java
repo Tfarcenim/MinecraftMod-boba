@@ -4,6 +4,7 @@ import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.block.crop.CassavaCropBlock;
 import com.kmek.minecafe.block.crop.CropTreeBottomBlock;
 import com.kmek.minecafe.block.crop.CropTreeTopBlock;
+import com.kmek.minecafe.block.crop.FlowerCropBlock;
 import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.ModItemsInit;
 import net.minecraft.world.item.BlockItem;
@@ -24,6 +25,14 @@ import java.util.function.Supplier;
 
 public class ModBlocksInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MineCafeMod.MODID);
+
+    /**
+     * Flower Crop Blocks
+     */
+//    public static final RegistryObject<Block> DANDELION_CROP = BLOCKS.register("dandelion_crop",
+//            () -> new FlowerCropBlock("dandelion_seeds", Blocks.DANDELION, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+//    public static final RegistryObject<Block> POPPY_CROP = BLOCKS.register("poppy_crop",
+//            () -> new FlowerCropBlock("poppy_seeds", Blocks.POPPY, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
 
     /**
      * Crop Blocks

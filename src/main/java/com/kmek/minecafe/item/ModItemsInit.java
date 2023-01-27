@@ -43,6 +43,14 @@ public class ModItemsInit {
             () -> new BucketItem(ModFluids.SOURCE_COFFEE_FLUID, new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET)));
 
     /**
+     * Flower Crop Blocks
+     */
+//    public static final RegistryObject<Item> DANDELION_SEEDS = ITEMS.register("dandelion_seeds",
+//            () -> new ItemNameBlockItem(ModBlocksInit.DANDELION_CROP.get(), new Item.Properties()));
+//    public static final RegistryObject<Item> POPPY_SEEDS = ITEMS.register("poppy_seeds",
+//            () -> new ItemNameBlockItem(ModBlocksInit.POPPY_CROP.get(), new Item.Properties()));
+
+    /**
      * Cassava Crop
      */
     public static final RegistryObject<Item> CASSAVA_CUTTING = ITEMS.register("cassava_cutting",

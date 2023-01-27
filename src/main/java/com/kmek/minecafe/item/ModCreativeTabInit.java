@@ -63,6 +63,8 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCropsAndSeeds(CreativeModeTab.Output output) {
+//        output.accept(ModItemsInit.DANDELION_SEEDS.get());
+//        output.accept(ModItemsInit.POPPY_SEEDS.get());
         output.accept(ModItemsInit.CASSAVA_CUTTING.get());
         output.accept(ModItemsInit.CASSAVA.get());
         output.accept(ModItemsInit.COFFEE_BEANS_UNROASTED.get());

@@ -1,5 +1,4 @@
 {
-  "block.minecafe.cassava_crop": "Cassava Crop",
   "block.minecafe.display_case_curved": "Display Case",
   "block.minecafe.cake_stand": "Cake Stand",
   "block.minecafe.oak_wall_shelf": "Oak Wall Shelf",
@@ -10,6 +9,12 @@
 
   "item.minecafe.coffee_bucket": "Coffee Bucket",
 
+  "block.minecafe.dandelion_crop": "Dandelion Crop",
+  "item.minecafe.dandelion_seeds": "Dandelion Seeds",
+  "block.minecafe.poppy_crop": "Poppy Crop",
+  "item.minecafe.poppy_seeds": "Poppy Seeds",
+
+  "block.minecafe.cassava_crop": "Cassava Crop",
   "item.minecafe.cassava_cutting": "Cassava Cutting",
   "item.minecafe.cassava": "Cassava",
 

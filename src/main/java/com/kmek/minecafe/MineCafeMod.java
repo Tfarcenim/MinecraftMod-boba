@@ -74,8 +74,12 @@ public class MineCafeMod {
 
         ModMessages.register();
 
+        ComposterBlock.COMPOSTABLES.put(ModItemsInit.CASSAVA_CUTTING.get(), 0.65F);
         ComposterBlock.COMPOSTABLES.put(ModItemsInit.CASSAVA.get(), 0.65F);
         ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_FILTER_USED.get(), 0.65F);
+        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_BEANS_UNROASTED.get(), 0.65F);
+        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_BEANS_ROASTED.get(), 0.65F);
+        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_GROUNDS.get(), 0.65F);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -95,6 +99,8 @@ public class MineCafeMod {
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
 
+//            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DANDELION_CROP.get(), RenderType.cutout());
+//            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.POPPY_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASSAVA_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.COFFEE_CROP_BOTTOM.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.COFFEE_CROP_TOP.get(), RenderType.cutout());
