@@ -27,7 +27,7 @@ displayName="MineCafe Mod" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+displayURL="https://www.curseforge.com/minecraft/mc-mods/minecafe" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="minecafe.png" #optional
 # A text field displayed in the mod UI
@@ -47,11 +47,12 @@ description='''
 A mod that adds cafe related food and blocks to Minecraft.
 
 - 27 different craftable Bubble Milk Teas
-- 5 Boba themed paintings
-- Cassava Crop
+- 5 Boba themed Paintings
+- Cassava Crop, Coffee Crop
+- 16 different craftable Coffees
 - 12 Waffles and Waffle Molds
-- 13 Waffle Fillings
-- Display Case and Cake Stand blocks
+- 14 Waffle Fillings
+- 3 decorative display blocks
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.minecafe]] #optional

@@ -74,11 +74,11 @@ public class MineCafeMod {
 
         ModMessages.register();
 
-        ComposterBlock.COMPOSTABLES.put(ModItemsInit.CASSAVA_CUTTING.get(), 0.65F);
+        ComposterBlock.COMPOSTABLES.put(ModItemsInit.CASSAVA_CUTTING.get(), 0.3F);
         ComposterBlock.COMPOSTABLES.put(ModItemsInit.CASSAVA.get(), 0.65F);
-        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_FILTER_USED.get(), 0.65F);
-        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_BEANS_UNROASTED.get(), 0.65F);
-        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_BEANS_ROASTED.get(), 0.65F);
+        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_FILTER_USED.get(), 0.6F);
+        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_BEANS_UNROASTED.get(), 0.3F);
+        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_BEANS_ROASTED.get(), 0.6F);
         ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_GROUNDS.get(), 0.65F);
     }
 
