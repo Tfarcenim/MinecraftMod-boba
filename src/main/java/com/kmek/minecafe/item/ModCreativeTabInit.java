@@ -63,12 +63,26 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCropsAndSeeds(CreativeModeTab.Output output) {
-//        output.accept(ModItemsInit.DANDELION_SEEDS.get());
-//        output.accept(ModItemsInit.POPPY_SEEDS.get());
+        acceptFlowerSeeds(output);
+
         output.accept(ModItemsInit.CASSAVA_CUTTING.get());
         output.accept(ModItemsInit.CASSAVA.get());
         output.accept(ModItemsInit.COFFEE_BEANS_UNROASTED.get());
         output.accept(ModItemsInit.COFFEE_CHERRIES.get());
+    }
+    private void acceptFlowerSeeds(CreativeModeTab.Output output) {
+        output.accept(ModItemsInit.DANDELION_SEEDS.get());
+        output.accept(ModItemsInit.POPPY_SEEDS.get());
+        output.accept(ModItemsInit.BLUE_ORCHID_SEEDS.get());
+        output.accept(ModItemsInit.ALLIUM_SEEDS.get());
+        output.accept(ModItemsInit.AZURE_BLUET_SEEDS.get());
+        output.accept(ModItemsInit.RED_TULIP_SEEDS.get());
+        output.accept(ModItemsInit.ORANGE_TULIP_SEEDS.get());
+        output.accept(ModItemsInit.WHITE_TULIP_SEEDS.get());
+        output.accept(ModItemsInit.PINK_TULIP_SEEDS.get());
+        output.accept(ModItemsInit.OXEYE_DAISY_SEEDS.get());
+        output.accept(ModItemsInit.CORNFLOWER_SEEDS.get());
+        output.accept(ModItemsInit.LILY_OF_THE_VALLEY_SEEDS.get());
     }
 
     private void acceptJams(CreativeModeTab.Output output) {

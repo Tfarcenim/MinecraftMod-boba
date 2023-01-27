@@ -45,10 +45,30 @@ public class ModItemsInit {
     /**
      * Flower Crop Blocks
      */
-//    public static final RegistryObject<Item> DANDELION_SEEDS = ITEMS.register("dandelion_seeds",
-//            () -> new ItemNameBlockItem(ModBlocksInit.DANDELION_CROP.get(), new Item.Properties()));
-//    public static final RegistryObject<Item> POPPY_SEEDS = ITEMS.register("poppy_seeds",
-//            () -> new ItemNameBlockItem(ModBlocksInit.POPPY_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DANDELION_SEEDS = ITEMS.register("dandelion_seeds",
+            () -> new ItemNameBlockItem(ModBlocksInit.DANDELION_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> POPPY_SEEDS = ITEMS.register("poppy_seeds",
+            () -> new ItemNameBlockItem(ModBlocksInit.POPPY_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLUE_ORCHID_SEEDS = ITEMS.register("blue_orchid_seeds",
+            () -> new ItemNameBlockItem(ModBlocksInit.BLUE_ORCHID_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ALLIUM_SEEDS = ITEMS.register("allium_seeds",
+            () -> new ItemNameBlockItem(ModBlocksInit.ALLIUM_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AZURE_BLUET_SEEDS = ITEMS.register("azure_bluet_seeds",
+            () -> new ItemNameBlockItem(ModBlocksInit.AZURE_BLUET_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> RED_TULIP_SEEDS = ITEMS.register("red_tulip_seeds",
+            () -> new ItemNameBlockItem(ModBlocksInit.RED_TULIP_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ORANGE_TULIP_SEEDS = ITEMS.register("orange_tulip_seeds",
+            () -> new ItemNameBlockItem(ModBlocksInit.ORANGE_TULIP_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WHITE_TULIP_SEEDS = ITEMS.register("white_tulip_seeds",
+            () -> new ItemNameBlockItem(ModBlocksInit.WHITE_TULIP_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> PINK_TULIP_SEEDS = ITEMS.register("pink_tulip_seeds",
+            () -> new ItemNameBlockItem(ModBlocksInit.PINK_TULIP_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> OXEYE_DAISY_SEEDS = ITEMS.register("oxeye_daisy_seeds",
+            () -> new ItemNameBlockItem(ModBlocksInit.OXEYE_DAISY_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORNFLOWER_SEEDS = ITEMS.register("cornflower_seeds",
+            () -> new ItemNameBlockItem(ModBlocksInit.CORNFLOWER_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LILY_OF_THE_VALLEY_SEEDS = ITEMS.register("lily_of_the_valley_seeds",
+            () -> new ItemNameBlockItem(ModBlocksInit.LILY_OF_THE_VALLEY_CROP.get(), new Item.Properties()));
 
     /**
      * Cassava Crop

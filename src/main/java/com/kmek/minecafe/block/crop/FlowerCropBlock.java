@@ -59,4 +59,9 @@ public class FlowerCropBlock extends CropBlock {
     private void growIntoFlower(BlockState pState, ServerLevel pLevel, BlockPos pPos) {
         pLevel.setBlock(pPos, flower.defaultBlockState(), 2);
     }
+
+    @Override
+    public void performBonemeal(ServerLevel pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
+        growIntoFlower(pState, pLevel, pPos);
+    }
 }

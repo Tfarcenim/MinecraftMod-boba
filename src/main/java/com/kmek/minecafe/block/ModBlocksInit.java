@@ -29,10 +29,30 @@ public class ModBlocksInit {
     /**
      * Flower Crop Blocks
      */
-//    public static final RegistryObject<Block> DANDELION_CROP = BLOCKS.register("dandelion_crop",
-//            () -> new FlowerCropBlock("dandelion_seeds", Blocks.DANDELION, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
-//    public static final RegistryObject<Block> POPPY_CROP = BLOCKS.register("poppy_crop",
-//            () -> new FlowerCropBlock("poppy_seeds", Blocks.POPPY, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> DANDELION_CROP = BLOCKS.register("dandelion_crop",
+            () -> new FlowerCropBlock("dandelion_seeds", Blocks.DANDELION, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> POPPY_CROP = BLOCKS.register("poppy_crop",
+            () -> new FlowerCropBlock("poppy_seeds", Blocks.POPPY, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> BLUE_ORCHID_CROP = BLOCKS.register("blue_orchid_crop",
+            () -> new FlowerCropBlock("blue_orchid_seeds", Blocks.BLUE_ORCHID, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> ALLIUM_CROP = BLOCKS.register("allium_crop",
+            () -> new FlowerCropBlock("allium_seeds", Blocks.ALLIUM, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> AZURE_BLUET_CROP = BLOCKS.register("azure_bluet_crop",
+            () -> new FlowerCropBlock("azure_bluet_seeds", Blocks.AZURE_BLUET, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> RED_TULIP_CROP = BLOCKS.register("red_tulip_crop",
+            () -> new FlowerCropBlock("red_tulip_seeds", Blocks.RED_TULIP, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> ORANGE_TULIP_CROP = BLOCKS.register("orange_tulip_crop",
+            () -> new FlowerCropBlock("orange_tulip_seeds", Blocks.ORANGE_TULIP, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> WHITE_TULIP_CROP = BLOCKS.register("white_tulip_crop",
+            () -> new FlowerCropBlock("white_tulip_seeds", Blocks.WHITE_TULIP, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> PINK_TULIP_CROP = BLOCKS.register("pink_tulip_crop",
+            () -> new FlowerCropBlock("pink_tulip_seeds", Blocks.PINK_TULIP, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> OXEYE_DAISY_CROP = BLOCKS.register("oxeye_daisy_crop",
+            () -> new FlowerCropBlock("oxeye_daisy_seeds", Blocks.OXEYE_DAISY, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> CORNFLOWER_CROP = BLOCKS.register("cornflower_crop",
+            () -> new FlowerCropBlock("cornflower_seeds", Blocks.CORNFLOWER, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> LILY_OF_THE_VALLEY_CROP = BLOCKS.register("lily_of_the_valley_crop",
+            () -> new FlowerCropBlock("lily_of_the_valley_seeds", Blocks.LILY_OF_THE_VALLEY, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ)));
 
     /**
      * Crop Blocks
