@@ -1,6 +1,8 @@
 package com.kmek.minecafe.block.entity;
 
 import com.kmek.minecafe.item.ModItemsInit;
+import com.kmek.minecafe.networking.ModMessages;
+import com.kmek.minecafe.networking.packet.ItemStackSyncS2CPacket;
 import com.kmek.minecafe.screen.EspressoMachineMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.SimpleContainer;
@@ -13,6 +15,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.items.ItemStackHandler;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class EspressoMachineBlockEntity extends CustomBaseBlockEntity {
@@ -47,6 +51,35 @@ public class EspressoMachineBlockEntity extends CustomBaseBlockEntity {
             @Override
             public int getCount() {
                 return 1;
+            }
+        };
+
+        this.itemHandler = new ItemStackHandler(menuSlotCount) {
+            @Override
+            protected void onContentsChanged(int slot) {
+                setChanged();
+                if (!level.isClientSide) {
+                    ModMessages.sendToClients(new ItemStackSyncS2CPacket(this, worldPosition));
+                }
+            }
+
+            @Override
+            public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+                return switch (slot) {
+                    case SLOT_WATER -> stack.getItem() == Items.WATER_BUCKET || stack.getItem() == Items.BUCKET;
+                    case SLOT_GROUNDS -> stack.getItem() == ModItemsInit.COFFEE_GROUNDS.get();
+                    case SLOT_MILK -> stack.getItem() == Items.MILK_BUCKET || stack.getItem() == ModItemsInit.STEAMED_MILK.get() || stack.getItem() == Items.BUCKET;
+                    case SLOT_OUTPUT -> true;
+                    default -> false;
+                };
+            }
+
+            @Override
+            public int getSlotLimit(int slot) {
+                return switch (slot) {
+                    case SLOT_OUTPUT -> 1;
+                    default -> 64;
+                };
             }
         };
     }

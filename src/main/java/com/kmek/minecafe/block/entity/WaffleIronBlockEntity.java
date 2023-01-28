@@ -3,6 +3,8 @@ package com.kmek.minecafe.block.entity;
 import com.kmek.minecafe.item.ModItemsInit;
 import com.kmek.minecafe.item.WaffleItem;
 import com.kmek.minecafe.item.WaffleMoldItem;
+import com.kmek.minecafe.networking.ModMessages;
+import com.kmek.minecafe.networking.packet.ItemStackSyncS2CPacket;
 import com.kmek.minecafe.screen.WaffleIronMenu;
 import com.kmek.minecafe.tags.ModTags;
 import net.minecraft.core.BlockPos;
@@ -16,6 +18,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraftforge.items.ItemStackHandler;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class WaffleIronBlockEntity extends CustomBaseBlockEntity {
@@ -45,13 +49,41 @@ public class WaffleIronBlockEntity extends CustomBaseBlockEntity {
             public void set(int pIndex, int pValue) {
                 switch(pIndex) {
                     case 0 -> progress = pValue;
-//                    case 1 -> WaffleIronBlockEntity.this.maxProgress = pValue;
                 }
             }
 
             @Override
             public int getCount() {
                 return 2;
+            }
+        };
+
+        this.itemHandler = new ItemStackHandler(menuSlotCount) {
+            @Override
+            protected void onContentsChanged(int slot) {
+                setChanged();
+                if (!level.isClientSide) {
+                    ModMessages.sendToClients(new ItemStackSyncS2CPacket(this, worldPosition));
+                }
+            }
+
+            @Override
+            public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+                return switch (slot) {
+                    case SLOT_BATTER -> itemIsRawWaffleBatter(stack.getItem());
+                    case SLOT_FILLING -> itemIsWaffleFilling(stack);
+                    case SLOT_MOLD -> itemIsWaffleMold(stack);
+                    case SLOT_OUTPUT -> true;
+                    default -> false;
+                };
+            }
+
+            @Override
+            public int getSlotLimit(int slot) {
+                return switch (slot) {
+                    case SLOT_OUTPUT -> 1;
+                    default -> 64;
+                };
             }
         };
     }
@@ -117,9 +149,13 @@ public class WaffleIronBlockEntity extends CustomBaseBlockEntity {
         return itemStack.is(ModTags.Items.WAFFLE);
     }
 
+    private static boolean itemIsWaffleMold(ItemStack itemStack) {
+        return itemStack.is(ModTags.Items.WAFFLE_MOLD);
+    }
+
     private static boolean hasWaffleMold(SimpleContainer inventory) {
         return !inventory.getItem(SLOT_MOLD).isEmpty()
-                && inventory.getItem(SLOT_MOLD).is(ModTags.Items.WAFFLE_MOLD);
+                && itemIsWaffleMold(inventory.getItem(SLOT_MOLD));
     }
 
     private static boolean itemIsWaffleFilling(ItemStack itemStack) {

@@ -66,6 +66,36 @@ public class CoffeeMachineBlockEntity extends CustomBaseBlockEntity {
                 return 1;
             }
         };
+
+        this.itemHandler = new ItemStackHandler(menuSlotCount) {
+            @Override
+            protected void onContentsChanged(int slot) {
+                setChanged();
+                if (!level.isClientSide) {
+                    ModMessages.sendToClients(new ItemStackSyncS2CPacket(this, worldPosition));
+                }
+            }
+
+            @Override
+            public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+                return switch (slot) {
+                    case SLOT_WATER -> stack.getItem() == Items.WATER_BUCKET || stack.getItem() == Items.BUCKET;
+                    case SLOT_GROUNDS -> stack.getItem() == ModItemsInit.COFFEE_GROUNDS.get();
+                    case SLOT_FILTER -> stack.getItem() == ModItemsInit.COFFEE_FILTER.get() || stack.getItem() == ModItemsInit.COFFEE_FILTER_USED.get();
+                    case SLOT_OUTPUT -> stack.getItem() == ModItemsInit.COFFEE_POT.get() || stack.getItem() == ModItemsInit.COFFEE_POT_FULL.get();
+                    default -> false;
+                };
+            }
+
+            @Override
+            public int getSlotLimit(int slot) {
+                return switch (slot) {
+                    case SLOT_FILTER -> 1;
+                    case SLOT_OUTPUT -> 1;
+                    default -> 64;
+                };
+            }
+        };
     }
 
     @Nullable
