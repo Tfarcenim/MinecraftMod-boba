@@ -11,7 +11,7 @@ import net.minecraftforge.items.IItemHandler;
 
 public class DisplayCaseMenu extends CustomBaseMenu {
     public DisplayCaseMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(/*DisplayCaseBlockEntity.dataFieldsCount*/0));
+        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(/*DisplayCaseBlockEntity.dataFieldsCount*/1));
     }
 
     public DisplayCaseMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
@@ -24,5 +24,9 @@ public class DisplayCaseMenu extends CustomBaseMenu {
         add4Slots(handler, 4, 25, 17);
         add4Slots(handler, 8, 17, 35);
         add4Slots(handler, 12, 8, 53);
+    }
+
+    public boolean isLocked() {
+        return data.get(0) == 1;
     }
 }

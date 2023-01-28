@@ -1,5 +1,6 @@
 package com.kmek.minecafe.block.entity;
 
+import com.kmek.minecafe.block.DisplayCaseBlock;
 import com.kmek.minecafe.screen.DisplayCaseMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Inventory;
@@ -11,10 +12,13 @@ import org.jetbrains.annotations.Nullable;
 
 public class DisplayCaseBlockEntity extends CustomBaseBlockEntity {
     public DisplayCaseBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(pPos, pBlockState, ModBlockEntities.DISPLAY_CASE.get(), 16, 0, "Display Case");
+        super(pPos, pBlockState, ModBlockEntities.DISPLAY_CASE.get(), 16, 1, "Display Case");
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
+                if (pIndex == 0) {
+                    return getBlockState().getValue(DisplayCaseBlock.LOCKED) ? 1 : 0;
+                }
                 return 0;
             }
 
@@ -24,7 +28,7 @@ public class DisplayCaseBlockEntity extends CustomBaseBlockEntity {
 
             @Override
             public int getCount() {
-                return 0;
+                return 1;
             }
         };
     }
