@@ -16,4 +16,5 @@ A [Forge](https://www.curseforge.com/minecraft/mc-mods/minecafe) mod that adds a
 ![waffles](./tea_images/waffles.png)
 ![coffee](./tea_images/coffee.png)
 ![display blocks](./tea_images/display_cases.png)
+![flowers and vase](./tea_images/flowers.png)
 ![paintings](./tea_images/paintings.png)
