@@ -91,13 +91,20 @@ public class ModItemsInit {
     });
 
     /**
-     * Coffee Crop
+     * Tree Crop
      */
+    // Coffee
     public static final RegistryObject<Item> COFFEE_BEANS_UNROASTED = ITEMS.register("coffee_beans_unroasted",
             () -> new DoubleHighBlockItem(ModBlocksInit.COFFEE_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_CHERRIES = ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties()));
+    // Apple
     public static final RegistryObject<Item> APPLE_SEEDS = ITEMS.register("apple_seeds",
             () -> new DoubleHighBlockItem(ModBlocksInit.APPLE_CROP_BOTTOM.get(), new Item.Properties()));
+    // Orange
+    public static final RegistryObject<Item> ORANGE_SEEDS = ITEMS.register("orange_seeds",
+            () -> new DoubleHighBlockItem(ModBlocksInit.ORANGE_CROP_BOTTOM.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ORANGE = ITEMS.register("orange", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
 
     /**
      * Cassava-related Foods

@@ -42,6 +42,9 @@
   "item.minecafe.cassava": "Cassava",
   "item.minecafe.apple_seeds": "Apple Seeds",
   "block.minecafe.apple_crop_bottom": "Apple Seeds",
+  "item.minecafe.orange": "Orange",
+  "item.minecafe.orange_seeds": "Orange Seeds",
+  "block.minecafe.orange_crop_bottom": "Orange Seeds",
 
 
   "item.minecafe.cassava_bibingka": "Cassava Cake",

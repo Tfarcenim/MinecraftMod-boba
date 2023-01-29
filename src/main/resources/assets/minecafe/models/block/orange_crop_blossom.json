@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "crop": "minecafe:block/apple_crop_t13"
+    "crop": "minecafe:block/orange_crop_blossom"
   }
 }

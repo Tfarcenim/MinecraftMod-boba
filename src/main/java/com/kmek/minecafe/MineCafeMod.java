@@ -121,6 +121,8 @@ public class MineCafeMod {
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.COFFEE_CROP_TOP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.APPLE_CROP_BOTTOM.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.APPLE_CROP_TOP.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.ORANGE_CROP_BOTTOM.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.ORANGE_CROP_TOP.get(), RenderType.cutout());
             // Display blocks
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_CURVED.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.VASE.get(), RenderType.translucent());

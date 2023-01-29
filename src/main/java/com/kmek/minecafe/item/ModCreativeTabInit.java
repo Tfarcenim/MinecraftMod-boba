@@ -74,6 +74,8 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.COFFEE_BEANS_UNROASTED.get());
         output.accept(ModItemsInit.COFFEE_CHERRIES.get());
         output.accept(ModItemsInit.APPLE_SEEDS.get());
+        output.accept(ModItemsInit.ORANGE_SEEDS.get());
+        output.accept(ModItemsInit.ORANGE.get());
     }
     private void acceptFlowerSeeds(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.DANDELION_SEEDS.get());

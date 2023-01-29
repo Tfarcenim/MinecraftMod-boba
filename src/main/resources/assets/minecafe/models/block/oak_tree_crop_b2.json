@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "minecafe:block/apple_crop_b1"
+    "cross": "minecafe:block/oak_tree_crop_b2"
   }
 }
