@@ -130,6 +130,11 @@ public class ModItemsInit {
             () -> new DoubleHighBlockItem(ModBlocksInit.BANANA_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> BANANA = ITEMS.register("banana", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
+    // Mango
+    public static final RegistryObject<Item> MANGO_SEEDS = ITEMS.register("mango_seeds",
+            () -> new DoubleHighBlockItem(ModBlocksInit.MANGO_CROP_BOTTOM.get(), new Item.Properties()));
+    public static final RegistryObject<Item> MANGO = ITEMS.register("mango", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
 
     /**
      * Cassava-related Foods
