@@ -45,7 +45,9 @@
   "item.minecafe.orange": "Orange",
   "item.minecafe.orange_seeds": "Orange Seeds",
   "block.minecafe.orange_crop_bottom": "Orange Seeds",
-
+  "item.minecafe.lemon": "Lemon",
+  "item.minecafe.lemon_seeds": "Lemon Seeds",
+  "block.minecafe.lemon_crop_bottom": "Lemon Seeds",
 
   "item.minecafe.cassava_bibingka": "Cassava Cake",
   "item.minecafe.tapioca_pudding": "Tapioca Pudding",

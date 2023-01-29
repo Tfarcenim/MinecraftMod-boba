@@ -58,6 +58,7 @@ public class ModBlocksInit {
     /**
      * Crop Blocks
      */
+//    private static final BlockBehaviour.Properties  =
     // Cassava
     public static final RegistryObject<Block> CASSAVA_CROP = BLOCKS.register("cassava_crop",
             () -> new CassavaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
@@ -65,16 +66,26 @@ public class ModBlocksInit {
     public static final RegistryObject<Block> COFFEE_CROP_BOTTOM = BLOCKS.register("coffee_crop_bottom",
             () -> new CropTreeBottomBlock("coffee_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
     public static final RegistryObject<Block> COFFEE_CROP_TOP = BLOCKS.register("coffee_crop_top",
-            () -> new CropTreeTopBlock(COFFEE_CROP_BOTTOM.get(), "item.minecafe.coffee_cherries", 7, BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+            () -> new CropTreeTopBlock(COFFEE_CROP_BOTTOM.get(), "item.minecafe.coffee_cherries", 7,
+                    BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
     // Apple
     public static final RegistryObject<Block> APPLE_CROP_BOTTOM = BLOCKS.register("apple_crop_bottom",
             () -> new CropTreeBottomBlock("apple_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
     public static final RegistryObject<Block> APPLE_CROP_TOP = BLOCKS.register("apple_crop_top",
-            () -> new CropTreeTopBlock(APPLE_CROP_BOTTOM.get(), Items.APPLE, 5, BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+            () -> new CropTreeTopBlock(APPLE_CROP_BOTTOM.get(), Items.APPLE, 5,
+                    BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+    // Orange
     public static final RegistryObject<Block> ORANGE_CROP_BOTTOM = BLOCKS.register("orange_crop_bottom",
             () -> new CropTreeBottomBlock("orange_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
     public static final RegistryObject<Block> ORANGE_CROP_TOP = BLOCKS.register("orange_crop_top",
-            () -> new CropTreeTopBlock(ORANGE_CROP_BOTTOM.get(), "item.minecafe.orange", 5, BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+            () -> new CropTreeTopBlock(ORANGE_CROP_BOTTOM.get(), "item.minecafe.orange", 5,
+                    BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+    // Lemon
+    public static final RegistryObject<Block> LEMON_CROP_BOTTOM = BLOCKS.register("lemon_crop_bottom",
+            () -> new CropTreeBottomBlock("lemon_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> LEMON_CROP_TOP = BLOCKS.register("lemon_crop_top",
+            () -> new CropTreeTopBlock(LEMON_CROP_BOTTOM.get(), "item.minecafe.lemon", 5,
+                    BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
 
     /**
      * Crafting Blocks
