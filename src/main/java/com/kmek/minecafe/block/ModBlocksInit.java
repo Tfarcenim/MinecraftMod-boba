@@ -10,6 +10,7 @@ import com.kmek.minecafe.item.ModItemsInit;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
@@ -62,9 +63,14 @@ public class ModBlocksInit {
             () -> new CassavaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
     // Coffee
     public static final RegistryObject<Block> COFFEE_CROP_BOTTOM = BLOCKS.register("coffee_crop_bottom",
-            () -> new CropTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+            () -> new CropTreeBottomBlock("coffee_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
     public static final RegistryObject<Block> COFFEE_CROP_TOP = BLOCKS.register("coffee_crop_top",
-            () -> new CropTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+            () -> new CropTreeTopBlock(COFFEE_CROP_BOTTOM.get(), "item.minecafe.coffee_cherries", 7, BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+    // Apple
+    public static final RegistryObject<Block> APPLE_CROP_BOTTOM = BLOCKS.register("apple_crop_bottom",
+            () -> new CropTreeBottomBlock("apple_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> APPLE_CROP_TOP = BLOCKS.register("apple_crop_top",
+            () -> new CropTreeTopBlock(APPLE_CROP_BOTTOM.get(), Items.APPLE, 5, BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
 
     /**
      * Crafting Blocks

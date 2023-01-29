@@ -1,6 +1,5 @@
 package com.kmek.minecafe.block.crop;
 
-import com.kmek.minecafe.block.ModBlocksInit;
 import com.kmek.minecafe.item.ModItemsInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -13,12 +12,14 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -29,13 +30,43 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Optional;
 
 public class CropTreeTopBlock extends BushBlock implements BonemealableBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_15;
 
-    public CropTreeTopBlock(BlockBehaviour.Properties pProperties) {
+    private Block bottomBlock;
+    private String fruitName;
+    private Item fruit = null;
+    private final int resetAge;
+
+    public CropTreeTopBlock(Block bottomBlock, String fruitName, int resetAge, BlockBehaviour.Properties pProperties) {
         super(pProperties);
+        this.bottomBlock = bottomBlock;
+        this.fruitName = fruitName;
+        this.resetAge = resetAge;
         this.registerDefaultState(this.stateDefinition.any().setValue(AGE, Integer.valueOf(0)));
+    }
+
+    public CropTreeTopBlock(Block bottomBlock, Item fruit, int resetAge, BlockBehaviour.Properties pProperties) {
+        super(pProperties);
+        this.bottomBlock = bottomBlock;
+        this.fruit = fruit;
+        this.resetAge = resetAge;
+        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, Integer.valueOf(0)));
+    }
+
+    public Item getFruit() {
+        if (fruit == null) {
+            Optional<RegistryObject<Item>> opt = ModItemsInit.ITEMS.getEntries().stream()
+//                    .peek(entry -> System.out.println(entry.get().getDescriptionId()))
+                    .filter(entry -> entry.get().getDescriptionId().equals(fruitName))
+                    .findFirst();
+            fruit = opt.isPresent() ? opt.get().get() : Items.STICK;
+        }
+        return fruit;
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
@@ -83,9 +114,9 @@ public class CropTreeTopBlock extends BushBlock implements BonemealableBlock {
             return InteractionResult.PASS;
         } else if (age == 15) {
             int j = 1 + pLevel.random.nextInt(2);
-            popResource(pLevel, pPos, new ItemStack(ModItemsInit.COFFEE_CHERRIES.get(), j));
+            popResource(pLevel, pPos, new ItemStack(getFruit(), j));
             pLevel.playSound((Player)null, pPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + pLevel.random.nextFloat() * 0.4F);
-            BlockState blockstate = pState.setValue(AGE, Integer.valueOf(7));
+            BlockState blockstate = pState.setValue(AGE, Integer.valueOf(resetAge));
             pLevel.setBlock(pPos, blockstate, 2);
             pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(pPlayer, blockstate));
             return InteractionResult.sidedSuccess(pLevel.isClientSide);
@@ -97,7 +128,7 @@ public class CropTreeTopBlock extends BushBlock implements BonemealableBlock {
     // Will break if bottom block is broken
     @Override
     protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
-        return pLevel.getBlockState(pPos.above()).is(ModBlocksInit.COFFEE_CROP_BOTTOM.get());
+        return pLevel.getBlockState(pPos.above()).is(bottomBlock);
     }
 
     // Makes the block slow to walk through

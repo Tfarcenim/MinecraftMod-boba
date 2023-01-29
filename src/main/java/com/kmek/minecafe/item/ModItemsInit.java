@@ -96,6 +96,8 @@ public class ModItemsInit {
     public static final RegistryObject<Item> COFFEE_BEANS_UNROASTED = ITEMS.register("coffee_beans_unroasted",
             () -> new DoubleHighBlockItem(ModBlocksInit.COFFEE_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_CHERRIES = ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> APPLE_SEEDS = ITEMS.register("apple_seeds",
+            () -> new DoubleHighBlockItem(ModBlocksInit.APPLE_CROP_BOTTOM.get(), new Item.Properties()));
 
     /**
      * Cassava-related Foods

@@ -12,6 +12,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -21,13 +22,30 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Optional;
 
 public class CropTreeBottomBlock extends BushBlock implements BonemealableBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
 
-    public CropTreeBottomBlock(BlockBehaviour.Properties pProperties) {
+    private final String topBlockName;
+    private Block topBlock = null;
+
+    public CropTreeBottomBlock(String topBlockName, BlockBehaviour.Properties pProperties) {
         super(pProperties);
+        this.topBlockName = "block.minecafe." + topBlockName; // this.getDescriptionId()
         this.registerDefaultState(this.stateDefinition.any().setValue(AGE, Integer.valueOf(0)));
+    }
+
+    private Block getTopBlock() {
+        if (topBlock == null) {
+            Optional<RegistryObject<Block>> opt = ModBlocksInit.BLOCKS.getEntries().stream()
+                    .filter(entry -> entry.get().getDescriptionId().equals(topBlockName))
+                    .findFirst();
+            topBlock = opt.isPresent() ? opt.get().get() : Blocks.AIR;
+        }
+        return topBlock;
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
@@ -60,7 +78,7 @@ public class CropTreeBottomBlock extends BushBlock implements BonemealableBlock 
     // Grow the top block
     private void growTopBlock(ServerLevel pLevel, BlockPos pPos, BlockState pState) {
         if (pLevel.getBlockState(pPos.above()).isAir()) {
-            pLevel.setBlock(pPos.above(), ModBlocksInit.COFFEE_CROP_TOP.get().defaultBlockState(), 3);
+            pLevel.setBlock(pPos.above(), getTopBlock().defaultBlockState(), 3);
         }
     }
 
@@ -79,7 +97,7 @@ public class CropTreeBottomBlock extends BushBlock implements BonemealableBlock 
     // Makes this bottom sustain the top crop
     @Override
     public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
-        return plantable.getPlant(world, pos).is(ModBlocksInit.COFFEE_CROP_TOP.get());
+        return plantable.getPlant(world, pos).is(getTopBlock());
     }
 
     // Makes this block slow to walk through
