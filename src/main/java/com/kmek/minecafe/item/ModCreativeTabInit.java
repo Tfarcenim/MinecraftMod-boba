@@ -76,6 +76,7 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.ORANGE_SEEDS.get());
         output.accept(ModItemsInit.LEMON_SEEDS.get());
         output.accept(ModItemsInit.LIME_SEEDS.get());
+        output.accept(ModItemsInit.AVOCADO_SEEDS.get());
 
         // Fruit
         output.accept(ModItemsInit.CASSAVA.get());
@@ -83,6 +84,7 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.ORANGE.get());
         output.accept(ModItemsInit.LEMON.get());
         output.accept(ModItemsInit.LIME.get());
+        output.accept(ModItemsInit.AVOCADO.get());
     }
     private void acceptFlowerSeeds(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.DANDELION_SEEDS.get());

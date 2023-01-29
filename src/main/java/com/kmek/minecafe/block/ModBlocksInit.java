@@ -92,7 +92,12 @@ public class ModBlocksInit {
     public static final RegistryObject<Block> LIME_CROP_TOP = BLOCKS.register("lime_crop_top",
             () -> new CropTreeTopBlock(LEMON_CROP_BOTTOM.get(), "item.minecafe.lime", 5,
                     BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
-
+    // Avocado
+    public static final RegistryObject<Block> AVOCADO_CROP_BOTTOM = BLOCKS.register("avocado_crop_bottom",
+            () -> new CropTreeBottomBlock("avocado_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> AVOCADO_CROP_TOP = BLOCKS.register("avocado_crop_top",
+            () -> new CropTreeTopBlock(AVOCADO_CROP_BOTTOM.get(), "item.minecafe.avocado", 5,
+                    BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
 
     /**
      * Crafting Blocks
