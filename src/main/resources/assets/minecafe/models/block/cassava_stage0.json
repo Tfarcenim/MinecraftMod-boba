@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/crop",
+  "parent": "minecafe:block/crop_cross",
   "textures": {
-    "crop": "minecafe:block/cassava_stage0"
+    "cross": "minecafe:block/cassava_stage0"
   }
 }
