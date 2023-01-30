@@ -3,8 +3,10 @@ package com.kmek.minecafe.event;
 import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.block.entity.ModBlockEntities;
 import com.kmek.minecafe.block.entity.renderer.*;
+import com.kmek.minecafe.client.CropInspectorOverlay;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -19,6 +21,11 @@ public class ClientEvents {
             event.registerBlockEntityRenderer(ModBlockEntities.VASE.get(), VaseBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.WALL_SHELF.get(), WallShelfBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.COFFEE_MACHINE.get(), CoffeeMachineBlockEntityRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void registerGuiOverlays(RegisterGuiOverlaysEvent event) {
+            event.registerBelowAll("crop_inspector", CropInspectorOverlay.HUD_CROP_INSPECTOR);
         }
     }
 }

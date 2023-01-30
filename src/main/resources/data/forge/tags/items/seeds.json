@@ -1,0 +1,34 @@
+{
+  "replace": false,
+  "values": [
+    "minecafe:dandelion_seeds",
+    "minecafe:poppy_seeds",
+    "minecafe:blue_orchid_seeds",
+    "minecafe:allium_seeds",
+    "minecafe:azure_bluet_seeds",
+    "minecafe:red_tulip_seeds",
+    "minecafe:orange_tulip_seeds",
+    "minecafe:white_tulip_seeds",
+    "minecafe:pink_tulip_seeds",
+    "minecafe:oxeye_daisy_seeds",
+    "minecafe:cornflower_seeds",
+    "minecafe:lily_of_the_valley_seeds",
+
+    "minecafe:cassava_cutting",
+    "minecafe:coffee_beans_unroasted",
+
+    "minecafe:apple_seeds",
+    "minecafe:orange_seeds",
+    "minecafe:lemon_seeds",
+    "minecafe:lime_seeds",
+    "minecafe:avocado_seeds",
+    "minecafe:lychee_seeds",
+    "minecafe:banana_seeds",
+    "minecafe:mango_seeds",
+    "minecafe:cherry_seeds",
+    "minecafe:peach_seeds",
+    "minecafe:pear_seeds",
+    "minecafe:plum_seeds",
+    "minecafe:fig_seeds"
+  ]
+}

@@ -45,6 +45,12 @@ public class ModItemsInit {
             () -> new BucketItem(ModFluids.SOURCE_COFFEE_FLUID, new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET)));
 
     /**
+     * Crop Inspector Tool
+     */
+    public static final RegistryObject<Item> CROP_INSPECTOR_ITEM = ITEMS.register("crop_inspector",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
+    /**
      * Flower Crop Blocks
      */
     public static final RegistryObject<Item> DANDELION_SEEDS = ITEMS.register("dandelion_seeds",
@@ -95,69 +101,69 @@ public class ModItemsInit {
      */
     // Coffee
     public static final RegistryObject<Item> COFFEE_BEANS_UNROASTED = ITEMS.register("coffee_beans_unroasted",
-            () -> new DoubleHighBlockItem(ModBlocksInit.COFFEE_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.COFFEE_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_CHERRIES = ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties()));
     // Apple
     public static final RegistryObject<Item> APPLE_SEEDS = ITEMS.register("apple_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.APPLE_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.APPLE_CROP_BOTTOM.get(), new Item.Properties()));
     // Orange
     public static final RegistryObject<Item> ORANGE_SEEDS = ITEMS.register("orange_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.ORANGE_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.ORANGE_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> ORANGE = ITEMS.register("orange", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
     // Lemon
     public static final RegistryObject<Item> LEMON_SEEDS = ITEMS.register("lemon_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.LEMON_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.LEMON_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> LEMON = ITEMS.register("lemon", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
     // Lime
     public static final RegistryObject<Item> LIME_SEEDS = ITEMS.register("lime_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.LIME_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.LIME_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> LIME = ITEMS.register("lime", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
     // Avocado
     public static final RegistryObject<Item> AVOCADO_SEEDS = ITEMS.register("avocado_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.AVOCADO_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.AVOCADO_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> AVOCADO = ITEMS.register("avocado", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
     // Lychee
     public static final RegistryObject<Item> LYCHEE_SEEDS = ITEMS.register("lychee_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.LYCHEE_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.LYCHEE_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> LYCHEE = ITEMS.register("lychee", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
     // Banana
     public static final RegistryObject<Item> BANANA_SEEDS = ITEMS.register("banana_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.BANANA_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.BANANA_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> BANANA = ITEMS.register("banana", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
     // Mango
     public static final RegistryObject<Item> MANGO_SEEDS = ITEMS.register("mango_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.MANGO_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.MANGO_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
     // Cherry
     public static final RegistryObject<Item> CHERRY_SEEDS = ITEMS.register("cherry_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.CHERRY_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.CHERRY_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> CHERRY = ITEMS.register("cherry", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
     // Peach
     public static final RegistryObject<Item> PEACH_SEEDS = ITEMS.register("peach_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.PEACH_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.PEACH_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> PEACH = ITEMS.register("peach", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
     // Pear
     public static final RegistryObject<Item> PEAR_SEEDS = ITEMS.register("pear_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.PEAR_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.PEAR_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> PEAR = ITEMS.register("pear", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
     // Plum
     public static final RegistryObject<Item> PLUM_SEEDS = ITEMS.register("plum_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.PLUM_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.PLUM_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> PLUM = ITEMS.register("plum", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
     // Fig
     public static final RegistryObject<Item> FIG_SEEDS = ITEMS.register("fig_seeds",
-            () -> new DoubleHighBlockItem(ModBlocksInit.FIG_CROP_BOTTOM.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocksInit.FIG_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> FIG = ITEMS.register("fig", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
 

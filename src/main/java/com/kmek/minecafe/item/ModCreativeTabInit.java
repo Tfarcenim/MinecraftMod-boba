@@ -67,6 +67,8 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCropsAndSeeds(CreativeModeTab.Output output) {
+        output.accept(ModItemsInit.CROP_INSPECTOR_ITEM.get());
+
         acceptFlowerSeeds(output);
 
         // Seeds
