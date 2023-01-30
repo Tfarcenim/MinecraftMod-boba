@@ -155,6 +155,11 @@ public class ModItemsInit {
             () -> new DoubleHighBlockItem(ModBlocksInit.PLUM_CROP_BOTTOM.get(), new Item.Properties()));
     public static final RegistryObject<Item> PLUM = ITEMS.register("plum", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
+    // Fig
+    public static final RegistryObject<Item> FIG_SEEDS = ITEMS.register("fig_seeds",
+            () -> new DoubleHighBlockItem(ModBlocksInit.FIG_CROP_BOTTOM.get(), new Item.Properties()));
+    public static final RegistryObject<Item> FIG = ITEMS.register("fig", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
 
     /**
      * Cassava-related Foods
