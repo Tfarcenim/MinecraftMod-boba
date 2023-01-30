@@ -12,11 +12,9 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MineCafeMod.MODID);
 
-    public static final RegistryObject<BlockEntityType<WaffleIronBlockEntity>> WAFFLE_IRON =
-            BLOCK_ENTITIES.register("waffle_iron", () ->
-                    BlockEntityType.Builder.of(WaffleIronBlockEntity::new,
-                            ModBlocksInit.WAFFLE_IRON.get()).build(null));
-
+    /**
+     * Decor / Display Block Entities
+     */
     public static final RegistryObject<BlockEntityType<DisplayCaseBlockEntity>> DISPLAY_CASE =
             BLOCK_ENTITIES.register("display_case", () ->
                     BlockEntityType.Builder.of(DisplayCaseBlockEntity::new,
@@ -27,15 +25,28 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(CakeStandBlockEntity::new,
                             ModBlocksInit.CAKE_STAND.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<VaseBlockEntity>> VASE =
+            BLOCK_ENTITIES.register("vase", () ->
+                    BlockEntityType.Builder.of(VaseBlockEntity::new,
+                            ModBlocksInit.VASE.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<CashRegisterBlockEntity>> CASH_REGISTER =
+            BLOCK_ENTITIES.register("cash_register", () ->
+                    BlockEntityType.Builder.of(CashRegisterBlockEntity::new,
+                            ModBlocksInit.CASH_REGISTER.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<WallShelfBlockEntity>> WALL_SHELF =
             BLOCK_ENTITIES.register("wall_shelf", () ->
                     BlockEntityType.Builder.of(WallShelfBlockEntity::new,
                             ModBlocksInit.OAK_WALL_SHELF.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<VaseBlockEntity>> VASE =
-            BLOCK_ENTITIES.register("vase", () ->
-                    BlockEntityType.Builder.of(VaseBlockEntity::new,
-                            ModBlocksInit.VASE.get()).build(null));
+    /**
+     * Crafting Station Block Entities
+     */
+    public static final RegistryObject<BlockEntityType<WaffleIronBlockEntity>> WAFFLE_IRON =
+            BLOCK_ENTITIES.register("waffle_iron", () ->
+                    BlockEntityType.Builder.of(WaffleIronBlockEntity::new,
+                            ModBlocksInit.WAFFLE_IRON.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<CoffeeMachineBlockEntity>> COFFEE_MACHINE =
             BLOCK_ENTITIES.register("coffee_machine", () ->
@@ -47,7 +58,9 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(EspressoMachineBlockEntity::new,
                             ModBlocksInit.ESPRESSO_MACHINE.get()).build(null));
 
-
+    /**
+     * Registering to the Event Bus
+     */
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

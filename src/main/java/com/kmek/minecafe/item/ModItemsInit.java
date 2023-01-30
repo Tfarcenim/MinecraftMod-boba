@@ -31,12 +31,16 @@ public class ModItemsInit {
             () -> new BlockItem(ModBlocksInit.DISPLAY_CASE_CURVED.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> CAKE_STAND_ITEM = ITEMS.register("cake_stand",
             () -> new BlockItem(ModBlocksInit.CAKE_STAND.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> VASE_ITEM = ITEMS.register("vase",
+            () -> new BlockItem(ModBlocksInit.VASE.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CASH_REGISTER_ITEM = ITEMS.register("cash_register",
+            () -> new BlockItem(ModBlocksInit.CASH_REGISTER.get(), new Item.Properties()));
+    // Wall Shelves
     public static final RegistryObject<BlockItem> OAK_WALL_SHELF_ITEM = ITEMS.register("oak_wall_shelf",
             () -> new BlockItem(ModBlocksInit.OAK_WALL_SHELF.get(), new Item.Properties()));
 //    public static final RegistryObject<BlockItem> BIRCH_WALL_SHELF_ITEM = ITEMS.register("birch_wall_shelf",
 //            () -> new BlockItem(ModBlocksInit.BIRCH_WALL_SHELF.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> VASE_ITEM = ITEMS.register("vase",
-        () -> new BlockItem(ModBlocksInit.VASE.get(), new Item.Properties()));
+
 
     /**
      * Fun Blocks

@@ -40,14 +40,16 @@ public class CustomBaseMenu extends AbstractContainerMenu {
     }
 
     protected void add8Slots(IItemHandler handler, int startIndex, int startX, int startY) {
-        for (int i = 0; i < 8; i++) {
-            this.addSlot(new SlotItemHandler(handler, i + startIndex, startX + (i * 18), startY));
-        }
+        addNSlots(handler, 8, startIndex, startX, startY, 18, 0);
     }
 
     protected void add4Slots(IItemHandler handler, int startIndex, int startX, int startY) {
-        for (int i = 0; i < 4; i++) {
-            this.addSlot(new SlotItemHandler(handler, i + startIndex, startX + (i * 18), startY));
+        addNSlots(handler, 4, startIndex, startX, startY, 18, 0);
+    }
+
+    protected void addNSlots(IItemHandler handler, int n, int startIndex, int startX, int startY, int spacingX, int spacingY) {
+        for (int i = 0; i < n; i++) {
+            this.addSlot(new SlotItemHandler(handler, i + startIndex, startX + (i * spacingX), startY + (i * spacingY)));
         }
     }
 

@@ -16,6 +16,7 @@ public class WallShelfBlock extends CustomVoxelMenuEntityBlock<WallShelfBlockEnt
         super(properties, true);
     }
 
+    @Override
     public VoxelShape makeShape() {
         VoxelShape shape = Shapes.empty();
         shape = Shapes.join(shape, Shapes.box(0, 0, 0.625, 1, 1, 1), BooleanOp.OR);

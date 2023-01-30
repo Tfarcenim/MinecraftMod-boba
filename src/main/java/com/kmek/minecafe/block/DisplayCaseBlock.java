@@ -53,7 +53,7 @@ public class DisplayCaseBlock extends CustomMenuEntityBlock<DisplayCaseBlockEnti
         if (pPlayer.getDirection().equals(pState.getValue(CustomMenuEntityBlock.FACING))) {
             if (pPlayer.isCrouching()) {
                 BlockState updated = pState.cycle(LOCKED);
-                if (!pLevel.isClientSide()) {
+                if (!pLevel.isClientSide() && pHand == InteractionHand.MAIN_HAND) {
                     pLevel.setBlock(pPos, updated, 3);
                 }
             }

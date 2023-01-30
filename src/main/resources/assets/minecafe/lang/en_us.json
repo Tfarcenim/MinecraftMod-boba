@@ -1,9 +1,11 @@
 {
   "block.minecafe.display_case_curved": "Display Case",
   "block.minecafe.cake_stand": "Cake Stand",
+  "block.minecafe.vase": "Vase",
+  "block.minecafe.cash_register": "Cash Register",
+
   "block.minecafe.oak_wall_shelf": "Oak Wall Shelf",
   "block.minecafe.birch_wall_shelf": "Birch Wall Shelf",
-  "block.minecafe.vase": "Vase",
 
   "block.minecafe.waffle_iron": "Waffle Iron",
   "block.minecafe.coffee_machine": "Coffee Machine",

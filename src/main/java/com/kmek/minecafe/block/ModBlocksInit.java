@@ -164,12 +164,15 @@ public class ModBlocksInit {
             () -> new DisplayCaseBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
     public static final RegistryObject<Block> CAKE_STAND = BLOCKS.register("cake_stand",
             () -> new CakeStandBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
+    public static final RegistryObject<Block> VASE = BLOCKS.register("vase",
+            () -> new VaseBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
+    public static final RegistryObject<Block> CASH_REGISTER = BLOCKS.register("cash_register",
+            () -> new CashRegisterBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(3.5f).dynamicShape().requiresCorrectToolForDrops().noOcclusion()));
+    // Wall Shelves
     public static final RegistryObject<Block> OAK_WALL_SHELF = BLOCKS.register("oak_wall_shelf",
             () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.6f).dynamicShape().noOcclusion()));
 //    public static final RegistryObject<Block> BIRCH_WALL_SHELF = BLOCKS.register("birch_wall_shelf",
 //            () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.6f).dynamicShape().noOcclusion()));
-public static final RegistryObject<Block> VASE = BLOCKS.register("vase",
-        () -> new VaseBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
 
     /**
      * Fluids
