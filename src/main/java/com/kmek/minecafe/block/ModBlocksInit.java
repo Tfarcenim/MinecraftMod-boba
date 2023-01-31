@@ -171,6 +171,8 @@ public class ModBlocksInit {
     // Wall Shelves
     public static final RegistryObject<Block> OAK_WALL_SHELF = BLOCKS.register("oak_wall_shelf",
             () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.75f).dynamicShape().noOcclusion()));
+    public static final RegistryObject<Block> SPRUCE_WALL_SHELF = BLOCKS.register("spruce_wall_shelf",
+            () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.75f).dynamicShape().noOcclusion()));
     public static final RegistryObject<Block> BIRCH_WALL_SHELF = BLOCKS.register("birch_wall_shelf",
             () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.75f).dynamicShape().noOcclusion()));
     public static final RegistryObject<Block> JUNGLE_WALL_SHELF = BLOCKS.register("jungle_wall_shelf",

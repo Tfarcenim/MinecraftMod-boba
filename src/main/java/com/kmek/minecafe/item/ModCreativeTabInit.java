@@ -57,9 +57,14 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.CASH_REGISTER_ITEM.get());
         // Wall Shelves
         output.accept(ModItemsInit.OAK_WALL_SHELF_ITEM.get());
+        output.accept(ModItemsInit.SPRUCE_WALL_SHELF_ITEM.get());
         output.accept(ModItemsInit.BIRCH_WALL_SHELF_ITEM.get());
         output.accept(ModItemsInit.JUNGLE_WALL_SHELF_ITEM.get());
         output.accept(ModItemsInit.ACACIA_WALL_SHELF_ITEM.get());
+        // dark oak
+        // mangrove
+        // crimson
+        // warped
 
 
         // Crafting bench blocks
