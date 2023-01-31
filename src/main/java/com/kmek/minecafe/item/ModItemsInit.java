@@ -42,6 +42,8 @@ public class ModItemsInit {
             () -> new BlockItem(ModBlocksInit.BIRCH_WALL_SHELF.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> JUNGLE_WALL_SHELF_ITEM = ITEMS.register("jungle_wall_shelf",
             () -> new BlockItem(ModBlocksInit.JUNGLE_WALL_SHELF.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> ACACIA_WALL_SHELF_ITEM = ITEMS.register("acacia_wall_shelf",
+            () -> new BlockItem(ModBlocksInit.ACACIA_WALL_SHELF.get(), new Item.Properties()));
 
 
     /**

@@ -59,6 +59,7 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.OAK_WALL_SHELF_ITEM.get());
         output.accept(ModItemsInit.BIRCH_WALL_SHELF_ITEM.get());
         output.accept(ModItemsInit.JUNGLE_WALL_SHELF_ITEM.get());
+        output.accept(ModItemsInit.ACACIA_WALL_SHELF_ITEM.get());
 
 
         // Crafting bench blocks
