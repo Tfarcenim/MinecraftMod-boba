@@ -63,9 +63,8 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.ACACIA_WALL_SHELF_ITEM.get());
         output.accept(ModItemsInit.DARK_OAK_WALL_SHELF_ITEM.get());
         output.accept(ModItemsInit.MANGROVE_WALL_SHELF_ITEM.get());
-        // crimson
+        output.accept(ModItemsInit.CRIMSON_WALL_SHELF_ITEM.get());
         // warped
-
 
         // Crafting bench blocks
         output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
