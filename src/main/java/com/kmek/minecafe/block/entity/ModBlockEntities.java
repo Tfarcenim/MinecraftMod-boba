@@ -42,7 +42,8 @@ public class ModBlockEntities {
                             ModBlocksInit.SPRUCE_WALL_SHELF.get(),
                             ModBlocksInit.BIRCH_WALL_SHELF.get(),
                             ModBlocksInit.JUNGLE_WALL_SHELF.get(),
-                            ModBlocksInit.ACACIA_WALL_SHELF.get()).build(null));
+                            ModBlocksInit.ACACIA_WALL_SHELF.get(),
+                            ModBlocksInit.DARK_OAK_WALL_SHELF.get()).build(null));
 
     /**
      * Crafting Station Block Entities

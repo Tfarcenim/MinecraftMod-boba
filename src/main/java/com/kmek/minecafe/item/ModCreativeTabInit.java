@@ -61,7 +61,7 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.BIRCH_WALL_SHELF_ITEM.get());
         output.accept(ModItemsInit.JUNGLE_WALL_SHELF_ITEM.get());
         output.accept(ModItemsInit.ACACIA_WALL_SHELF_ITEM.get());
-        // dark oak
+        output.accept(ModItemsInit.DARK_OAK_WALL_SHELF_ITEM.get());
         // mangrove
         // crimson
         // warped
