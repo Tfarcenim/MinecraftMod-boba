@@ -11,6 +11,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
@@ -180,6 +181,8 @@ public class ModBlocksInit {
     public static final RegistryObject<Block> ACACIA_WALL_SHELF = BLOCKS.register("acacia_wall_shelf",
             () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.75f).dynamicShape().noOcclusion()));
     public static final RegistryObject<Block> DARK_OAK_WALL_SHELF = BLOCKS.register("dark_oak_wall_shelf",
+            () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.75f).dynamicShape().noOcclusion()));
+    public static final RegistryObject<Block> MANGROVE_WALL_SHELF = BLOCKS.register("mangrove_wall_shelf",
             () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.75f).dynamicShape().noOcclusion()));
 
     /**

@@ -48,6 +48,8 @@ public class ModItemsInit {
             () -> new BlockItem(ModBlocksInit.ACACIA_WALL_SHELF.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> DARK_OAK_WALL_SHELF_ITEM = ITEMS.register("dark_oak_wall_shelf",
             () -> new BlockItem(ModBlocksInit.DARK_OAK_WALL_SHELF.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> MANGROVE_WALL_SHELF_ITEM = ITEMS.register("mangrove_wall_shelf",
+            () -> new BlockItem(ModBlocksInit.MANGROVE_WALL_SHELF.get(), new Item.Properties()));
 
     /**
      * Fun Blocks
