@@ -186,6 +186,8 @@ public class ModBlocksInit {
             () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.75f).dynamicShape().noOcclusion()));
     public static final RegistryObject<Block> CRIMSON_WALL_SHELF = BLOCKS.register("crimson_wall_shelf",
             () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.75f).dynamicShape().noOcclusion()));
+    public static final RegistryObject<Block> WARPED_WALL_SHELF = BLOCKS.register("warped_wall_shelf",
+            () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.75f).dynamicShape().noOcclusion()));
 
     /**
      * Fluids

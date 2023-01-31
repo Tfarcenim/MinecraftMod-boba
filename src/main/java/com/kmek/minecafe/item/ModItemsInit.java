@@ -52,6 +52,8 @@ public class ModItemsInit {
             () -> new BlockItem(ModBlocksInit.MANGROVE_WALL_SHELF.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> CRIMSON_WALL_SHELF_ITEM = ITEMS.register("crimson_wall_shelf",
             () -> new BlockItem(ModBlocksInit.CRIMSON_WALL_SHELF.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WARPED_WALL_SHELF_ITEM = ITEMS.register("warped_wall_shelf",
+            () -> new BlockItem(ModBlocksInit.WARPED_WALL_SHELF.get(), new Item.Properties()));
 
     /**
      * Fun Blocks
