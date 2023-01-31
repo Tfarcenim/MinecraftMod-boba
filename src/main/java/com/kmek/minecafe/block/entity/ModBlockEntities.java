@@ -39,7 +39,8 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("wall_shelf", () ->
                     BlockEntityType.Builder.of(WallShelfBlockEntity::new,
                             ModBlocksInit.OAK_WALL_SHELF.get(),
-                            ModBlocksInit.BIRCH_WALL_SHELF.get()).build(null));
+                            ModBlocksInit.BIRCH_WALL_SHELF.get(),
+                            ModBlocksInit.JUNGLE_WALL_SHELF.get()).build(null));
 
     /**
      * Crafting Station Block Entities

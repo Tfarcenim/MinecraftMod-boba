@@ -55,8 +55,10 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.VASE_ITEM.get());
         output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
         output.accept(ModItemsInit.CASH_REGISTER_ITEM.get());
+        // Wall Shelves
         output.accept(ModItemsInit.OAK_WALL_SHELF_ITEM.get());
         output.accept(ModItemsInit.BIRCH_WALL_SHELF_ITEM.get());
+        output.accept(ModItemsInit.JUNGLE_WALL_SHELF_ITEM.get());
 
 
         // Crafting bench blocks
