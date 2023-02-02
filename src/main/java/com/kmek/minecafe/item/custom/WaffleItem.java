@@ -1,4 +1,4 @@
-package com.kmek.minecafe.item;
+package com.kmek.minecafe.item.custom;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
@@ -17,7 +17,7 @@ public class WaffleItem extends Item {
         super(pProperties);
     }
 
-    WaffleItem(int nut, float sat) {
+    public WaffleItem(int nut, float sat) {
         super(new Item.Properties().food(new FoodProperties.Builder().nutrition(nut).saturationMod(sat).build()));
     }
 

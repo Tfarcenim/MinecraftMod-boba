@@ -1,5 +1,6 @@
 package com.kmek.minecafe.block.crop;
 
+import com.kmek.minecafe.block.ModBlocksInit;
 import com.kmek.minecafe.item.ModItemsInit;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -18,7 +19,7 @@ public class CassavaCropBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItemsInit.CASSAVA_CUTTING.get();
+        return ModBlocksInit.CASSAVA_CROP.get().asItem();
     }
 
     @Override

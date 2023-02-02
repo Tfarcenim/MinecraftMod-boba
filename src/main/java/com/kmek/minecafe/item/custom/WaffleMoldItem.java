@@ -1,5 +1,6 @@
-package com.kmek.minecafe.item;
+package com.kmek.minecafe.item.custom;
 
+import com.kmek.minecafe.item.custom.WaffleItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 

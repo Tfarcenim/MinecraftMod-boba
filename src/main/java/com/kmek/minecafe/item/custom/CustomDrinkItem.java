@@ -1,4 +1,4 @@
-package com.kmek.minecafe.item;
+package com.kmek.minecafe.item.custom;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;

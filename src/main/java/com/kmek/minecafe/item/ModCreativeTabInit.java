@@ -1,6 +1,7 @@
 package com.kmek.minecafe.item;
 
 import com.kmek.minecafe.MineCafeMod;
+import com.kmek.minecafe.block.ModBlocksInit;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -51,25 +52,25 @@ public class ModCreativeTabInit {
 
     private void acceptBlocks(CreativeModeTab.Output output) {
         // Decorative blocks
-        output.accept(ModItemsInit.CAKE_STAND_ITEM.get());
-        output.accept(ModItemsInit.VASE_ITEM.get());
-        output.accept(ModItemsInit.DISPLAY_CASE_CURVED_ITEM.get());
-        output.accept(ModItemsInit.CASH_REGISTER_ITEM.get());
+        output.accept(ModBlocksInit.CAKE_STAND.get());
+        output.accept(ModBlocksInit.VASE.get());
+        output.accept(ModBlocksInit.DISPLAY_CASE_CURVED.get());
+        output.accept(ModBlocksInit.CASH_REGISTER.get());
         // Wall Shelves
-        output.accept(ModItemsInit.OAK_WALL_SHELF_ITEM.get());
-        output.accept(ModItemsInit.SPRUCE_WALL_SHELF_ITEM.get());
-        output.accept(ModItemsInit.BIRCH_WALL_SHELF_ITEM.get());
-        output.accept(ModItemsInit.JUNGLE_WALL_SHELF_ITEM.get());
-        output.accept(ModItemsInit.ACACIA_WALL_SHELF_ITEM.get());
-        output.accept(ModItemsInit.DARK_OAK_WALL_SHELF_ITEM.get());
-        output.accept(ModItemsInit.MANGROVE_WALL_SHELF_ITEM.get());
-        output.accept(ModItemsInit.CRIMSON_WALL_SHELF_ITEM.get());
-        output.accept(ModItemsInit.WARPED_WALL_SHELF_ITEM.get());
+        output.accept(ModBlocksInit.OAK_WALL_SHELF.get());
+        output.accept(ModBlocksInit.SPRUCE_WALL_SHELF.get());
+        output.accept(ModBlocksInit.BIRCH_WALL_SHELF.get());
+        output.accept(ModBlocksInit.JUNGLE_WALL_SHELF.get());
+        output.accept(ModBlocksInit.ACACIA_WALL_SHELF.get());
+        output.accept(ModBlocksInit.DARK_OAK_WALL_SHELF.get());
+        output.accept(ModBlocksInit.MANGROVE_WALL_SHELF.get());
+        output.accept(ModBlocksInit.CRIMSON_WALL_SHELF.get());
+        output.accept(ModBlocksInit.WARPED_WALL_SHELF.get());
 
         // Crafting bench blocks
-        output.accept(ModItemsInit.WAFFLE_IRON_ITEM.get());
-        output.accept(ModItemsInit.COFFEE_MACHINE_ITEM.get());
-        output.accept(ModItemsInit.ESPRESSO_MACHINE_ITEM.get());
+        output.accept(ModBlocksInit.WAFFLE_IRON.get());
+        output.accept(ModBlocksInit.COFFEE_MACHINE.get());
+        output.accept(ModBlocksInit.ESPRESSO_MACHINE.get());
 
         // Fun Blocks
         output.accept(ModItemsInit.COFFEE_BUCKET.get());
@@ -81,21 +82,21 @@ public class ModCreativeTabInit {
         acceptFlowerSeeds(output);
 
         // Seeds
-        output.accept(ModItemsInit.CASSAVA_CUTTING.get());
-        output.accept(ModItemsInit.COFFEE_BEANS_UNROASTED.get());
-        output.accept(ModItemsInit.APPLE_SEEDS.get());
-        output.accept(ModItemsInit.ORANGE_SEEDS.get());
-        output.accept(ModItemsInit.LEMON_SEEDS.get());
-        output.accept(ModItemsInit.LIME_SEEDS.get());
-        output.accept(ModItemsInit.AVOCADO_SEEDS.get());
-        output.accept(ModItemsInit.LYCHEE_SEEDS.get());
-        output.accept(ModItemsInit.BANANA_SEEDS.get());
-        output.accept(ModItemsInit.MANGO_SEEDS.get());
-        output.accept(ModItemsInit.CHERRY_SEEDS.get());
-        output.accept(ModItemsInit.PEACH_SEEDS.get());
-        output.accept(ModItemsInit.PEAR_SEEDS.get());
-        output.accept(ModItemsInit.PLUM_SEEDS.get());
-        output.accept(ModItemsInit.FIG_SEEDS.get());
+        output.accept(ModBlocksInit.CASSAVA_CROP.get());
+        output.accept(ModBlocksInit.COFFEE_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.APPLE_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.ORANGE_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.LEMON_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.LIME_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.AVOCADO_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.LYCHEE_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.BANANA_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.MANGO_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.CHERRY_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.PEACH_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.PEAR_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.PLUM_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.FIG_CROP_BOTTOM.get());
 
         // Fruit
         output.accept(ModItemsInit.CASSAVA.get());
@@ -114,18 +115,18 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.FIG.get());
     }
     private void acceptFlowerSeeds(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.DANDELION_SEEDS.get());
-        output.accept(ModItemsInit.POPPY_SEEDS.get());
-        output.accept(ModItemsInit.BLUE_ORCHID_SEEDS.get());
-        output.accept(ModItemsInit.ALLIUM_SEEDS.get());
-        output.accept(ModItemsInit.AZURE_BLUET_SEEDS.get());
-        output.accept(ModItemsInit.RED_TULIP_SEEDS.get());
-        output.accept(ModItemsInit.ORANGE_TULIP_SEEDS.get());
-        output.accept(ModItemsInit.WHITE_TULIP_SEEDS.get());
-        output.accept(ModItemsInit.PINK_TULIP_SEEDS.get());
-        output.accept(ModItemsInit.OXEYE_DAISY_SEEDS.get());
-        output.accept(ModItemsInit.CORNFLOWER_SEEDS.get());
-        output.accept(ModItemsInit.LILY_OF_THE_VALLEY_SEEDS.get());
+        output.accept(ModBlocksInit.DANDELION_CROP.get());
+        output.accept(ModBlocksInit.POPPY_CROP.get());
+        output.accept(ModBlocksInit.BLUE_ORCHID_CROP.get());
+        output.accept(ModBlocksInit.ALLIUM_CROP.get());
+        output.accept(ModBlocksInit.AZURE_BLUET_CROP.get());
+        output.accept(ModBlocksInit.RED_TULIP_CROP.get());
+        output.accept(ModBlocksInit.ORANGE_TULIP_CROP.get());
+        output.accept(ModBlocksInit.WHITE_TULIP_CROP.get());
+        output.accept(ModBlocksInit.PINK_TULIP_CROP.get());
+        output.accept(ModBlocksInit.OXEYE_DAISY_CROP.get());
+        output.accept(ModBlocksInit.CORNFLOWER_CROP.get());
+        output.accept(ModBlocksInit.LILY_OF_THE_VALLEY_CROP.get());
     }
 
     private void acceptJams(CreativeModeTab.Output output) {

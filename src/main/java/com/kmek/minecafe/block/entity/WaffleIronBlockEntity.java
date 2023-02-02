@@ -1,8 +1,8 @@
 package com.kmek.minecafe.block.entity;
 
 import com.kmek.minecafe.item.ModItemsInit;
-import com.kmek.minecafe.item.WaffleItem;
-import com.kmek.minecafe.item.WaffleMoldItem;
+import com.kmek.minecafe.item.custom.WaffleItem;
+import com.kmek.minecafe.item.custom.WaffleMoldItem;
 import com.kmek.minecafe.networking.ModMessages;
 import com.kmek.minecafe.networking.packet.ItemStackSyncS2CPacket;
 import com.kmek.minecafe.screen.WaffleIronMenu;

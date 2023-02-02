@@ -31,6 +31,7 @@ public class FlowerCropBlock extends CropBlock {
     @Override
     protected ItemLike getBaseSeedId() {
         Optional<RegistryObject<Item>> opt = ModItemsInit.ITEMS.getEntries().stream()
+//                .peek(entry -> System.out.println(entry.get().getDescriptionId()))
                 .filter(entry -> entry.get().getDescriptionId().equals(seeds))
                 .findFirst();
         return opt.isPresent() ? opt.get().get() : super.getBaseSeedId();
