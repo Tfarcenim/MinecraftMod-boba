@@ -12,7 +12,7 @@
       "item": "minecafe:espresso_shot"
     },
     "C": {
-      "item": "minecafe:chocolate"
+      "tag": "forge:chocolate"
     },
     "M": {
       "item": "minecafe:mug"

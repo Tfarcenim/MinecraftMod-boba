@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "B": {
-      "item": "minecafe:butter"
+      "tag": "forge:butter"
     },
     "C": {
       "item": "minecafe:coffee"

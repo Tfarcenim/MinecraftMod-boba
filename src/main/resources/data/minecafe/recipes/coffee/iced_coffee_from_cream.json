@@ -9,7 +9,7 @@
       "item": "minecafe:ice_cubes"
     },
     "K": {
-      "item": "minecafe:cream"
+      "tag": "forge:cream"
     },
     "M": {
       "item": "minecafe:clear_cup"

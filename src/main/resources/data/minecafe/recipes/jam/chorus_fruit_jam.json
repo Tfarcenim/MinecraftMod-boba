@@ -6,7 +6,7 @@
       "item": "minecraft:chorus_fruit"
     },
     "S": {
-      "item": "minecraft:sugar"
+      "tag": "forge:sugar"
     }
   },
   "pattern": [

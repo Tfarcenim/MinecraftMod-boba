@@ -6,10 +6,10 @@
       "item": "minecraft:azure_bluet"
     },
     "S": {
-      "item": "minecraft:sugar"
+      "tag": "forge:sugar"
     },
     "C": {
-      "item": "minecafe:cream"
+      "tag": "forge:cream"
     }
   },
   "pattern": [

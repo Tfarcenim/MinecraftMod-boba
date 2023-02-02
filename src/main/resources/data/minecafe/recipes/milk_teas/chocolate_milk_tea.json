@@ -6,7 +6,7 @@
       "item": "minecraft:milk_bucket"
     },
     "S": {
-      "item": "minecraft:sugar"
+      "tag": "forge:sugar"
     },
     "B": {
       "item": "minecafe:boba_pearls"
@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:chocolate"
+      "tag": "forge:chocolate"
     }
   },
   "pattern": [

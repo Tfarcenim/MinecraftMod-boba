@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "F": {
-      "item": "minecafe:chocolate"
+      "tag": "forge:chocolate"
     },
     "S": {
-      "item": "minecraft:sugar"
+      "tag": "forge:sugar"
     },
     "C": {
-      "item": "minecafe:cream"
+      "tag": "forge:cream"
     }
   },
   "pattern": [

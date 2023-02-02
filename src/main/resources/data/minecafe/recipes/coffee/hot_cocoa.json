@@ -9,10 +9,10 @@
       "item": "minecafe:marshmallows"
     },
     "C": {
-      "item": "minecafe:chocolate"
+      "tag": "forge:chocolate"
     },
     "S": {
-      "item": "minecraft:sugar"
+      "tag": "forge:sugar"
     },
     "M": {
       "item": "minecafe:mug"

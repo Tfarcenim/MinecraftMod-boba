@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "S": {
-      "item": "minecraft:sugar"
+      "tag": "forge:sugar"
     },
     "M": {
       "item": "minecafe:marshmallow"
