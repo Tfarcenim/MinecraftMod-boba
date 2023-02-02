@@ -25,7 +25,7 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 public class ModBlocksInit {
-    public static final DeferredRegister<Item> ITEMS = ModItemsInit.ITEMS; //DeferredRegister.create(ForgeRegistries.ITEMS, MineCafeMod.MODID);
+    public static final DeferredRegister<Item> ITEMS = ModItemsInit.ITEMS;
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MineCafeMod.MODID);
 
     /**
@@ -215,7 +215,6 @@ public class ModBlocksInit {
      * Registering the event bus
      */
     public static void register(IEventBus eventBus) {
-//        ITEMS.register(eventBus);
         BLOCKS.register(eventBus);
     }
 }

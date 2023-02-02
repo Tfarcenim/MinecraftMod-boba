@@ -6,10 +6,7 @@ import com.kmek.minecafe.item.custom.CoffeeItem;
 import com.kmek.minecafe.item.custom.MilkTeaItem;
 import com.kmek.minecafe.item.custom.WaffleItem;
 import com.kmek.minecafe.item.custom.WaffleMoldItem;
-import com.kmek.minecafe.item.registery.FruitItems;
 import com.kmek.minecafe.item.registery.Fruits;
-import com.kmek.minecafe.item.registery.RegistryGroup;
-import com.kmek.minecafe.item.registery.RegistryGroupFruitTreeItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -17,15 +14,14 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class ModItemsInit {
     /**
@@ -46,7 +42,7 @@ public class ModItemsInit {
             () -> new Item(new Item.Properties().stacksTo(1)));
 
     /**
-     * Cassava
+     * Raw Crop Drops
      */
     public static final RegistryObject<Item> CASSAVA = ITEMS.register("cassava", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0f)
@@ -60,50 +56,14 @@ public class ModItemsInit {
             super.appendHoverText(stack, level, components, flag);
         }
     });
-
-    /**
-     * Tree Crop
-     */
     // Coffee
     public static final RegistryObject<Item> COFFEE_CHERRIES = ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties()));
-    // Apple
-    // Orange
-    public static final RegistryObject<Item> ORANGE = ITEMS.register("orange", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
-//    public static final Map<FruitItems, Item> ORANGE_ITEMS = new RegistryGroupFruitTreeItems("orange2", ModBlocksInit.ORANGE_CROP_BOTTOM.get(), ITEMS).build();
-    // Lemon
-    public static final RegistryObject<Item> LEMON = ITEMS.register("lemon", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
-    // Lime
-    public static final RegistryObject<Item> LIME = ITEMS.register("lime", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
-    // Avocado
-    public static final RegistryObject<Item> AVOCADO = ITEMS.register("avocado", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
-    // Lychee
-    public static final RegistryObject<Item> LYCHEE = ITEMS.register("lychee", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
-    // Banana
-    public static final RegistryObject<Item> BANANA = ITEMS.register("banana", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
-    // Mango
-    public static final RegistryObject<Item> MANGO = ITEMS.register("mango", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
-    // Cherry
-    public static final RegistryObject<Item> CHERRY = ITEMS.register("cherry", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
-    // Peach
-    public static final RegistryObject<Item> PEACH = ITEMS.register("peach", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
-    // Pear
-    public static final RegistryObject<Item> PEAR = ITEMS.register("pear", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
-    // Plum
-    public static final RegistryObject<Item> PLUM = ITEMS.register("plum", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
-    // Fig
-    public static final RegistryObject<Item> FIG = ITEMS.register("fig", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
+    // Fruits
+    public static final List<RegistryObject<Item>> FRUIT_ITEMS = Arrays.stream(Fruits.values())
+            .filter(fruit -> fruit != Fruits.APPLE)
+            .map(fruit -> ITEMS.register(fruit.toString().toLowerCase(), () -> new Item(new Item.Properties().food(
+                new FoodProperties.Builder().nutrition(3).saturationMod(1f).build()))))
+            .toList();
 
     /**
      * Cassava-related Foods

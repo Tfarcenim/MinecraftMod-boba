@@ -82,8 +82,6 @@ public class ModCreativeTabInit {
         acceptFlowerSeeds(output);
 
         // Seeds
-        output.accept(ModBlocksInit.CASSAVA_CROP.get());
-        output.accept(ModBlocksInit.COFFEE_CROP_BOTTOM.get());
         output.accept(ModBlocksInit.APPLE_CROP_BOTTOM.get());
         output.accept(ModBlocksInit.ORANGE_CROP_BOTTOM.get());
         output.accept(ModBlocksInit.LEMON_CROP_BOTTOM.get());
@@ -97,22 +95,17 @@ public class ModCreativeTabInit {
         output.accept(ModBlocksInit.PEAR_CROP_BOTTOM.get());
         output.accept(ModBlocksInit.PLUM_CROP_BOTTOM.get());
         output.accept(ModBlocksInit.FIG_CROP_BOTTOM.get());
+        output.accept(ModBlocksInit.CASSAVA_CROP.get());
+        output.accept(ModBlocksInit.COFFEE_CROP_BOTTOM.get());
 
         // Fruit
+        ModItemsInit.FRUIT_ITEMS.forEach(reg -> {
+            output.accept(reg.get());
+        });
+
+        // Other Crop Drops
         output.accept(ModItemsInit.CASSAVA.get());
         output.accept(ModItemsInit.COFFEE_CHERRIES.get());
-        output.accept(ModItemsInit.ORANGE.get());
-        output.accept(ModItemsInit.LEMON.get());
-        output.accept(ModItemsInit.LIME.get());
-        output.accept(ModItemsInit.AVOCADO.get());
-        output.accept(ModItemsInit.LYCHEE.get());
-        output.accept(ModItemsInit.BANANA.get());
-        output.accept(ModItemsInit.MANGO.get());
-        output.accept(ModItemsInit.CHERRY.get());
-        output.accept(ModItemsInit.PEACH.get());
-        output.accept(ModItemsInit.PEAR.get());
-        output.accept(ModItemsInit.PLUM.get());
-        output.accept(ModItemsInit.FIG.get());
     }
     private void acceptFlowerSeeds(CreativeModeTab.Output output) {
         output.accept(ModBlocksInit.DANDELION_CROP.get());
