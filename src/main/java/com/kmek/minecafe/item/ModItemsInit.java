@@ -30,7 +30,7 @@ public class ModItemsInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MineCafeMod.MODID);
 
     /**
-     * Fun Blocks
+     * Fluid Block Item
      */
     public static final RegistryObject<Item> COFFEE_BUCKET = ITEMS.register("coffee_bucket",
             () -> new BucketItem(ModFluids.SOURCE_COFFEE_FLUID, new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET)));
@@ -66,20 +66,114 @@ public class ModItemsInit {
             .toList();
 
     /**
-     * Cassava-related Foods
+     * Ingredients
      */
-    public static final RegistryObject<Item> CASSAVA_BIBINGKA = ITEMS.register("cassava_bibingka", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-    public static final RegistryObject<Item> TAPIOCA_PUDDING = ITEMS.register("tapioca_pudding", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
     public static final RegistryObject<Item> CHOCOLATE = ITEMS.register("chocolate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(new Item.Properties()));
+    // Creams
+    public static final RegistryObject<Item> CREAM = ITEMS.register("cream", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
+    public static final RegistryObject<Item> WHIPPED_CREAM = ITEMS.register("whipped_cream", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+    public static final RegistryObject<Item> CHOCOLATE_CREAM = ITEMS.register("chocolate_cream", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
+    public static final RegistryObject<Item> VANILLA_CREAM = ITEMS.register("vanilla_cream", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
+    public static final RegistryObject<Item> COFFEE_CREAM = ITEMS.register("coffee_cream", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
+    public static final RegistryObject<Item> MATCHA_CREAM = ITEMS.register("matcha_cream", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
+    public static final RegistryObject<Item> HONEY_CREAM = ITEMS.register("honey_cream", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
+    public static final RegistryObject<Item> ROSE_CREAM = ITEMS.register("rose_cream", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
+    public static final RegistryObject<Item> MARSHMALLOW = ITEMS.register("marshmallow", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+    public static final RegistryObject<Item> MARSHMALLOWS = ITEMS.register("marshmallows", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).alwaysEat()
+                    .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 60, 0), 1.0f)
+                    .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 0), 1.0f)
+                    .build())));
+    public static final RegistryObject<Item> CUSTARD = ITEMS.register("custard", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
+    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
+    // Jams
+    public static final RegistryObject<Item> APPLE_JAM = ITEMS.register("apple_jam", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
+    public static final RegistryObject<Item> CHORUS_FRUIT_JAM = ITEMS.register("chorus_fruit_jam", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
+    public static final RegistryObject<Item> GLOW_BERRY_JAM = ITEMS.register("glow_berry_jam", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
+    public static final RegistryObject<Item> SWEET_BERRY_JAM = ITEMS.register("sweet_berry_jam", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
+    public static final RegistryObject<Item> WATERMELON_JAM = ITEMS.register("watermelon_jam", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
+    // Tea Crafting Ingredients
+    public static final RegistryObject<Item> BOBA_PEARLS = ITEMS.register("boba_pearls", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder", () -> new Item(new Item.Properties()));
+    // Dishes
+    public static final RegistryObject<Item> CLEAR_CUP = ITEMS.register("clear_cup", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MUG = ITEMS.register("mug", () -> new Item(new Item.Properties()));
 
     /**
-     * Tea Crafting Ingredients
+     * Food
      */
-    public static final RegistryObject<Item> BOBA_PEARLS = ITEMS.register("boba_pearls", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CLEAR_CUP = ITEMS.register("clear_cup", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BATTER_MESS = ITEMS.register("batter_mess", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0)
+                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 0.8f)
+                    .build())) {
+        @Override
+        public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+            components.add(Component.literal("Consume raw eggs at your own risk").withStyle(ChatFormatting.YELLOW));
+            super.appendHoverText(stack, level, components, flag);
+        }
+    });
+    public static final RegistryObject<Item> BURNT_CRISP = ITEMS.register("burnt_crisp", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f)
+                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 200, 0), 1.0f)
+                    .build())));
+    // Waffle snacks
+    public static final RegistryObject<Item> RAW_WAFFLE_BATTER = ITEMS.register("raw_waffle_batter", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0)
+                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 300, 0), 0.6f)
+                    .build())) {
+        @Override
+        public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+            components.add(Component.literal("Consume raw eggs at your own risk").withStyle(ChatFormatting.YELLOW));
+            super.appendHoverText(stack, level, components, flag);
+        }
+    });
+    public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new WaffleItem(2, 0.8f));
+    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new WaffleMoldItem(TAIYAKI.get()));
+    public static final RegistryObject<Item> EGG_WAFFLE = ITEMS.register("egg_waffle", () -> new WaffleItem(2, 0.8f));
+    public static final RegistryObject<Item> EGG_WAFFLE_MOLD = ITEMS.register("egg_waffle_mold", () -> new WaffleMoldItem(EGG_WAFFLE.get()));
+    public static final RegistryObject<Item> PAW_WAFFLE = ITEMS.register("paw_waffle", () -> new WaffleItem(2, 0.8f));
+    public static final RegistryObject<Item> PAW_WAFFLE_MOLD = ITEMS.register("paw_waffle_mold", () -> new WaffleMoldItem(PAW_WAFFLE.get()));
+    public static final RegistryObject<Item> CLASSIC_WAFFLE = ITEMS.register("classic_waffle", () -> new WaffleItem(2, 0.8f));
+    public static final RegistryObject<Item> CLASSIC_WAFFLE_MOLD = ITEMS.register("classic_waffle_mold", () -> new WaffleMoldItem(CLASSIC_WAFFLE.get()));
+    public static final RegistryObject<Item> CREEPER_WAFFLE = ITEMS.register("creeper_waffle", () -> new WaffleItem(2, 0.8f));
+    public static final RegistryObject<Item> CREEPER_WAFFLE_MOLD = ITEMS.register("creeper_waffle_mold", () -> new WaffleMoldItem(CREEPER_WAFFLE.get()));
+    public static final RegistryObject<Item> HEART_WAFFLE = ITEMS.register("heart_waffle", () -> new WaffleItem(2, 0.8f));
+    public static final RegistryObject<Item> HEART_WAFFLE_MOLD = ITEMS.register("heart_waffle_mold", () -> new WaffleMoldItem(HEART_WAFFLE.get()));
+    public static final RegistryObject<Item> PUMPKIN_WAFFLE = ITEMS.register("pumpkin_waffle", () -> new WaffleItem(2, 0.8f));
+    public static final RegistryObject<Item> PUMPKIN_WAFFLE_MOLD = ITEMS.register("pumpkin_waffle_mold", () -> new WaffleMoldItem(PUMPKIN_WAFFLE.get()));
+    public static final RegistryObject<Item> MUSHROOM_WAFFLE = ITEMS.register("mushroom_waffle", () -> new WaffleItem(2, 0.8f));
+    public static final RegistryObject<Item> MUSHROOM_WAFFLE_MOLD = ITEMS.register("mushroom_waffle_mold", () -> new WaffleMoldItem(MUSHROOM_WAFFLE.get()));
+    public static final RegistryObject<Item> FLOWER_WAFFLE = ITEMS.register("flower_waffle", () -> new WaffleItem(2, 0.8f));
+    public static final RegistryObject<Item> FLOWER_WAFFLE_MOLD = ITEMS.register("flower_waffle_mold", () -> new WaffleMoldItem(FLOWER_WAFFLE.get()));
+    public static final RegistryObject<Item> DIAMOND_WAFFLE = ITEMS.register("diamond_waffle", () -> new WaffleItem(2, 0.8f));
+    public static final RegistryObject<Item> DIAMOND_WAFFLE_MOLD = ITEMS.register("diamond_waffle_mold", () -> new WaffleMoldItem(DIAMOND_WAFFLE.get()));
+    public static final RegistryObject<Item> PICKAXE_WAFFLE = ITEMS.register("pickaxe_waffle", () -> new WaffleItem(2, 0.8f));
+    public static final RegistryObject<Item> PICKAXE_WAFFLE_MOLD = ITEMS.register("pickaxe_waffle_mold", () -> new WaffleMoldItem(PICKAXE_WAFFLE.get()));
+    public static final RegistryObject<Item> SWORD_WAFFLE = ITEMS.register("sword_waffle", () -> new WaffleItem(2, 0.8f));
+    public static final RegistryObject<Item> SWORD_WAFFLE_MOLD = ITEMS.register("sword_waffle_mold", () -> new WaffleMoldItem(SWORD_WAFFLE.get()));
+    // Cake
+    public static final RegistryObject<Item> CASSAVA_BIBINGKA = ITEMS.register("cassava_bibingka", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
+    // Pudding
+    public static final RegistryObject<Item> TAPIOCA_PUDDING = ITEMS.register("tapioca_pudding", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
 
     /**
      * Bubble Milk Teas
@@ -190,112 +284,8 @@ public class ModItemsInit {
 //    todo public static final RegistryObject<Item> ENDER_MILK_TEA
 
     /**
-     * Waffle Snacks
-     */
-    public static final RegistryObject<Item> RAW_WAFFLE_BATTER = ITEMS.register("raw_waffle_batter", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0)
-                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 300, 0), 0.6f)
-                    .build())) {
-        @Override
-        public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-            components.add(Component.literal("Consume raw eggs at your own risk").withStyle(ChatFormatting.YELLOW));
-            super.appendHoverText(stack, level, components, flag);
-        }
-    });
-    public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new WaffleMoldItem(TAIYAKI.get()));
-    public static final RegistryObject<Item> EGG_WAFFLE = ITEMS.register("egg_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> EGG_WAFFLE_MOLD = ITEMS.register("egg_waffle_mold", () -> new WaffleMoldItem(EGG_WAFFLE.get()));
-    public static final RegistryObject<Item> PAW_WAFFLE = ITEMS.register("paw_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> PAW_WAFFLE_MOLD = ITEMS.register("paw_waffle_mold", () -> new WaffleMoldItem(PAW_WAFFLE.get()));
-    public static final RegistryObject<Item> CLASSIC_WAFFLE = ITEMS.register("classic_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> CLASSIC_WAFFLE_MOLD = ITEMS.register("classic_waffle_mold", () -> new WaffleMoldItem(CLASSIC_WAFFLE.get()));
-    public static final RegistryObject<Item> CREEPER_WAFFLE = ITEMS.register("creeper_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> CREEPER_WAFFLE_MOLD = ITEMS.register("creeper_waffle_mold", () -> new WaffleMoldItem(CREEPER_WAFFLE.get()));
-    public static final RegistryObject<Item> HEART_WAFFLE = ITEMS.register("heart_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> HEART_WAFFLE_MOLD = ITEMS.register("heart_waffle_mold", () -> new WaffleMoldItem(HEART_WAFFLE.get()));
-    public static final RegistryObject<Item> PUMPKIN_WAFFLE = ITEMS.register("pumpkin_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> PUMPKIN_WAFFLE_MOLD = ITEMS.register("pumpkin_waffle_mold", () -> new WaffleMoldItem(PUMPKIN_WAFFLE.get()));
-    public static final RegistryObject<Item> MUSHROOM_WAFFLE = ITEMS.register("mushroom_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> MUSHROOM_WAFFLE_MOLD = ITEMS.register("mushroom_waffle_mold", () -> new WaffleMoldItem(MUSHROOM_WAFFLE.get()));
-    public static final RegistryObject<Item> FLOWER_WAFFLE = ITEMS.register("flower_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> FLOWER_WAFFLE_MOLD = ITEMS.register("flower_waffle_mold", () -> new WaffleMoldItem(FLOWER_WAFFLE.get()));
-    public static final RegistryObject<Item> DIAMOND_WAFFLE = ITEMS.register("diamond_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> DIAMOND_WAFFLE_MOLD = ITEMS.register("diamond_waffle_mold", () -> new WaffleMoldItem(DIAMOND_WAFFLE.get()));
-    public static final RegistryObject<Item> PICKAXE_WAFFLE = ITEMS.register("pickaxe_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> PICKAXE_WAFFLE_MOLD = ITEMS.register("pickaxe_waffle_mold", () -> new WaffleMoldItem(PICKAXE_WAFFLE.get()));
-    public static final RegistryObject<Item> SWORD_WAFFLE = ITEMS.register("sword_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> SWORD_WAFFLE_MOLD = ITEMS.register("sword_waffle_mold", () -> new WaffleMoldItem(SWORD_WAFFLE.get()));
-
-    /**
-     * Creams
-     */
-    public static final RegistryObject<Item> CREAM = ITEMS.register("cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
-    public static final RegistryObject<Item> WHIPPED_CREAM = ITEMS.register("whipped_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
-    public static final RegistryObject<Item> CHOCOLATE_CREAM = ITEMS.register("chocolate_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> VANILLA_CREAM = ITEMS.register("vanilla_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> COFFEE_CREAM = ITEMS.register("coffee_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> MATCHA_CREAM = ITEMS.register("matcha_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> HONEY_CREAM = ITEMS.register("honey_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> ROSE_CREAM = ITEMS.register("rose_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> MARSHMALLOW = ITEMS.register("marshmallow", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
-    public static final RegistryObject<Item> MARSHMALLOWS = ITEMS.register("marshmallows", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).alwaysEat()
-                    .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 60, 0), 1.0f)
-                    .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 0), 1.0f)
-                    .build())));
-    public static final RegistryObject<Item> CUSTARD = ITEMS.register("custard", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
-
-    /**
-     * Jams
-     */
-    public static final RegistryObject<Item> APPLE_JAM = ITEMS.register("apple_jam", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-    public static final RegistryObject<Item> CHORUS_FRUIT_JAM = ITEMS.register("chorus_fruit_jam", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-    public static final RegistryObject<Item> GLOW_BERRY_JAM = ITEMS.register("glow_berry_jam", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-    public static final RegistryObject<Item> SWEET_BERRY_JAM = ITEMS.register("sweet_berry_jam", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-    public static final RegistryObject<Item> WATERMELON_JAM = ITEMS.register("watermelon_jam", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-
-//    public static final RegistryObject<Item> PASTRY_BAG = ITEMS.register("pastry_bag", () -> new Item(new Item.Properties()));
-
-    /**
-     * Misc Food
-     */
-    public static final RegistryObject<Item> BATTER_MESS = ITEMS.register("batter_mess", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0)
-                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 0.8f)
-                    .build())) {
-        @Override
-        public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-            components.add(Component.literal("Consume raw eggs at your own risk").withStyle(ChatFormatting.YELLOW));
-            super.appendHoverText(stack, level, components, flag);
-        }
-    });
-    public static final RegistryObject<Item> BURNT_CRISP = ITEMS.register("burnt_crisp", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f)
-                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 200, 0), 1.0f)
-                    .build())));
-
-    /**
      * Coffee Stuff
      */
-    public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_BEANS_ROASTED = ITEMS.register("coffee_beans_roasted", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_GROUNDS = ITEMS.register("coffee_grounds", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_FILTER = ITEMS.register("coffee_filter", () -> new Item(new Item.Properties()));
@@ -306,8 +296,6 @@ public class ModItemsInit {
     public static final RegistryObject<Item> ESPRESSO_SHOT = ITEMS.register("espresso_shot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> STEAMED_MILK = ITEMS.register("steamed_milk", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MILK_FOAM = ITEMS.register("milk_foam", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> PAPER_CUP = ITEMS.register("paper_cup", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MUG = ITEMS.register("mug", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee",
             () -> new CoffeeItem(0, 0.5f, 1, null));

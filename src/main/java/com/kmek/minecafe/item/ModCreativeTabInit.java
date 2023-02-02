@@ -162,8 +162,6 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.COFFEE_POT.get());
         output.accept(ModItemsInit.MUG.get());
         output.accept(ModItemsInit.CLEAR_CUP.get());
-        // output.accept(ModItemsInit.PAPER_CUP.get());
-        // output.accept(ModItemsInit.PASTRY_BAG.get());
         output.accept(ModItemsInit.TAIYAKI_MOLD.get());
         output.accept(ModItemsInit.EGG_WAFFLE_MOLD.get());
         output.accept(ModItemsInit.PAW_WAFFLE_MOLD.get());
