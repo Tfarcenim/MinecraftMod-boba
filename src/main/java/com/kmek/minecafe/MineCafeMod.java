@@ -116,35 +116,10 @@ public class MineCafeMod {
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CORNFLOWER_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.LILY_OF_THE_VALLEY_CROP.get(), RenderType.cutout());
             // Other Crops
+            ModBlocksInit.renderAsCutout.stream().forEach(block -> {
+                ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout());
+            });
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASSAVA_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.COFFEE_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.COFFEE_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.APPLE_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.APPLE_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.ORANGE_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.ORANGE_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.LEMON_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.LEMON_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.LIME_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.LIME_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.AVOCADO_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.AVOCADO_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.LYCHEE_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.LYCHEE_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.BANANA_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.BANANA_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.MANGO_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.MANGO_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CHERRY_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CHERRY_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.PEACH_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.PEACH_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.PEAR_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.PEAR_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.PLUM_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.PLUM_CROP_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.FIG_CROP_BOTTOM.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.FIG_CROP_TOP.get(), RenderType.cutout());
             // Display blocks
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_CURVED.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.VASE.get(), RenderType.translucent());

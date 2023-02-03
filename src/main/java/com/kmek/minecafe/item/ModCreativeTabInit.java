@@ -83,18 +83,9 @@ public class ModCreativeTabInit {
 
         // Seeds
         output.accept(ModBlocksInit.APPLE_CROP_BOTTOM.get());
-        output.accept(ModBlocksInit.ORANGE_CROP_BOTTOM.get());
-        output.accept(ModBlocksInit.LEMON_CROP_BOTTOM.get());
-        output.accept(ModBlocksInit.LIME_CROP_BOTTOM.get());
-        output.accept(ModBlocksInit.AVOCADO_CROP_BOTTOM.get());
-        output.accept(ModBlocksInit.LYCHEE_CROP_BOTTOM.get());
-        output.accept(ModBlocksInit.BANANA_CROP_BOTTOM.get());
-        output.accept(ModBlocksInit.MANGO_CROP_BOTTOM.get());
-        output.accept(ModBlocksInit.CHERRY_CROP_BOTTOM.get());
-        output.accept(ModBlocksInit.PEACH_CROP_BOTTOM.get());
-        output.accept(ModBlocksInit.PEAR_CROP_BOTTOM.get());
-        output.accept(ModBlocksInit.PLUM_CROP_BOTTOM.get());
-        output.accept(ModBlocksInit.FIG_CROP_BOTTOM.get());
+        ModBlocksInit.FRUIT_CROPS.stream().forEach(reg -> {
+            output.accept(reg.get());
+        });
         output.accept(ModBlocksInit.CASSAVA_CROP.get());
         output.accept(ModBlocksInit.COFFEE_CROP_BOTTOM.get());
 
