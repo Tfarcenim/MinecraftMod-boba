@@ -99,18 +99,9 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.COFFEE_CHERRIES.get());
     }
     private void acceptFlowerSeeds(CreativeModeTab.Output output) {
-        output.accept(ModBlocksInit.DANDELION_CROP.get());
-        output.accept(ModBlocksInit.POPPY_CROP.get());
-        output.accept(ModBlocksInit.BLUE_ORCHID_CROP.get());
-        output.accept(ModBlocksInit.ALLIUM_CROP.get());
-        output.accept(ModBlocksInit.AZURE_BLUET_CROP.get());
-        output.accept(ModBlocksInit.RED_TULIP_CROP.get());
-        output.accept(ModBlocksInit.ORANGE_TULIP_CROP.get());
-        output.accept(ModBlocksInit.WHITE_TULIP_CROP.get());
-        output.accept(ModBlocksInit.PINK_TULIP_CROP.get());
-        output.accept(ModBlocksInit.OXEYE_DAISY_CROP.get());
-        output.accept(ModBlocksInit.CORNFLOWER_CROP.get());
-        output.accept(ModBlocksInit.LILY_OF_THE_VALLEY_CROP.get());
+        ModBlocksInit.FLOWER_CROPS.forEach(reg -> {
+            output.accept(reg.get());
+        });
     }
 
     private void acceptJams(CreativeModeTab.Output output) {

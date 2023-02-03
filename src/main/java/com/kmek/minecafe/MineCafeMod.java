@@ -73,13 +73,6 @@ public class MineCafeMod {
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
 
         ModMessages.register();
-
-        ComposterBlock.COMPOSTABLES.put(ModBlocksInit.CASSAVA_CROP.get().asItem(), 0.3F);
-        ComposterBlock.COMPOSTABLES.put(ModItemsInit.CASSAVA.get(), 0.65F);
-        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_FILTER_USED.get(), 0.6F);
-        ComposterBlock.COMPOSTABLES.put(ModBlocksInit.COFFEE_CROP_BOTTOM.get(), 0.3F);
-        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_BEANS_ROASTED.get(), 0.6F);
-        ComposterBlock.COMPOSTABLES.put(ModItemsInit.COFFEE_GROUNDS.get(), 0.65F);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -100,30 +93,26 @@ public class MineCafeMod {
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
 
             /**
+             * Add Compostable Items
+             */
+            ModItemsInit.compostableItems.forEach((reg, rate) -> {
+                ComposterBlock.COMPOSTABLES.put(reg.get(), rate);
+            });
+            ModBlocksInit.compostableItems.forEach((reg, rate) -> {
+                ComposterBlock.COMPOSTABLES.put(reg.get().asItem(), rate);
+            });
+
+            /**
              * Set Block Render Layer Types
              */
-            // Flower Crops
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DANDELION_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.POPPY_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.BLUE_ORCHID_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.ALLIUM_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.AZURE_BLUET_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.RED_TULIP_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.ORANGE_TULIP_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.WHITE_TULIP_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.PINK_TULIP_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.OXEYE_DAISY_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CORNFLOWER_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.LILY_OF_THE_VALLEY_CROP.get(), RenderType.cutout());
-            // Other Crops
+            // Cutout Blocks
             ModBlocksInit.renderAsCutout.stream().forEach(block -> {
                 ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout());
             });
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASSAVA_CROP.get(), RenderType.cutout());
-            // Display blocks
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.DISPLAY_CASE_CURVED.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.VASE.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocksInit.CASH_REGISTER.get(), RenderType.translucent());
+            // Translucent Blocks
+            ModBlocksInit.renderAsTranslucent.stream().forEach(block -> {
+                ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.translucent());
+            });
             // Fluid
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_COFFEE_FLUID.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_COFFEE_FLUID.get(), RenderType.translucent());
@@ -145,7 +134,7 @@ public class MineCafeMod {
     /**
      * Helper Methods
      */
-
+    // For rotating voxel shapes for blocks
     public static VoxelShape calculateShapes(Direction to, VoxelShape shape) {
         final VoxelShape[] buffer = { shape, Shapes.empty() };
 

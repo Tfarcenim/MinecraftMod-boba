@@ -21,13 +21,24 @@ import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ModItemsInit {
     /**
      * Registry
      */
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MineCafeMod.MODID);
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
+    }
+
+    public static final Map<RegistryObject<Item>, Float> compostableItems = new HashMap<>();
+    public static RegistryObject<Item> compostable(float rate, RegistryObject<Item> reg) {
+        compostableItems.put(reg, rate);
+        return reg;
+    }
 
     /**
      * Fluid Block Item
@@ -44,7 +55,7 @@ public class ModItemsInit {
     /**
      * Raw Crop Drops
      */
-    public static final RegistryObject<Item> CASSAVA = ITEMS.register("cassava", () -> new Item(new Item.Properties().food(
+    public static final RegistryObject<Item> CASSAVA = compostable(0.65F, ITEMS.register("cassava", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0f)
                     .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 1.0f)
                     .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 0), 1.0f)
@@ -55,14 +66,14 @@ public class ModItemsInit {
             components.add(Component.literal("Poisonous when raw").withStyle(ChatFormatting.YELLOW));
             super.appendHoverText(stack, level, components, flag);
         }
-    });
+    }));
     // Coffee
-    public static final RegistryObject<Item> COFFEE_CHERRIES = ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_CHERRIES = compostable(0.6F, ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties())));
     // Fruits
     public static final List<RegistryObject<Item>> FRUIT_ITEMS = Arrays.stream(Fruits.values())
             .filter(fruit -> fruit != Fruits.APPLE)
-            .map(fruit -> ITEMS.register(fruit.toString().toLowerCase(), () -> new Item(new Item.Properties().food(
-                new FoodProperties.Builder().nutrition(3).saturationMod(1f).build()))))
+            .map(fruit -> compostable(0.65F, ITEMS.register(fruit.toString().toLowerCase(), () -> new Item(new Item.Properties().food(
+                new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())))))
             .toList();
 
     /**
@@ -112,7 +123,10 @@ public class ModItemsInit {
     // Tea Crafting Ingredients
     public static final RegistryObject<Item> BOBA_PEARLS = ITEMS.register("boba_pearls", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder", () -> new Item(new Item.Properties()));
-    // Dishes
+
+    /**
+     * Dishes
+     */
     public static final RegistryObject<Item> CLEAR_CUP = ITEMS.register("clear_cup", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MUG = ITEMS.register("mug", () -> new Item(new Item.Properties()));
 
@@ -286,10 +300,10 @@ public class ModItemsInit {
     /**
      * Coffee Stuff
      */
-    public static final RegistryObject<Item> COFFEE_BEANS_ROASTED = ITEMS.register("coffee_beans_roasted", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COFFEE_GROUNDS = ITEMS.register("coffee_grounds", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_BEANS_ROASTED = compostable(0.5F, ITEMS.register("coffee_beans_roasted", () -> new Item(new Item.Properties())));
+    public static final RegistryObject<Item> COFFEE_GROUNDS = compostable(0.6F, ITEMS.register("coffee_grounds", () -> new Item(new Item.Properties())));
     public static final RegistryObject<Item> COFFEE_FILTER = ITEMS.register("coffee_filter", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COFFEE_FILTER_USED = ITEMS.register("coffee_filter_used", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COFFEE_FILTER_USED = compostable(0.5F, ITEMS.register("coffee_filter_used", () -> new Item(new Item.Properties())));
     public static final RegistryObject<Item> COFFEE_POT = ITEMS.register("coffee_pot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_POT_FULL = ITEMS.register("coffee_pot_full",
             () -> new Item(new Item.Properties().craftRemainder(COFFEE_POT.get())));
@@ -338,11 +352,4 @@ public class ModItemsInit {
     // Teas
     public static final RegistryObject<Item> MATCHA_TEA = ITEMS.register("matcha_tea",
             () -> new CoffeeItem(1, 0.5f, 1, null));
-
-    /**
-     * Registering the event bus
-     */
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
-    }
 }

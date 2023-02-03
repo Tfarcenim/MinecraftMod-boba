@@ -3,6 +3,7 @@ package com.kmek.minecafe.item.registery;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -13,7 +14,7 @@ public class RegistryGroupFruitFoodItemVariants {
     private final String nameSuffix;
     private final DeferredRegister<Item> ITEMS;
     protected List<Fruits> values = Arrays.asList(Fruits.values());
-    protected final Map<Fruits, Item> group = new HashMap<>();
+    protected final Map<Fruits, RegistryObject<Item>> group = new HashMap<>();
 
     public RegistryGroupFruitFoodItemVariants(String nameSuffix, DeferredRegister<Item> items) {
         this.ITEMS = items;
@@ -27,11 +28,11 @@ public class RegistryGroupFruitFoodItemVariants {
 
     public RegistryGroupFruitFoodItemVariants override(Fruits toOverride, Item toSet) {
         skip(toOverride);
-        group.put(toOverride, toSet);
+        group.put(toOverride, ITEMS.register(toOverride.toString().toLowerCase() + nameSuffix, () -> toSet));
         return this;
     }
 
-    public Map<Fruits, Item> build() {
+    public Map<Fruits, RegistryObject<Item>> build() {
         values.forEach(this::buildItem);
         return group;
     }
@@ -39,7 +40,6 @@ public class RegistryGroupFruitFoodItemVariants {
     protected void buildItem(Fruits val) {
         Item toAdd = new Item(new Item.Properties().food(new FoodProperties.Builder()
                 .nutrition(3).saturationMod(1f).build()));
-        group.put(val, toAdd);
-        ITEMS.register(val.toString().toLowerCase()  + "_" + nameSuffix, () -> toAdd);
+        group.put(val, ITEMS.register(val.toString().toLowerCase()  + nameSuffix, () -> toAdd));
     }
 }
