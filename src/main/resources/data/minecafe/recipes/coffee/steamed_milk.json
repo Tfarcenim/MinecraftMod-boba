@@ -1,0 +1,15 @@
+{
+  "type": "minecafe:espresso_machine",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {},
+    {
+      "item": "minecraft:milk_bucket"
+    }
+  ],
+  "output": {
+    "item": "minecafe:steamed_milk"
+  }
+}

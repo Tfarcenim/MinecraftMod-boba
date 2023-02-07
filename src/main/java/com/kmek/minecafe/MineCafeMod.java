@@ -9,6 +9,7 @@ import com.kmek.minecafe.item.ModItemsInit;
 import com.kmek.minecafe.loot.ModLootModifiers;
 import com.kmek.minecafe.networking.ModMessages;
 import com.kmek.minecafe.painting.ModPaintingsInit;
+import com.kmek.minecafe.recipe.ModRecipes;
 import com.kmek.minecafe.screen.*;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -55,6 +56,8 @@ public class MineCafeMod {
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

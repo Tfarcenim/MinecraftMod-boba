@@ -81,6 +81,8 @@ public class ModItemsInit {
      */
     public static final RegistryObject<Item> CHOCOLATE = ITEMS.register("chocolate", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
     // Creams
     public static final RegistryObject<Item> CREAM = ITEMS.register("cream", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
@@ -107,8 +109,6 @@ public class ModItemsInit {
                     .build())));
     public static final RegistryObject<Item> CUSTARD = ITEMS.register("custard", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
     // Jams
     public static final RegistryObject<Item> APPLE_JAM = ITEMS.register("apple_jam", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));

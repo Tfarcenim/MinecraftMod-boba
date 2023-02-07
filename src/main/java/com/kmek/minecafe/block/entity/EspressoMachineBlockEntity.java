@@ -3,6 +3,7 @@ package com.kmek.minecafe.block.entity;
 import com.kmek.minecafe.item.ModItemsInit;
 import com.kmek.minecafe.networking.ModMessages;
 import com.kmek.minecafe.networking.packet.ItemStackSyncS2CPacket;
+import com.kmek.minecafe.recipe.EspressoMachineRecipe;
 import com.kmek.minecafe.screen.EspressoMachineMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.SimpleContainer;
@@ -10,14 +11,16 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class EspressoMachineBlockEntity extends CustomBaseBlockEntity {
 
@@ -104,53 +107,41 @@ public class EspressoMachineBlockEntity extends CustomBaseBlockEntity {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        if (entity.progress == 0) {
-            if (isHeating(inventory)) {
-                entity.progress++;
-                setChanged(level, blockPos, blockState);
-            }
-        } else if (entity.progress <= maxProgress && isHeating(inventory)) {
+        Optional<EspressoMachineRecipe> recipe = level.getRecipeManager()
+                .getRecipeFor(EspressoMachineRecipe.Type.INSTANCE, inventory, level);
+
+        if (hasRecipe(entity, inventory, recipe)) {
             entity.progress++;
-            heat(entity);
             setChanged(level, blockPos, blockState);
+            if (entity.progress >= maxProgress) {
+                craftItem(entity, inventory, recipe);
+            }
         } else {
             entity.resetProgress();
             setChanged(level, blockPos, blockState);
         }
     }
 
-    private static boolean isHeating(SimpleContainer inventory) {
-        ItemStack waterStack = inventory.getItem(SLOT_WATER);
-        return waterStack.getCount() == 1
-                && waterStack.getItem() == Items.WATER_BUCKET
-                && (inventory.getItem(SLOT_GROUNDS).getCount() >= 1
-                    || inventory.getItem(SLOT_MILK).getCount() >= 1);
+    private static boolean hasRecipe(EspressoMachineBlockEntity entity, SimpleContainer inventory, Optional<EspressoMachineRecipe> recipe) {
+        return recipe.isPresent() && canInsertIntoOutputSlot(inventory, recipe.get().getResultItem());
+    }
+    private static boolean canInsertIntoOutputSlot(SimpleContainer inv, ItemStack stack) {
+        ItemStack inOutput = inv.getItem(SLOT_OUTPUT);
+        return (inOutput.getItem() == stack.getItem() || inOutput.isEmpty())
+                && (inOutput.getMaxStackSize() > inOutput.getCount());
     }
 
-    private static void heat(EspressoMachineBlockEntity entity) {
-        if (entity.progress == maxProgress) {
-            if (entity.itemHandler.getStackInSlot(SLOT_GROUNDS).getItem() == ModItemsInit.COFFEE_GROUNDS.get()
-                && insertedOutputItem(entity, ModItemsInit.ESPRESSO_SHOT.get())) {
-                entity.itemHandler.extractItem(SLOT_GROUNDS, 1, false);
-            } else if (entity.itemHandler.getStackInSlot(SLOT_MILK).getItem() == Items.MILK_BUCKET
-                    && insertedOutputItem(entity, ModItemsInit.STEAMED_MILK.get())) {
-                entity.itemHandler.setStackInSlot(SLOT_MILK, new ItemStack(Items.BUCKET));
-            } else if (entity.itemHandler.getStackInSlot(SLOT_MILK).getItem() == ModItemsInit.STEAMED_MILK.get()
-                    && insertedOutputItem(entity, ModItemsInit.MILK_FOAM.get())) {
-                entity.itemHandler.extractItem(SLOT_MILK, 1, false);
-            }
+    private static void craftItem(EspressoMachineBlockEntity entity, SimpleContainer inventory, Optional<EspressoMachineRecipe> recipe) {
+        if (recipe.isPresent()) {
             entity.itemHandler.setStackInSlot(SLOT_WATER, new ItemStack(Items.BUCKET));
+            if (recipe.get().getIngredients().get(SLOT_GROUNDS) == Ingredient.EMPTY) {
+                entity.itemHandler.setStackInSlot(SLOT_MILK, new ItemStack(Items.BUCKET));
+            } else {
+                entity.itemHandler.extractItem(SLOT_GROUNDS, 1, false);
+            }
+            entity.itemHandler.setStackInSlot(SLOT_OUTPUT, new ItemStack(recipe.get().getResultItem().getItem(), inventory.getItem(SLOT_OUTPUT).getCount() + 1));
+            entity.resetProgress();
         }
-    }
-
-    private static boolean insertedOutputItem(EspressoMachineBlockEntity entity, Item item) {
-        ItemStack toInsert = new ItemStack(item, 1);
-        ItemStack currentStack = entity.itemHandler.getStackInSlot(SLOT_OUTPUT);
-        if (currentStack.isEmpty() || (currentStack.getItem() == item && currentStack.getCount() < item.getMaxStackSize(toInsert))) {
-            entity.itemHandler.insertItem(SLOT_OUTPUT, toInsert, false);
-            return true;
-        }
-        return false;
     }
 
     private void resetProgress() {

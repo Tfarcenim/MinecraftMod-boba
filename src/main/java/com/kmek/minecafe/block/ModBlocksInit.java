@@ -121,8 +121,8 @@ public class ModBlocksInit {
      */
     public static final RegistryObject<Block> COFFEE_CROP_BOTTOM = compostable(0.5F,
             registerDoubleCropBlockItem("coffee", "coffee_beans_unroasted", "item.minecafe.coffee_cherries", 7));
-    public static final RegistryObject<Block> APPLE_CROP_BOTTOM = compostable(0.5F, registerDoubleCropBlockItem("apple", "apple_seeds", Items.APPLE, 5));
     // Fruits
+    public static final RegistryObject<Block> APPLE_CROP_BOTTOM = compostable(0.5F, registerDoubleCropBlockItem("apple", "apple_seeds", Items.APPLE, 5));
     public static final List<RegistryObject<Block>> FRUIT_CROPS = Arrays.stream(Fruits.treeCrops)
             .filter(fruit -> fruit != Fruits.APPLE)
             .map(fruit -> compostable(0.65F, registerFruitTree(fruit.toString().toLowerCase())))
