@@ -3,6 +3,7 @@ package com.kmek.minecafe.integration;
 import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.recipe.CoffeeMachineRecipe;
 import com.kmek.minecafe.recipe.EspressoMachineRecipe;
+import com.kmek.minecafe.recipe.WaffleIronRecipe;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.recipe.RecipeType;
@@ -19,6 +20,7 @@ import java.util.Objects;
 public class JEIMineCafePlugin implements IModPlugin {
     public static RecipeType<EspressoMachineRecipe> ESPRESSO_TYPE = new RecipeType<>(EspressoMachineRecipeCategory.UID, EspressoMachineRecipe.class);
     public static RecipeType<CoffeeMachineRecipe> COFFEE_TYPE = new RecipeType<>(CoffeeMachineRecipeCategory.UID, CoffeeMachineRecipe.class);
+    public static RecipeType<WaffleIronRecipe> WAFFLE_TYPE = new RecipeType<>(WaffleIronRecipeCategory.UID, WaffleIronRecipe.class);
 
     @Override
     public ResourceLocation getPluginUid() {
@@ -29,6 +31,7 @@ public class JEIMineCafePlugin implements IModPlugin {
     public void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(new EspressoMachineRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new CoffeeMachineRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new WaffleIronRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -42,5 +45,9 @@ public class JEIMineCafePlugin implements IModPlugin {
         // Coffee Machine
         List<CoffeeMachineRecipe> recipesCoffeeMachine = rm.getAllRecipesFor(CoffeeMachineRecipe.Type.INSTANCE);
         registration.addRecipes(COFFEE_TYPE, recipesCoffeeMachine);
+
+        // Waffle Iron
+        List<WaffleIronRecipe> recipesWaffleIron = rm.getAllRecipesFor(WaffleIronRecipe.Type.INSTANCE);
+        registration.addRecipes(WAFFLE_TYPE, recipesWaffleIron);
     }
 }
