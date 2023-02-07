@@ -13,6 +13,9 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<EspressoMachineRecipe>> ESPRESSO_MACHINE_SERIALIZER =
             SERIALIZERS.register("espresso_machine", () -> EspressoMachineRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<CoffeeMachineRecipe>> COFFEE_MACHINE_SERIALIZER =
+            SERIALIZERS.register("coffee_machine", () -> CoffeeMachineRecipe.Serializer.INSTANCE);
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
     }
