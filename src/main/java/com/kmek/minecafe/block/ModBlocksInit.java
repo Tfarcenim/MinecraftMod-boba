@@ -77,8 +77,6 @@ public class ModBlocksInit {
         RegistryObject<Block> top = BLOCKS.register(cropName + "_crop_top",
                 () -> new CropTreeTopBlock(bottom.get(), fruitName, resetAge,
                         BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
-        renderAsCutout.add(bottom);
-        renderAsCutout.add(top);
         return bottom;
     }
     private static RegistryObject<Block> registerDoubleCropBlockItem(String cropName, String seedName, Item fruitItem, int resetAge) {
@@ -87,8 +85,6 @@ public class ModBlocksInit {
         RegistryObject<Block> top = BLOCKS.register(cropName + "_crop_top",
                 () -> new CropTreeTopBlock(bottom.get(), fruitItem, resetAge,
                         BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
-        renderAsCutout.add(bottom);
-        renderAsCutout.add(top);
         return bottom;
     }
     // Create fruit tree blocks and seed item
@@ -106,7 +102,6 @@ public class ModBlocksInit {
                 String flowerName = block.getDescriptionId().split("minecraft")[1].substring(1);
                 RegistryObject<Block> flowerCropBlock = compostable(0.6F, registerItemNameBlockItem(flowerName + "_crop", flowerName + "_seeds",
                         () -> new FlowerCropBlock(flowerName + "_seeds", block, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ))));
-                renderAsCutout.add(flowerCropBlock);
                 return flowerCropBlock;
             }).toList();
 
@@ -114,8 +109,8 @@ public class ModBlocksInit {
      * Single Block Crops
      */
     // Cassava
-    public static final RegistryObject<Block> CASSAVA_CROP = asCutout(compostable(0.5F, registerItemNameBlockItem("cassava_crop", "cassava_cutting",
-            () -> new CassavaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)))));
+    public static final RegistryObject<Block> CASSAVA_CROP = compostable(0.5F, registerItemNameBlockItem("cassava_crop", "cassava_cutting",
+            () -> new CassavaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT))));
     /**
      * Double Block Crops
      */

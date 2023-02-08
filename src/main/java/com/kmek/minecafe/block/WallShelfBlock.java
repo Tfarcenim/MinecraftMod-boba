@@ -2,6 +2,8 @@ package com.kmek.minecafe.block;
 
 import com.kmek.minecafe.block.entity.WallShelfBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -21,6 +23,20 @@ public class WallShelfBlock extends CustomVoxelMenuEntityBlock<WallShelfBlockEnt
         VoxelShape shape = Shapes.empty();
         shape = Shapes.join(shape, Shapes.box(0, 0, 0.625, 1, 1, 1), BooleanOp.OR);
         return shape;
+    }
+
+    // Tree crops can catch on fire
+    @Override
+    public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+        return true;
+    }
+    @Override
+    public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+        return 20;
+    }
+    @Override
+    public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+        return 5;
     }
 
     /**

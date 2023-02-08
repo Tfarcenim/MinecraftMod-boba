@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cross",
   "textures": {
     "cross": "minecafe:block/coffee_crop_b3"
-  }
+  },
+  "render_type": "cutout"
 }

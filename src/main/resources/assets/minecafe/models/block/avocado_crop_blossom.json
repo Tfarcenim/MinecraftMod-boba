@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/crop",
+  "parent": "minecafe:block/fruit_tree_crop",
   "textures": {
-    "crop": "minecafe:block/avocado_crop_blossom"
+    "leaves": "minecafe:block/oak_tree_crop_leaves",
+    "decoration": "minecafe:block/avocado_crop_blossom"
   }
 }
