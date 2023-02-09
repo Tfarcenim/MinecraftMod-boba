@@ -44,6 +44,7 @@ public class ModCreativeTabInit {
                 acceptMiscFoodItems(output);
 
                 // Specialty Drinks
+                acceptFruitDrinks(output);
                 acceptCoffeeDrinks(output);
                 acceptMilkTeaDrinks(output);
             })
@@ -71,6 +72,7 @@ public class ModCreativeTabInit {
         output.accept(ModBlocksInit.WAFFLE_IRON.get());
         output.accept(ModBlocksInit.COFFEE_MACHINE.get());
         output.accept(ModBlocksInit.ESPRESSO_MACHINE.get());
+        output.accept(ModBlocksInit.JUICER.get());
 
         // Fun Blocks
         output.accept(ModItemsInit.COFFEE_BUCKET.get());
@@ -247,5 +249,9 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.FRAPPE_COFFEE.get());
         output.accept(ModItemsInit.WHIPPED_COFFEE.get());
         output.accept(ModItemsInit.ICED_COFFEE.get());
+    }
+
+    private void acceptFruitDrinks(CreativeModeTab.Output output) {
+        ModItemsInit.FRUIT_JUICES.forEach(reg -> { output.accept(reg.get()); });
     }
 }

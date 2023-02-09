@@ -3,6 +3,7 @@ package com.kmek.minecafe.integration;
 import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.recipe.CoffeeMachineRecipe;
 import com.kmek.minecafe.recipe.EspressoMachineRecipe;
+import com.kmek.minecafe.recipe.JuicerRecipe;
 import com.kmek.minecafe.recipe.WaffleIronRecipe;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
@@ -21,6 +22,7 @@ public class JEIMineCafePlugin implements IModPlugin {
     public static RecipeType<EspressoMachineRecipe> ESPRESSO_TYPE = new RecipeType<>(EspressoMachineRecipeCategory.UID, EspressoMachineRecipe.class);
     public static RecipeType<CoffeeMachineRecipe> COFFEE_TYPE = new RecipeType<>(CoffeeMachineRecipeCategory.UID, CoffeeMachineRecipe.class);
     public static RecipeType<WaffleIronRecipe> WAFFLE_TYPE = new RecipeType<>(WaffleIronRecipeCategory.UID, WaffleIronRecipe.class);
+    public static RecipeType<JuicerRecipe> JUICER_TYPE = new RecipeType<>(JuicerRecipeCategory.UID, JuicerRecipe.class);
 
     @Override
     public ResourceLocation getPluginUid() {
@@ -32,6 +34,7 @@ public class JEIMineCafePlugin implements IModPlugin {
         registration.addRecipeCategories(new EspressoMachineRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new CoffeeMachineRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new WaffleIronRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new JuicerRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -49,5 +52,9 @@ public class JEIMineCafePlugin implements IModPlugin {
         // Waffle Iron
         List<WaffleIronRecipe> recipesWaffleIron = rm.getAllRecipesFor(WaffleIronRecipe.Type.INSTANCE);
         registration.addRecipes(WAFFLE_TYPE, recipesWaffleIron);
+
+        // Juicer
+        List<JuicerRecipe> recipesJuicer = rm.getAllRecipesFor(JuicerRecipe.Type.INSTANCE);
+        registration.addRecipes(JUICER_TYPE, recipesJuicer);
     }
 }

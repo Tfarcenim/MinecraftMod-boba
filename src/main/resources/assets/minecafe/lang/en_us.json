@@ -1,4 +1,6 @@
 {
+  "itemGroup.minecafe": "MineCafe",
+
   "block.minecafe.display_case_curved": "Display Case",
   "block.minecafe.cake_stand": "Cake Stand",
   "block.minecafe.vase": "Vase",
@@ -17,6 +19,7 @@
   "block.minecafe.waffle_iron": "Waffle Iron",
   "block.minecafe.coffee_machine": "Coffee Machine",
   "block.minecafe.espresso_machine": "Espresso Machine",
+  "block.minecafe.juicer": "Juicer",
 
   "item.minecafe.coffee_bucket": "Coffee Bucket",
   "fluid_type.minecafe.coffee_fluid": "Coffee",
@@ -241,5 +244,6 @@
   "item.minecafe.black_eye_coffee": "Black-Eye Coffee",
   "item.minecafe.dead_eye_coffee": "Dead-Eye Coffee",
 
-  "itemGroup.minecafe": "MineCafe"
+  "item.minecafe.apple_juice": "Apple Juice",
+  "item.minecafe.lemon_juice": "Lemon Juice"
 }

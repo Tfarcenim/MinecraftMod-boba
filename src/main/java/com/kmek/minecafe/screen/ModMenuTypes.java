@@ -23,6 +23,8 @@ public class ModMenuTypes {
             registerMenuType(CoffeeMachineMenu::new, "coffee_machine_menu");
     public static final RegistryObject<MenuType<EspressoMachineMenu>> ESPRESSO_MACHINE_MENU =
             registerMenuType(EspressoMachineMenu::new, "espresso_machine_menu");
+    public static final RegistryObject<MenuType<JuicerMenu>> JUICER_MENU =
+            registerMenuType(JuicerMenu::new, "juicer_menu");
 
     /**
      * Display / Decor Menus

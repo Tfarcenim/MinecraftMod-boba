@@ -66,6 +66,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(EspressoMachineBlockEntity::new,
                             ModBlocksInit.ESPRESSO_MACHINE.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<JuicerBlockEntity>> JUICER =
+            BLOCK_ENTITIES.register("juicer", () ->
+                    BlockEntityType.Builder.of(JuicerBlockEntity::new,
+                            ModBlocksInit.JUICER.get()).build(null));
+
     /**
      * Registering to the Event Bus
      */

@@ -352,4 +352,13 @@ public class ModItemsInit {
     // Teas
     public static final RegistryObject<Item> MATCHA_TEA = ITEMS.register("matcha_tea",
             () -> new CoffeeItem(1, 0.5f, 1, null));
+
+    /**
+     * Fruit Variant Stuff
+     */
+    public static final List<RegistryObject<Item>> FRUIT_JUICES = Arrays.stream(Fruits.values())
+//            .filter(fruit -> fruit != Fruits.APPLE)
+            .map(fruit -> ITEMS.register(fruit.toString().toLowerCase() + "_juice", () -> new Item(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(3).saturationMod(1f).build()))))
+            .toList();
 }

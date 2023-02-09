@@ -1,0 +1,15 @@
+{
+  "type": "minecafe:juicer",
+  "ingredients": [
+    { "item": "minecafe:lemon" },
+    { "item": "minecafe:lemon" },
+    { "item": "minecafe:lemon" },
+    { "item": "minecafe:lemon" },
+    { "item": "minecafe:lemon" },
+    { "item": "minecafe:lemon" },
+    { "item": "minecafe:clear_cup" }
+  ],
+  "output": {
+    "item": "minecafe:lemon_juice"
+  }
+}

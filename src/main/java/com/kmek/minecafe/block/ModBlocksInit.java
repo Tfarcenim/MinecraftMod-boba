@@ -132,6 +132,8 @@ public class ModBlocksInit {
             () -> new CoffeeMachineBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
     public static final RegistryObject<Block> ESPRESSO_MACHINE = registerBlockItem("espresso_machine",
             () -> new EspressoMachineBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
+    public static final RegistryObject<Block> JUICER = asTranslucent(registerBlockItem("juicer",
+            () -> new JuicerBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion())));
 
     /**
      * Display Blocks
