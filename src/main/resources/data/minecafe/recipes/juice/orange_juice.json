@@ -1,0 +1,15 @@
+{
+  "type": "minecafe:juicer",
+  "ingredients": [
+    { "item": "minecafe:orange" },
+    { "item": "minecafe:orange" },
+    { "item": "minecafe:orange" },
+    { "item": "minecafe:orange" },
+    { "item": "minecafe:orange" },
+    { "item": "minecafe:orange" },
+    { "item": "minecafe:clear_cup" }
+  ],
+  "output": {
+    "item": "minecafe:orange_juice"
+  }
+}

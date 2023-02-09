@@ -1,0 +1,15 @@
+{
+  "type": "minecafe:juicer",
+  "ingredients": [
+    { "item": "minecafe:pear" },
+    { "item": "minecafe:pear" },
+    { "item": "minecafe:pear" },
+    { "item": "minecafe:pear" },
+    { "item": "minecafe:pear" },
+    { "item": "minecafe:pear" },
+    { "item": "minecafe:clear_cup" }
+  ],
+  "output": {
+    "item": "minecafe:pear_juice"
+  }
+}

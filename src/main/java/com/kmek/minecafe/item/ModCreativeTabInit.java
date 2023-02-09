@@ -252,6 +252,10 @@ public class ModCreativeTabInit {
     }
 
     private void acceptFruitDrinks(CreativeModeTab.Output output) {
-        ModItemsInit.FRUIT_JUICES.forEach(reg -> { output.accept(reg.get()); });
+        ModItemsInit.FRUIT_JUICES.forEach(reg -> {
+            output.accept(reg.get());
+        });
+        output.accept(ModItemsInit.LEMONADE.get());
+        output.accept(ModItemsInit.LIMEADE.get());
     }
 }

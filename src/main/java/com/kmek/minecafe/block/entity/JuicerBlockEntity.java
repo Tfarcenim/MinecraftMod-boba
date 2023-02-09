@@ -2,7 +2,6 @@ package com.kmek.minecafe.block.entity;
 
 import com.kmek.minecafe.networking.ModMessages;
 import com.kmek.minecafe.networking.packet.ItemStackSyncS2CPacket;
-import com.kmek.minecafe.recipe.CoffeeMachineRecipe;
 import com.kmek.minecafe.recipe.JuicerRecipe;
 import com.kmek.minecafe.screen.JuicerMenu;
 import net.minecraft.core.BlockPos;
@@ -124,7 +123,11 @@ public class JuicerBlockEntity extends CustomBaseBlockEntity {
     }
 
     private static boolean hasRecipe(JuicerBlockEntity entity, SimpleContainer inventory, Optional<JuicerRecipe> recipe) {
-        return recipe.isPresent(); // todo and can move item into output
+        return recipe.isPresent() && canInsertIntoOutputSlot(inventory, recipe.get().getResultItem());
+    }
+    private static boolean canInsertIntoOutputSlot(SimpleContainer inv, ItemStack stack) {
+        ItemStack inOutput = inv.getItem(SLOT_OUTPUT);
+        return inOutput.isEmpty() || (inOutput.getItem() == stack.getItem() && (inOutput.getMaxStackSize() > inOutput.getCount()));
     }
 
     private static void craftItem(JuicerBlockEntity entity, SimpleContainer inventory, Optional<JuicerRecipe> recipe) {

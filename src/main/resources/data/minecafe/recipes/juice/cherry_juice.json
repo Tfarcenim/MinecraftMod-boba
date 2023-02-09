@@ -1,0 +1,15 @@
+{
+  "type": "minecafe:juicer",
+  "ingredients": [
+    { "item": "minecafe:cherry" },
+    { "item": "minecafe:cherry" },
+    { "item": "minecafe:cherry" },
+    { "item": "minecafe:cherry" },
+    { "item": "minecafe:cherry" },
+    { "item": "minecafe:cherry" },
+    { "item": "minecafe:clear_cup" }
+  ],
+  "output": {
+    "item": "minecafe:cherry_juice"
+  }
+}

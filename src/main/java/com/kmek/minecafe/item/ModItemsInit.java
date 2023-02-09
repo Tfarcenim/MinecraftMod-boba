@@ -2,10 +2,8 @@ package com.kmek.minecafe.item;
 
 import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.fluid.ModFluids;
-import com.kmek.minecafe.item.custom.CoffeeItem;
-import com.kmek.minecafe.item.custom.MilkTeaItem;
-import com.kmek.minecafe.item.custom.WaffleItem;
-import com.kmek.minecafe.item.custom.WaffleMoldItem;
+import com.kmek.minecafe.item.custom.*;
+import com.kmek.minecafe.item.registery.FoodVariants;
 import com.kmek.minecafe.item.registery.Fruits;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -356,9 +354,9 @@ public class ModItemsInit {
     /**
      * Fruit Variant Stuff
      */
-    public static final List<RegistryObject<Item>> FRUIT_JUICES = Arrays.stream(Fruits.values())
-//            .filter(fruit -> fruit != Fruits.APPLE)
-            .map(fruit -> ITEMS.register(fruit.toString().toLowerCase() + "_juice", () -> new Item(new Item.Properties().food(
-                    new FoodProperties.Builder().nutrition(3).saturationMod(1f).build()))))
+    public static final List<RegistryObject<Item>> FRUIT_JUICES = Arrays.stream(FoodVariants.juices)
+            .map(variant -> ITEMS.register(variant.toString() + "_juice", () -> (Item) new CustomDrinkItem(5, 3f, CLEAR_CUP.get())))
             .toList();
+    public static final RegistryObject<Item> LEMONADE = ITEMS.register("lemonade", () -> new CustomDrinkItem(4, 1f, CLEAR_CUP.get()));
+    public static final RegistryObject<Item> LIMEADE = ITEMS.register("limeade", () -> new CustomDrinkItem(4, 1f, CLEAR_CUP.get()));
 }

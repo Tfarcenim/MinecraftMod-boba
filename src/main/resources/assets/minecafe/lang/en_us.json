@@ -1,6 +1,4 @@
 {
-  "itemGroup.minecafe": "MineCafe",
-
   "block.minecafe.display_case_curved": "Display Case",
   "block.minecafe.cake_stand": "Cake Stand",
   "block.minecafe.vase": "Vase",
@@ -245,5 +243,26 @@
   "item.minecafe.dead_eye_coffee": "Dead-Eye Coffee",
 
   "item.minecafe.apple_juice": "Apple Juice",
-  "item.minecafe.lemon_juice": "Lemon Juice"
+  "item.minecafe.beetroot_juice": "Beetroot Juice",
+  "item.minecafe.carrot_juice": "Carrot Juice",
+  "item.minecafe.cherry_juice": "Cherry Juice",
+  "item.minecafe.chorus_fruit_juice": "Chorus Fruit Juice",
+  "item.minecafe.fig_juice": "Fig Juice",
+  "item.minecafe.glow_berry_juice": "Glow Berry Juice",
+  "item.minecafe.lemon_juice": "Lemon Juice",
+  "item.minecafe.lime_juice": "Lime Juice",
+  "item.minecafe.lychee_juice": "Lychee Juice",
+  "item.minecafe.mango_juice": "Mango Juice",
+  "item.minecafe.orange_juice": "Orange Juice",
+  "item.minecafe.peach_juice": "Peach Juice",
+  "item.minecafe.pear_juice": "Pear Juice",
+  "item.minecafe.plum_juice": "Plum Juice",
+  "item.minecafe.potato_juice": "Potato Juice",
+  "item.minecafe.sweet_berry_juice": "Sweet Berry Juice",
+  "item.minecafe.watermelon_juice": "Watermelon Juice",
+
+  "item.minecafe.lemonade": "Lemonade",
+  "item.minecafe.limeade": "Limeade",
+
+  "itemGroup.minecafe": "MineCafe"
 }

@@ -37,6 +37,15 @@ public class CustomDrinkItem extends Item {
                         .build()));
     }
 
+    public CustomDrinkItem(int nutrition, float saturation, Item remainder) {
+        super(new Item.Properties().food(
+                new FoodProperties.Builder()
+                        .nutrition(nutrition)
+                        .saturationMod(saturation)
+                        .build())
+                .craftRemainder(remainder));
+    }
+
     public CustomDrinkItem(int nutrition, float saturation, Component tooltip) {
         super(new Item.Properties().food(
                 new FoodProperties.Builder()
