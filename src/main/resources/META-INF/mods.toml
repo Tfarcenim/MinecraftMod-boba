@@ -46,13 +46,11 @@ authors="Kmek" #optional
 description='''
 A mod that adds cafe related food and blocks to Minecraft.
 
-- 27 different craftable Bubble Milk Teas
-- 5 Boba themed Paintings
-- Cassava Crop, Coffee Crop
-- 16 different craftable Coffees
-- 12 Waffles and Waffle Molds
-- 14 Waffle Fillings
-- 3 decorative display blocks
+- Craftable drinks like Juice, Coffee, and Bubble Milk Tea
+- New crops including coffee, cassava, replantable flowers, and many fruits
+- Appliances such as a Waffle Iron, Coffee Machine, Espresso Machine, Juicer
+- Crop Inspector tool that displays the growth percentage of any growable crop
+- Several decorative display blocks and paintings
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.minecafe]] #optional
