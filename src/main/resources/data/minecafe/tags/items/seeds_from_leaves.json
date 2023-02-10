@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecafe:orange",
+    "minecafe:lemon",
+    "minecafe:lime",
+    "minecafe:avocado",
+    "minecafe:lychee",
+    "minecafe:banana",
+    "minecafe:mango",
+    "minecafe:cherry",
+    "minecafe:peach",
+    "minecafe:pear",
+    "minecafe:plum",
+    "minecafe:fig"
+  ]
+}

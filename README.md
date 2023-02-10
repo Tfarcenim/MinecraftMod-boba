@@ -3,6 +3,8 @@
 
 A [Forge](https://www.curseforge.com/minecraft/mc-mods/minecafe) mod that adds a variety of cafe-related blocks, drinks, foods, and crops to minecraft.
 
+This mod is in progress with more to be added in the future!
+
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A2I777F)
 
 ### Note

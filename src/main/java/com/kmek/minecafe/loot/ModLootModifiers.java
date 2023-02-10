@@ -14,6 +14,9 @@ public class ModLootModifiers {
 
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> ADD_ITEM =
             LOOT_MODIFIER_SERIALIZERS.register("add_item_tenth_chance", AddItemModifierTenthChance.CODEC);
+    public static final RegistryObject<Codec<? extends IGlobalLootModifier>> ADD_TAG =
+            LOOT_MODIFIER_SERIALIZERS.register("add_tag_chance", AddTagModifierChance.CODEC);
+    // Don't forget to also add loot_modifier json file to data/forge/loot_modifiers/global_loot_modifiers.json!
 
     public static void register(IEventBus bus) {
         LOOT_MODIFIER_SERIALIZERS.register(bus);

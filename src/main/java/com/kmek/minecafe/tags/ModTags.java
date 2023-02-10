@@ -25,6 +25,8 @@ public class ModTags {
         public static final TagKey<Item> WAFFLE = tag("waffle");
         public static final TagKey<Item> WAFFLE_FILLING = tag("waffle_filling");
         public static final TagKey<Item> WAFFLE_MOLD = tag("waffle_mold");
+        public static final TagKey<Item> SEEDS_FROM_GRASS = tag("seeds_from_grass");
+        public static final TagKey<Item> SEEDS_FROM_LEAVES = tag("seeds_from_leaves");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(MineCafeMod.MODID, name));
