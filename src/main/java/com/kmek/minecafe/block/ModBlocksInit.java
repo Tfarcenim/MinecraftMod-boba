@@ -73,18 +73,18 @@ public class ModBlocksInit {
     // Create two block crop with seed block
     private static RegistryObject<Block> registerDoubleCropBlockItem(String cropName, String seedName, String fruitName, int resetAge) {
         RegistryObject<Block> bottom = registerItemNameBlockItem(cropName + "_crop_bottom", seedName,
-                () -> new CropTreeBottomBlock(cropName + "_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+                () -> new CropTreeBottomBlock(cropName + "_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(1f).sound(SoundType.GRASS)));
         RegistryObject<Block> top = BLOCKS.register(cropName + "_crop_top",
                 () -> new CropTreeTopBlock(bottom.get(), fruitName, resetAge,
-                        BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+                        BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(0.5f).sound(SoundType.GRASS)));
         return bottom;
     }
     private static RegistryObject<Block> registerDoubleCropBlockItem(String cropName, String seedName, Item fruitItem, int resetAge) {
         RegistryObject<Block> bottom = registerItemNameBlockItem(cropName + "_crop_bottom", seedName,
-                () -> new CropTreeBottomBlock(cropName + "_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+                () -> new CropTreeBottomBlock(cropName + "_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(1f).sound(SoundType.GRASS)));
         RegistryObject<Block> top = BLOCKS.register(cropName + "_crop_top",
                 () -> new CropTreeTopBlock(bottom.get(), fruitItem, resetAge,
-                        BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+                        BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(0.5f).sound(SoundType.GRASS)));
         return bottom;
     }
     // Create fruit tree blocks and seed item
