@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": { "item": "minecraft:stick" },
+    "C": { "item": "minecafe:caramel" },
+    "A": { "item": "minecraft:apple" }
+  },
+  "pattern": [
+    "S",
+    "C",
+    "A"
+  ],
+  "result": {
+    "item": "minecafe:caramel_apple"
+  }
+}

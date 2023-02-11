@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": { "item": "minecraft:wheat" },
+    "B": { "tag": "forge:butter" },
+    "S": { "tag": "forge:sugar" },
+    "E": { "item": "minecraft:egg" },
+    "H": { "item": "minecraft:honey_bottle" },
+    "F": { "item": "minecafe:fig" }
+  },
+  "pattern": [
+    "WBW",
+    "SES",
+    "FHF"
+  ],
+  "result": {
+    "item": "minecafe:fig_newton",
+    "count": 4
+  }
+}

@@ -81,6 +81,8 @@ public class ModItemsInit {
     public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
+    public static final RegistryObject<Item> CARAMEL = ITEMS.register("caramel", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
     // Creams
     public static final RegistryObject<Item> CREAM = ITEMS.register("cream", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
@@ -98,6 +100,7 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
     public static final RegistryObject<Item> ROSE_CREAM = ITEMS.register("rose_cream", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
+    // Marshmallow
     public static final RegistryObject<Item> MARSHMALLOW = ITEMS.register("marshmallow", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
     public static final RegistryObject<Item> MARSHMALLOWS = ITEMS.register("marshmallows", () -> new Item(new Item.Properties().food(
@@ -186,6 +189,23 @@ public class ModItemsInit {
     // Pudding
     public static final RegistryObject<Item> TAPIOCA_PUDDING = ITEMS.register("tapioca_pudding", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
+    // Candy
+    public static final RegistryObject<Item> PEEPS = ITEMS.register("peeps", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+    public static final RegistryObject<Item> CARAMEL_APPLE = ITEMS.register("caramel_apple", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
+    public static final RegistryObject<Item> STRAWBERRY_CHOCOLATE = ITEMS.register("strawberry_chocolate", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
+    public static final RegistryObject<Item> WHITE_STRAWBERRY_CHOCOLATE = ITEMS.register("white_strawberry_chocolate", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
+    // Misc Foods
+    public static final RegistryObject<Item> FLAN = ITEMS.register("flan", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
+    public static final RegistryObject<Item> BROWNIE = ITEMS.register("brownie", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
+    public static final RegistryObject<Item> FIG_NEWTON = ITEMS.register("fig_newton", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
+
 
     /**
      * Bubble Milk Teas

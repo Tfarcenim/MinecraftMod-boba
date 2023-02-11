@@ -197,8 +197,18 @@
   "item.minecafe.rose_cream": "Rose Cream",
   "item.minecafe.marshmallow": "Marshmallow",
   "item.minecafe.marshmallows": "Marshmallows",
+  "item.minecafe.peeps": "Peeps",
   "item.minecafe.custard": "Custard",
   "item.minecafe.butter": "Butter",
+  "item.minecafe.caramel": "Caramel",
+
+  "item.minecafe.caramel_apple": "Caramel Apple",
+  "item.minecafe.strawberry_chocolate": "Chocolate Dipped Strawberry",
+  "item.minecafe.white_strawberry_chocolate": "Chocolate Dipped White Strawberry",
+
+  "item.minecafe.flan": "Flan",
+  "item.minecafe.brownie": "Brownie",
+  "item.minecafe.fig_newton": "Fig Newton",
 
   "item.minecafe.apple_jam": "Apple Jam",
   "item.minecafe.chorus_fruit_jam": "Chorus Fruit Jam",

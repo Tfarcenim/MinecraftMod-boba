@@ -24,32 +24,20 @@ public class ModCreativeTabInit {
             .title(Component.translatable("itemGroup.minecafe"))
             .icon(() -> new ItemStack(ModItemsInit.BROWN_SUGAR_MILK_TEA.get()))
             .displayItems((featureFlags, output, hasOp) -> {
-                // Blocks
+                // Add categories
                 acceptBlocks(output);
-
-                // Gardening / Some Ingredients
                 acceptCropsAndSeeds(output);
-
-                // Ingredients
-                acceptJams(output);
-                acceptCreams(output);
-                acceptCoffeeIngredients(output);
-                acceptMiscIngredients(output);
-
-                // Dishes
+                acceptIngredients(output);
                 acceptDishes(output);
-
-                // Specialty Foods
-                acceptWaffles(output);
-                acceptMiscFoodItems(output);
-
-                // Specialty Drinks
-                acceptFruitDrinks(output);
-                acceptCoffeeDrinks(output);
-                acceptMilkTeaDrinks(output);
+                acceptFoods(output);
+                acceptDrinks(output);
             })
         );
     }
+
+    /*****************************************************************************************************************
+     * Blocks
+     *****************************************************************************************************************/
 
     private void acceptBlocks(CreativeModeTab.Output output) {
         // Decorative blocks
@@ -77,6 +65,10 @@ public class ModCreativeTabInit {
         // Fun Blocks
         output.accept(ModItemsInit.COFFEE_BUCKET.get());
     }
+
+    /*****************************************************************************************************************
+     * Crops
+     *****************************************************************************************************************/
 
     private void acceptCropsAndSeeds(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.CROP_INSPECTOR_ITEM.get());
@@ -106,6 +98,31 @@ public class ModCreativeTabInit {
         });
     }
 
+    /*****************************************************************************************************************
+     * Ingredients
+     *****************************************************************************************************************/
+
+    private void acceptIngredients(CreativeModeTab.Output output) {
+        acceptCoreIngreidents(output);
+
+        acceptCreams(output);
+        acceptMarshmallows(output);
+        acceptJams(output);
+        acceptCoffeeIngredients(output);
+        acceptMiscIngredients(output);
+    }
+
+    private void acceptCoreIngreidents(CreativeModeTab.Output output) {
+        output.accept(ModItemsInit.CREAM.get());
+        output.accept(ModItemsInit.BUTTER.get());
+
+        output.accept(ModItemsInit.CUSTARD.get());
+
+        output.accept(ModItemsInit.CHOCOLATE.get());
+
+        output.accept(ModItemsInit.CARAMEL.get());
+    }
+
     private void acceptJams(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.APPLE_JAM.get());
         output.accept(ModItemsInit.CHORUS_FRUIT_JAM.get());
@@ -115,7 +132,6 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCreams(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.CREAM.get());
         output.accept(ModItemsInit.WHIPPED_CREAM.get());
         output.accept(ModItemsInit.CHOCOLATE_CREAM.get());
         output.accept(ModItemsInit.VANILLA_CREAM.get());
@@ -123,15 +139,11 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.MATCHA_CREAM.get());
         output.accept(ModItemsInit.HONEY_CREAM.get());
         output.accept(ModItemsInit.ROSE_CREAM.get());
+    }
 
+    private void acceptMarshmallows(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.MARSHMALLOW.get());
         output.accept(ModItemsInit.MARSHMALLOWS.get());
-
-        output.accept(ModItemsInit.CUSTARD.get());
-
-        output.accept(ModItemsInit.BUTTER.get());
-
-        output.accept(ModItemsInit.CHOCOLATE.get());
     }
 
     private void acceptMiscIngredients(CreativeModeTab.Output output) {
@@ -142,10 +154,28 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.BURNT_CRISP.get());
     }
 
+    private void acceptCoffeeIngredients(CreativeModeTab.Output output) {
+        output.accept(ModItemsInit.COFFEE_BEANS_ROASTED.get());
+        output.accept(ModItemsInit.COFFEE_GROUNDS.get());
+        output.accept(ModItemsInit.COFFEE_POT_FULL.get());
+        output.accept(ModItemsInit.COFFEE_FILTER.get());
+        output.accept(ModItemsInit.COFFEE_FILTER_USED.get());
+        output.accept(ModItemsInit.ESPRESSO_SHOT.get());
+        output.accept(ModItemsInit.STEAMED_MILK.get());
+        output.accept(ModItemsInit.MILK_FOAM.get());
+        output.accept(ModItemsInit.ICE_CUBES.get());
+    }
+
+    /*****************************************************************************************************************
+     * Dishes
+     *****************************************************************************************************************/
+
     private void acceptDishes(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.COFFEE_POT.get());
+
         output.accept(ModItemsInit.MUG.get());
         output.accept(ModItemsInit.CLEAR_CUP.get());
+
         output.accept(ModItemsInit.TAIYAKI_MOLD.get());
         output.accept(ModItemsInit.EGG_WAFFLE_MOLD.get());
         output.accept(ModItemsInit.PAW_WAFFLE_MOLD.get());
@@ -158,6 +188,18 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.DIAMOND_WAFFLE_MOLD.get());
         output.accept(ModItemsInit.PICKAXE_WAFFLE_MOLD.get());
         output.accept(ModItemsInit.SWORD_WAFFLE_MOLD.get());
+    }
+
+    /*****************************************************************************************************************
+     * Foods
+     *****************************************************************************************************************/
+
+    private void acceptFoods(CreativeModeTab.Output output) {
+        acceptWaffles(output);
+        acceptCake(output);
+        acceptPudding(output);
+        acceptMiscFoodItems(output);
+        acceptCandy(output);
     }
 
     private void acceptWaffles(CreativeModeTab.Output output) {
@@ -175,16 +217,35 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.SWORD_WAFFLE.get());
     }
 
-    private void acceptMiscFoodItems(CreativeModeTab.Output output) {
+    private void acceptCake(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.CASSAVA_BIBINGKA.get());
+    }
+
+    private void acceptPudding(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.TAPIOCA_PUDDING.get());
-        /*
-        Brownies
-        Cannoli
-        Cookies
-        Croissants
-        Whoopie pie
-         */
+        output.accept(ModItemsInit.FLAN.get());
+    }
+
+    private void acceptCandy(CreativeModeTab.Output output) {
+        output.accept(ModItemsInit.STRAWBERRY_CHOCOLATE.get());
+        output.accept(ModItemsInit.WHITE_STRAWBERRY_CHOCOLATE.get());
+        output.accept(ModItemsInit.CARAMEL_APPLE.get());
+        output.accept(ModItemsInit.PEEPS.get());
+    }
+
+    private void acceptMiscFoodItems(CreativeModeTab.Output output) {
+        output.accept(ModItemsInit.BROWNIE.get());
+        output.accept(ModItemsInit.FIG_NEWTON.get());
+    }
+
+    /*****************************************************************************************************************
+     * Drinks
+     *****************************************************************************************************************/
+
+    private void acceptDrinks(CreativeModeTab.Output output) {
+        acceptFruitDrinks(output);
+        acceptCoffeeDrinks(output);
+        acceptMilkTeaDrinks(output);
     }
 
     private void acceptMilkTeaDrinks(CreativeModeTab.Output output) {
@@ -217,18 +278,6 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.DARKSIDE_MILK_TEA.get());
         output.accept(ModItemsInit.WET_MILK_TEA.get());
         output.accept(ModItemsInit.IMAGINARY_MILK_TEA.get());
-    }
-
-    private void acceptCoffeeIngredients(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.COFFEE_BEANS_ROASTED.get());
-        output.accept(ModItemsInit.COFFEE_GROUNDS.get());
-        output.accept(ModItemsInit.COFFEE_POT_FULL.get());
-        output.accept(ModItemsInit.COFFEE_FILTER.get());
-        output.accept(ModItemsInit.COFFEE_FILTER_USED.get());
-        output.accept(ModItemsInit.ESPRESSO_SHOT.get());
-        output.accept(ModItemsInit.STEAMED_MILK.get());
-        output.accept(ModItemsInit.MILK_FOAM.get());
-        output.accept(ModItemsInit.ICE_CUBES.get());
     }
 
     private void acceptCoffeeDrinks(CreativeModeTab.Output output) {
