@@ -7,7 +7,7 @@ import com.kmek.minecafe.block.crop.CropTreeTopBlock;
 import com.kmek.minecafe.block.crop.FlowerCropBlock;
 import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.ModItemsInit;
-import com.kmek.minecafe.item.registery.Fruits;
+import com.kmek.minecafe.item.registery.FoodVariants;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -118,9 +118,9 @@ public class ModBlocksInit {
             registerDoubleCropBlockItem("coffee", "coffee_beans_unroasted", "item.minecafe.coffee_cherries", 7));
     // Fruits
     public static final RegistryObject<Block> APPLE_CROP_BOTTOM = compostable(0.5F, registerDoubleCropBlockItem("apple", "apple_seeds", Items.APPLE, 5));
-    public static final List<RegistryObject<Block>> FRUIT_CROPS = Arrays.stream(Fruits.treeCrops)
-            .filter(fruit -> fruit != Fruits.APPLE)
-            .map(fruit -> compostable(0.65F, registerFruitTree(fruit.toString().toLowerCase())))
+    public static final List<RegistryObject<Block>> FRUIT_CROPS = Arrays.stream(FoodVariants.treeCrops)
+            .filter(fruit -> fruit != FoodVariants.APPLE)
+            .map(fruit -> compostable(0.65F, registerFruitTree(fruit.toString())))
             .toList();
 
     /**

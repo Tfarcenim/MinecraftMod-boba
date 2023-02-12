@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": { "item": "minecraft:milk_bucket" },
+    "S": { "tag": "forge:sugar" },
+    "B": { "tag": "forge:butter" },
+    "E": { "item": "minecraft:egg" },
+    "F": { "item": "minecafe:fig" },
+    "W": { "item": "minecraft:wheat" }
+  },
+  "pattern": [
+    "SMS",
+    "BFE",
+    "FWF"
+  ],
+  "result": {
+    "item": "minecafe:figgy_pudding"
+  }
+}

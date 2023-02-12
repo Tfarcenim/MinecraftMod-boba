@@ -4,7 +4,6 @@ import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.custom.*;
 import com.kmek.minecafe.item.registery.FoodVariants;
-import com.kmek.minecafe.item.registery.Fruits;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -68,9 +67,9 @@ public class ModItemsInit {
     // Coffee
     public static final RegistryObject<Item> COFFEE_CHERRIES = compostable(0.6F, ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties())));
     // Fruits
-    public static final List<RegistryObject<Item>> FRUIT_ITEMS = Arrays.stream(Fruits.values())
-            .filter(fruit -> fruit != Fruits.APPLE)
-            .map(fruit -> compostable(0.65F, ITEMS.register(fruit.toString().toLowerCase(), () -> new Item(new Item.Properties().food(
+    public static final List<RegistryObject<Item>> FRUIT_ITEMS = Arrays.stream(FoodVariants.fruits)
+            .filter(fruit -> fruit != FoodVariants.APPLE)
+            .map(fruit -> compostable(0.65F, ITEMS.register(fruit.toString(), () -> new Item(new Item.Properties().food(
                 new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())))))
             .toList();
 
@@ -78,11 +77,13 @@ public class ModItemsInit {
      * Ingredients
      */
     public static final RegistryObject<Item> CHOCOLATE = ITEMS.register("chocolate", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
+    public static final RegistryObject<Item> VANILLA = ITEMS.register("vanilla", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CARAMEL = ITEMS.register("caramel", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
+    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
+    public static final RegistryObject<Item> MONKFRUIT_SWEETENER = ITEMS.register("monkfruit_sweetener", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(new Item.Properties()));
     // Creams
     public static final RegistryObject<Item> CREAM = ITEMS.register("cream", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
@@ -130,6 +131,9 @@ public class ModItemsInit {
      */
     public static final RegistryObject<Item> CLEAR_CUP = ITEMS.register("clear_cup", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MUG = ITEMS.register("mug", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ICE_TRAY = ITEMS.register("ice_tray", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ICE_TRAY_WATER = ITEMS.register("ice_tray_water", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ICE_TRAY_ICE = ITEMS.register("ice_tray_ice", () -> new Item(new Item.Properties().stacksTo(1).craftRemainder(ICE_TRAY.get())));
 
     /**
      * Food
@@ -189,6 +193,10 @@ public class ModItemsInit {
     // Pudding
     public static final RegistryObject<Item> TAPIOCA_PUDDING = ITEMS.register("tapioca_pudding", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
+    public static final RegistryObject<Item> FIGGY_PUDDING = ITEMS.register("figgy_pudding", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
+    public static final RegistryObject<Item> FLAN = ITEMS.register("flan", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
     // Candy
     public static final RegistryObject<Item> PEEPS = ITEMS.register("peeps", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
@@ -199,8 +207,6 @@ public class ModItemsInit {
     public static final RegistryObject<Item> WHITE_STRAWBERRY_CHOCOLATE = ITEMS.register("white_strawberry_chocolate", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
     // Misc Foods
-    public static final RegistryObject<Item> FLAN = ITEMS.register("flan", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
     public static final RegistryObject<Item> BROWNIE = ITEMS.register("brownie", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
     public static final RegistryObject<Item> FIG_NEWTON = ITEMS.register("fig_newton", () -> new Item(new Item.Properties().food(

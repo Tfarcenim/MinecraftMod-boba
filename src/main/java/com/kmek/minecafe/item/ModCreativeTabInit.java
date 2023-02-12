@@ -113,13 +113,14 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCoreIngreidents(CreativeModeTab.Output output) {
+        output.accept(ModItemsInit.MONKFRUIT_SWEETENER.get());
         output.accept(ModItemsInit.CREAM.get());
         output.accept(ModItemsInit.BUTTER.get());
 
         output.accept(ModItemsInit.CUSTARD.get());
 
         output.accept(ModItemsInit.CHOCOLATE.get());
-
+        output.accept(ModItemsInit.VANILLA.get());
         output.accept(ModItemsInit.CARAMEL.get());
     }
 
@@ -176,6 +177,10 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.MUG.get());
         output.accept(ModItemsInit.CLEAR_CUP.get());
 
+        output.accept(ModItemsInit.ICE_TRAY.get());
+        output.accept(ModItemsInit.ICE_TRAY_WATER.get());
+        output.accept(ModItemsInit.ICE_TRAY_ICE.get());
+
         output.accept(ModItemsInit.TAIYAKI_MOLD.get());
         output.accept(ModItemsInit.EGG_WAFFLE_MOLD.get());
         output.accept(ModItemsInit.PAW_WAFFLE_MOLD.get());
@@ -223,6 +228,7 @@ public class ModCreativeTabInit {
 
     private void acceptPudding(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.TAPIOCA_PUDDING.get());
+        output.accept(ModItemsInit.FIGGY_PUDDING.get());
         output.accept(ModItemsInit.FLAN.get());
     }
 
