@@ -122,6 +122,8 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.CHOCOLATE.get());
         output.accept(ModItemsInit.VANILLA.get());
         output.accept(ModItemsInit.CARAMEL.get());
+
+        output.accept(ModItemsInit.PIE_CRUST.get());
     }
 
     private void acceptJams(CreativeModeTab.Output output) {
@@ -310,7 +312,8 @@ public class ModCreativeTabInit {
         ModItemsInit.FRUIT_JUICES.forEach(reg -> {
             output.accept(reg.get());
         });
-        output.accept(ModItemsInit.LEMONADE.get());
-        output.accept(ModItemsInit.LIMEADE.get());
+        ModItemsInit.LEMONADES.forEach(reg -> {
+            output.accept(reg.get());
+        });
     }
 }

@@ -217,6 +217,8 @@
   "item.minecafe.butter": "Butter",
   "item.minecafe.caramel": "Caramel",
 
+  "item.minecafe.pie_crust": "Pie Crust",
+
   "item.minecafe.caramel_apple": "Caramel Apple",
   "item.minecafe.strawberry_chocolate": "Chocolate Dipped Strawberry",
   "item.minecafe.white_strawberry_chocolate": "Chocolate Dipped White Strawberry",
@@ -292,6 +294,11 @@
   "item.minecafe.watermelon_juice": "Watermelon Juice",
 
   "item.minecafe.lemonade": "Lemonade",
+  "item.minecafe.blueberry_lemonade": "Blueberry Lemonade",
+  "item.minecafe.strawberry_lemonade": "Strawberry Lemonade",
+  "item.minecafe.raspberry_lemonade": "Raspberry Lemonade",
+  "item.minecafe.mango_lemonade": "Mango Lemonade",
+  "item.minecafe.pineapple_lemonade": "Pineapple Lemonade",
   "item.minecafe.limeade": "Limeade",
 
   "itemGroup.minecafe": "MineCafe"

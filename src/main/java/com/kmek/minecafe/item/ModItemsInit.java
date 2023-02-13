@@ -84,6 +84,7 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
     public static final RegistryObject<Item> MONKFRUIT_SWEETENER = ITEMS.register("monkfruit_sweetener", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PIE_CRUST = ITEMS.register("pie_crust", () -> new Item(new Item.Properties()));
     // Creams
     public static final RegistryObject<Item> CREAM = ITEMS.register("cream", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
@@ -383,6 +384,8 @@ public class ModItemsInit {
     public static final List<RegistryObject<Item>> FRUIT_JUICES = Arrays.stream(FoodVariants.juices)
             .map(variant -> ITEMS.register(variant.toString() + "_juice", () -> (Item) new CustomDrinkItem(5, 3f, CLEAR_CUP.get())))
             .toList();
-    public static final RegistryObject<Item> LEMONADE = ITEMS.register("lemonade", () -> new CustomDrinkItem(4, 1f, CLEAR_CUP.get()));
-    public static final RegistryObject<Item> LIMEADE = ITEMS.register("limeade", () -> new CustomDrinkItem(4, 1f, CLEAR_CUP.get()));
+    public static final List<RegistryObject<Item>> LEMONADES = Arrays.stream(new String[]{"lemonade", "blueberry_lemonade",
+                    "strawberry_lemonade", "raspberry_lemonade", "mango_lemonade", "pineapple_lemonade", "limeade"})
+                    .map(name -> ITEMS.register(name, () -> (Item) new CustomDrinkItem(4, 1f, CLEAR_CUP.get()))).toList();
+
 }
