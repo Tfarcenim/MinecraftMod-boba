@@ -212,6 +212,11 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
     public static final RegistryObject<Item> FIG_NEWTON = ITEMS.register("fig_newton", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
+    // Smores Marshmallow toasting
+    public static final RegistryObject<Item> GOLDEN_MARSHMALLOW = ITEMS.register("golden_marshmallow",
+            () -> new MarshmallowStickItem());
+//            () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
 
 
     /**

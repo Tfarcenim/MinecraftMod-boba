@@ -207,6 +207,7 @@ public class ModCreativeTabInit {
         acceptPudding(output);
         acceptMiscFoodItems(output);
         acceptCandy(output);
+        acceptSmores(output);
     }
 
     private void acceptWaffles(CreativeModeTab.Output output) {
@@ -234,6 +235,11 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.FLAN.get());
     }
 
+    private void acceptMiscFoodItems(CreativeModeTab.Output output) {
+        output.accept(ModItemsInit.BROWNIE.get());
+        output.accept(ModItemsInit.FIG_NEWTON.get());
+    }
+
     private void acceptCandy(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.STRAWBERRY_CHOCOLATE.get());
         output.accept(ModItemsInit.WHITE_STRAWBERRY_CHOCOLATE.get());
@@ -241,9 +247,8 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.PEEPS.get());
     }
 
-    private void acceptMiscFoodItems(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.BROWNIE.get());
-        output.accept(ModItemsInit.FIG_NEWTON.get());
+    private void acceptSmores(CreativeModeTab.Output output) {
+        output.accept(ModItemsInit.GOLDEN_MARSHMALLOW.get());
     }
 
     /*****************************************************************************************************************
