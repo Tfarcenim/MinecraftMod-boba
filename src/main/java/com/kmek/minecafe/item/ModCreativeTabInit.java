@@ -11,7 +11,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 
 public class ModCreativeTabInit {
     public static CreativeModeTab minecafeTab;
-    // Blocks, Ingredients, Food, Drinks
 
     /**
      * Registering the event bus
@@ -21,18 +20,43 @@ public class ModCreativeTabInit {
     }
 
     private void registerCustomCreativeTab(CreativeModeTabEvent.Register event) {
-        minecafeTab = event.registerCreativeModeTab(new ResourceLocation(MineCafeMod.MODID, "minecafe"), builder -> builder
-            .title(Component.translatable("itemGroup.minecafe"))
-            .icon(() -> new ItemStack(ModItemsInit.BROWN_SUGAR_MILK_TEA.get()))
+        minecafeTab = event.registerCreativeModeTab(new ResourceLocation(MineCafeMod.MODID, "minecafe_tab1"), builder -> builder
+            .title(Component.translatable("itemGroup.minecafe_blocks"))
+            .icon(() -> new ItemStack(ModBlocksInit.ESPRESSO_MACHINE.get()))
             .displayItems((featureFlags, output, hasOp) -> {
                 // Add categories
                 acceptBlocks(output);
                 acceptCropsAndSeeds(output);
-                acceptIngredients(output);
-                acceptDishes(output);
-                acceptFoods(output);
-                acceptDrinks(output);
             })
+            .build()
+        );
+        event.registerCreativeModeTab(new ResourceLocation(MineCafeMod.MODID, "minecafe_tab2"), builder -> builder
+                .title(Component.translatable("itemGroup.minecafe_ingredients"))
+                .icon(() -> new ItemStack(ModItemsInit.BUTTER.get()))
+                .displayItems((featureFlags, output, hasOp) -> {
+                    // Add categories
+                    acceptIngredients(output);
+                    acceptDishes(output);
+                })
+                .build()
+        );
+        event.registerCreativeModeTab(new ResourceLocation(MineCafeMod.MODID, "minecafe_tab3"), builder -> builder
+                .title(Component.translatable("itemGroup.minecafe_food"))
+                .icon(() -> new ItemStack(ModItemsInit.CROISSANT.get()))
+                .displayItems((featureFlags, output, hasOp) -> {
+                    // Add categories
+                    acceptFoods(output);
+                })
+                .build()
+        );
+        event.registerCreativeModeTab(new ResourceLocation(MineCafeMod.MODID, "minecafe_tab4"), builder -> builder
+                .title(Component.translatable("itemGroup.minecafe_drinks"))
+                .icon(() -> new ItemStack(ModItemsInit.BROWN_SUGAR_MILK_TEA.get()))
+                .displayItems((featureFlags, output, hasOp) -> {
+                    // Add categories
+                    acceptDrinks(output);
+                })
+                .build()
         );
     }
 
@@ -81,13 +105,6 @@ public class ModCreativeTabInit {
         ModBlocksInit.FRUIT_CROPS.stream().forEach(reg -> output.accept(reg.get()));
         output.accept(ModBlocksInit.CASSAVA_CROP.get());
         output.accept(ModBlocksInit.COFFEE_CROP_BOTTOM.get());
-
-        // Fruit
-        ModItemsInit.FRUIT_ITEMS.forEach(reg -> output.accept(reg.get()));
-
-        // Other Crop Drops
-        output.accept(ModItemsInit.CASSAVA.get());
-        output.accept(ModItemsInit.COFFEE_CHERRIES.get());
     }
     private void acceptFlowerSeeds(CreativeModeTab.Output output) {
         ModBlocksInit.FLOWER_CROPS.forEach(reg -> output.accept(reg.get()));
@@ -98,6 +115,8 @@ public class ModCreativeTabInit {
      *****************************************************************************************************************/
 
     private void acceptIngredients(CreativeModeTab.Output output) {
+        acceptFruit(output);
+
         acceptCoreIngreidents(output);
 
         acceptCreams(output);
@@ -105,6 +124,15 @@ public class ModCreativeTabInit {
         acceptJams(output);
         acceptCoffeeIngredients(output);
         acceptMiscIngredients(output);
+    }
+
+    private void acceptFruit(CreativeModeTab.Output output) {
+        // Fruit
+        ModItemsInit.FRUIT_ITEMS.forEach(reg -> output.accept(reg.get()));
+
+        // Other Crop Drops
+        output.accept(ModItemsInit.CASSAVA.get());
+        output.accept(ModItemsInit.COFFEE_CHERRIES.get());
     }
 
     private void acceptCoreIngreidents(CreativeModeTab.Output output) {
@@ -117,9 +145,10 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.CHOCOLATE.get());
         output.accept(ModItemsInit.VANILLA.get());
         output.accept(ModItemsInit.CARAMEL.get());
+        output.accept(ModItemsInit.CINNAMON.get());
 
-        output.accept(ModItemsInit.PIE_CRUST.get());
         output.accept(ModItemsInit.GRAHAM_CRACKER.get());
+        output.accept(ModItemsInit.PIE_CRUST.get());
     }
 
     private void acceptJams(CreativeModeTab.Output output) {
@@ -207,12 +236,18 @@ public class ModCreativeTabInit {
      *****************************************************************************************************************/
 
     private void acceptFoods(CreativeModeTab.Output output) {
+        acceptBreads(output);
         acceptWaffles(output);
         acceptCake(output);
         acceptPudding(output);
         acceptMiscFoodItems(output);
         acceptCandy(output);
         acceptSmores(output);
+    }
+
+    private void acceptBreads(CreativeModeTab.Output output) {
+        output.accept(ModItemsInit.CROISSANT.get());
+        output.accept(ModItemsInit.BAGUETTE.get());
     }
 
     private void acceptWaffles(CreativeModeTab.Output output) {

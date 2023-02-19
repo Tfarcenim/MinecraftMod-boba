@@ -80,6 +80,7 @@ public class ModItemsInit {
     public static final RegistryObject<Item> VANILLA = ITEMS.register("vanilla", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CARAMEL = ITEMS.register("caramel", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
+    public static final RegistryObject<Item> CINNAMON = ITEMS.register("cinnamon", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
     public static final RegistryObject<Item> MONKFRUIT_SWEETENER = ITEMS.register("monkfruit_sweetener", () -> new Item(new Item.Properties()));
@@ -147,6 +148,11 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(1).saturationMod(0.5f)
                     .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 200, 0), 1.0f)
                     .build())));
+    // Breads
+    public static final RegistryObject<Item> CROISSANT = ITEMS.register("croissant", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
+    public static final RegistryObject<Item> BAGUETTE = ITEMS.register("baguette", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(4).saturationMod(2f).build()))); // todo "hohoho"
     // Waffle snacks
     public static final RegistryObject<Item> RAW_WAFFLE_BATTER = ITEMS.register("raw_waffle_batter", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0)

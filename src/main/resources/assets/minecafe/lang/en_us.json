@@ -216,9 +216,13 @@
   "item.minecafe.custard": "Custard",
   "item.minecafe.butter": "Butter",
   "item.minecafe.caramel": "Caramel",
+  "item.minecafe.cinnamon": "Cinnamon",
 
   "item.minecafe.pie_crust": "Pie Crust",
   "item.minecafe.graham_cracker": "Graham Cracker",
+
+  "item.minecafe.croissant": "Croissant",
+  "item.minecafe.baguette": "Baguette",
 
   "item.minecafe.caramel_apple": "Caramel Apple",
   "item.minecafe.strawberry_chocolate": "Chocolate Dipped Strawberry",
@@ -318,5 +322,8 @@
   "item.minecafe.smore_burnt": "Smores",
   "item.minecafe.smore_scorched": "Smores",
 
-  "itemGroup.minecafe": "MineCafe"
+  "itemGroup.minecafe_blocks": "MineCafe: Blocks",
+  "itemGroup.minecafe_ingredients": "MineCafe: Ingredients",
+  "itemGroup.minecafe_food": "MineCafe: Food",
+  "itemGroup.minecafe_drinks": "MineCafe: Drinks"
 }
