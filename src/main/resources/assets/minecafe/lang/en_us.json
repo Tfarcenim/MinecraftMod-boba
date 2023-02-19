@@ -218,6 +218,7 @@
   "item.minecafe.caramel": "Caramel",
 
   "item.minecafe.pie_crust": "Pie Crust",
+  "item.minecafe.graham_cracker": "Graham Cracker",
 
   "item.minecafe.caramel_apple": "Caramel Apple",
   "item.minecafe.strawberry_chocolate": "Chocolate Dipped Strawberry",
@@ -301,7 +302,21 @@
   "item.minecafe.pineapple_lemonade": "Pineapple Lemonade",
   "item.minecafe.limeade": "Limeade",
 
-  "item.minecafe.golden_marshmallow": "Golden Marshmallow on a Stick",
+  "item.minecafe.marshmallow_puff": "Marshmallow",
+  "item.minecafe.marshmallow_on_stick": "Marshmallow on a Stick",
+  "item.minecafe.marshmallow_on_stick_warm": "Warm Marshmallow on a Stick",
+  "item.minecafe.marshmallow_on_stick_toasted": "Toasted Marshmallow on a Stick",
+  "item.minecafe.marshmallow_on_stick_golden": "Golden Marshmallow on a Stick",
+  "item.minecafe.marshmallow_on_stick_well_done": "Well Done Marshmallow on a Stick",
+  "item.minecafe.marshmallow_on_stick_burnt": "Burnt Marshmallow on a Stick",
+  "item.minecafe.marshmallow_on_stick_scorched": " Scorched Marshmallow on a Stick",
+  "item.minecafe.marshmallow_on_stick_fire": "Fire Marshmallow on a Stick",
+  "item.minecafe.smore_warm": "Smores",
+  "item.minecafe.smore_toasted": "Smores",
+  "item.minecafe.smore_golden": "Smores",
+  "item.minecafe.smore_well_done": "Smores",
+  "item.minecafe.smore_burnt": "Smores",
+  "item.minecafe.smore_scorched": "Smores",
 
   "itemGroup.minecafe": "MineCafe"
 }

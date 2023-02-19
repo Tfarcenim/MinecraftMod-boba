@@ -85,6 +85,10 @@ public class ModItemsInit {
     public static final RegistryObject<Item> MONKFRUIT_SWEETENER = ITEMS.register("monkfruit_sweetener", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PIE_CRUST = ITEMS.register("pie_crust", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GRAHAM_CRACKER = ITEMS.register("graham_cracker", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+    public static final RegistryObject<Item> CUSTARD = ITEMS.register("custard", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
     // Creams
     public static final RegistryObject<Item> CREAM = ITEMS.register("cream", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
@@ -101,16 +105,6 @@ public class ModItemsInit {
     public static final RegistryObject<Item> HONEY_CREAM = ITEMS.register("honey_cream", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
     public static final RegistryObject<Item> ROSE_CREAM = ITEMS.register("rose_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    // Marshmallow
-    public static final RegistryObject<Item> MARSHMALLOW = ITEMS.register("marshmallow", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
-    public static final RegistryObject<Item> MARSHMALLOWS = ITEMS.register("marshmallows", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).alwaysEat()
-                    .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 60, 0), 1.0f)
-                    .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 0), 1.0f)
-                    .build())));
-    public static final RegistryObject<Item> CUSTARD = ITEMS.register("custard", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
     // Jams
     public static final RegistryObject<Item> APPLE_JAM = ITEMS.register("apple_jam", () -> new Item(new Item.Properties().food(
@@ -213,11 +207,33 @@ public class ModItemsInit {
     public static final RegistryObject<Item> FIG_NEWTON = ITEMS.register("fig_newton", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
     // Smores Marshmallow toasting
-    public static final RegistryObject<Item> GOLDEN_MARSHMALLOW = ITEMS.register("golden_marshmallow",
-            () -> new MarshmallowStickItem());
-//            () -> new Item(new Item.Properties().food(
-//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-
+    public static final RegistryObject<Item> MARSHMALLOW = ITEMS.register("marshmallow", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+    public static final RegistryObject<Item> MARSHMALLOWS = ITEMS.register("marshmallows", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).alwaysEat()
+                    .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 60, 0), 1.0f)
+                    .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 0), 1.0f)
+                    .build())));
+    public static final RegistryObject<Item> MARSHMALLOW_PUFF = ITEMS.register("marshmallow_puff", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+    public static final RegistryObject<Item> MARSHMALLOW_ON_STICK_SCORCHED = ITEMS.register("marshmallow_on_stick_scorched",
+            () -> new MarshmallowStickItem(5, BURNT_CRISP.get()));
+    public static final RegistryObject<Item> MARSHMALLOW_ON_STICK_BURNT = ITEMS.register("marshmallow_on_stick_burnt",
+            () -> new MarshmallowStickItem(5, MARSHMALLOW_ON_STICK_SCORCHED.get()));
+    public static final RegistryObject<Item> MARSHMALLOW_ON_STICK_WELL_DONE = ITEMS.register("marshmallow_on_stick_well_done",
+            () -> new MarshmallowStickItem(5, MARSHMALLOW_ON_STICK_BURNT.get()));
+    public static final RegistryObject<Item> MARSHMALLOW_ON_STICK_GOLDEN = ITEMS.register("marshmallow_on_stick_golden",
+            () -> new MarshmallowStickItem(10, MARSHMALLOW_ON_STICK_WELL_DONE.get()));
+    public static final RegistryObject<Item> MARSHMALLOW_ON_STICK_TOASTED = ITEMS.register("marshmallow_on_stick_toasted",
+            () -> new MarshmallowStickItem(10, MARSHMALLOW_ON_STICK_GOLDEN.get()));
+    public static final RegistryObject<Item> MARSHMALLOW_ON_STICK_WARM = ITEMS.register("marshmallow_on_stick_warm",
+            () -> new MarshmallowStickItem(10, MARSHMALLOW_ON_STICK_TOASTED.get()));
+    public static final RegistryObject<Item> MARSHMALLOW_ON_STICK = ITEMS.register("marshmallow_on_stick",
+            () -> new MarshmallowStickItem(5, MARSHMALLOW_ON_STICK_WARM.get()));
+    public static final List<RegistryObject<Item>> SMORES = Arrays.stream(new String[]{"warm", "toasted", "golden", "well_done", "burnt", "scorched"})
+            .map(str -> ITEMS.register("smore_" + str, () -> new Item(new Item.Properties().food(
+                        new FoodProperties.Builder().nutrition(5).saturationMod(2f).build())))
+            ).toList();
 
     /**
      * Bubble Milk Teas

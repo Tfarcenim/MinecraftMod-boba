@@ -10,7 +10,8 @@ import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 public class ModCreativeTabInit {
-    public static CreativeModeTab bobaTab;
+    public static CreativeModeTab minecafeTab;
+    // Blocks, Ingredients, Food, Drinks
 
     /**
      * Registering the event bus
@@ -20,7 +21,7 @@ public class ModCreativeTabInit {
     }
 
     private void registerCustomCreativeTab(CreativeModeTabEvent.Register event) {
-        bobaTab = event.registerCreativeModeTab(new ResourceLocation(MineCafeMod.MODID, "minecafe"), builder -> builder
+        minecafeTab = event.registerCreativeModeTab(new ResourceLocation(MineCafeMod.MODID, "minecafe"), builder -> builder
             .title(Component.translatable("itemGroup.minecafe"))
             .icon(() -> new ItemStack(ModItemsInit.BROWN_SUGAR_MILK_TEA.get()))
             .displayItems((featureFlags, output, hasOp) -> {
@@ -77,25 +78,19 @@ public class ModCreativeTabInit {
 
         // Seeds
         output.accept(ModBlocksInit.APPLE_CROP_BOTTOM.get());
-        ModBlocksInit.FRUIT_CROPS.stream().forEach(reg -> {
-            output.accept(reg.get());
-        });
+        ModBlocksInit.FRUIT_CROPS.stream().forEach(reg -> output.accept(reg.get()));
         output.accept(ModBlocksInit.CASSAVA_CROP.get());
         output.accept(ModBlocksInit.COFFEE_CROP_BOTTOM.get());
 
         // Fruit
-        ModItemsInit.FRUIT_ITEMS.forEach(reg -> {
-            output.accept(reg.get());
-        });
+        ModItemsInit.FRUIT_ITEMS.forEach(reg -> output.accept(reg.get()));
 
         // Other Crop Drops
         output.accept(ModItemsInit.CASSAVA.get());
         output.accept(ModItemsInit.COFFEE_CHERRIES.get());
     }
     private void acceptFlowerSeeds(CreativeModeTab.Output output) {
-        ModBlocksInit.FLOWER_CROPS.forEach(reg -> {
-            output.accept(reg.get());
-        });
+        ModBlocksInit.FLOWER_CROPS.forEach(reg -> output.accept(reg.get()));
     }
 
     /*****************************************************************************************************************
@@ -124,6 +119,7 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.CARAMEL.get());
 
         output.accept(ModItemsInit.PIE_CRUST.get());
+        output.accept(ModItemsInit.GRAHAM_CRACKER.get());
     }
 
     private void acceptJams(CreativeModeTab.Output output) {
@@ -147,6 +143,15 @@ public class ModCreativeTabInit {
     private void acceptMarshmallows(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.MARSHMALLOW.get());
         output.accept(ModItemsInit.MARSHMALLOWS.get());
+        output.accept(ModItemsInit.MARSHMALLOW_PUFF.get());
+
+        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK.get());
+        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_WARM.get());
+        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_TOASTED.get());
+        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_GOLDEN.get());
+        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_WELL_DONE.get());
+        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_BURNT.get());
+        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_SCORCHED.get());
     }
 
     private void acceptMiscIngredients(CreativeModeTab.Output output) {
@@ -248,7 +253,7 @@ public class ModCreativeTabInit {
     }
 
     private void acceptSmores(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.GOLDEN_MARSHMALLOW.get());
+        ModItemsInit.SMORES.forEach(reg -> output.accept(reg.get()));
     }
 
     /*****************************************************************************************************************
@@ -314,11 +319,7 @@ public class ModCreativeTabInit {
     }
 
     private void acceptFruitDrinks(CreativeModeTab.Output output) {
-        ModItemsInit.FRUIT_JUICES.forEach(reg -> {
-            output.accept(reg.get());
-        });
-        ModItemsInit.LEMONADES.forEach(reg -> {
-            output.accept(reg.get());
-        });
+        ModItemsInit.FRUIT_JUICES.forEach(reg -> output.accept(reg.get()));
+        ModItemsInit.LEMONADES.forEach(reg -> output.accept(reg.get()));
     }
 }

@@ -3,17 +3,17 @@
   "category": "misc",
   "key": {
     "S": {
-      "tag": "forge:sugar"
+      "item": "minecraft:stick"
     },
     "M": {
-      "item": "minecafe:marshmallow"
+      "item": "minecafe:marshmallow_puff"
     }
   },
   "pattern": [
-    "S",
-    "M"
+    "M",
+    "S"
   ],
   "result": {
-    "item": "minecafe:marshmallows"
+    "item": "minecafe:marshmallow_on_stick"
   }
 }
