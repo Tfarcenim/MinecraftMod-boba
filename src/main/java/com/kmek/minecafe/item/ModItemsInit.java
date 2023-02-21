@@ -95,18 +95,20 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
     public static final RegistryObject<Item> WHIPPED_CREAM = ITEMS.register("whipped_cream", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
-    public static final RegistryObject<Item> CHOCOLATE_CREAM = ITEMS.register("chocolate_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> VANILLA_CREAM = ITEMS.register("vanilla_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> COFFEE_CREAM = ITEMS.register("coffee_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> MATCHA_CREAM = ITEMS.register("matcha_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> HONEY_CREAM = ITEMS.register("honey_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> ROSE_CREAM = ITEMS.register("rose_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
+    public static final List<RegistryObject<Item>> CREAMS = Arrays.stream(new String[]{
+                    "rose",
+                    "raspberry", "strawberry", "apple", "watermelon", "sweet_berry", "cherry", "pomegranate", "cranberry",
+                    "orange", "peach", "glow_berry", "mango", "gooseberry",
+                    "honey", "banana", "lemon", "pear", "pineapple", "passion_fruit", "starfruit",
+                    "matcha", "lime", "grape", "kiwi", "honeydew_melon",
+                    "blueberry",
+                    "chorus_fruit", "plum", "fig", "acai",
+                    "chocolate", "coffee", "caramel", "cinnamon",
+                    "vanilla", "coconut", "lychee", "dragon_fruit", "mangosteen",
+            })
+            .map(str -> ITEMS.register(str + "_cream", () -> new Item(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())))
+            ).toList();
     // Jams
     public static final RegistryObject<Item> APPLE_JAM = ITEMS.register("apple_jam", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
@@ -191,6 +193,43 @@ public class ModItemsInit {
     // Cake
     public static final RegistryObject<Item> CASSAVA_BIBINGKA = ITEMS.register("cassava_bibingka", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
+    public static final List<RegistryObject<Item>> CHEESECAKES = Arrays.stream(new String[]{
+                    "cheesecake_slice"})
+            .map(str -> ITEMS.register(str, () -> new Item(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())))
+            ).toList();
+    // Pie
+    public static final List<RegistryObject<Item>> PIES = Arrays.stream(new String[]{
+                    "chocolate_chip_cookie_pie_slice",
+                    "brownie_pie_slice",
+                    "possum_pie_slice",
+                    "smores_pie_slice",
+                    "honey_pie_slice",
+                    "cookies_and_cream_pie_slice",
+                    "peanut_butter_pie_slice",
+                    "grasshopper_pie_slice",
+                    "turtle_pie_slice",
+                    "key_lime_pie_slice",
+                    "chess_pie_slice",
+                    "pecan_pie_slice",
+                    "pumpkin_pie_slice",
+                    "butterscotch_cinnamon_pie_slice",
+                    "sugar_cream_pie_slice",
+                    "water_pie_slice",
+                    "strawberry_cream_pie_slice",
+                    "caramel_cream_pie_slice",
+                    "vanilla_cream_pie_slice",
+                    "raspberry_cream_pie_slice",
+                    "chocolate_cream_pie_slice",
+                    "peaches_and_cream_pie_slice",
+                    "banoffi_pie_slice",
+                    "orange_creamsicle_pie_slice",
+                    "coconut_cream_pie_slice",
+                    "banana_cream_pie_slice",
+                    "lemon_cream_pie_slice"})
+            .map(str -> ITEMS.register(str, () -> new Item(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())))
+            ).toList();
     // Pudding
     public static final RegistryObject<Item> TAPIOCA_PUDDING = ITEMS.register("tapioca_pudding", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
@@ -198,6 +237,7 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
     public static final RegistryObject<Item> FLAN = ITEMS.register("flan", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
+    // todo chocolate vanilla caramel
     // Candy
     public static final RegistryObject<Item> PEEPS = ITEMS.register("peeps", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));

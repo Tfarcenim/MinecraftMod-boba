@@ -91,10 +91,6 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.COFFEE_BUCKET.get());
     }
 
-    /*****************************************************************************************************************
-     * Crops
-     *****************************************************************************************************************/
-
     private void acceptCropsAndSeeds(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.CROP_INSPECTOR_ITEM.get());
 
@@ -161,12 +157,7 @@ public class ModCreativeTabInit {
 
     private void acceptCreams(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.WHIPPED_CREAM.get());
-        output.accept(ModItemsInit.CHOCOLATE_CREAM.get());
-        output.accept(ModItemsInit.VANILLA_CREAM.get());
-        output.accept(ModItemsInit.COFFEE_CREAM.get());
-        output.accept(ModItemsInit.MATCHA_CREAM.get());
-        output.accept(ModItemsInit.HONEY_CREAM.get());
-        output.accept(ModItemsInit.ROSE_CREAM.get());
+        ModItemsInit.CREAMS.forEach(reg -> output.accept(reg.get()));
     }
 
     private void acceptMarshmallows(CreativeModeTab.Output output) {
@@ -203,10 +194,6 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.ICE_CUBES.get());
     }
 
-    /*****************************************************************************************************************
-     * Dishes
-     *****************************************************************************************************************/
-
     private void acceptDishes(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.COFFEE_POT.get());
 
@@ -239,6 +226,7 @@ public class ModCreativeTabInit {
         acceptBreads(output);
         acceptWaffles(output);
         acceptCake(output);
+        acceptPie(output);
         acceptPudding(output);
         acceptMiscFoodItems(output);
         acceptCandy(output);
@@ -248,6 +236,7 @@ public class ModCreativeTabInit {
     private void acceptBreads(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.CROISSANT.get());
         output.accept(ModItemsInit.BAGUETTE.get());
+        // Accept buns
     }
 
     private void acceptWaffles(CreativeModeTab.Output output) {
@@ -267,6 +256,15 @@ public class ModCreativeTabInit {
 
     private void acceptCake(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.CASSAVA_BIBINGKA.get());
+        acceptCheesecake(output);
+    }
+
+    private void acceptCheesecake(CreativeModeTab.Output output) {
+        ModItemsInit.CHEESECAKES.forEach(reg -> output.accept(reg.get()));
+    }
+
+    private void acceptPie(CreativeModeTab.Output output) {
+        ModItemsInit.PIES.forEach(reg -> output.accept(reg.get()));
     }
 
     private void acceptPudding(CreativeModeTab.Output output) {

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": { "item": "minecafe:cinnamon" },
+    "S": { "tag": "forge:sugar" },
+    "V": { "item": "minecafe:vanilla" },
+    "M": { "item": "minecraft:milk_bucket" },
+    "B": { "tag": "forge:butter" },
+    "E": { "item": "minecraft:egg" },
+    "R": { "item": "minecafe:pie_crust" }
+  },
+  "pattern": [
+    "CSV",
+    "MBE",
+    " R "
+  ],
+  "result": {
+    "item": "minecafe:butterscotch_cinnamon_pie_slice",
+    "count": 4
+  }
+}

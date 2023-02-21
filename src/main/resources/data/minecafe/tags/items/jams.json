@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecafe:apple_jam",
+    "minecafe:chorus_fruit_jam",
+    "minecafe:glow_berry_jam",
+    "minecafe:sweet_berry_jam",
+    "minecafe:watermelon_jam"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": { "item": "minecafe:whipped_cream" },
+    "C": { "tag": "forge:chocolate" },
+    "V": { "item": "minecafe:vanilla_pudding" },
+    "R": { "item": "minecafe:pie_crust" }
+  },
+  "pattern": [
+    " W ",
+    "CVC",
+    " R "
+  ],
+  "result": {
+    "item": "minecafe:cookies_and_cream_pie_slice",
+    "count": 4
+  }
+}
