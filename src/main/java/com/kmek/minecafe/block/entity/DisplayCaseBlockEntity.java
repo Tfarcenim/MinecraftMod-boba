@@ -1,6 +1,6 @@
 package com.kmek.minecafe.block.entity;
 
-import com.kmek.minecafe.block.DisplayCaseBlock;
+import com.kmek.minecafe.block.custom.DisplayCaseBlock;
 import com.kmek.minecafe.screen.DisplayCaseMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Inventory;

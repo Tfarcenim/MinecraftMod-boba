@@ -1,4 +1,4 @@
-package com.kmek.minecafe.block.crop;
+package com.kmek.minecafe.block.custom.crop;
 
 import com.kmek.minecafe.item.ModItemsInit;
 import net.minecraft.core.BlockPos;

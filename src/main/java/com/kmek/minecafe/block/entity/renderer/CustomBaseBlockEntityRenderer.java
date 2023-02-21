@@ -1,6 +1,6 @@
 package com.kmek.minecafe.block.entity.renderer;
 
-import com.kmek.minecafe.block.DisplayCaseBlock;
+import com.kmek.minecafe.block.custom.DisplayCaseBlock;
 import com.kmek.minecafe.block.entity.CustomBaseBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;

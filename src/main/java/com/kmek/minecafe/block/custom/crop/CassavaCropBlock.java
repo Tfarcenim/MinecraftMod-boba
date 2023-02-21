@@ -1,7 +1,6 @@
-package com.kmek.minecafe.block.crop;
+package com.kmek.minecafe.block.custom.crop;
 
 import com.kmek.minecafe.block.ModBlocksInit;
-import com.kmek.minecafe.item.ModItemsInit;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;

@@ -6,7 +6,7 @@ public enum FoodVariants {
     SWEET_BERRY, GLOW_BERRY, WATERMELON, CHORUS_FRUIT,
 
     // Sweet variants
-    VANILLA, CHOCOLATE, CARAMEL, PUMPKIN_SPICE, HONEY, BROWN_SUGAR,
+    /*VANILLA,*/ CHOCOLATE, CARAMEL, PUMPKIN_SPICE, HONEY, BROWN_SUGAR,
 
     // Flowery
     ROSE, BUTTERFLY_PEA, LAVENDER, MATCHA,
@@ -27,46 +27,54 @@ public enum FoodVariants {
     FIG,
 
     // To be implemented as growable crops eventually
+
+    // todo tree crop to add
     GRAPE,
     KIWI,
-    PINEAPPLE,
     DRAGON_FRUIT,
     PASSION_FRUIT,
     POMEGRANATE,
-    COCONUT,
-    HONEYDEW_MELON,
+    COCONUT, // (special tree one day?)
     MANGOSTEEN,
     MONKFRUIT,
     STARFRUIT,
-    STRAWBERRY,
-    WHITE_STRAWBERRY,
+    ACAI,
+
+    // todo Bush crop
     RASPBERRY,
     BLUEBERRY,
     CRANBERRY,
-    ACAI,
     GOOSEBERRY,
     KIWIBERRY,
 
+    // todo 1 block Crop (custom art)
+    STRAWBERRY,
+    WHITE_STRAWBERRY,
+    PINEAPPLE,
     ALOE_VERA,
+    MINT,
+    VANILLA,
 
-    CINNAMON, MINT,
-
-    // Nuts
     PECAN,
-    PEANUT,
-    ALMOND;
+//    PEANUT, // eventually
+//    ALMOND, // eventually
+
+    // todo Pumpkin-style crop and block
+    HONEYDEW_MELON,
+
+    // todo Full size tree?
+    CINNAMON;
 
     public static final FoodVariants[] fruits = { APPLE, ORANGE, LEMON, LIME, AVOCADO, LYCHEE, BANANA, MANGO, CHERRY,
             PEACH, PEAR, PLUM, FIG, GRAPE, KIWI, PINEAPPLE, DRAGON_FRUIT, PASSION_FRUIT,
-            POMEGRANATE, COCONUT, /*DATE,*/ HONEYDEW_MELON, MANGOSTEEN, MONKFRUIT,
-            STARFRUIT, /*PAPAYA, GUAVA, SOURSOP, CUSTARD_APPLE, SALAK, EGG_FRUIT,*/
-            STRAWBERRY, WHITE_STRAWBERRY, RASPBERRY, BLUEBERRY, CRANBERRY, ACAI, GOOSEBERRY, KIWIBERRY,
-            /*VANILLA_BEAN_RAW,*/ ALOE_VERA };
+            POMEGRANATE, COCONUT, HONEYDEW_MELON, MANGOSTEEN, MONKFRUIT,
+            STARFRUIT, STRAWBERRY, WHITE_STRAWBERRY, RASPBERRY, BLUEBERRY, CRANBERRY, ACAI, GOOSEBERRY, KIWIBERRY,
+            ALOE_VERA };
 
     public static final FoodVariants[] treeCrops = {APPLE, ORANGE, LEMON, LIME, AVOCADO, LYCHEE, BANANA, MANGO, CHERRY, PEACH,
-            PEAR, PLUM, FIG/*, DRAGON_FRUIT, EGG_FRUIT, GRAPE, KIWI, MANGOSTEEN, PAPAYA, PASSION_FRUIT, POMEGRANATE*/};
+            PEAR, PLUM, FIG/*, DRAGON_FRUIT, EGG_FRUIT, GRAPE, KIWI, MANGOSTEEN, PAPAYA, PASSION_FRUIT, POMEGRANATE, ACAI*/};
 
-    public static final FoodVariants[] bushCrops = {STRAWBERRY, WHITE_STRAWBERRY, RASPBERRY, BLUEBERRY, CRANBERRY, PINEAPPLE/*, GRAPE?*/};
+    public static final FoodVariants[] bushCrops = {RASPBERRY, BLUEBERRY, CRANBERRY, GOOSEBERRY, KIWIBERRY};
 
     public static final FoodVariants[] juices = {APPLE, ORANGE, LEMON, LIME, LYCHEE, MANGO, CHERRY, PEACH,
             PEAR, PLUM, FIG, SWEET_BERRY, WATERMELON, GLOW_BERRY, CHORUS_FRUIT, CARROT, POTATO, BEETROOT/*,

@@ -1,6 +1,7 @@
-package com.kmek.minecafe.block;
+package com.kmek.minecafe.block.custom;
 
-import com.kmek.minecafe.block.entity.VaseBlockEntity;
+import com.kmek.minecafe.block.CustomVoxelMenuEntityBlock;
+import com.kmek.minecafe.block.entity.CakeStandBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -13,15 +14,16 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 
-public class VaseBlock extends CustomVoxelMenuEntityBlock<VaseBlockEntity> {
-    public VaseBlock(BlockBehaviour.Properties properties) {
+public class CakeStandBlock extends CustomVoxelMenuEntityBlock<CakeStandBlockEntity> {
+    public CakeStandBlock(BlockBehaviour.Properties properties) {
         super(properties, false);
     }
 
     @Override
     public VoxelShape makeShape() {
         VoxelShape shape = Shapes.empty();
-        shape = Shapes.join(shape, Shapes.box(0.3125, 0, 0.3125, 0.6875, 0.4375, 0.6875), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.3125, 0, 0.3125, 0.6875, 0.3125, 0.6875), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.1875, 0.3125, 0.1875, 0.8125, 0.375, 0.8125), BooleanOp.OR);
         return shape;
     }
 
@@ -37,11 +39,11 @@ public class VaseBlock extends CustomVoxelMenuEntityBlock<VaseBlockEntity> {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new VaseBlockEntity(pos, state);
+        return new CakeStandBlockEntity(pos, state);
     }
 
     @Override
     protected boolean isBlockEntity(BlockEntity blockEntity) {
-        return blockEntity instanceof VaseBlockEntity;
+        return blockEntity instanceof CakeStandBlockEntity;
     }
 }

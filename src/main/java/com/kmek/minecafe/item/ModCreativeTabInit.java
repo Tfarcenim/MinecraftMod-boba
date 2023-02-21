@@ -98,7 +98,8 @@ public class ModCreativeTabInit {
 
         // Seeds
         output.accept(ModBlocksInit.APPLE_CROP_BOTTOM.get());
-        ModBlocksInit.FRUIT_CROPS.stream().forEach(reg -> output.accept(reg.get()));
+        ModBlocksInit.FRUIT_TREE_CROPS.stream().forEach(reg -> output.accept(reg.get()));
+        ModBlocksInit.FRUIT_BUSH_CROPS.stream().forEach(reg -> output.accept(reg.get()));
         output.accept(ModBlocksInit.CASSAVA_CROP.get());
         output.accept(ModBlocksInit.COFFEE_CROP_BOTTOM.get());
     }

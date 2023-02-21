@@ -97,16 +97,15 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
     public static final List<RegistryObject<Item>> CREAMS = Arrays.stream(new String[]{
                     "rose",
-                    "raspberry", "strawberry", "apple", "watermelon", "sweet_berry", "cherry", "pomegranate", "cranberry",
-                    "orange", "peach", "glow_berry", "mango", "gooseberry",
-                    "honey", "banana", "lemon", "pear", "pineapple", "passion_fruit", "starfruit",
-                    "matcha", "lime", "grape", "kiwi", "honeydew_melon",
+                    "raspberry", "strawberry", "apple", "cherry", "watermelon", "sweet_berry", "pomegranate", "cranberry",
+                    "orange", "peach", "glow_berry", "gooseberry", "mango", "passion_fruit",
+                     "banana", "lemon", "honey", "pineapple", "starfruit",
+                    "honeydew_melon", "kiwi", "grape", "lime", "matcha",
                     "blueberry",
                     "chorus_fruit", "plum", "fig", "acai",
-                    "chocolate", "coffee", "caramel", "cinnamon",
-                    "vanilla", "coconut", "lychee", "dragon_fruit", "mangosteen",
-            })
-            .map(str -> ITEMS.register(str + "_cream", () -> new Item(new Item.Properties().food(
+                    "chocolate", "coffee", "cinnamon", "caramel", "pear",
+                    "dragon_fruit", "vanilla", "coconut", "lychee", "mangosteen",
+            }).map(str -> ITEMS.register(str + "_cream", () -> new Item(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())))
             ).toList();
     // Jams

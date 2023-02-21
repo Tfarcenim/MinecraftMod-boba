@@ -1,10 +1,8 @@
 package com.kmek.minecafe.block;
 
 import com.kmek.minecafe.MineCafeMod;
-import com.kmek.minecafe.block.crop.CassavaCropBlock;
-import com.kmek.minecafe.block.crop.CropTreeBottomBlock;
-import com.kmek.minecafe.block.crop.CropTreeTopBlock;
-import com.kmek.minecafe.block.crop.FlowerCropBlock;
+import com.kmek.minecafe.block.custom.*;
+import com.kmek.minecafe.block.custom.crop.*;
 import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.ModItemsInit;
 import com.kmek.minecafe.item.registery.FoodVariants;
@@ -73,7 +71,8 @@ public class ModBlocksInit {
     // Create two block crop with seed block
     private static RegistryObject<Block> registerDoubleCropBlockItem(String cropName, String seedName, String fruitName, int resetAge) {
         RegistryObject<Block> bottom = registerItemNameBlockItem(cropName + "_crop_bottom", seedName,
-                () -> new CropTreeBottomBlock(cropName + "_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(1f).sound(SoundType.GRASS)));
+                () -> new CropTreeBottomBlock(cropName + "_crop_top",
+                        BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(1f).sound(SoundType.GRASS)));
         RegistryObject<Block> top = BLOCKS.register(cropName + "_crop_top",
                 () -> new CropTreeTopBlock(bottom.get(), fruitName, resetAge,
                         BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(0.5f).sound(SoundType.GRASS)));
@@ -81,7 +80,8 @@ public class ModBlocksInit {
     }
     private static RegistryObject<Block> registerDoubleCropBlockItem(String cropName, String seedName, Item fruitItem, int resetAge) {
         RegistryObject<Block> bottom = registerItemNameBlockItem(cropName + "_crop_bottom", seedName,
-                () -> new CropTreeBottomBlock(cropName + "_crop_top", BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(1f).sound(SoundType.GRASS)));
+                () -> new CropTreeBottomBlock(cropName + "_crop_top",
+                        BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(1f).sound(SoundType.GRASS)));
         RegistryObject<Block> top = BLOCKS.register(cropName + "_crop_top",
                 () -> new CropTreeTopBlock(bottom.get(), fruitItem, resetAge,
                         BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(0.5f).sound(SoundType.GRASS)));
@@ -90,6 +90,14 @@ public class ModBlocksInit {
     // Create fruit tree blocks and seed item
     private static RegistryObject<Block> registerFruitTree(String fruitName) {
         return registerDoubleCropBlockItem(fruitName, fruitName + "_seeds", "item.minecafe." + fruitName, 5);
+    }
+
+    // Create fruit bush block and seed item
+    private static RegistryObject<Block> registerFruitBush(String fruitName, int resetAge) {
+        return registerItemNameBlockItem(fruitName + "_bush_crop", fruitName + "_seeds",
+                () -> new BushCrop("item.minecafe." + fruitName, resetAge,
+                        BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(1f).sound(SoundType.GRASS)));
+
     }
 
     /**
@@ -111,14 +119,18 @@ public class ModBlocksInit {
     // Cassava
     public static final RegistryObject<Block> CASSAVA_CROP = compostable(0.5F, registerItemNameBlockItem("cassava_crop", "cassava_cutting",
             () -> new CassavaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT))));
+    public static final List<RegistryObject<Block>> FRUIT_BUSH_CROPS = Arrays.stream(FoodVariants.bushCrops)
+            .map(fruit -> compostable(0.65F, registerFruitBush(fruit.toString(), 7)))
+            .toList();
+
     /**
-     * Double Block Crops
+     * Double Block Crops (+ Seed Items)
      */
     public static final RegistryObject<Block> COFFEE_CROP_BOTTOM = compostable(0.5F,
             registerDoubleCropBlockItem("coffee", "coffee_beans_unroasted", "item.minecafe.coffee_cherries", 7));
     // Fruits
     public static final RegistryObject<Block> APPLE_CROP_BOTTOM = compostable(0.5F, registerDoubleCropBlockItem("apple", "apple_seeds", Items.APPLE, 5));
-    public static final List<RegistryObject<Block>> FRUIT_CROPS = Arrays.stream(FoodVariants.treeCrops)
+    public static final List<RegistryObject<Block>> FRUIT_TREE_CROPS = Arrays.stream(FoodVariants.treeCrops)
             .filter(fruit -> fruit != FoodVariants.APPLE)
             .map(fruit -> compostable(0.65F, registerFruitTree(fruit.toString())))
             .toList();

@@ -1,4 +1,4 @@
-package com.kmek.minecafe.block;
+package com.kmek.minecafe.block.custom;
 
 import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.block.entity.ModBlockEntities;

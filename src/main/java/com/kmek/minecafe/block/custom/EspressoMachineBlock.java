@@ -1,5 +1,6 @@
-package com.kmek.minecafe.block;
+package com.kmek.minecafe.block.custom;
 
+import com.kmek.minecafe.block.CustomVoxelMenuEntityBlock;
 import com.kmek.minecafe.block.entity.EspressoMachineBlockEntity;
 import com.kmek.minecafe.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;

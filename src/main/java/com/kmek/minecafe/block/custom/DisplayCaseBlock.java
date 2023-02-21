@@ -1,5 +1,6 @@
-package com.kmek.minecafe.block;
+package com.kmek.minecafe.block.custom;
 
+import com.kmek.minecafe.block.CustomMenuEntityBlock;
 import com.kmek.minecafe.block.entity.DisplayCaseBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;

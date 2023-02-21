@@ -1,4 +1,4 @@
-package com.kmek.minecafe.block.crop;
+package com.kmek.minecafe.block.custom.crop;
 
 import com.kmek.minecafe.item.ModItemsInit;
 import net.minecraft.core.BlockPos;
@@ -114,7 +114,7 @@ public class CropTreeTopBlock extends BushBlock implements BonemealableBlock {
         } else if (age == 15) {
             int j = 1 + pLevel.random.nextInt(2);
             popResource(pLevel, pPos, new ItemStack(getFruit(), j));
-            pLevel.playSound((Player)null, pPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + pLevel.random.nextFloat() * 0.4F);
+            pLevel.playSound(null, pPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + pLevel.random.nextFloat() * 0.4F);
             BlockState blockstate = pState.setValue(AGE, Integer.valueOf(resetAge));
             pLevel.setBlock(pPos, blockstate, 2);
             pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(pPlayer, blockstate));
