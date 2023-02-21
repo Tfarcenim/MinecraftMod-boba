@@ -101,6 +101,7 @@ public class ModCreativeTabInit {
         ModBlocksInit.FRUIT_TREE_CROPS.stream().forEach(reg -> output.accept(reg.get()));
         ModBlocksInit.FRUIT_BUSH_CROPS.stream().forEach(reg -> output.accept(reg.get()));
         output.accept(ModBlocksInit.CASSAVA_CROP.get());
+        ModBlocksInit.TILLED_CROPS.stream().forEach(reg -> output.accept(reg.get()));
         output.accept(ModBlocksInit.COFFEE_CROP_BOTTOM.get());
     }
     private void acceptFlowerSeeds(CreativeModeTab.Output output) {

@@ -206,7 +206,7 @@ public class ModItemsInit {
                     "honey_pie_slice",
                     "cookies_and_cream_pie_slice",
                     "peanut_butter_pie_slice",
-                    "grasshopper_pie_slice",
+//                    "grasshopper_pie_slice",
                     "turtle_pie_slice",
                     "key_lime_pie_slice",
                     "chess_pie_slice",
