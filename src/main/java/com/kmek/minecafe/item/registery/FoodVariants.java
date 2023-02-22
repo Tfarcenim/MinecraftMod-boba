@@ -46,6 +46,7 @@ public enum FoodVariants {
     CRANBERRY,
     GOOSEBERRY,
     KIWIBERRY,
+    // BLACKBERRY,
 
     // todo 1 block Crop (custom art)
     STRAWBERRY,

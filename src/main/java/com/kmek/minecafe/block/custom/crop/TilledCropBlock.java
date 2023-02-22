@@ -1,6 +1,5 @@
 package com.kmek.minecafe.block.custom.crop;
 
-import com.kmek.minecafe.block.ModBlocksInit;
 import com.kmek.minecafe.item.ModItemsInit;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -16,12 +15,12 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Optional;
 
-public class CustomCropBlock extends CropBlock {
+public class TilledCropBlock extends CropBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
 
     private final String seedName;
 
-    public CustomCropBlock(String seedName, BlockBehaviour.Properties properties) {
+    public TilledCropBlock(String seedName, BlockBehaviour.Properties properties) {
         super(properties);
         this.seedName = seedName;
     }
