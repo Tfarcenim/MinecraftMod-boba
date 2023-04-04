@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "minecafe:block/palm_tree_crop_b0"
+  },
+  "render_type": "cutout"
+}
