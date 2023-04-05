@@ -13,9 +13,13 @@
     "minecafe:oxeye_daisy_seeds",
     "minecafe:cornflower_seeds",
     "minecafe:lily_of_the_valley_seeds",
+    "minecafe:vanilla_seeds",
 
     "minecafe:cassava_cutting",
     "minecafe:coffee_beans_unroasted",
+    "minecafe:strawberry_seeds",
+    "minecafe:white_strawberry_seeds",
+    "minecafe:pineapple_seeds",
 
     "minecafe:apple_seeds",
     "minecafe:orange_seeds",
@@ -29,6 +33,16 @@
     "minecafe:peach_seeds",
     "minecafe:pear_seeds",
     "minecafe:plum_seeds",
-    "minecafe:fig_seeds"
+    "minecafe:fig_seeds",
+    "minecafe:grape_seeds",
+    "minecafe:kiwi_seeds",
+    "minecafe:dragon_fruit_seeds",
+    "minecafe:passion_fruit_seeds",
+    "minecafe:pomegranate_seeds",
+    "minecafe:coconut_seeds",
+    "minecafe:mangosteen_seeds",
+    "minecafe:monkfruit_seeds",
+    "minecafe:starfruit_seeds",
+    "minecafe:acai_seeds"
   ]
 }

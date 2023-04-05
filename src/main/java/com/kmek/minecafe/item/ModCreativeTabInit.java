@@ -106,6 +106,8 @@ public class ModCreativeTabInit {
     }
     private void acceptFlowerSeeds(CreativeModeTab.Output output) {
         ModBlocksInit.FLOWER_CROPS.forEach(reg -> output.accept(reg.get()));
+        output.accept(ModBlocksInit.VANILLA_CROP.get());
+        output.accept(ModBlocksInit.VANILLA_FLOWER.get());
     }
 
     /*****************************************************************************************************************

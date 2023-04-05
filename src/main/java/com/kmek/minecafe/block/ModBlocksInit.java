@@ -6,14 +6,12 @@ import com.kmek.minecafe.block.custom.crop.*;
 import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.ModItemsInit;
 import com.kmek.minecafe.item.registery.FoodVariants;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -112,6 +110,11 @@ public class ModBlocksInit {
                         () -> new FlowerCropBlock(flowerName + "_seeds", block, BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ))));
                 return flowerCropBlock;
             }).toList();
+    // Vanilla Flower + Crop
+    public static final RegistryObject<Block> VANILLA_FLOWER = compostable(0.5F, registerBlockItem("vanilla_flower",
+            () -> new FlowerBlock(MobEffects.SATURATION, 3, BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ))));
+    public static final RegistryObject<Block> VANILLA_CROP = compostable(0.6F, registerItemNameBlockItem("vanilla_crop", "vanilla_seeds",
+            () -> new FlowerCropBlock("vanilla_seeds", VANILLA_FLOWER.get(), BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ))));
 
     /**
      * Single Block Crops

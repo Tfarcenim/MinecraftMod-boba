@@ -78,7 +78,7 @@ public enum FoodVariants {
 
     public static final FoodVariants[] bushCrops = { RASPBERRY, BLUEBERRY, CRANBERRY, GOOSEBERRY, KIWIBERRY };
 
-    public static final FoodVariants[] tilledCrops = { STRAWBERRY, WHITE_STRAWBERRY, PINEAPPLE, VANILLA };
+    public static final FoodVariants[] tilledCrops = { STRAWBERRY, WHITE_STRAWBERRY, PINEAPPLE };
 
     public static final FoodVariants[] juices = { APPLE, ORANGE, LEMON, LIME, LYCHEE, MANGO, CHERRY, PEACH,
             PEAR, PLUM, FIG, SWEET_BERRY, WATERMELON, GLOW_BERRY, CHORUS_FRUIT, CARROT, POTATO, BEETROOT/*,
