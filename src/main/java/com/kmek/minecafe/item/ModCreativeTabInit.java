@@ -149,6 +149,7 @@ public class ModCreativeTabInit {
 
         output.accept(ModItemsInit.GRAHAM_CRACKER.get());
         output.accept(ModItemsInit.PIE_CRUST.get());
+        output.accept(ModItemsInit.CANNOLI_SHELL.get());
     }
 
     private void acceptJams(CreativeModeTab.Output output) {
@@ -232,6 +233,7 @@ public class ModCreativeTabInit {
         acceptCake(output);
         acceptPie(output);
         acceptPudding(output);
+        acceptCannolis(output);
         acceptMiscFoodItems(output);
         acceptCandy(output);
         acceptSmores(output);
@@ -262,7 +264,6 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.CASSAVA_BIBINGKA.get());
         acceptCheesecake(output);
     }
-
     private void acceptCheesecake(CreativeModeTab.Output output) {
         ModItemsInit.CHEESECAKES.forEach(reg -> output.accept(reg.get()));
     }
@@ -291,6 +292,10 @@ public class ModCreativeTabInit {
 
     private void acceptSmores(CreativeModeTab.Output output) {
         ModItemsInit.SMORES.forEach(reg -> output.accept(reg.get()));
+    }
+
+    private void acceptCannolis(CreativeModeTab.Output output) {
+        ModItemsInit.CANNOLIS.forEach(reg -> output.accept(reg.get()));
     }
 
     /*****************************************************************************************************************

@@ -279,6 +279,21 @@ public class ModItemsInit {
             .map(str -> ITEMS.register("smore_" + str, () -> new Item(new Item.Properties().food(
                         new FoodProperties.Builder().nutrition(5).saturationMod(2f).build())))
             ).toList();
+    // Cannolis
+    public static final RegistryObject<Item> CANNOLI_SHELL = ITEMS.register("cannoli_shell", () -> new Item(new Item.Properties()));
+    public static final List<RegistryObject<Item>> CANNOLIS = Arrays.stream(new String[]{
+            "rose",
+            "raspberry", "strawberry", "apple", "cherry", "watermelon", "sweet_berry", "pomegranate", "cranberry",
+            "orange", "peach", "glow_berry", "gooseberry", "mango", "passion_fruit",
+            "banana", "lemon", "honey", "pineapple", "starfruit",
+            "honeydew_melon", "kiwi", "grape", "lime", "matcha",
+            "blueberry",
+            "chorus_fruit", "plum", "fig",
+            "chocolate", "coffee", "cinnamon", "caramel", "pear",
+            "dragon_fruit", "vanilla", "coconut", "lychee", "mangosteen",
+    }).map(str -> ITEMS.register(str + "_cannoli", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(2).saturationMod(0.5f).build())))
+    ).toList();
 
     /**
      * Bubble Milk Teas
