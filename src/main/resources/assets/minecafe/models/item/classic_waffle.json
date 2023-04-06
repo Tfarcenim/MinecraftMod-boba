@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/classic_waffle"
+    "layer0": "minecafe:item/waffles/classic_waffle"
   }
 }

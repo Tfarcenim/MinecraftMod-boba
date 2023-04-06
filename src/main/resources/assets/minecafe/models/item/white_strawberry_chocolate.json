@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/white_strawberry_chocolate"
+    "layer0": "minecafe:item/candy/white_strawberry_chocolate"
   }
 }

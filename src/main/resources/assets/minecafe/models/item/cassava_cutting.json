@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/cassava_cutting"
+    "layer0": "minecafe:item/seeds/cassava_cutting"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/lemon_juice"
+    "layer0": "minecafe:item/juices/lemon_juice"
   }
 }

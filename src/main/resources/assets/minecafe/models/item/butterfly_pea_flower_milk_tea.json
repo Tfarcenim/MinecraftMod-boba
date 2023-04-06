@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/butterfly_pea_flower_milk_tea"
+    "layer0": "minecafe:item/milk_teas/butterfly_pea_flower_milk_tea"
   }
 }

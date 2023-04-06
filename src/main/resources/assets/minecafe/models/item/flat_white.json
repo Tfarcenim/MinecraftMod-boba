@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/flat_white"
+    "layer0": "minecafe:item/coffees/flat_white"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:block/vanilla_flower"
+    "layer0": "minecafe:block/flower/vanilla_flower"
   }
 }

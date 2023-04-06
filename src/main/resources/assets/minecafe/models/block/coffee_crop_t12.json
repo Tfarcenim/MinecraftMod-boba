@@ -1,7 +1,0 @@
-{
-  "parent": "minecafe:block/fruit_tree_crop",
-  "textures": {
-    "leaves": "minecafe:block/coffee_crop_t10",
-    "decoration": "minecafe:block/coffee_crop_t12"
-  }
-}

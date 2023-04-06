@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=north": {
-      "model": "minecafe:block/coffee_machine"
+      "model": "minecafe:block/crafting/coffee_machine"
     },
     "facing=south": {
-      "model": "minecafe:block/coffee_machine",
+      "model": "minecafe:block/crafting/coffee_machine",
       "y": 180
     },
     "facing=west": {
-      "model": "minecafe:block/coffee_machine",
+      "model": "minecafe:block/crafting/coffee_machine",
       "y": 270
     },
     "facing=east": {
-      "model": "minecafe:block/coffee_machine",
+      "model": "minecafe:block/crafting/coffee_machine",
       "y": 90
     }
   }

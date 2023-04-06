@@ -115,6 +115,8 @@ public class ModBlocksInit {
             () -> new FlowerBlock(MobEffects.SATURATION, 3, BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ))));
     public static final RegistryObject<Block> VANILLA_CROP = compostable(0.6F, registerItemNameBlockItem("vanilla_crop", "vanilla_seeds",
             () -> new FlowerCropBlock("vanilla_seeds", VANILLA_FLOWER.get(), BlockBehaviour.Properties.copy(Blocks.WHEAT).offsetType(BlockBehaviour.OffsetType.XZ))));
+    // todo make vanilla orchid potted
+    // todo follow adding a flower youtube guide? making it spawnable with bonemeal possibly? adding to tags?
 
     /**
      * Single Block Crops

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/coffee_beans_unroasted"
+    "layer0": "minecafe:item/coffees/coffee_beans_unroasted"
   }
 }

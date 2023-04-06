@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/monkfruit_sweetener"
+    "layer0": "minecafe:item/ingredients/monkfruit_sweetener"
   }
 }

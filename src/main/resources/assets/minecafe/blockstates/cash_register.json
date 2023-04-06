@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=north": {
-      "model": "minecafe:block/cash_register"
+      "model": "minecafe:block/decorative/cash_register"
     },
     "facing=south": {
-      "model": "minecafe:block/cash_register",
+      "model": "minecafe:block/decorative/cash_register",
       "y": 180
     },
     "facing=west": {
-      "model": "minecafe:block/cash_register",
+      "model": "minecafe:block/decorative/cash_register",
       "y": 270
     },
     "facing=east": {
-      "model": "minecafe:block/cash_register",
+      "model": "minecafe:block/decorative/cash_register",
       "y": 90
     }
   }

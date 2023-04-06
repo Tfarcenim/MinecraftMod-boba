@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/batter_mess"
+    "layer0": "minecafe:item/ingredients/batter_mess"
   }
 }

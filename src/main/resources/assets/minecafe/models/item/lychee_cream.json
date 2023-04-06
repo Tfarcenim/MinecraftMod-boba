@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/lychee_cream"
+    "layer0": "minecafe:item/creams/lychee_cream"
   }
 }

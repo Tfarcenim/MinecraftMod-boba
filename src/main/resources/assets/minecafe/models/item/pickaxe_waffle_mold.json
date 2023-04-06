@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/pickaxe_waffle_mold"
+    "layer0": "minecafe:item/waffles/pickaxe_waffle_mold"
   }
 }

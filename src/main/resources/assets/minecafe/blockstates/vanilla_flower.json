@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "minecafe:block/vanilla_flower"
+      "model": "minecafe:block/flower/vanilla_flower"
     }
   }
 }

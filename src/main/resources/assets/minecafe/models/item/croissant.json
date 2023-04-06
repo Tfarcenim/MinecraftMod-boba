@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/croissant"
+    "layer0": "minecafe:item/breads/croissant"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/darkside_milk_tea"
+    "layer0": "minecafe:item/milk_teas/darkside_milk_tea"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/mangosteen_seeds"
+    "layer0": "minecafe:item/seeds/mangosteen_seeds"
   }
 }
