@@ -283,10 +283,17 @@ public class ModCreativeTabInit {
     }
 
     private void acceptMiscFoodItems(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.BROWNIE.get());
+//        output.accept(ModItemsInit.BROWNIE.get());
+//        output.accept(ModItemsInit.COOKIE_BROWNIE.get());
+//        output.accept(ModItemsInit.CARAMEL_BROWNIE.get());
+//        output.accept(ModItemsInit.CHEESECAKE_BROWNIE.get());
+//        output.accept(ModItemsInit.BLONDIE_BROWNIE.get());
+        ModItemsInit.BROWNIES.forEach(reg -> output.accept(reg.get()));
+
         output.accept(ModItemsInit.LEMON_BAR.get());
         output.accept(ModItemsInit.SOPAIPILLA_CHEESECAKE_BAR.get());
         output.accept(ModItemsInit.FIG_NEWTON.get());
+
         output.accept(ModItemsInit.MACAROON.get()); // Eventually move to cookies section
     }
 
