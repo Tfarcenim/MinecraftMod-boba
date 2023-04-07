@@ -281,16 +281,6 @@ public class ModItemsInit {
             .map(str -> ITEMS.register(str, () -> new Item(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())))
             ).toList();
-//    public static final RegistryObject<Item> BROWNIE = ITEMS.register("brownie", () -> new Item(new Item.Properties().food(
-//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-//    public static final RegistryObject<Item> COOKIE_BROWNIE = ITEMS.register("cookie_brownie", () -> new Item(new Item.Properties().food(
-//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-//    public static final RegistryObject<Item> CARAMEL_BROWNIE = ITEMS.register("caramel_brownie", () -> new Item(new Item.Properties().food(
-//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-//    public static final RegistryObject<Item> CHEESECAKE_BROWNIE = ITEMS.register("cheesecake_brownie", () -> new Item(new Item.Properties().food(
-//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-//    public static final RegistryObject<Item> BLONDIE_BROWNIE = ITEMS.register("blondie_brownie", () -> new Item(new Item.Properties().food(
-//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
     public static final RegistryObject<Item> LEMON_BAR = ITEMS.register("lemon_bar", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
     public static final RegistryObject<Item> SOPAIPILLA_CHEESECAKE_BAR = ITEMS.register("sopaipilla_cheesecake_bar", () -> new Item(new Item.Properties().food(

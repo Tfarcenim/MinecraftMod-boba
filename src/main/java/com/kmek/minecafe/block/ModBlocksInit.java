@@ -126,8 +126,8 @@ public class ModBlocksInit {
             () -> new TilledCropBlock("item.minecafe.cassava_cutting", BlockBehaviour.Properties.copy(Blocks.WHEAT))));
     // Tilled Crops
     public static final List<RegistryObject<Block>> TILLED_CROPS = Arrays.stream(FoodVariants.tilledCrops)
-            .map(fruit -> compostable(0.65F, registerItemNameBlockItem(fruit + "_crop", fruit + "_seeds",
-                    () -> new TilledCropBlock("item.minecafe." + fruit + "_seeds", BlockBehaviour.Properties.copy(Blocks.WHEAT)))))
+            .map(fruit -> asCutout(compostable(0.65F, registerItemNameBlockItem(fruit + "_crop", fruit + "_seeds",
+                    () -> new TilledCropBlock("item.minecafe." + fruit + "_seeds", BlockBehaviour.Properties.copy(Blocks.WHEAT))))))
             .toList();
     // Bush Fruit Crops
     public static final List<RegistryObject<Block>> FRUIT_BUSH_CROPS = Arrays.stream(FoodVariants.bushCrops)
