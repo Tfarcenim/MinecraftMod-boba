@@ -242,6 +242,8 @@ public class ModCreativeTabInit {
     private void acceptBreads(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.CROISSANT.get());
         output.accept(ModItemsInit.BAGUETTE.get());
+        output.accept(ModItemsInit.BANANA_BREAD.get());
+        output.accept(ModItemsInit.PUMPKIN_BREAD.get());
         // Accept buns
     }
 
@@ -262,6 +264,8 @@ public class ModCreativeTabInit {
 
     private void acceptCake(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.CASSAVA_BIBINGKA.get());
+        output.accept(ModItemsInit.COFFEE_CAKE.get());
+        output.accept(ModItemsInit.TIRAMISU.get());
         acceptCheesecake(output);
     }
     private void acceptCheesecake(CreativeModeTab.Output output) {
@@ -280,10 +284,14 @@ public class ModCreativeTabInit {
 
     private void acceptMiscFoodItems(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.BROWNIE.get());
+        output.accept(ModItemsInit.LEMON_BAR.get());
+        output.accept(ModItemsInit.SOPAIPILLA_CHEESECAKE_BAR.get());
         output.accept(ModItemsInit.FIG_NEWTON.get());
+        output.accept(ModItemsInit.MACAROON.get()); // Eventually move to cookies section
     }
 
     private void acceptCandy(CreativeModeTab.Output output) {
+        output.accept(ModItemsInit.CHOCOLATE_BANANA.get());
         output.accept(ModItemsInit.STRAWBERRY_CHOCOLATE.get());
         output.accept(ModItemsInit.WHITE_STRAWBERRY_CHOCOLATE.get());
         output.accept(ModItemsInit.CARAMEL_APPLE.get());

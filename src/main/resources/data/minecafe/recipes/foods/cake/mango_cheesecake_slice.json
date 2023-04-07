@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": { "item": "minecafe:mango" },
+    "R": { "item": "minecafe:cheesecake_slice" }
+  },
+  "pattern": [
+    "B",
+    "R"
+  ],
+  "result": {
+    "item": "minecafe:mango_cheesecake_slice"
+  }
+}

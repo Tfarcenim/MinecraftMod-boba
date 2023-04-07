@@ -294,14 +294,23 @@
 
   "item.minecafe.croissant": "Croissant",
   "item.minecafe.baguette": "Baguette",
+  "item.minecafe.banana_bread": "Banana Bread",
+  "item.minecafe.pumpkin_bread": "Pumpkin Bread",
 
   "item.minecafe.caramel_apple": "Caramel Apple",
   "item.minecafe.strawberry_chocolate": "Chocolate Dipped Strawberry",
   "item.minecafe.white_strawberry_chocolate": "Chocolate Dipped White Strawberry",
+  "item.minecafe.chocolate_banana": "Chocolate Dipped Banana",
+
+  "item.minecafe.brownie": "Brownie",
+  "item.minecafe.lemon_bar": "Lemon Bar",
+  "item.minecafe.sopaipilla_cheesecake_bar": "Sopaipilla Cheesecake Bar",
+  "item.minecafe.tiramisu": "Tiramisu",
+  "item.minecafe.fig_newton": "Fig Newton",
+  "item.minecafe.macaroon": "Macaroon",
+  "item.minecafe.coffee_cake": "Coffee Cake",
 
   "item.minecafe.flan": "Flan",
-  "item.minecafe.brownie": "Brownie",
-  "item.minecafe.fig_newton": "Fig Newton",
   "item.minecafe.figgy_pudding": "Figgy Pudding",
 
   "item.minecafe.apple_jam": "Apple Jam",
@@ -397,7 +406,21 @@
   "item.minecafe.smore_scorched": "Smores",
 
   "item.minecafe.cheesecake_slice": "Cheesecake",
+  "item.minecafe.banana_cheesecake_slice": "Banana Cheesecake",
+  "item.minecafe.blueberry_cheesecake_slice": "Blueberry Cheesecake",
+  "item.minecafe.cherry_cheesecake_slice": "Cherry Cheesecake",
+  "item.minecafe.coconut_cheesecake_slice": "Coconut Cheesecake",
+  "item.minecafe.coffee_cheesecake_slice": "Coffee Cheesecake",
+  "item.minecafe.kiwi_cheesecake_slice": "Kiwi Cheesecake",
+  "item.minecafe.lemon_cheesecake_slice": "Lemon Cheesecake",
+  "item.minecafe.mango_cheesecake_slice": "Mango Cheesecake",
+  "item.minecafe.peach_cheesecake_slice": "Peach Cheesecake",
+  "item.minecafe.raspberry_cheesecake_slice": "Raspberry Cheesecake",
 
+  "item.minecafe.apple_pie_slice": "Apple Pie",
+  "item.minecafe.blueberry_pie_slice": "Blueberry Pie",
+  "item.minecafe.cherry_pie_slice": "Cherry Pie",
+  "item.minecafe.strawberry_pie_slice": "Strawberry Pie",
   "item.minecafe.chocolate_chip_cookie_pie_slice": "Chocolate Chip Cookie Pie",
   "item.minecafe.brownie_pie_slice": "Brownie Pie",
   "item.minecafe.possum_pie_slice": "Possum Pie",

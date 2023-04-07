@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": { "tag": "forge:sugar" },
+    "C": { "item": "minecafe:cinnamon" },
+    "E": { "item": "minecraft:egg" },
+    "B": { "tag": "forge:butter" },
+    "W": { "item": "minecraft:wheat" }
+  },
+  "pattern": [
+    "SCS",
+    "EBE",
+    "WWW"
+  ],
+  "result": {
+    "item": "minecafe:coffee_cake",
+    "count": 4
+  }
+}
