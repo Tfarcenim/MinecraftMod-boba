@@ -94,7 +94,7 @@ public class ModBlocksInit {
     private static RegistryObject<Block> registerFruitBush(String fruitName, int resetAge) {
         return registerItemNameBlockItem(fruitName + "_bush_crop", fruitName + "_seeds",
                 () -> new BushCrop("item.minecafe." + fruitName, resetAge,
-                        BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(1f).sound(SoundType.GRASS)));
+                        BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(0.5f).sound(SoundType.GRASS)));
 
     }
 
@@ -131,7 +131,7 @@ public class ModBlocksInit {
             .toList();
     // Bush Fruit Crops
     public static final List<RegistryObject<Block>> FRUIT_BUSH_CROPS = Arrays.stream(FoodVariants.bushCrops)
-            .map(fruit -> compostable(0.65F, registerFruitBush(fruit.toString(), 7)))
+            .map(fruit -> compostable(0.65F, registerFruitBush(fruit.toString(), 3)))
             .toList();
 
     /**

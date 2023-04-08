@@ -15,7 +15,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
@@ -34,7 +33,7 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.Optional;
 
 public class BushCrop extends BushBlock implements BonemealableBlock {
-    public static final IntegerProperty AGE = BlockStateProperties.AGE_15;
+    public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
 
     private final String fruitName;
     private Item fruit = null;
@@ -64,7 +63,7 @@ public class BushCrop extends BushBlock implements BonemealableBlock {
 
     @Override
     public boolean isValidBonemealTarget(LevelReader pLevel, BlockPos pPos, BlockState pState, boolean pIsClient) {
-        return pState.getValue(AGE) < 15;
+        return pState.getValue(AGE) < 7;
     }
     @Override
     public boolean isBonemealSuccess(Level pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
@@ -77,14 +76,14 @@ public class BushCrop extends BushBlock implements BonemealableBlock {
     // Grow the crop
     private void grow(ServerLevel pLevel, BlockPos pPos, BlockState pState, int toAdd) {
         int age = pState.getValue(AGE);
-        if (age < 15) {
-            pLevel.setBlock(pPos, this.defaultBlockState().setValue(AGE, Math.min(15, age + toAdd)), 2);
+        if (age < 7) {
+            pLevel.setBlock(pPos, this.defaultBlockState().setValue(AGE, Math.min(7, age + toAdd)), 2);
         }
     }
 
     @Override
     public boolean isRandomlyTicking(BlockState pState) {
-        return pState.getValue(AGE) < 15;
+        return pState.getValue(AGE) < 7;
     }
     @Override
     public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
@@ -98,9 +97,9 @@ public class BushCrop extends BushBlock implements BonemealableBlock {
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         int age = pState.getValue(AGE);
-        if (age < 15 && pPlayer.getItemInHand(pHand).is(Items.BONE_MEAL)) {
+        if (age < 7 && pPlayer.getItemInHand(pHand).is(Items.BONE_MEAL)) {
             return InteractionResult.PASS;
-        } else if (age == 15) {
+        } else if (age == 7) {
             int j = 1 + pLevel.random.nextInt(2);
             popResource(pLevel, pPos, new ItemStack(getFruit(), j));
             pLevel.playSound(null, pPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + pLevel.random.nextFloat() * 0.4F);
@@ -112,12 +111,6 @@ public class BushCrop extends BushBlock implements BonemealableBlock {
             return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
         }
     }
-
-//    // Will break if bottom block is broken
-//    @Override
-//    protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
-////        return pLevel.getBlockState(pPos.above()).is(bottomBlock);
-//    }
 
     // Makes the block slow to walk through
     @Override

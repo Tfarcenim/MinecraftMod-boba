@@ -62,6 +62,11 @@
   "block.minecafe.pineapple_crop": "Pineapple Crop",
   "block.minecafe.strawberry_crop": "Strawberry Crop",
   "block.minecafe.white_strawberry_crop": "White Strawberry Crop",
+  "block.minecafe.blueberry_bush_crop": "Blueberry Bush",
+  "block.minecafe.cranberry_bush_crop": "Cranberry Bush",
+  "block.minecafe.gooseberry_bush_crop": "Gooseberry Bush",
+  "block.minecafe.kiwiberry_bush_crop": "Kiwiberry Bush",
+  "block.minecafe.raspberry_bush_crop": "Raspberry Bush",
 
   "item.minecafe.apple_seeds": "Apple Seeds",
   "block.minecafe.apple_crop_bottom": "Apple Tree",
