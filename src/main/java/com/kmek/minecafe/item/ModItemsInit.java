@@ -109,16 +109,30 @@ public class ModItemsInit {
                     new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())))
             ).toList();
     // Jams
-    public static final RegistryObject<Item> APPLE_JAM = ITEMS.register("apple_jam", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-    public static final RegistryObject<Item> CHORUS_FRUIT_JAM = ITEMS.register("chorus_fruit_jam", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-    public static final RegistryObject<Item> GLOW_BERRY_JAM = ITEMS.register("glow_berry_jam", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-    public static final RegistryObject<Item> SWEET_BERRY_JAM = ITEMS.register("sweet_berry_jam", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-    public static final RegistryObject<Item> WATERMELON_JAM = ITEMS.register("watermelon_jam", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
+    public static final List<RegistryObject<Item>> JAMS = Arrays.stream(new String[]{
+            "watermelon", "strawberry",
+            "sweet_berry", "cherry", "plum", "pomegranate", "mangosteen", "acai", "cranberry", "raspberry",
+            "fig", "gooseberry",
+            "peach", "orange", "apple", "pear", "mango", "grape", "passion_fruit",
+            "pineapple", "glow_berry", "lemon",
+            "lime", "kiwi",
+            "blueberry",
+            "chorus_fruit",
+            "dragon_fruit", "lychee",
+    }).map(str -> ITEMS.register(str + "_jam", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())))
+    ).toList();
+
+//    public static final RegistryObject<Item> APPLE_JAM = ITEMS.register("apple_jam", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
+//    public static final RegistryObject<Item> CHORUS_FRUIT_JAM = ITEMS.register("chorus_fruit_jam", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
+//    public static final RegistryObject<Item> GLOW_BERRY_JAM = ITEMS.register("glow_berry_jam", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
+//    public static final RegistryObject<Item> SWEET_BERRY_JAM = ITEMS.register("sweet_berry_jam", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
+//    public static final RegistryObject<Item> WATERMELON_JAM = ITEMS.register("watermelon_jam", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
     // Tea Crafting Ingredients
     public static final RegistryObject<Item> BOBA_PEARLS = ITEMS.register("boba_pearls", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder", () -> new Item(new Item.Properties()));

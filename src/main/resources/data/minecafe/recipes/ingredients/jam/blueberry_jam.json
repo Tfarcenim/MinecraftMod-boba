@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "minecafe:blueberry"
+    },
+    "S": {
+      "tag": "forge:sugar"
+    }
+  },
+  "pattern": [
+    "SFS"
+  ],
+  "result": {
+    "item": "minecafe:blueberry_jam"
+  }
+}

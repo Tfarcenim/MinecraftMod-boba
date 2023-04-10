@@ -120,8 +120,8 @@ public class ModCreativeTabInit {
         acceptCoreIngreidents(output);
 
         acceptCreams(output);
-        acceptMarshmallows(output);
         acceptJams(output);
+        acceptMarshmallows(output);
         acceptCoffeeIngredients(output);
         acceptMiscIngredients(output);
     }
@@ -153,11 +153,12 @@ public class ModCreativeTabInit {
     }
 
     private void acceptJams(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.APPLE_JAM.get());
-        output.accept(ModItemsInit.CHORUS_FRUIT_JAM.get());
-        output.accept(ModItemsInit.GLOW_BERRY_JAM.get());
-        output.accept(ModItemsInit.SWEET_BERRY_JAM.get());
-        output.accept(ModItemsInit.WATERMELON_JAM.get());
+        ModItemsInit.JAMS.forEach(reg -> output.accept(reg.get()));
+//        output.accept(ModItemsInit.APPLE_JAM.get());
+//        output.accept(ModItemsInit.CHORUS_FRUIT_JAM.get());
+//        output.accept(ModItemsInit.GLOW_BERRY_JAM.get());
+//        output.accept(ModItemsInit.SWEET_BERRY_JAM.get());
+//        output.accept(ModItemsInit.WATERMELON_JAM.get());
     }
 
     private void acceptCreams(CreativeModeTab.Output output) {
