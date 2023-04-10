@@ -2,7 +2,6 @@ package com.kmek.minecafe.integration;
 
 import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.block.ModBlocksInit;
-import com.kmek.minecafe.recipe.CoffeeMachineRecipe;
 import com.kmek.minecafe.recipe.JuicerRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;

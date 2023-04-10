@@ -4,6 +4,7 @@ import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.custom.*;
 import com.kmek.minecafe.item.registery.FoodVariants;
+import com.kmek.minecafe.registration.ItemDataLoader;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -17,10 +18,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ModItemsInit {
     /**
@@ -340,37 +338,13 @@ public class ModItemsInit {
     /**
      * Bubble Milk Teas
      */
-    // Very sweet
-    public static final RegistryObject<Item> BROWN_SUGAR_MILK_TEA = ITEMS.register("brown_sugar_milk_tea",
-            () -> new MilkTeaItem(2, 0.5f));
-    public static final RegistryObject<Item> TIGER_MILK_TEA = ITEMS.register("tiger_milk_tea",
-            () -> new MilkTeaItem(new Item.Properties().food(
-                    new FoodProperties.Builder().nutrition(2).saturationMod(0.5f)
-                            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 500, 0), 1.0f)
-                            .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 500, 0), 1.0f)
-                            .build()),
-                    Component.literal("Move like a tiger!").withStyle(ChatFormatting.YELLOW)));
-    public static final RegistryObject<Item> HONEY_MILK_TEA = ITEMS.register("honey_milk_tea",
-            () -> new MilkTeaItem(6, 0.5f));
-    public static final RegistryObject<Item> CHOCOLATE_MILK_TEA = ITEMS.register("chocolate_milk_tea",
-            () -> new MilkTeaItem(2, 0.6f));
-    public static final RegistryObject<Item> VANILLA_MILK_TEA = ITEMS.register("vanilla_milk_tea",
-            () -> new MilkTeaItem(2, 0.5f));
-    public static final RegistryObject<Item> EGG_CUSTARD_MILK_TEA = ITEMS.register("egg_custard_milk_tea",
-            () -> new MilkTeaItem(2, 0.5f));
-    public static final RegistryObject<Item> COOKIE_MILK_TEA = ITEMS.register("cookie_milk_tea",
-            () -> new MilkTeaItem(2, 0.5f));
-    public static final RegistryObject<Item> CAKE_MILK_TEA = ITEMS.register("cake_milk_tea",
-            () -> new MilkTeaItem(15, 2.9f));
-    public static final RegistryObject<Item> PUMPKIN_SPICE_MILK_TEA = ITEMS.register("pumpkin_spice_milk_tea",
-            () -> new MilkTeaItem(2, 0.6f));
-    // Fruit teas
-    public static final RegistryObject<Item> APPLE_MILK_TEA = ITEMS.register("apple_milk_tea",
-            () -> new MilkTeaItem(4, 2.5f));
-    public static final RegistryObject<Item> SWEET_BERRY_MILK_TEA = ITEMS.register("sweet_berry_milk_tea",
-            () -> new MilkTeaItem(2, 0.5f));
-    public static final RegistryObject<Item> WATERMELON_MILK_TEA = ITEMS.register("watermelon_milk_tea",
-            () -> new MilkTeaItem(2, 1.5f));
+    public static final List<RegistryObject<MilkTeaItem>> BOBA_MILK_TEAS = new ItemDataLoader("registration_data/boba_milk_teas.txt").read().stream().map(
+        args -> ITEMS.register(args.get(0) + "_milk_tea",
+                () -> new MilkTeaItem(
+                        Integer.parseInt(args.get(1)),
+                        Float.parseFloat(args.get(2))))
+    ).toList();
+    // Funky tea flavors with effects
     public static final RegistryObject<Item> GLOW_BERRY_MILK_TEA = ITEMS.register("glow_berry_milk_tea",
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(2).saturationMod(0.5f)
@@ -378,44 +352,6 @@ public class ModItemsInit {
                             .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300, 0), 1.0f)
                             .build()),
                     Component.literal("Glowing!").withStyle(ChatFormatting.YELLOW)));
-    public static final RegistryObject<Item> CHORUS_FRUIT_MILK_TEA = ITEMS.register("chorus_fruit_milk_tea",
-    //    todo (teleports you randomly? use ChorusFruitItem?)
-            () -> new MilkTeaItem(4, 2.5f));
-    public static final List<RegistryObject<MilkTeaItem>> FRUIT_MILK_TEAS = Arrays.stream(new String[]{
-            "raspberry", "strawberry",
-            "cherry", "pomegranate", "cranberry", "fig",
-            "peach", "orange", "gooseberry", "mango", "passion_fruit",
-            "pineapple", "starfruit", "lemon", "banana", "pear",
-            "lime", "kiwi", "grape",
-            "blueberry",
-            "plum", "mangosteen", "acai",
-            "coconut", "lychee", "dragon_fruit"
-        }).map(str -> ITEMS.register(str + "_milk_tea", () -> new MilkTeaItem(3, 2.5f))
-        ).toList();
-    // Floral
-    public static final RegistryObject<Item> ROSE_MILK_TEA = ITEMS.register("rose_milk_tea",
-            () -> new MilkTeaItem(3, 0.6f));
-    public static final RegistryObject<Item> BUTTERFLY_PEA_FLOWER_MILK_TEA = ITEMS.register("butterfly_pea_flower_milk_tea",
-            () -> new MilkTeaItem(3, 0.6f));
-    public static final RegistryObject<Item> MATCHA_MILK_TEA = ITEMS.register("matcha_milk_tea",
-            () -> new MilkTeaItem(3, 1f));
-    public static final RegistryObject<Item> LAVENDER_MILK_TEA = ITEMS.register("lavender_milk_tea",
-            () -> new MilkTeaItem(3, 0.6f));
-    // Misc normal food tea flavors
-    public static final RegistryObject<Item> THAI_MILK_TEA = ITEMS.register("thai_milk_tea",
-            () -> new MilkTeaItem(2, 0.6f));
-    // todo green tea (green dye)?
-    public static final RegistryObject<Item> BEETROOT_MILK_TEA = ITEMS.register("beetroot_milk_tea",
-            () -> new MilkTeaItem(1, 1.5f));
-    public static final RegistryObject<Item> CARROT_MILK_TEA = ITEMS.register("carrot_milk_tea",
-            () -> new MilkTeaItem(new Item.Properties().food(
-                    new FoodProperties.Builder().nutrition(4).saturationMod(3.8f)
-                            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 600, 0), 1.0f)
-                            .build()),
-                    Component.literal("Good for your eyes").withStyle(ChatFormatting.YELLOW)));
-    public static final RegistryObject<Item> KELP_MILK_TEA = ITEMS.register("kelp_milk_tea",
-            () -> new MilkTeaItem(1, 1f));
-    // Funky tea flavors with effects
     public static final RegistryObject<Item> PHANTOM_MILK_TEA = ITEMS.register("phantom_milk_tea",
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(1).saturationMod(0.4f)
@@ -454,7 +390,6 @@ public class ModItemsInit {
                         .effect(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 800, 0), 1.0f)
                         .build()),
                 Component.literal("It's there, I promise!").withStyle(ChatFormatting.YELLOW)));
-//    todo public static final RegistryObject<Item> ENDER_MILK_TEA
 
     /**
      * Coffee Stuff
