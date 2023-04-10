@@ -154,11 +154,6 @@ public class ModCreativeTabInit {
 
     private void acceptJams(CreativeModeTab.Output output) {
         ModItemsInit.JAMS.forEach(reg -> output.accept(reg.get()));
-//        output.accept(ModItemsInit.APPLE_JAM.get());
-//        output.accept(ModItemsInit.CHORUS_FRUIT_JAM.get());
-//        output.accept(ModItemsInit.GLOW_BERRY_JAM.get());
-//        output.accept(ModItemsInit.SWEET_BERRY_JAM.get());
-//        output.accept(ModItemsInit.WATERMELON_JAM.get());
     }
 
     private void acceptCreams(CreativeModeTab.Output output) {
@@ -284,11 +279,6 @@ public class ModCreativeTabInit {
     }
 
     private void acceptMiscFoodItems(CreativeModeTab.Output output) {
-//        output.accept(ModItemsInit.BROWNIE.get());
-//        output.accept(ModItemsInit.COOKIE_BROWNIE.get());
-//        output.accept(ModItemsInit.CARAMEL_BROWNIE.get());
-//        output.accept(ModItemsInit.CHEESECAKE_BROWNIE.get());
-//        output.accept(ModItemsInit.BLONDIE_BROWNIE.get());
         ModItemsInit.BROWNIES.forEach(reg -> output.accept(reg.get()));
 
         output.accept(ModItemsInit.LEMON_BAR.get());
@@ -327,32 +317,38 @@ public class ModCreativeTabInit {
     private void acceptMilkTeaDrinks(CreativeModeTab.Output output) {
         output.accept(ModItemsInit.MATCHA_TEA.get());
 
+        output.accept(ModItemsInit.PUMPKIN_SPICE_MILK_TEA.get());
+        output.accept(ModItemsInit.COOKIE_MILK_TEA.get());
         output.accept(ModItemsInit.BROWN_SUGAR_MILK_TEA.get());
         output.accept(ModItemsInit.TIGER_MILK_TEA.get());
         output.accept(ModItemsInit.HONEY_MILK_TEA.get());
-        output.accept(ModItemsInit.CHOCOLATE_MILK_TEA.get());
-        output.accept(ModItemsInit.VANILLA_MILK_TEA.get());
         output.accept(ModItemsInit.EGG_CUSTARD_MILK_TEA.get());
-        output.accept(ModItemsInit.COOKIE_MILK_TEA.get());
+        output.accept(ModItemsInit.CHOCOLATE_MILK_TEA.get());
         output.accept(ModItemsInit.CAKE_MILK_TEA.get());
-        output.accept(ModItemsInit.PUMPKIN_SPICE_MILK_TEA.get());
-        output.accept(ModItemsInit.APPLE_MILK_TEA.get());
+        output.accept(ModItemsInit.VANILLA_MILK_TEA.get());
+
         output.accept(ModItemsInit.SWEET_BERRY_MILK_TEA.get());
+        output.accept(ModItemsInit.APPLE_MILK_TEA.get());
         output.accept(ModItemsInit.WATERMELON_MILK_TEA.get());
         output.accept(ModItemsInit.GLOW_BERRY_MILK_TEA.get());
         output.accept(ModItemsInit.CHORUS_FRUIT_MILK_TEA.get());
-        output.accept(ModItemsInit.ROSE_MILK_TEA.get());
+
+        ModItemsInit.FRUIT_MILK_TEAS.forEach(reg -> output.accept(reg.get()));
+
         output.accept(ModItemsInit.BUTTERFLY_PEA_FLOWER_MILK_TEA.get());
         output.accept(ModItemsInit.MATCHA_MILK_TEA.get());
         output.accept(ModItemsInit.LAVENDER_MILK_TEA.get());
-        output.accept(ModItemsInit.THAI_MILK_TEA.get());
+        output.accept(ModItemsInit.ROSE_MILK_TEA.get());
+
         output.accept(ModItemsInit.BEETROOT_MILK_TEA.get());
+        output.accept(ModItemsInit.THAI_MILK_TEA.get());
         output.accept(ModItemsInit.CARROT_MILK_TEA.get());
         output.accept(ModItemsInit.KELP_MILK_TEA.get());
-        output.accept(ModItemsInit.PHANTOM_MILK_TEA.get());
+
         output.accept(ModItemsInit.BLAZING_MILK_TEA.get());
-        output.accept(ModItemsInit.DARKSIDE_MILK_TEA.get());
         output.accept(ModItemsInit.WET_MILK_TEA.get());
+        output.accept(ModItemsInit.PHANTOM_MILK_TEA.get());
+        output.accept(ModItemsInit.DARKSIDE_MILK_TEA.get());
         output.accept(ModItemsInit.IMAGINARY_MILK_TEA.get());
     }
 

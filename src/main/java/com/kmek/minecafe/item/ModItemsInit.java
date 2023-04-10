@@ -122,18 +122,6 @@ public class ModItemsInit {
     }).map(str -> ITEMS.register(str + "_jam", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())))
     ).toList();
-
-//    public static final RegistryObject<Item> APPLE_JAM = ITEMS.register("apple_jam", () -> new Item(new Item.Properties().food(
-//            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-//    public static final RegistryObject<Item> CHORUS_FRUIT_JAM = ITEMS.register("chorus_fruit_jam", () -> new Item(new Item.Properties().food(
-//            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-//    public static final RegistryObject<Item> GLOW_BERRY_JAM = ITEMS.register("glow_berry_jam", () -> new Item(new Item.Properties().food(
-//            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-//    public static final RegistryObject<Item> SWEET_BERRY_JAM = ITEMS.register("sweet_berry_jam", () -> new Item(new Item.Properties().food(
-//            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-//    public static final RegistryObject<Item> WATERMELON_JAM = ITEMS.register("watermelon_jam", () -> new Item(new Item.Properties().food(
-//            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())));
-    // Tea Crafting Ingredients
     public static final RegistryObject<Item> BOBA_PEARLS = ITEMS.register("boba_pearls", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder", () -> new Item(new Item.Properties()));
 
@@ -391,8 +379,19 @@ public class ModItemsInit {
                             .build()),
                     Component.literal("Glowing!").withStyle(ChatFormatting.YELLOW)));
     public static final RegistryObject<Item> CHORUS_FRUIT_MILK_TEA = ITEMS.register("chorus_fruit_milk_tea",
+    //    todo (teleports you randomly? use ChorusFruitItem?)
             () -> new MilkTeaItem(4, 2.5f));
-//    todo (teleports you randomly? use ChorusFruitItem?)
+    public static final List<RegistryObject<MilkTeaItem>> FRUIT_MILK_TEAS = Arrays.stream(new String[]{
+            "raspberry", "strawberry",
+            "cherry", "pomegranate", "cranberry", "fig",
+            "peach", "orange", "gooseberry", "mango", "passion_fruit",
+            "pineapple", "starfruit", "lemon", "banana", "pear",
+            "lime", "kiwi", "grape",
+            "blueberry",
+            "plum", "mangosteen", "acai",
+            "coconut", "lychee", "dragon_fruit"
+        }).map(str -> ITEMS.register(str + "_milk_tea", () -> new MilkTeaItem(3, 2.5f))
+        ).toList();
     // Floral
     public static final RegistryObject<Item> ROSE_MILK_TEA = ITEMS.register("rose_milk_tea",
             () -> new MilkTeaItem(3, 0.6f));

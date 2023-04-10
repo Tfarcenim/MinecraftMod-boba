@@ -95,7 +95,6 @@ public class ModBlocksInit {
         return registerItemNameBlockItem(fruitName + "_bush_crop", fruitName + "_seeds",
                 () -> new BushCrop("item.minecafe." + fruitName, resetAge,
                         BlockBehaviour.Properties.of(Material.PLANT).noCollission().destroyTime(0.5f).sound(SoundType.GRASS)));
-
     }
 
     /**
