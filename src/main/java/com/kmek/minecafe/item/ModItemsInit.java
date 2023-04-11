@@ -62,9 +62,8 @@ public class ModItemsInit {
             super.appendHoverText(stack, level, components, flag);
         }
     }));
-    // Coffee
-    public static final RegistryObject<Item> COFFEE_CHERRIES = compostable(0.6F, ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties())));
     // Fruits
+    public static final RegistryObject<Item> COFFEE_CHERRIES = compostable(0.6F, ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties())));
     public static final List<RegistryObject<Item>> FRUIT_ITEMS = Arrays.stream(FoodVariants.fruits)
             .filter(fruit -> fruit != FoodVariants.APPLE)
             .map(fruit -> compostable(0.65F, ITEMS.register(fruit.toString(), () -> new Item(new Item.Properties().food(
@@ -93,33 +92,17 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
     public static final RegistryObject<Item> WHIPPED_CREAM = ITEMS.register("whipped_cream", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
-    public static final List<RegistryObject<Item>> CREAMS = Arrays.stream(new String[]{
-                    "rose",
-                    "raspberry", "strawberry", "apple", "cherry", "watermelon", "sweet_berry", "pomegranate", "cranberry",
-                    "orange", "peach", "glow_berry", "gooseberry", "mango", "passion_fruit",
-                     "banana", "lemon", "honey", "pineapple", "starfruit",
-                    "honeydew_melon", "kiwi", "grape", "lime", "matcha",
-                    "blueberry",
-                    "chorus_fruit", "plum", "fig", "acai",
-                    "chocolate", "coffee", "cinnamon", "caramel", "pear",
-                    "dragon_fruit", "vanilla", "coconut", "lychee", "mangosteen",
-            }).map(str -> ITEMS.register(str + "_cream", () -> new Item(new Item.Properties().food(
-                    new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())))
-            ).toList();
+    public static final List<RegistryObject<Item>> CREAMS =
+            new ItemDataLoader("registration_data/creams.txt").read().stream()
+                .map(args -> ITEMS.register(args.get(0) + "_cream", () -> new Item(new Item.Properties().food(
+                        new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())))
+                ).toList();
     // Jams
-    public static final List<RegistryObject<Item>> JAMS = Arrays.stream(new String[]{
-            "watermelon", "strawberry",
-            "sweet_berry", "cherry", "plum", "pomegranate", "mangosteen", "acai", "cranberry", "raspberry",
-            "fig", "gooseberry",
-            "peach", "orange", "apple", "pear", "mango", "grape", "passion_fruit",
-            "pineapple", "glow_berry", "lemon",
-            "lime", "kiwi",
-            "blueberry",
-            "chorus_fruit",
-            "dragon_fruit", "lychee",
-    }).map(str -> ITEMS.register(str + "_jam", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())))
-    ).toList();
+    public static final List<RegistryObject<Item>> JAMS =
+        new ItemDataLoader("registration_data/jams.txt").read().stream()
+            .map(args -> ITEMS.register(args.get(0) + "_jam", () -> new Item(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())))
+            ).toList();
     public static final RegistryObject<Item> BOBA_PEARLS = ITEMS.register("boba_pearls", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder", () -> new Item(new Item.Properties()));
 
@@ -150,14 +133,13 @@ public class ModItemsInit {
                     .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 200, 0), 1.0f)
                     .build())));
     // Breads
-    public static final RegistryObject<Item> CROISSANT = ITEMS.register("croissant", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-    public static final RegistryObject<Item> BAGUETTE = ITEMS.register("baguette", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(4).saturationMod(2f).build()))); // todo "hohoho"
-    public static final RegistryObject<Item> BANANA_BREAD = ITEMS.register("banana_bread", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(4).saturationMod(2f).build())));
-    public static final RegistryObject<Item> PUMPKIN_BREAD = ITEMS.register("pumpkin_bread", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(4).saturationMod(2f).build())));
+    public static final List<RegistryObject<Item>> BREADS =
+            new ItemDataLoader("registration_data/breads.txt").read().stream()
+                    .map(args -> ITEMS.register(args.get(0), () -> new Item(new Item.Properties().food(
+                            new FoodProperties.Builder()
+                                    .nutrition(Integer.parseInt(args.get(1)))
+                                    .saturationMod(Float.parseFloat(args.get(2))).build())))
+                    ).toList();
     // Waffle snacks
     public static final RegistryObject<Item> RAW_WAFFLE_BATTER = ITEMS.register("raw_waffle_batter", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0)
@@ -198,58 +180,21 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
     public static final RegistryObject<Item> COFFEE_CAKE = ITEMS.register("coffee_cake", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-    public static final List<RegistryObject<Item>> CHEESECAKES = Arrays.stream(new String[]{
-                    "cheesecake_slice",
-                    "cherry_cheesecake_slice",
-                    "raspberry_cheesecake_slice",
-                    "peach_cheesecake_slice",
-                    "mango_cheesecake_slice",
-                    "lemon_cheesecake_slice",
-                    "kiwi_cheesecake_slice",
-                    "blueberry_cheesecake_slice",
-                    "banana_cheesecake_slice",
-                    "coconut_cheesecake_slice"
-//                    "coffee_cheesecake_slice",
-            })
-            .map(str -> ITEMS.register(str, () -> new Item(new Item.Properties().food(
-                    new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())))
-            ).toList();
+    public static final List<RegistryObject<Item>> CHEESECAKES =
+            new ItemDataLoader("registration_data/cheesecakes.txt").read().stream()
+                .map(args -> ITEMS.register(args.get(0), () -> new Item(new Item.Properties().food(
+                        new FoodProperties.Builder()
+                                .nutrition(Integer.parseInt(args.get(1)))
+                                .saturationMod(Float.parseFloat(args.get(2))).build())))
+                ).toList();
     // Pie
-    public static final List<RegistryObject<Item>> PIES = Arrays.stream(new String[]{
-                    "cherry_pie_slice",
-                    "strawberry_pie_slice",
-                    "apple_pie_slice",
-                    "blueberry_pie_slice",
-                    "chocolate_chip_cookie_pie_slice",
-                    "brownie_pie_slice",
-                    "possum_pie_slice",
-                    "smores_pie_slice",
-                    "honey_pie_slice",
-                    "cookies_and_cream_pie_slice",
-                    "peanut_butter_pie_slice",
-                    "grasshopper_pie_slice",
-                    "turtle_pie_slice",
-                    "key_lime_pie_slice",
-                    "chess_pie_slice",
-                    "pecan_pie_slice",
-                    "pumpkin_pie_slice",
-                    "butterscotch_cinnamon_pie_slice",
-                    "sugar_cream_pie_slice",
-                    "water_pie_slice",
-                    "strawberry_cream_pie_slice",
-                    "caramel_cream_pie_slice",
-                    "vanilla_cream_pie_slice",
-                    "raspberry_cream_pie_slice",
-                    "chocolate_cream_pie_slice",
-                    "peaches_and_cream_pie_slice",
-                    "banoffi_pie_slice",
-                    "orange_creamsicle_pie_slice",
-                    "coconut_cream_pie_slice",
-                    "banana_cream_pie_slice",
-                    "lemon_cream_pie_slice"})
-            .map(str -> ITEMS.register(str, () -> new Item(new Item.Properties().food(
-                    new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())))
-            ).toList();
+    public static final List<RegistryObject<Item>> PIES =
+            new ItemDataLoader("registration_data/pies.txt").read().stream()
+                .map(args -> ITEMS.register(args.get(0), () -> new Item(new Item.Properties().food(
+                        new FoodProperties.Builder()
+                                .nutrition(Integer.parseInt(args.get(1)))
+                                .saturationMod(Float.parseFloat(args.get(2))).build())))
+                ).toList();
     // Pudding
     public static final RegistryObject<Item> TAPIOCA_PUDDING = ITEMS.register("tapioca_pudding", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
@@ -270,17 +215,13 @@ public class ModItemsInit {
     public static final RegistryObject<Item> CHOCOLATE_BANANA = ITEMS.register("chocolate_banana", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
     // Misc Foods
-    public static final List<RegistryObject<Item>> BROWNIES = Arrays.stream(new String[]{
-                    "brownie",
-                    "double_chocolate_brownie",
-                    "cookie_brownie",
-                    "caramel_brownie",
-                    "cheesecake_brownie",
-                    "blondie_brownie"
-            })
-            .map(str -> ITEMS.register(str, () -> new Item(new Item.Properties().food(
-                    new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())))
-            ).toList();
+    public static final List<RegistryObject<Item>> BROWNIES =
+            new ItemDataLoader("registration_data/brownies.txt").read().stream()
+                .map(args -> ITEMS.register(args.get(0), () -> new Item(new Item.Properties().food(
+                        new FoodProperties.Builder()
+                                .nutrition(Integer.parseInt(args.get(1)))
+                                .saturationMod(Float.parseFloat(args.get(2))).build())))
+                ).toList();
     public static final RegistryObject<Item> LEMON_BAR = ITEMS.register("lemon_bar", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
     public static final RegistryObject<Item> SOPAIPILLA_CHEESECAKE_BAR = ITEMS.register("sopaipilla_cheesecake_bar", () -> new Item(new Item.Properties().food(
@@ -321,74 +262,62 @@ public class ModItemsInit {
             ).toList();
     // Cannolis
     public static final RegistryObject<Item> CANNOLI_SHELL = ITEMS.register("cannoli_shell", () -> new Item(new Item.Properties()));
-    public static final List<RegistryObject<Item>> CANNOLIS = Arrays.stream(new String[]{
-                    "rose",
-                    "raspberry", "strawberry", "apple", "cherry", "watermelon", "sweet_berry", "pomegranate", "cranberry",
-                    "orange", "peach", "glow_berry", "gooseberry", "mango", "passion_fruit",
-                    "banana", "lemon", "honey", "pineapple", "starfruit",
-                    "honeydew_melon", "kiwi", "grape", "lime", "matcha",
-                    "blueberry",
-                    "chorus_fruit", "plum", "fig",
-                    "chocolate", "coffee", "cinnamon", "caramel", "pear",
-                    "dragon_fruit", "vanilla", "coconut", "lychee", "mangosteen",
-            }).map(str -> ITEMS.register(str + "_cannoli", () -> new Item(new Item.Properties().food(
-                    new FoodProperties.Builder().nutrition(2).saturationMod(0.5f).build())))
-            ).toList();
+    public static final List<RegistryObject<Item>> CANNOLIS =
+            new ItemDataLoader("registration_data/creams.txt").read().stream()
+                .map(args -> ITEMS.register(args.get(0) + "_cannoli", () -> new Item(new Item.Properties().food(
+                        new FoodProperties.Builder().nutrition(2).saturationMod(0.5f).build())))
+                ).toList();
 
     /**
      * Bubble Milk Teas
      */
-    public static final List<RegistryObject<MilkTeaItem>> BOBA_MILK_TEAS = new ItemDataLoader("registration_data/boba_milk_teas.txt").read().stream().map(
-        args -> ITEMS.register(args.get(0) + "_milk_tea",
-                () -> new MilkTeaItem(
-                        Integer.parseInt(args.get(1)),
-                        Float.parseFloat(args.get(2))))
-    ).toList();
+    public static final List<RegistryObject<MilkTeaItem>> BOBA_MILK_TEAS =
+        new ItemDataLoader("registration_data/boba_milk_teas.txt").read().stream().map(
+            args -> ITEMS.register(args.get(0) + "_milk_tea",
+                    () -> new MilkTeaItem(
+                            Integer.parseInt(args.get(1)),
+                            Float.parseFloat(args.get(2))))
+        ).toList();
     // Funky tea flavors with effects
     public static final RegistryObject<Item> GLOW_BERRY_MILK_TEA = ITEMS.register("glow_berry_milk_tea",
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(2).saturationMod(0.5f)
                             .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 600, 0), 1.0f)
                             .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300, 0), 1.0f)
-                            .build()),
+                            .alwaysEat().build()),
                     Component.literal("Glowing!").withStyle(ChatFormatting.YELLOW)));
     public static final RegistryObject<Item> PHANTOM_MILK_TEA = ITEMS.register("phantom_milk_tea",
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(1).saturationMod(0.4f)
-                            .alwaysEat()
                             .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 700, 0), 1.0f)
                             .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 1000, 0), 1.0f)
-                            .build()),
+                            .alwaysEat().build()),
                     Component.literal("A good pick-me-up in the morning").withStyle(ChatFormatting.YELLOW)));
     public static final RegistryObject<Item> BLAZING_MILK_TEA = ITEMS.register("blazing_milk_tea",
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(0).saturationMod(0f)
-                            .alwaysEat()
                             .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0), 1.0f)
-                            .build()),
+                            .alwaysEat().build()),
                     Component.literal("Now with authentic firey taste").withStyle(ChatFormatting.YELLOW)));
     public static final RegistryObject<Item> DARKSIDE_MILK_TEA = ITEMS.register("darkside_milk_tea",
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(0).saturationMod(0f)
-                            .alwaysEat()
                             .effect(() -> new MobEffectInstance(MobEffects.DARKNESS, 800, 0), 1.0f)
-                            .build()),
+                            .alwaysEat().build()),
                     Component.literal("Join the dark side").withStyle(ChatFormatting.YELLOW)));
     public static final RegistryObject<Item> WET_MILK_TEA = ITEMS.register("wet_milk_tea",
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(0).saturationMod(0f)
-                            .alwaysEat()
                             .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 800, 0), 1.0f)
                             .effect(() -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 800, 0), 1.0f)
                             .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300, 0), 1.0f)
-                            .build()),
+                            .alwaysEat().build()),
                     Component.literal("Underwater vibes").withStyle(ChatFormatting.YELLOW)));
     public static final RegistryObject<Item> IMAGINARY_MILK_TEA = ITEMS.register("imaginary_milk_tea",
         () -> new MilkTeaItem(new Item.Properties().food(
                 new FoodProperties.Builder().nutrition(0).saturationMod(0f)
-                        .alwaysEat()
                         .effect(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 800, 0), 1.0f)
-                        .build()),
+                        .alwaysEat().build()),
                 Component.literal("It's there, I promise!").withStyle(ChatFormatting.YELLOW)));
 
     /**
@@ -405,34 +334,15 @@ public class ModItemsInit {
     public static final RegistryObject<Item> STEAMED_MILK = ITEMS.register("steamed_milk", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MILK_FOAM = ITEMS.register("milk_foam", () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee",
-            () -> new CoffeeItem(0, 0.5f, 1, null));
-    public static final RegistryObject<Item> BUTTER_COFFEE = ITEMS.register("butter_coffee",
-            () -> new CoffeeItem(0, 0.5f, 1, null));
-    public static final RegistryObject<Item> ESPRESSO = ITEMS.register("espresso",
-            () -> new CoffeeItem(0, 0, 1, null));
-    public static final RegistryObject<Item> CAFE_AU_LAIT = ITEMS.register("cafe_au_lait",
-            () -> new CoffeeItem(0, 1f, 2, null));
-    public static final RegistryObject<Item> AMERICANO = ITEMS.register("americano",
-            () -> new CoffeeItem(0, 1f, 2, null));
-    public static final RegistryObject<Item> FLAT_WHITE = ITEMS.register("flat_white",
-            () -> new CoffeeItem(0, 1f, 2, null));
-    public static final RegistryObject<Item> MACCHIATO = ITEMS.register("macchiato",
-            () -> new CoffeeItem(0, 1f, 2, null));
-    public static final RegistryObject<Item> CAPPUCCINO = ITEMS.register("cappuccino",
-            () -> new CoffeeItem(0, 1f, 2, null));
-    public static final RegistryObject<Item> MOCHA = ITEMS.register("mocha",
-            () -> new CoffeeItem(0, 1f, 2, null));
-    public static final RegistryObject<Item> LATTE = ITEMS.register("latte",
-            () -> new CoffeeItem(0, 1f, 1, null));
-    public static final RegistryObject<Item> FRAPPE_COFFEE = ITEMS.register("frappe_coffee",
-            () -> new CoffeeItem(0, 0.75f, 1, CLEAR_CUP.get()));
-    public static final RegistryObject<Item> WHIPPED_COFFEE = ITEMS.register("whipped_coffee",
-            () -> new CoffeeItem(0, 0.75f, 1, CLEAR_CUP.get()));
-    public static final RegistryObject<Item> ICED_COFFEE = ITEMS.register("iced_coffee",
-            () -> new CoffeeItem(0, 0.75f, 1, CLEAR_CUP.get()));
-    public static final RegistryObject<Item> HOT_COCOA = ITEMS.register("hot_cocoa",
-            () -> new CoffeeItem(1, 1f, 0, null));
+    public static final List<RegistryObject<CoffeeItem>> COFFEES =
+            new ItemDataLoader("registration_data/coffees.txt").read().stream().map(
+                    args -> ITEMS.register(args.get(0),
+                            () -> new CoffeeItem(
+                                    Integer.parseInt(args.get(1)),
+                                    Float.parseFloat(args.get(2)),
+                                    Integer.parseInt(args.get(3)),
+                                    Integer.parseInt(args.get(4)) == 1 ? CLEAR_CUP.get() : null))
+            ).toList();
     public static final RegistryObject<Item> RED_EYE_COFFEE = ITEMS.register("red_eye_coffee",
             () -> new CoffeeItem(0, 0, 3, null,
                     Component.literal("Careful there!").withStyle(ChatFormatting.DARK_RED)));
@@ -447,14 +357,12 @@ public class ModItemsInit {
     public static final RegistryObject<Item> MATCHA_TEA = ITEMS.register("matcha_tea",
             () -> new CoffeeItem(1, 0.5f, 1, null));
 
-    /**
-     * Fruit Variant Stuff
-     */
-    public static final List<RegistryObject<Item>> FRUIT_JUICES = Arrays.stream(FoodVariants.juices)
-            .map(variant -> ITEMS.register(variant.toString() + "_juice", () -> (Item) new CustomDrinkItem(5, 3f, CLEAR_CUP.get())))
-            .toList();
-    public static final List<RegistryObject<Item>> LEMONADES = Arrays.stream(new String[]{"lemonade", "blueberry_lemonade",
-                    "strawberry_lemonade", "raspberry_lemonade", "mango_lemonade", "pineapple_lemonade", "limeade"})
-                    .map(name -> ITEMS.register(name, () -> (Item) new CustomDrinkItem(4, 1f, CLEAR_CUP.get()))).toList();
-
+    // Juices & lemonades
+    public static final List<RegistryObject<Item>> FRUIT_JUICES =
+            new ItemDataLoader("registration_data/juices.txt").read().stream()
+                .map(args -> ITEMS.register(args.get(0),
+                        () -> (Item) new CustomDrinkItem(
+                                Integer.parseInt(args.get(1)),
+                                Float.parseFloat(args.get(2)), CLEAR_CUP.get())))
+                .toList();
 }

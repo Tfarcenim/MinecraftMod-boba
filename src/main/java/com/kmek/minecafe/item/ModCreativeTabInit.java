@@ -42,7 +42,7 @@ public class ModCreativeTabInit {
         );
         event.registerCreativeModeTab(new ResourceLocation(MineCafeMod.MODID, "minecafe_tab3"), builder -> builder
                 .title(Component.translatable("itemGroup.minecafe_food"))
-                .icon(() -> new ItemStack(ModItemsInit.CROISSANT.get()))
+                .icon(() -> new ItemStack(ModItemsInit.BREADS.get(0).get()))
                 .displayItems((featureFlags, output, hasOp) -> {
                     // Add categories
                     acceptFoods(output);
@@ -51,7 +51,7 @@ public class ModCreativeTabInit {
         );
         event.registerCreativeModeTab(new ResourceLocation(MineCafeMod.MODID, "minecafe_tab4"), builder -> builder
                 .title(Component.translatable("itemGroup.minecafe_drinks"))
-                .icon(() -> new ItemStack(ModItemsInit.HOT_COCOA.get()))
+                .icon(() -> new ItemStack(ModItemsInit.BOBA_MILK_TEAS.get(ModItemsInit.BOBA_MILK_TEAS.size() - 1).get()))
                 .displayItems((featureFlags, output, hasOp) -> {
                     // Add categories
                     acceptDrinks(output);
@@ -236,10 +236,7 @@ public class ModCreativeTabInit {
     }
 
     private void acceptBreads(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.CROISSANT.get());
-        output.accept(ModItemsInit.BAGUETTE.get());
-        output.accept(ModItemsInit.BANANA_BREAD.get());
-        output.accept(ModItemsInit.PUMPKIN_BREAD.get());
+        ModItemsInit.BREADS.forEach(reg -> output.accept(reg.get()));
         // Accept buns
     }
 
@@ -318,7 +315,6 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.MATCHA_TEA.get());
 
         ModItemsInit.BOBA_MILK_TEAS.forEach(reg -> output.accept(reg.get()));
-
         output.accept(ModItemsInit.BLAZING_MILK_TEA.get());
         output.accept(ModItemsInit.GLOW_BERRY_MILK_TEA.get());
         output.accept(ModItemsInit.WET_MILK_TEA.get());
@@ -328,27 +324,13 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCoffeeDrinks(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.HOT_COCOA.get());
-        output.accept(ModItemsInit.COFFEE.get());
-        output.accept(ModItemsInit.BUTTER_COFFEE.get());
-        output.accept(ModItemsInit.ESPRESSO.get());
+        ModItemsInit.COFFEES.forEach(reg -> output.accept(reg.get()));
         output.accept(ModItemsInit.RED_EYE_COFFEE.get());
         output.accept(ModItemsInit.BLACK_EYE_COFFEE.get());
         output.accept(ModItemsInit.DEAD_EYE_COFFEE.get());
-        output.accept(ModItemsInit.AMERICANO.get());
-        output.accept(ModItemsInit.MACCHIATO.get());
-        output.accept(ModItemsInit.MOCHA.get());
-        output.accept(ModItemsInit.CAFE_AU_LAIT.get());
-        output.accept(ModItemsInit.FLAT_WHITE.get());
-        output.accept(ModItemsInit.CAPPUCCINO.get());
-        output.accept(ModItemsInit.LATTE.get());
-        output.accept(ModItemsInit.FRAPPE_COFFEE.get());
-        output.accept(ModItemsInit.WHIPPED_COFFEE.get());
-        output.accept(ModItemsInit.ICED_COFFEE.get());
     }
 
     private void acceptFruitDrinks(CreativeModeTab.Output output) {
         ModItemsInit.FRUIT_JUICES.forEach(reg -> output.accept(reg.get()));
-        ModItemsInit.LEMONADES.forEach(reg -> output.accept(reg.get()));
     }
 }

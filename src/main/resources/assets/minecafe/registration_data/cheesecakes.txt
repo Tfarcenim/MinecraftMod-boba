@@ -1,0 +1,12 @@
+cheesecake_slice, 3, 1.5
+cherry_cheesecake_slice, 3, 1.5
+raspberry_cheesecake_slice, 3, 1.5
+peach_cheesecake_slice, 3, 1.5
+mango_cheesecake_slice, 3, 1.5
+lemon_cheesecake_slice, 3, 1.5
+kiwi_cheesecake_slice, 3, 1.5
+blueberry_cheesecake_slice, 3, 1.5
+banana_cheesecake_slice, 3, 1.5
+coconut_cheesecake_slice, 3, 1.5
+// todo coffee_cheesecake_slice
+// todo caramel, chocolate, etc.

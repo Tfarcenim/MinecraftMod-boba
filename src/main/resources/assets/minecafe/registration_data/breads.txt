@@ -1,0 +1,4 @@
+croissant, 3, 1.5
+baguette, 4, 2
+banana_bread, 4, 2
+pumpkin_bread, 4, 2
