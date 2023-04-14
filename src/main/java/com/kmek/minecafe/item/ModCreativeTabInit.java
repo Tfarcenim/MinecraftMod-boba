@@ -133,6 +133,9 @@ public class ModCreativeTabInit {
         // Other Crop Drops
         output.accept(ModItemsInit.CASSAVA.get());
         output.accept(ModItemsInit.COFFEE_CHERRIES.get());
+
+        // Dried fruit
+        output.accept(ModItemsInit.RAISINS.get());
     }
 
     private void acceptCoreIngreidents(CreativeModeTab.Output output) {
