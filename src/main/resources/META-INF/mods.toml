@@ -21,7 +21,7 @@ modId="minecafe" #mandatory
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
 #version="${file.jarVersion}" #mandatory
-version="1.3"
+version="1.4"
  # A display name for the mod
 displayName="MineCafe Mod" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
@@ -43,15 +43,8 @@ authors="Kmek" #optional
 #displayTest="MATCH_VERSION" # MATCH_VERSION is the default if nothing is specified (#optional)
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''
-A mod that adds cafe related food and blocks to Minecraft.
+description='''A mod that adds new cafe-related drinks, food, crops, tools, and blocks.'''
 
-- Craftable drinks like Juice, Coffee, and Bubble Milk Tea
-- New crops including coffee, cassava, replantable flowers, and many fruits
-- Appliances such as a Waffle Iron, Coffee Machine, Espresso Machine, Juicer
-- Crop Inspector tool that displays the growth percentage of any growable crop
-- Several decorative display blocks and paintings
-'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.minecafe]] #optional
     # the modid of the dependency

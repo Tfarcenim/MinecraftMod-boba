@@ -204,9 +204,9 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.MUG.get());
         output.accept(ModItemsInit.CLEAR_CUP.get());
 
-        output.accept(ModItemsInit.ICE_TRAY.get());
-        output.accept(ModItemsInit.ICE_TRAY_WATER.get());
-        output.accept(ModItemsInit.ICE_TRAY_ICE.get());
+//        output.accept(ModItemsInit.ICE_TRAY.get());
+//        output.accept(ModItemsInit.ICE_TRAY_WATER.get());
+//        output.accept(ModItemsInit.ICE_TRAY_ICE.get());
 
         output.accept(ModItemsInit.TAIYAKI_MOLD.get());
         output.accept(ModItemsInit.EGG_WAFFLE_MOLD.get());
@@ -282,7 +282,7 @@ public class ModCreativeTabInit {
         ModItemsInit.BROWNIES.forEach(reg -> output.accept(reg.get()));
 
         output.accept(ModItemsInit.LEMON_BAR.get());
-        output.accept(ModItemsInit.SOPAIPILLA_CHEESECAKE_BAR.get());
+//        output.accept(ModItemsInit.SOPAIPILLA_CHEESECAKE_BAR.get());
         output.accept(ModItemsInit.FIG_NEWTON.get());
 
         output.accept(ModItemsInit.MACAROON.get()); // Eventually move to cookies section

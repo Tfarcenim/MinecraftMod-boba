@@ -5,6 +5,8 @@ A [Forge](https://www.curseforge.com/minecraft/mc-mods/minecafe) mod that adds a
 
 This mod is in progress with more to be added in the future!
 
+Please keep in mind that features are still being implemented in the Beta stage, so some items might be missing recipes, or change in a future update.
+
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A2I777F)
 
 ### Note
@@ -23,14 +25,12 @@ You can look at my source code for learning purposes, but you cannot copy!
 ---
 # What's in the mod?
 ![milk teas](./tea_images/milk_tea.png)
-![milk tea flavors](./tea_images/milk_tea_flavors.png)
-![waffles](./tea_images/waffles.png)
 ![coffee](./tea_images/coffee.png)
+![juices](./tea_images/juices.png)
+![waffles](./tea_images/waffles.png)
+![fruit items](./tea_images/fruit_items.png)
 ![display blocks](./tea_images/display_cases.png)
 ![flowers and vase](./tea_images/flowers.png)
-![fruit trees](./tea_images/fruit_trees.png)
-![juices](./tea_images/juices.png)
-![paintings](./tea_images/paintings.png)
 
 ---
 
