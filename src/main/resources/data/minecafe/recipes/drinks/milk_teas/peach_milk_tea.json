@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:peach"
+      "tag": "forge:crops/peach"
     }
   },
   "pattern": [

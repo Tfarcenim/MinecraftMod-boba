@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "F": {
-      "item": "minecafe:passion_fruit"
+      "tag": "forge:crops/passion_fruit"
     },
     "S": {
       "tag": "forge:sugar"

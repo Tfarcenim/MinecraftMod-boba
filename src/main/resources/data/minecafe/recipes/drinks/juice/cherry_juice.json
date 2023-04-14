@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:cherry" },
-    { "item": "minecafe:cherry" },
-    { "item": "minecafe:cherry" },
-    { "item": "minecafe:cherry" },
-    { "item": "minecafe:cherry" },
-    { "item": "minecafe:cherry" },
+    { "tag": "forge:crops/cherry" },
+    { "tag": "forge:crops/cherry" },
+    { "tag": "forge:crops/cherry" },
+    { "tag": "forge:crops/cherry" },
+    { "tag": "forge:crops/cherry" },
+    { "tag": "forge:crops/cherry" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:lime"
+      "tag": "forge:crops/lime"
     }
   },
   "pattern": [

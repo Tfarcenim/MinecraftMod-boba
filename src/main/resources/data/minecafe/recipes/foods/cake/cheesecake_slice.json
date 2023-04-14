@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "S": { "tag": "forge:sugar" },
-    "V": { "item": "minecafe:vanilla" },
+    "V": { "tag": "forge:crops/vanilla" },
     "C": { "tag": "forge:cream" },
     "E": { "item": "minecraft:egg" },
     "R": { "item": "minecafe:pie_crust" }

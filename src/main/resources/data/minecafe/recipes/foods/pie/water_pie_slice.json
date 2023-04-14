@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "S": { "tag": "forge:sugar" },
-    "V": { "item": "minecafe:vanilla" },
+    "V": { "tag": "forge:crops/vanilla" },
     "H": { "item": "minecraft:wheat" },
     "W": { "item": "minecraft:water_bucket" },
     "B": { "tag": "forge:butter" },

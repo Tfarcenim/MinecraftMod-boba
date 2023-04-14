@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:gooseberry"
+      "tag": "forge:crops/gooseberry"
     }
   },
   "pattern": [

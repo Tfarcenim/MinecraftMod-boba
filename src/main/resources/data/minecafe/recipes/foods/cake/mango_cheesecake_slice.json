@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": { "item": "minecafe:mango" },
+    "B": { "tag": "forge:crops/mango" },
     "R": { "item": "minecafe:cheesecake_slice" }
   },
   "pattern": [

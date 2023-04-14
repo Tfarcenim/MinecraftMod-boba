@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:grape" },
-    { "item": "minecafe:grape" },
-    { "item": "minecafe:grape" },
-    { "item": "minecafe:grape" },
-    { "item": "minecafe:grape" },
-    { "item": "minecafe:grape" },
+    { "tag": "forge:crops/grape" },
+    { "tag": "forge:crops/grape" },
+    { "tag": "forge:crops/grape" },
+    { "tag": "forge:crops/grape" },
+    { "tag": "forge:crops/grape" },
+    { "tag": "forge:crops/grape" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

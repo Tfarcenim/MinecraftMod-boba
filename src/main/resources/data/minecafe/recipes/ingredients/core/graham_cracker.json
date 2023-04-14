@@ -4,7 +4,7 @@
   "key": {
     "B": { "tag": "forge:butter" },
     "S": { "tag": "forge:sugar" },
-    "C": { "item": "minecafe:cinnamon" },
+    "C": { "tag": "forge:crops/cinnamon" },
     "W": { "item": "minecraft:wheat" }
   },
   "pattern": [

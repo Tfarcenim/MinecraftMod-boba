@@ -7,7 +7,7 @@
     "I": { "item": "minecafe:ice_cubes" },
     "L": { "item": "minecafe:lemon_juice" },
     "C": { "item": "minecafe:clear_cup" },
-    "F": { "item": "minecafe:mango" }
+    "F": { "tag": "forge:crops/mango" }
   },
   "pattern": [
     "SWS",

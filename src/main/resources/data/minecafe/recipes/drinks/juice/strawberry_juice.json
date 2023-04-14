@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:strawberry" },
-    { "item": "minecafe:strawberry" },
-    { "item": "minecafe:strawberry" },
-    { "item": "minecafe:strawberry" },
-    { "item": "minecafe:strawberry" },
-    { "item": "minecafe:strawberry" },
+    { "tag": "forge:crops/strawberry" },
+    { "tag": "forge:crops/strawberry" },
+    { "tag": "forge:crops/strawberry" },
+    { "tag": "forge:crops/strawberry" },
+    { "tag": "forge:crops/strawberry" },
+    { "tag": "forge:crops/strawberry" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

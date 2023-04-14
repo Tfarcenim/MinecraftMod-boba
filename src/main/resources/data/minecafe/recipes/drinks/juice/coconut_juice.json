@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:coconut" },
-    { "item": "minecafe:coconut" },
-    { "item": "minecafe:coconut" },
-    { "item": "minecafe:coconut" },
-    { "item": "minecafe:coconut" },
-    { "item": "minecafe:coconut" },
+    { "tag": "forge:crops/coconut" },
+    { "tag": "forge:crops/coconut" },
+    { "tag": "forge:crops/coconut" },
+    { "tag": "forge:crops/coconut" },
+    { "tag": "forge:crops/coconut" },
+    { "tag": "forge:crops/coconut" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

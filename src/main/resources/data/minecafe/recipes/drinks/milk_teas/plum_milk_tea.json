@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:plum"
+      "tag": "forge:crops/plum"
     }
   },
   "pattern": [

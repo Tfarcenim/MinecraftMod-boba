@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:lychee" },
-    { "item": "minecafe:lychee" },
-    { "item": "minecafe:lychee" },
-    { "item": "minecafe:lychee" },
-    { "item": "minecafe:lychee" },
-    { "item": "minecafe:lychee" },
+    { "tag": "forge:crops/lychee" },
+    { "tag": "forge:crops/lychee" },
+    { "tag": "forge:crops/lychee" },
+    { "tag": "forge:crops/lychee" },
+    { "tag": "forge:crops/lychee" },
+    { "tag": "forge:crops/lychee" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

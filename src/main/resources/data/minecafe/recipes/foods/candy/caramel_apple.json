@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "S": { "item": "minecraft:stick" },
-    "C": { "item": "minecafe:caramel" },
+    "C": { "tag": "forge:caramel" },
     "A": { "item": "minecraft:apple" }
   },
   "pattern": [

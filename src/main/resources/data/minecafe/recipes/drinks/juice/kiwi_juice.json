@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:kiwi" },
-    { "item": "minecafe:kiwi" },
-    { "item": "minecafe:kiwi" },
-    { "item": "minecafe:kiwi" },
-    { "item": "minecafe:kiwi" },
-    { "item": "minecafe:kiwi" },
+    { "tag": "forge:crops/kiwi" },
+    { "tag": "forge:crops/kiwi" },
+    { "tag": "forge:crops/kiwi" },
+    { "tag": "forge:crops/kiwi" },
+    { "tag": "forge:crops/kiwi" },
+    { "tag": "forge:crops/kiwi" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

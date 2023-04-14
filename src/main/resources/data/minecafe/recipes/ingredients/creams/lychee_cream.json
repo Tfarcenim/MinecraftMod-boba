@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "F": { "item": "minecafe:lychee" },
+    "F": { "tag": "forge:crops/lychee" },
     "S": { "tag": "forge:sugar" },
     "C": { "tag": "forge:cream" }
   },

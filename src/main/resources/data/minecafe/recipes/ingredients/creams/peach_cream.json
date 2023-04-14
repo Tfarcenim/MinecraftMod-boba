@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "F": {
-      "item": "minecafe:peach"
+      "tag": "forge:crops/peach"
     },
     "S": {
       "tag": "forge:sugar"

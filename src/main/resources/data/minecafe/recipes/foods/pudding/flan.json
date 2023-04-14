@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "S": { "tag": "forge:sugar" },
-    "C": { "item": "minecafe:caramel" },
+    "C": { "tag": "forge:caramel" },
     "M": { "item": "minecraft:milk_bucket" },
     "E": { "item": "minecraft:egg" }
   },

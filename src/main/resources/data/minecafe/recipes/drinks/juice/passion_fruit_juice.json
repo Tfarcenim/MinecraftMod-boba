@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:passion_fruit" },
-    { "item": "minecafe:passion_fruit" },
-    { "item": "minecafe:passion_fruit" },
-    { "item": "minecafe:passion_fruit" },
-    { "item": "minecafe:passion_fruit" },
-    { "item": "minecafe:passion_fruit" },
+    { "tag": "forge:crops/passion_fruit" },
+    { "tag": "forge:crops/passion_fruit" },
+    { "tag": "forge:crops/passion_fruit" },
+    { "tag": "forge:crops/passion_fruit" },
+    { "tag": "forge:crops/passion_fruit" },
+    { "tag": "forge:crops/passion_fruit" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

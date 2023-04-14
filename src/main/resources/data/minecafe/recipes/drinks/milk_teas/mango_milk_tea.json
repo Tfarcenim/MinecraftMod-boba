@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:mango"
+      "tag": "forge:crops/mango"
     }
   },
   "pattern": [

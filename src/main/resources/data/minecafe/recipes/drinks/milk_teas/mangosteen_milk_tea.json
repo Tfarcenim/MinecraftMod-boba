@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:mangosteen"
+      "tag": "forge:crops/mangosteen"
     }
   },
   "pattern": [

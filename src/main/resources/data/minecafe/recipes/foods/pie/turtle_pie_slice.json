@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": { "item": "minecafe:caramel" },
+    "A": { "tag": "forge:caramel" },
     "W": { "item": "minecafe:whipped_cream" },
     "H": { "tag": "forge:chocolate" },
     "S": { "tag": "forge:sugar" },

@@ -7,7 +7,7 @@
     "S": { "tag": "forge:sugar" },
     "E": { "item": "minecraft:egg" },
     "H": { "item": "minecraft:honey_bottle" },
-    "F": { "item": "minecafe:fig" }
+    "F": { "tag": "forge:crops/fig" }
   },
   "pattern": [
     "WBW",

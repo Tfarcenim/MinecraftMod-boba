@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:blueberry"
+      "tag": "forge:crops/blueberry"
     }
   },
   "pattern": [

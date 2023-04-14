@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "F": { "item": "minecafe:dragon_fruit" },
+    "F": { "tag": "forge:crops/dragon_fruit" },
     "S": { "tag": "forge:sugar" },
     "C": { "tag": "forge:cream" }
   },

@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:pear"
+      "tag": "forge:crops/pear"
     }
   },
   "pattern": [

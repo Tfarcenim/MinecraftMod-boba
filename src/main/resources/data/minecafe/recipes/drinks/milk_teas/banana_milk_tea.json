@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:banana"
+      "tag": "forge:crops/banana"
     }
   },
   "pattern": [

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "M": { "item": "minecafe:monkfruit" }
+    "M": { "tag": "forge:crops/monkfruit" }
   },
   "pattern": [
     " M ",

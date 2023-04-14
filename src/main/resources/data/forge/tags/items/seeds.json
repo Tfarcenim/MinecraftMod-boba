@@ -43,6 +43,12 @@
     "minecafe:mangosteen_seeds",
     "minecafe:monkfruit_seeds",
     "minecafe:starfruit_seeds",
-    "minecafe:acai_seeds"
+    "minecafe:acai_seeds",
+
+    "minecafe:raspberry_seeds",
+    "minecafe:blueberry_seeds",
+    "minecafe:cranberry_seeds",
+    "minecafe:gooseberry_seeds",
+    "minecafe:kiwiberry_seeds"
   ]
 }

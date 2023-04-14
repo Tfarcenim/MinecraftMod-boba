@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:orange" },
-    { "item": "minecafe:orange" },
-    { "item": "minecafe:orange" },
-    { "item": "minecafe:orange" },
-    { "item": "minecafe:orange" },
-    { "item": "minecafe:orange" },
+    { "tag": "forge:crops/orange" },
+    { "tag": "forge:crops/orange" },
+    { "tag": "forge:crops/orange" },
+    { "tag": "forge:crops/orange" },
+    { "tag": "forge:crops/orange" },
+    { "tag": "forge:crops/orange" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

@@ -5,7 +5,7 @@
     "S": { "tag": "forge:sugar" },
     "B": { "tag": "forge:butter" },
     "W": { "item": "minecafe:whipped_cream" },
-    "P": { "item": "minecafe:coconut" },
+    "P": { "tag": "forge:crops/coconut" },
     "E": { "item": "minecafe:coconut_cream" },
     "C": { "tag": "forge:cream" },
     "R": { "item": "minecafe:pie_crust" }

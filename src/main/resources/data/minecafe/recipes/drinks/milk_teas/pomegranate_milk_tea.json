@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:pomegranate"
+      "tag": "forge:crops/pomegranate"
     }
   },
   "pattern": [

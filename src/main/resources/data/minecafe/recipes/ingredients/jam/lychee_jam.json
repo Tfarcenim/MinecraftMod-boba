@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "F": {
-      "item": "minecafe:lychee"
+      "tag": "forge:crops/lychee"
     },
     "S": {
       "tag": "forge:sugar"

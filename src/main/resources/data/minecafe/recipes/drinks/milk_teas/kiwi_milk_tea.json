@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:kiwi"
+      "tag": "forge:crops/kiwi"
     }
   },
   "pattern": [

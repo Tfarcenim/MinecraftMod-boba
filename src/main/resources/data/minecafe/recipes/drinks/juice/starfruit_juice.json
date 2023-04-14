@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:starfruit" },
-    { "item": "minecafe:starfruit" },
-    { "item": "minecafe:starfruit" },
-    { "item": "minecafe:starfruit" },
-    { "item": "minecafe:starfruit" },
-    { "item": "minecafe:starfruit" },
+    { "tag": "forge:crops/starfruit" },
+    { "tag": "forge:crops/starfruit" },
+    { "tag": "forge:crops/starfruit" },
+    { "tag": "forge:crops/starfruit" },
+    { "tag": "forge:crops/starfruit" },
+    { "tag": "forge:crops/starfruit" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

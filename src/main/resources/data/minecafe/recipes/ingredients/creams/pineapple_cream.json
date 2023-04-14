@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "F": { "item": "minecafe:pineapple" },
+    "F": { "tag": "forge:crops/pineapple" },
     "S": { "tag": "forge:sugar" },
     "C": { "tag": "forge:cream" }
   },

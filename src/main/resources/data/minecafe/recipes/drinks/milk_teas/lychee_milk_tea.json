@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:lychee"
+      "tag": "forge:crops/lychee"
     }
   },
   "pattern": [

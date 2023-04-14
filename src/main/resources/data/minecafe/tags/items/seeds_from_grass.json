@@ -19,6 +19,12 @@
     "minecafe:coffee_beans_unroasted",
     "minecafe:strawberry_seeds",
     "minecafe:white_strawberry_seeds",
-    "minecafe:pineapple_seeds"
+    "minecafe:pineapple_seeds",
+
+    "minecafe:raspberry_seeds",
+    "minecafe:blueberry_seeds",
+    "minecafe:cranberry_seeds",
+    "minecafe:gooseberry_seeds",
+    "minecafe:kiwiberry_seeds"
   ]
 }

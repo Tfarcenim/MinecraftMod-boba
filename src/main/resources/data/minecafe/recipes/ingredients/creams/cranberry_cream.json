@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "F": { "item": "minecafe:cranberry" },
+    "F": { "tag": "forge:crops/cranberry" },
     "S": { "tag": "forge:sugar" },
     "C": { "tag": "forge:cream" }
   },

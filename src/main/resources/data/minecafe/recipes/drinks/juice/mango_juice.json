@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:mango" },
-    { "item": "minecafe:mango" },
-    { "item": "minecafe:mango" },
-    { "item": "minecafe:mango" },
-    { "item": "minecafe:mango" },
-    { "item": "minecafe:mango" },
+    { "tag": "forge:crops/mango" },
+    { "tag": "forge:crops/mango" },
+    { "tag": "forge:crops/mango" },
+    { "tag": "forge:crops/mango" },
+    { "tag": "forge:crops/mango" },
+    { "tag": "forge:crops/mango" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

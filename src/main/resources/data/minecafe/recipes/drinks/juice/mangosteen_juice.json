@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:mangosteen" },
-    { "item": "minecafe:mangosteen" },
-    { "item": "minecafe:mangosteen" },
-    { "item": "minecafe:mangosteen" },
-    { "item": "minecafe:mangosteen" },
-    { "item": "minecafe:mangosteen" },
+    { "tag": "forge:crops/mangosteen" },
+    { "tag": "forge:crops/mangosteen" },
+    { "tag": "forge:crops/mangosteen" },
+    { "tag": "forge:crops/mangosteen" },
+    { "tag": "forge:crops/mangosteen" },
+    { "tag": "forge:crops/mangosteen" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

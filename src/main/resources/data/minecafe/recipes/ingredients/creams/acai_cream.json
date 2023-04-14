@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "F": { "item": "minecafe:acai" },
+    "F": { "tag": "forge:crops/acai" },
     "S": { "tag": "forge:sugar" },
     "C": { "tag": "forge:cream" }
   },

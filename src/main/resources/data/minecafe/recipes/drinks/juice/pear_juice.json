@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:pear" },
-    { "item": "minecafe:pear" },
-    { "item": "minecafe:pear" },
-    { "item": "minecafe:pear" },
-    { "item": "minecafe:pear" },
-    { "item": "minecafe:pear" },
+    { "tag": "forge:crops/pear" },
+    { "tag": "forge:crops/pear" },
+    { "tag": "forge:crops/pear" },
+    { "tag": "forge:crops/pear" },
+    { "tag": "forge:crops/pear" },
+    { "tag": "forge:crops/pear" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

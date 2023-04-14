@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:vanilla"
+      "tag": "forge:crops/vanilla"
     }
   },
   "pattern": [

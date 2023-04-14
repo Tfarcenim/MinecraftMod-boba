@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "F": { "item": "minecafe:vanilla" },
+    "F": { "tag": "forge:crops/vanilla" },
     "S": { "tag": "forge:sugar" },
     "C": { "tag": "forge:cream" }
   },

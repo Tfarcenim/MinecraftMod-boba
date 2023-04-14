@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": { "item": "minecafe:banana" },
+    "B": { "tag": "forge:crops/banana" },
     "W": { "item": "minecraft:wheat" }
   },
   "pattern": [

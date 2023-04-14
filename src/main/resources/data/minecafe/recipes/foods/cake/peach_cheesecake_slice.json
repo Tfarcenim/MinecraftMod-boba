@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": { "item": "minecafe:peach" },
+    "B": { "tag": "forge:crops/peach" },
     "R": { "item": "minecafe:cheesecake_slice" }
   },
   "pattern": [

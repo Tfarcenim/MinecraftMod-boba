@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:passion_fruit"
+      "tag": "forge:crops/passion_fruit"
     }
   },
   "pattern": [

@@ -3,7 +3,7 @@ package com.kmek.minecafe.item.registery;
 public enum FoodVariants {
     // Vanilla variants
     CARROT, POTATO, BEETROOT,
-    SWEET_BERRY, GLOW_BERRY, WATERMELON, CHORUS_FRUIT,
+    APPLE, SWEET_BERRY, GLOW_BERRY, WATERMELON, CHORUS_FRUIT,
 
     // Sweet variants
     /*VANILLA,*/ CHOCOLATE, CARAMEL, PUMPKIN_SPICE, HONEY, BROWN_SUGAR,
@@ -12,7 +12,6 @@ public enum FoodVariants {
     ROSE, BUTTERFLY_PEA, LAVENDER, MATCHA,
 
     // Fruit tree crops
-    APPLE,
     ORANGE,
     LEMON,
     LIME,

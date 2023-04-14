@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:cranberry" },
-    { "item": "minecafe:cranberry" },
-    { "item": "minecafe:cranberry" },
-    { "item": "minecafe:cranberry" },
-    { "item": "minecafe:cranberry" },
-    { "item": "minecafe:cranberry" },
+    { "tag": "forge:crops/cranberry" },
+    { "tag": "forge:crops/cranberry" },
+    { "tag": "forge:crops/cranberry" },
+    { "tag": "forge:crops/cranberry" },
+    { "tag": "forge:crops/cranberry" },
+    { "tag": "forge:crops/cranberry" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

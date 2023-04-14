@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:lime" },
-    { "item": "minecafe:lime" },
-    { "item": "minecafe:lime" },
-    { "item": "minecafe:lime" },
-    { "item": "minecafe:lime" },
-    { "item": "minecafe:lime" },
+    { "tag": "forge:crops/lime" },
+    { "tag": "forge:crops/lime" },
+    { "tag": "forge:crops/lime" },
+    { "tag": "forge:crops/lime" },
+    { "tag": "forge:crops/lime" },
+    { "tag": "forge:crops/lime" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

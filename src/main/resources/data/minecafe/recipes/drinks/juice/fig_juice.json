@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:fig" },
-    { "item": "minecafe:fig" },
-    { "item": "minecafe:fig" },
-    { "item": "minecafe:fig" },
-    { "item": "minecafe:fig" },
-    { "item": "minecafe:fig" },
+    { "tag": "forge:crops/fig" },
+    { "tag": "forge:crops/fig" },
+    { "tag": "forge:crops/fig" },
+    { "tag": "forge:crops/fig" },
+    { "tag": "forge:crops/fig" },
+    { "tag": "forge:crops/fig" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {

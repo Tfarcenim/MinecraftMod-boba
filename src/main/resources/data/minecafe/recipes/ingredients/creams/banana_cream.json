@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "F": {
-      "item": "minecafe:banana"
-    },
-    "S": {
-      "tag": "forge:sugar"
-    },
-    "C": {
-      "tag": "forge:cream"
-    }
+    "F": { "tag": "forge:crops/banana" },
+    "S": { "tag": "forge:sugar" },
+    "C": { "tag": "forge:cream" }
   },
   "pattern": [
     "SCF"

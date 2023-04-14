@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": { "item": "minecafe:kiwiberry" },
+    "B": { "tag": "forge:crops/kiwiberry" },
     "R": { "item": "minecafe:cheesecake_slice" }
   },
   "pattern": [

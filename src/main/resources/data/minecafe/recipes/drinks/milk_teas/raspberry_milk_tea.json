@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:raspberry"
+      "tag": "forge:crops/raspberry"
     }
   },
   "pattern": [

@@ -4,7 +4,7 @@
   "key": {
     "S": { "tag": "forge:sugar" },
     "W": { "item": "minecafe:whipped_cream" },
-    "L": { "item": "minecafe:lemon" },
+    "L": { "tag": "forge:crops/lemon" },
     "C": { "item": "minecafe:custard" },
     "J": { "item": "minecafe:lemon_juice" },
     "R": { "item": "minecafe:pie_crust" }

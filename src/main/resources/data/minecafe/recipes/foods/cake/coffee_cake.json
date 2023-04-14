@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "S": { "tag": "forge:sugar" },
-    "C": { "item": "minecafe:cinnamon" },
+    "C": { "tag": "forge:crops/cinnamon" },
     "E": { "item": "minecraft:egg" },
     "B": { "tag": "forge:butter" },
     "W": { "item": "minecraft:wheat" }

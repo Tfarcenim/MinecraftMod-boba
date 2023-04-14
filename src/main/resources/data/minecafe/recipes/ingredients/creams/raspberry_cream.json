@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "F": {
-      "item": "minecafe:raspberry"
+      "tag": "forge:crops/raspberry"
     },
     "S": {
       "tag": "forge:sugar"

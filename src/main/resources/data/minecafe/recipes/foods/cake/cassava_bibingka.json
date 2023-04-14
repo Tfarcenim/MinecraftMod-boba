@@ -4,7 +4,7 @@
   "key": {
     "M": { "item": "minecraft:milk_bucket" },
     "S": { "tag": "forge:sugar" },
-    "C": { "item": "minecafe:cassava" },
+    "C": { "tag": "forge:crops/cassava" },
     "E": { "item": "minecraft:egg" }
   },
   "pattern": [

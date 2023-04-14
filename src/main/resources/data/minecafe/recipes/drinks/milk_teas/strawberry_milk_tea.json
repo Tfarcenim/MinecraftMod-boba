@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:strawberry"
+      "tag": "forge:crops/strawberry"
     }
   },
   "pattern": [

@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecafe:cranberry"
+      "tag": "forge:crops/cranberry"
     }
   },
   "pattern": [

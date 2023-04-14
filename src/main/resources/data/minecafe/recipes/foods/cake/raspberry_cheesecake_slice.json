@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": { "item": "minecafe:raspberry" },
+    "B": { "tag": "forge:crops/raspberry" },
     "R": { "item": "minecafe:cheesecake_slice" }
   },
   "pattern": [

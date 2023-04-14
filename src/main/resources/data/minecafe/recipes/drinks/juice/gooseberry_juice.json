@@ -1,12 +1,12 @@
 {
   "type": "minecafe:juicer",
   "ingredients": [
-    { "item": "minecafe:gooseberry" },
-    { "item": "minecafe:gooseberry" },
-    { "item": "minecafe:gooseberry" },
-    { "item": "minecafe:gooseberry" },
-    { "item": "minecafe:gooseberry" },
-    { "item": "minecafe:gooseberry" },
+    { "tag": "forge:crops/gooseberry" },
+    { "tag": "forge:crops/gooseberry" },
+    { "tag": "forge:crops/gooseberry" },
+    { "tag": "forge:crops/gooseberry" },
+    { "tag": "forge:crops/gooseberry" },
+    { "tag": "forge:crops/gooseberry" },
     { "item": "minecafe:clear_cup" }
   ],
   "output": {
