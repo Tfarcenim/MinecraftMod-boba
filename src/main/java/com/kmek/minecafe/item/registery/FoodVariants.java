@@ -25,22 +25,18 @@ public enum FoodVariants {
     PEAR,
     PLUM,
     FIG,
-
-    // To be implemented as growable crops eventually
-
-    // todo tree crop to add
     GRAPE,
     KIWI,
     DRAGON_FRUIT,
     PASSION_FRUIT,
     POMEGRANATE,
-    COCONUT, // (special tree one day?)
+    COCONUT,
     MANGOSTEEN,
     MONKFRUIT,
     STARFRUIT,
     ACAI,
 
-    // todo Bush crop
+    // Bush crops
     RASPBERRY,
     BLUEBERRY,
     CRANBERRY,
@@ -48,7 +44,7 @@ public enum FoodVariants {
     KIWIBERRY,
     // BLACKBERRY,
 
-    // todo 1 block Crop (custom art)
+    // Tilled crops
     STRAWBERRY,
     WHITE_STRAWBERRY,
     PINEAPPLE,
@@ -56,7 +52,7 @@ public enum FoodVariants {
 //    MINT,
     VANILLA,
 
-    PECAN,
+    PECAN, // todo
 //    PEANUT, // eventually
 //    ALMOND, // eventually
 
@@ -79,11 +75,6 @@ public enum FoodVariants {
     public static final FoodVariants[] bushCrops = { RASPBERRY, BLUEBERRY, CRANBERRY, GOOSEBERRY, KIWIBERRY };
 
     public static final FoodVariants[] tilledCrops = { STRAWBERRY, WHITE_STRAWBERRY, PINEAPPLE };
-
-//    public static final FoodVariants[] juices = { APPLE, ORANGE, LEMON, LIME, LYCHEE, MANGO, CHERRY, PEACH,
-//            PEAR, PLUM, FIG, SWEET_BERRY, WATERMELON, GLOW_BERRY, CHORUS_FRUIT, CARROT, POTATO, BEETROOT/*,
-//            STRAWBERRY, RASPBERRY, BLUEBERRY, CRANBERRY, DRAGON_FRUIT, GRAPE, KIWI, MANGOSTEEN, PAPAYA,
-//            PASSION_FRUIT, PINEAPPLE, POMEGRANATE*/ };
 
     @Override
     public String toString() {

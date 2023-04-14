@@ -20,9 +20,9 @@ fig, 3, 2.5
 peach, 3, 2.5
 orange, 3, 2.5
 pumpkin_spice, 2, 0.6
+thai, 2, 0.6
 tiger, 2, 0.5
 gooseberry, 3, 2.5
-thai, 2, 0.6
 carrot, 4, 3.8
 mango, 3, 2.5
 passion_fruit, 3, 2.5

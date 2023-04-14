@@ -1,0 +1,15 @@
+{
+  "type": "minecafe:juicer",
+  "ingredients": [
+    { "item": "minecafe:raspberry" },
+    { "item": "minecafe:raspberry" },
+    { "item": "minecafe:raspberry" },
+    { "item": "minecafe:raspberry" },
+    { "item": "minecafe:raspberry" },
+    { "item": "minecafe:raspberry" },
+    { "item": "minecafe:clear_cup" }
+  ],
+  "output": {
+    "item": "minecafe:raspberry_juice"
+  }
+}

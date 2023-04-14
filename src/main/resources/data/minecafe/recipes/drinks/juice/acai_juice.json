@@ -1,0 +1,15 @@
+{
+  "type": "minecafe:juicer",
+  "ingredients": [
+    { "item": "minecafe:acai" },
+    { "item": "minecafe:acai" },
+    { "item": "minecafe:acai" },
+    { "item": "minecafe:acai" },
+    { "item": "minecafe:acai" },
+    { "item": "minecafe:acai" },
+    { "item": "minecafe:clear_cup" }
+  ],
+  "output": {
+    "item": "minecafe:acai_juice"
+  }
+}

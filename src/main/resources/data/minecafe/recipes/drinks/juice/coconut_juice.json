@@ -1,0 +1,15 @@
+{
+  "type": "minecafe:juicer",
+  "ingredients": [
+    { "item": "minecafe:coconut" },
+    { "item": "minecafe:coconut" },
+    { "item": "minecafe:coconut" },
+    { "item": "minecafe:coconut" },
+    { "item": "minecafe:coconut" },
+    { "item": "minecafe:coconut" },
+    { "item": "minecafe:clear_cup" }
+  ],
+  "output": {
+    "item": "minecafe:coconut_juice"
+  }
+}
