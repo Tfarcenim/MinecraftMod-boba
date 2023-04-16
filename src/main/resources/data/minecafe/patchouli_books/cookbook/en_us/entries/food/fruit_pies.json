@@ -1,0 +1,18 @@
+{
+  "name": "Fruit Pies",
+  "icon": "minecafe:cherry_pie_slice",
+  "category": "minecafe:food",
+  "read_by_default": "true",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/pie/cherry_pie_slice",
+      "recipe2": "minecafe:foods/pie/strawberry_pie_slice"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/pie/apple_pie_slice",
+      "recipe2": "minecafe:foods/pie/blueberry_pie_slice"
+    }
+  ]
+}

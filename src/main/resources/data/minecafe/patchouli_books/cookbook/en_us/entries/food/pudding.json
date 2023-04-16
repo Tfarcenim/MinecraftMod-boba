@@ -1,0 +1,17 @@
+{
+  "name": "Puddings",
+  "icon": "minecafe:flan",
+  "category": "minecafe:food",
+  "read_by_default": "true",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/pudding/tapioca_pudding",
+      "recipe2": "minecafe:foods/pudding/flan"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/pudding/figgy_pudding"
+    }
+  ]
+}

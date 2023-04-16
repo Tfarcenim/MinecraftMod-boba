@@ -1,0 +1,22 @@
+{
+  "name": "Candy",
+  "icon": "minecafe:caramel_apple",
+  "category": "minecafe:food",
+  "read_by_default": "true",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/candy/caramel_apple",
+      "recipe2": "minecafe:foods/candy/chocolate_banana"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/candy/strawberry_chocolate",
+      "recipe2": "minecafe:foods/candy/white_strawberry_chocolate"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/candy/peeps"
+    }
+  ]
+}

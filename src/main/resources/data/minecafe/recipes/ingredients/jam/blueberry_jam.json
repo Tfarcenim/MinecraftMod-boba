@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "F": {
-      "tag": "forge:crops/blueberry"
-    },
-    "S": {
-      "tag": "forge:sugar"
-    }
+    "F": { "tag": "forge:crops/blueberry" },
+    "S": { "tag": "forge:sugar" }
   },
   "pattern": [
     "SFS"

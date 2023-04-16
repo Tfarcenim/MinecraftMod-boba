@@ -19,8 +19,9 @@ All rights reserved in this mod, and I allow for this mod to be included in ModP
 You can look at my source code for learning purposes, but you cannot copy!
 
 ## Compatability
-- Compiled with JEI for crafting recipe support
-- Currently focusing on Minecraft 1.19.3 (will work on backporting when I have more time)
+- Compiled with **JEI** for crafting recipe support
+- Depends on **Patchouli** for in-game guidebook support
+- Currently focusing on Minecraft **1.19.3** (will work on backporting when I have more time)
 
 ---
 # What's in the mod?
@@ -31,6 +32,7 @@ You can look at my source code for learning purposes, but you cannot copy!
 ![fruit items](./tea_images/fruit_items.png)
 ![display blocks](./tea_images/display_cases.png)
 ![flowers and vase](./tea_images/flowers.png)
+![cookbook](./tea_images/cookbook.png)
 
 ---
 

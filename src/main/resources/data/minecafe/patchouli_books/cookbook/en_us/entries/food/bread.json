@@ -1,0 +1,18 @@
+{
+  "name": "Breads",
+  "icon": "minecafe:croissant",
+  "category": "minecafe:food",
+  "read_by_default": "true",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/croissant",
+      "recipe2": "minecafe:foods/breads/baguette"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/banana_bread",
+      "recipe2": "minecafe:foods/breads/pumpkin_bread"
+    }
+  ]
+}
