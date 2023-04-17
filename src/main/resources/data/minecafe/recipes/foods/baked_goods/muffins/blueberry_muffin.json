@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": { "tag": "forge:crops/blueberry" },
+    "E": { "item": "minecraft:egg" },
+    "S": { "tag": "forge:sugar" },
+    "M": { "item": "minecraft:milk_bucket" },
+    "W": { "item": "minecraft:wheat" }
+  },
+  "pattern": [
+    " B ",
+    "ESM",
+    "WWW"
+  ],
+  "result": {
+    "item": "minecafe:blueberry_muffin",
+    "count": 4
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": { "tag": "forge:crops/lemon" },
+    "C": { "item": "minecraft:poppy" },
+    "E": { "item": "minecraft:egg" },
+    "S": { "tag": "forge:sugar" },
+    "M": { "item": "minecraft:milk_bucket" },
+    "W": { "item": "minecraft:wheat" }
+  },
+  "pattern": [
+    " BC",
+    "ESM",
+    "WWW"
+  ],
+  "result": {
+    "item": "minecafe:lemon_poppyseed_muffin",
+    "count": 4
+  }
+}

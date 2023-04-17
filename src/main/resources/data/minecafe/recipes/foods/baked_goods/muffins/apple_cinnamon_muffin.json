@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": { "item": "minecraft:apple" },
+    "C": { "tag": "forge:crops/cinnamon" },
+    "E": { "item": "minecraft:egg" },
+    "S": { "tag": "forge:sugar" },
+    "M": { "item": "minecraft:milk_bucket" },
+    "W": { "item": "minecraft:wheat" }
+  },
+  "pattern": [
+    " BC",
+    "ESM",
+    "WWW"
+  ],
+  "result": {
+    "item": "minecafe:apple_cinnamon_muffin",
+    "count": 4
+  }
+}

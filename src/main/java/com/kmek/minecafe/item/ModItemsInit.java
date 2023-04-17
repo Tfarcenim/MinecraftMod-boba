@@ -269,6 +269,13 @@ public class ModItemsInit {
                 .map(args -> ITEMS.register(args.get(0) + "_cannoli", () -> new Item(new Item.Properties().food(
                         new FoodProperties.Builder().nutrition(2).saturationMod(0.5f).build())))
                 ).toList();
+    public static final List<RegistryObject<Item>> MUFFINS =
+            new ItemDataLoader("registration_data/muffins.txt").read().stream()
+                .map(args -> ITEMS.register(args.get(0), () -> new Item(new Item.Properties().food(
+                    new FoodProperties.Builder()
+                        .nutrition(Integer.parseInt(args.get(1)))
+                        .saturationMod(Float.parseFloat(args.get(2))).build())))
+                ).toList();
 
     /**
      * Bubble Milk Teas

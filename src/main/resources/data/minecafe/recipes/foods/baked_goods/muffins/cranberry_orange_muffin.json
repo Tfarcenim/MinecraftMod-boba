@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": { "tag": "forge:crops/cranberry" },
+    "C": { "tag": "forge:crops/orange" },
+    "E": { "item": "minecraft:egg" },
+    "S": { "tag": "forge:sugar" },
+    "M": { "item": "minecraft:milk_bucket" },
+    "W": { "item": "minecraft:wheat" }
+  },
+  "pattern": [
+    " BC",
+    "ESM",
+    "WWW"
+  ],
+  "result": {
+    "item": "minecafe:cranberry_orange_muffin",
+    "count": 4
+  }
+}

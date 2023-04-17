@@ -285,6 +285,8 @@ public class ModCreativeTabInit {
 //        output.accept(ModItemsInit.SOPAIPILLA_CHEESECAKE_BAR.get());
         output.accept(ModItemsInit.FIG_NEWTON.get());
 
+        ModItemsInit.MUFFINS.forEach(reg -> output.accept(reg.get()));
+
         output.accept(ModItemsInit.MACAROON.get()); // Eventually move to cookies section
     }
 
