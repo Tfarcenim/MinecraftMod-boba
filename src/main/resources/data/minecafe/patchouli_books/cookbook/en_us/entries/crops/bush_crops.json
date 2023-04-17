@@ -21,7 +21,8 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "minecafe:seeds/kiwiberry_seeds"
+      "recipe": "minecafe:seeds/kiwiberry_seeds",
+      "recipe2": "minecafe:seeds/blackberry_seeds"
     }
   ]
 }

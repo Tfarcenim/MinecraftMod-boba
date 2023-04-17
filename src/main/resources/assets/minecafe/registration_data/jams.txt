@@ -24,5 +24,6 @@ lime
 kiwi
 blueberry
 chorus_fruit
+blackberry
 dragon_fruit
 lychee

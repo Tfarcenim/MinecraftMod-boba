@@ -33,6 +33,7 @@ honeydew_melon
 kiwi
 grape
 lime
+mint
 matcha
 
 // Blue
@@ -43,12 +44,14 @@ chorus_fruit
 plum
 fig
 acai
+blackberry
 
 // Brown
 chocolate
 coffee
 cinnamon
 caramel
+peanut
 pear
 
 // White

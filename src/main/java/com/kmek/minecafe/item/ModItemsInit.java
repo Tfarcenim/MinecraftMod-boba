@@ -69,15 +69,21 @@ public class ModItemsInit {
             .map(fruit -> compostable(0.65F, ITEMS.register(fruit.toString(), () -> new Item(new Item.Properties().food(
                 new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())))))
             .toList();
+    public static final List<RegistryObject<Item>> NUTS = Arrays.stream(FoodVariants.nuts)
+            .map(nut -> compostable(0.65F, ITEMS.register(nut.toString(), () -> new Item(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(2).saturationMod(1f).build())))))
+            .toList();
 
     /**
      * Ingredients
      */
     public static final RegistryObject<Item> CHOCOLATE = ITEMS.register("chocolate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PEANUT_BUTTER = ITEMS.register("peanut_butter", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> VANILLA = ITEMS.register("vanilla", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CARAMEL = ITEMS.register("caramel", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
     public static final RegistryObject<Item> CINNAMON = ITEMS.register("cinnamon", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MINT = ITEMS.register("mint", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
     public static final RegistryObject<Item> MONKFRUIT_SWEETENER = ITEMS.register("monkfruit_sweetener", () -> new Item(new Item.Properties()));
@@ -206,16 +212,13 @@ public class ModItemsInit {
             new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
     // todo chocolate vanilla caramel
     // Candy
-    public static final RegistryObject<Item> PEEPS = ITEMS.register("peeps", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
-    public static final RegistryObject<Item> CARAMEL_APPLE = ITEMS.register("caramel_apple", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
-    public static final RegistryObject<Item> STRAWBERRY_CHOCOLATE = ITEMS.register("strawberry_chocolate", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
-    public static final RegistryObject<Item> WHITE_STRAWBERRY_CHOCOLATE = ITEMS.register("white_strawberry_chocolate", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
-    public static final RegistryObject<Item> CHOCOLATE_BANANA = ITEMS.register("chocolate_banana", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
+    public static final List<RegistryObject<Item>> CANDY =
+            new ItemDataLoader("registration_data/candy.txt").read().stream()
+                .map(args -> ITEMS.register(args.get(0), () -> new Item(new Item.Properties().food(
+                    new FoodProperties.Builder()
+                        .nutrition(Integer.parseInt(args.get(1)))
+                        .saturationMod(Float.parseFloat(args.get(2))).build())))
+                ).toList();
     // Misc Foods
     public static final List<RegistryObject<Item>> BROWNIES =
             new ItemDataLoader("registration_data/brownies.txt").read().stream()

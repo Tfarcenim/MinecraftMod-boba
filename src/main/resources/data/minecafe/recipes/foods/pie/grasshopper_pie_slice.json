@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "M": { "item": "minecafe:mint" },
+    "M": { "tag": "forge:crops/mint" },
     "A": { "item": "minecafe:marshmallow" },
     "S": { "tag": "forge:sugar" },
     "B": { "tag": "forge:butter" },

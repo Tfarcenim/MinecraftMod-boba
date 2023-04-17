@@ -1,0 +1,8 @@
+Changes for upcoming 1.5:
+
+- Added blackberry crop + food & drink variants
+- Added almonds, pecans, peanuts, mint
+- Added muffins
+- Added in pecan pie, grasshopper pie
+- Added mint cream, mint cannoli, peanut cream, peanut cannoli
+- Added peanut butter, peanut butter cup, chocolate covered peanuts, peanut butter brownie

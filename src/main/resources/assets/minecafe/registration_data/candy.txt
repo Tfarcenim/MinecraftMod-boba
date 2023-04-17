@@ -1,0 +1,7 @@
+peanut_butter_cup, 3, 2
+chocolate_peanuts, 2, 1.5
+chocolate_banana, 4, 2.5
+strawberry_chocolate, 4, 2.5
+white_strawberry_chocolate, 4, 2.5
+caramel_apple, 4, 2.5
+peeps, 1, 0.5

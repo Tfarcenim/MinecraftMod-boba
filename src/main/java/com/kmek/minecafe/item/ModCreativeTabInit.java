@@ -139,16 +139,20 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCoreIngreidents(CreativeModeTab.Output output) {
+        ModItemsInit.NUTS.forEach(reg -> output.accept(reg.get()));
+
         output.accept(ModItemsInit.MONKFRUIT_SWEETENER.get());
         output.accept(ModItemsInit.CREAM.get());
         output.accept(ModItemsInit.BUTTER.get());
 
         output.accept(ModItemsInit.CUSTARD.get());
 
+        output.accept(ModItemsInit.PEANUT_BUTTER.get());
         output.accept(ModItemsInit.CHOCOLATE.get());
-        output.accept(ModItemsInit.VANILLA.get());
         output.accept(ModItemsInit.CARAMEL.get());
+        output.accept(ModItemsInit.VANILLA.get());
         output.accept(ModItemsInit.CINNAMON.get());
+        output.accept(ModItemsInit.MINT.get());
 
         output.accept(ModItemsInit.GRAHAM_CRACKER.get());
         output.accept(ModItemsInit.PIE_CRUST.get());
@@ -204,9 +208,9 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.MUG.get());
         output.accept(ModItemsInit.CLEAR_CUP.get());
 
-//        output.accept(ModItemsInit.ICE_TRAY.get());
-//        output.accept(ModItemsInit.ICE_TRAY_WATER.get());
-//        output.accept(ModItemsInit.ICE_TRAY_ICE.get());
+        output.accept(ModItemsInit.ICE_TRAY.get());
+        output.accept(ModItemsInit.ICE_TRAY_WATER.get());
+        output.accept(ModItemsInit.ICE_TRAY_ICE.get());
 
         output.accept(ModItemsInit.TAIYAKI_MOLD.get());
         output.accept(ModItemsInit.EGG_WAFFLE_MOLD.get());
@@ -282,7 +286,7 @@ public class ModCreativeTabInit {
         ModItemsInit.BROWNIES.forEach(reg -> output.accept(reg.get()));
 
         output.accept(ModItemsInit.LEMON_BAR.get());
-//        output.accept(ModItemsInit.SOPAIPILLA_CHEESECAKE_BAR.get());
+        output.accept(ModItemsInit.SOPAIPILLA_CHEESECAKE_BAR.get());
         output.accept(ModItemsInit.FIG_NEWTON.get());
 
         ModItemsInit.MUFFINS.forEach(reg -> output.accept(reg.get()));
@@ -291,11 +295,7 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCandy(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.CHOCOLATE_BANANA.get());
-        output.accept(ModItemsInit.STRAWBERRY_CHOCOLATE.get());
-        output.accept(ModItemsInit.WHITE_STRAWBERRY_CHOCOLATE.get());
-        output.accept(ModItemsInit.CARAMEL_APPLE.get());
-        output.accept(ModItemsInit.PEEPS.get());
+        ModItemsInit.CANDY.forEach(reg -> output.accept(reg.get()));
     }
 
     private void acceptSmores(CreativeModeTab.Output output) {

@@ -48,6 +48,7 @@ butterfly_pea_flower, 3, 0.6
 blueberry, 3, 2.5
 
 // Purple
+blackberry, 3, 2.5
 plum, 3, 2.5
 mangosteen, 3, 2.5
 acai, 3, 2.5

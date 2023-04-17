@@ -13,6 +13,10 @@
       "type": "patchouli:crafting",
       "recipe": "minecafe:foods/candy/strawberry_chocolate",
       "recipe2": "minecafe:foods/candy/white_strawberry_chocolate"
+    },{
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/candy/chocolate_peanuts",
+      "recipe2": "minecafe:foods/candy/peanut_butter_cup"
     },
     {
       "type": "patchouli:crafting",

@@ -38,8 +38,11 @@
     "minecafe:mangosteen_cream",
     "minecafe:starfruit_cream",
     "minecafe:blueberry_cream",
+    "minecafe:blackberry_cream",
     "minecafe:cranberry_cream",
     "minecafe:acai_cream",
-    "minecafe:gooseberry_cream"
+    "minecafe:gooseberry_cream",
+    "minecafe:mint_cream",
+    "minecafe:peanut_cream"
   ]
 }

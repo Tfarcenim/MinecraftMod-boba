@@ -28,6 +28,11 @@
       "type": "patchouli:crafting",
       "recipe": "minecafe:foods/pie/sugar_cream_pie_slice",
       "recipe2": "minecafe:foods/pie/water_pie_slice"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/pie/grasshopper_pie_slice",
+      "recipe2": "minecafe:foods/pie/pecan_pie_slice"
     }
   ]
 }

@@ -5,7 +5,7 @@
     "C": { "tag": "forge:caramel" },
     "S": { "tag": "forge:sugar" },
     "B": { "tag": "forge:butter" },
-    "P": { "item": "minecafe:pecan" },
+    "P": { "tag": "forge:crops/pecan" },
     "E": { "item": "minecraft:egg" },
     "R": { "item": "minecafe:pie_crust" }
   },

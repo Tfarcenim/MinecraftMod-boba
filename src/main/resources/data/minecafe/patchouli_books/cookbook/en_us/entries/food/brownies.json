@@ -18,6 +18,10 @@
       "type": "patchouli:crafting",
       "recipe": "minecafe:foods/baked_goods/brownies/cheesecake_brownie",
       "recipe2": "minecafe:foods/baked_goods/brownies/double_chocolate_brownie"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/baked_goods/brownies/peanut_butter_brownie"
     }
   ]
 }
