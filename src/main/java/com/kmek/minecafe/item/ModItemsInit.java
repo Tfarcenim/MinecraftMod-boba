@@ -77,8 +77,12 @@ public class ModItemsInit {
     /**
      * Ingredients
      */
-    public static final RegistryObject<Item> CHOCOLATE = ITEMS.register("chocolate", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> PEANUT_BUTTER = ITEMS.register("peanut_butter", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CHOCOLATE = ITEMS.register("chocolate", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+    public static final RegistryObject<Item> WHITE_CHOCOLATE = ITEMS.register("white_chocolate", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+    public static final RegistryObject<Item> PEANUT_BUTTER = ITEMS.register("peanut_butter", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
     public static final RegistryObject<Item> VANILLA = ITEMS.register("vanilla", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CARAMEL = ITEMS.register("caramel", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
@@ -279,6 +283,18 @@ public class ModItemsInit {
                         .nutrition(Integer.parseInt(args.get(1)))
                         .saturationMod(Float.parseFloat(args.get(2))).build())))
                 ).toList();
+    public static final List<RegistryObject<Item>> COOKIES =
+            new ItemDataLoader("registration_data/cookies.txt").read().stream()
+                .map(args -> ITEMS.register(args.get(0), () -> new Item(new Item.Properties().food(
+                    new FoodProperties.Builder()
+                        .nutrition(Integer.parseInt(args.get(1)))
+                        .saturationMod(Float.parseFloat(args.get(2))).build())))
+                ).toList();
+    public static final List<RegistryObject<Item>> JAM_THUMBPRINT_COOKIES =
+            new ItemDataLoader("registration_data/jams.txt").read().stream()
+                    .map(args -> ITEMS.register(args.get(0) + "_thumbprint_cookie", () -> new Item(new Item.Properties().food(
+                            new FoodProperties.Builder().nutrition(2).saturationMod(0.5f).build())))
+                    ).toList();
 
     /**
      * Bubble Milk Teas

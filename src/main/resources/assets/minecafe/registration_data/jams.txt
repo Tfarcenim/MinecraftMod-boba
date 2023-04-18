@@ -15,13 +15,13 @@ orange
 apple
 pear
 mango
-grape
 passion_fruit
 pineapple
 glow_berry
 lemon
 lime
 kiwi
+grape
 blueberry
 chorus_fruit
 blackberry

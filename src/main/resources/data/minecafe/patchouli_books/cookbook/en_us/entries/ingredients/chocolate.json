@@ -6,7 +6,8 @@
   "pages": [
     {
       "type": "patchouli:crafting",
-      "recipe": "minecafe:ingredients/core/chocolate"
+      "recipe": "minecafe:ingredients/core/chocolate",
+      "recipe2": "minecafe:ingredients/core/white_chocolate"
     }
   ]
 }
