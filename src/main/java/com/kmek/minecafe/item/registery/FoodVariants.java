@@ -54,6 +54,7 @@ public enum FoodVariants {
     PECAN, // todo crops
     PEANUT,
     ALMOND,
+    MACADAMIA_NUT,
 
     // todo Pumpkin-style crop and block
     HONEYDEW_MELON,
@@ -67,7 +68,7 @@ public enum FoodVariants {
             STARFRUIT, STRAWBERRY, WHITE_STRAWBERRY, RASPBERRY, BLUEBERRY, BLACKBERRY, CRANBERRY, GOOSEBERRY, KIWIBERRY
             /*ALOE_VERA*/ };
 
-    public static final FoodVariants[] nuts = { ALMOND, PECAN, PEANUT };
+    public static final FoodVariants[] nuts = { ALMOND, PECAN, PEANUT, MACADAMIA_NUT };
 
     public static final FoodVariants[] treeCrops = { APPLE, ORANGE, LEMON, LIME, AVOCADO, LYCHEE, BANANA, MANGO, CHERRY,
             PEACH, PEAR, PLUM, FIG,

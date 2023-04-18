@@ -8,13 +8,11 @@ lemon_cookie, 3, 1.5
 pumpkin_cookie, 3, 1.5
 double_chocolate_cookie, 3, 1.5
 white_chocolate_chip_chocolate_cookie, 3, 1.5
-white_chocolate_chip_macadamia_cookie, 3, 1.5
+white_chocolate_chip_cookie, 3, 1.5
 matcha_cookie, 3, 1.5
 red_velvet_cookie, 3, 1.5
 pinwheel_cookie, 3, 1.5
 black_and_white_cookie, 3, 1.5
-chocolate_caramel_cookie, 3, 1.5
-caramel_cookie, 3, 1.5
 strawberry_crinkle_cookie, 3, 1.5
 red_velvet_crinkle_cookie, 3, 1.5
 orange_crinkle_cookie, 3, 1.5
@@ -22,3 +20,9 @@ lemon_crinkle_cookie, 3, 1.5
 lime_crinkle_cookie, 3, 1.5
 chorus_fruit_crinkle_cookie, 3, 1.5
 chocolate_crinkle_cookie, 3, 1.5
+chocolate_caramel_cookie, 3, 1.5
+caramel_cookie, 3, 1.5
+almond_cookie, 3, 1.5
+pecan_cookie, 3, 1.5
+peanut_cookie, 3, 1.5
+white_chocolate_chip_macadamia_cookie, 3, 1.5

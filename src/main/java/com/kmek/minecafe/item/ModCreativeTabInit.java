@@ -234,6 +234,7 @@ public class ModCreativeTabInit {
     private void acceptFoods(CreativeModeTab.Output output) {
         acceptBreads(output);
         acceptWaffles(output);
+        acceptCookies(output);
         acceptMiscFoodItems(output);
         acceptCake(output);
         acceptPie(output);
@@ -281,10 +282,13 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.FLAN.get());
     }
 
-    private void acceptMiscFoodItems(CreativeModeTab.Output output) {
+    private void acceptCookies(CreativeModeTab.Output output) {
         ModItemsInit.COOKIES.forEach(reg -> output.accept(reg.get()));
         ModItemsInit.JAM_THUMBPRINT_COOKIES.forEach(reg -> output.accept(reg.get()));
+        output.accept(ModItemsInit.MACAROON.get());
+    }
 
+    private void acceptMiscFoodItems(CreativeModeTab.Output output) {
         ModItemsInit.BROWNIES.forEach(reg -> output.accept(reg.get()));
 
         output.accept(ModItemsInit.LEMON_BAR.get());
@@ -292,8 +296,6 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.FIG_NEWTON.get());
 
         ModItemsInit.MUFFINS.forEach(reg -> output.accept(reg.get()));
-
-        output.accept(ModItemsInit.MACAROON.get()); // Eventually move to cookies section
     }
 
     private void acceptCandy(CreativeModeTab.Output output) {

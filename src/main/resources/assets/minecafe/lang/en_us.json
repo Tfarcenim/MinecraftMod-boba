@@ -332,6 +332,7 @@
   "item.minecafe.almond": "Almonds",
   "item.minecafe.pecan": "Pecans",
   "item.minecafe.peanut": "Peanuts",
+  "item.minecafe.macadamia_nut": "Macadamia Nuts",
 
   "item.minecafe.pie_crust": "Pie Crust",
   "item.minecafe.graham_cracker": "Graham Cracker",
@@ -617,6 +618,7 @@
   "item.minecafe.caramel_cookie": "Caramel Cookie",
   "item.minecafe.pumpkin_cookie": "Pumpkin Cookie",
   "item.minecafe.white_chocolate_chip_macadamia_cookie": "White Choc. Macadamia Nut Cookie",
+  "item.minecafe.white_chocolate_chip_cookie": "White Choc. Chip Cookie",
   "item.minecafe.white_chocolate_chip_chocolate_cookie": "White Choc. Chip Choc. Cookie",
   "item.minecafe.matcha_cookie": "Matcha Cookie",
   "item.minecafe.red_velvet_cookie": "Red Velvet Cookie",
@@ -635,6 +637,9 @@
   "item.minecafe.snickerdoodle_cookie": "Snickerdoodle Cookie",
   "item.minecafe.peanut_butter_cookie": "Peanut Butter Cookie",
   "item.minecafe.double_chocolate_cookie": "Double Chocolate Cookie",
+  "item.minecafe.almond_cookie": "Almond Cookie",
+  "item.minecafe.pecan_cookie": "Pecan Cookie",
+  "item.minecafe.peanut_cookie": "Peanut Cookie",
 
   "item.minecafe.apple_thumbprint_cookie": "Apple Thumbprint Cookie",
   "item.minecafe.sweet_berry_thumbprint_cookie": "Sweet Berry Thumbprint Cookie",
