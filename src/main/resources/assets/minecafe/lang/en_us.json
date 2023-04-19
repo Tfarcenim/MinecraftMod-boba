@@ -328,6 +328,7 @@
   "item.minecafe.butter": "Butter",
   "item.minecafe.caramel": "Caramel",
   "item.minecafe.cinnamon": "Cinnamon",
+  "item.minecafe.ginger": "Ginger",
   "item.minecafe.mint": "Mint",
   "item.minecafe.almond": "Almonds",
   "item.minecafe.pecan": "Pecans",
@@ -339,8 +340,25 @@
 
   "item.minecafe.croissant": "Croissant",
   "item.minecafe.baguette": "Baguette",
+
   "item.minecafe.banana_bread": "Banana Bread",
   "item.minecafe.pumpkin_bread": "Pumpkin Bread",
+  "item.minecafe.blueberry_bread": "Blueberry Bread",
+  "item.minecafe.strawberry_bread": "Strawberry Bread",
+  "item.minecafe.lemon_bread": "Lemon Bread",
+  "item.minecafe.matcha_bread": "Matcha Bread",
+  "item.minecafe.chocolate_bread": "Chocolate Bread",
+  "item.minecafe.cinnamon_raisin_bread": "Cinnamon Raisin Bread",
+  "item.minecafe.carrot_bread": "Carrot Bread",
+  "item.minecafe.peanut_butter_bread": "Peanut Butter Bread",
+  "item.minecafe.peach_bread": "Peach Bread",
+  "item.minecafe.apple_bread": "Apple Bread",
+  "item.minecafe.caramel_apple_bread": "Caramel Apple Bread",
+  "item.minecafe.caramel_bread": "Caramel Bread",
+  "item.minecafe.potato_bread": "Potato Bread",
+  "item.minecafe.honey_bread": "Honey Bread",
+
+  "item.minecafe.gingerbread_square": "Gingerbread Square",
 
   "item.minecafe.caramel_apple": "Caramel Apple",
   "item.minecafe.strawberry_chocolate": "Chocolate Dipped Strawberry",
@@ -640,6 +658,8 @@
   "item.minecafe.almond_cookie": "Almond Cookie",
   "item.minecafe.pecan_cookie": "Pecan Cookie",
   "item.minecafe.peanut_cookie": "Peanut Cookie",
+  "item.minecafe.gingersnap_cookie": "Gingersnap Cookie",
+  "item.minecafe.gingerbread_man_cookie": "Gingerbread Man Cookie",
 
   "item.minecafe.apple_thumbprint_cookie": "Apple Thumbprint Cookie",
   "item.minecafe.sweet_berry_thumbprint_cookie": "Sweet Berry Thumbprint Cookie",

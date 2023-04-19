@@ -11,8 +11,47 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "minecafe:foods/breads/banana_bread",
-      "recipe2": "minecafe:foods/breads/pumpkin_bread"
+      "recipe": "minecafe:foods/breads/carrot_bread",
+      "recipe2": "minecafe:foods/breads/potato_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/honey_bread",
+      "recipe2": "minecafe:foods/breads/lemon_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/peanut_butter_bread",
+      "recipe2": "minecafe:foods/breads/banana_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/pumpkin_bread",
+      "recipe2": "minecafe:foods/breads/blueberry_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/strawberry_bread",
+      "recipe2": "minecafe:foods/breads/peach_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/apple_bread",
+      "recipe2": "minecafe:foods/breads/caramel_apple_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/caramel_bread",
+      "recipe2": "minecafe:foods/breads/chocolate_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/cinnamon_raisin_bread",
+      "recipe2": "minecafe:foods/breads/matcha_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/gingerbread_square"
     }
   ]
 }

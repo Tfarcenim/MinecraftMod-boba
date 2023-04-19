@@ -35,6 +35,12 @@
     "#forge:crops/starfruit",
     "#forge:crops/strawberry",
     "#forge:crops/vanilla",
-    "#forge:crops/white_strawberry"
+    "#forge:crops/white_strawberry",
+
+    "#forge:crops/almond",
+    "#forge:crops/pecan",
+    "#forge:crops/peanut",
+    "#forge:crops/macadamia_nut",
+    "#forge:crops/ginger"
   ]
 }

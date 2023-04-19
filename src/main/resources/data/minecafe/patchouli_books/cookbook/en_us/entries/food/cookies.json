@@ -83,6 +83,11 @@
       "type": "patchouli:crafting",
       "recipe": "minecafe:foods/baked_goods/cookies/peanut_cookie",
       "recipe2": "minecafe:foods/baked_goods/cookies/white_chocolate_chip_macadamia_cookie"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/baked_goods/cookies/gingersnap_cookie",
+      "recipe2": "minecafe:foods/baked_goods/cookies/gingerbread_man_cookie"
     }
   ]
 }

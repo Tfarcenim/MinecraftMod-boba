@@ -2,14 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": { "tag": "forge:crops/banana" },
+    "C": { "tag": "forge:caramel" },
+    "A": { "item": "minecraft:apple" },
     "W": { "item": "minecraft:wheat" }
   },
   "pattern": [
-    " B ",
+    " C ",
+    " A ",
     "WWW"
   ],
   "result": {
-    "item": "minecafe:banana_bread"
+    "item": "minecafe:caramel_apple_bread"
   }
 }

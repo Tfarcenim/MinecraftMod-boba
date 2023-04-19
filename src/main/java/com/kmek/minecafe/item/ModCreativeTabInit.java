@@ -154,6 +154,7 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.VANILLA.get());
         output.accept(ModItemsInit.CINNAMON.get());
         output.accept(ModItemsInit.MINT.get());
+        output.accept(ModItemsInit.GINGER.get());
 
         output.accept(ModItemsInit.GRAHAM_CRACKER.get());
         output.accept(ModItemsInit.PIE_CRUST.get());

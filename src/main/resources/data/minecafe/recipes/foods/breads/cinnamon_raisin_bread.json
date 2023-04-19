@@ -2,14 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": { "tag": "forge:crops/banana" },
+    "C": { "tag": "forge:crops/cinnamon" },
+    "R": { "item": "minecafe:raisins" },
     "W": { "item": "minecraft:wheat" }
   },
   "pattern": [
-    " B ",
+    "RCR",
     "WWW"
   ],
   "result": {
-    "item": "minecafe:banana_bread"
+    "item": "minecafe:cinnamon_raisin_bread"
   }
 }

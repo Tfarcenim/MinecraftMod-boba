@@ -26,3 +26,5 @@ almond_cookie, 3, 1.5
 pecan_cookie, 3, 1.5
 peanut_cookie, 3, 1.5
 white_chocolate_chip_macadamia_cookie, 3, 1.5
+gingersnap_cookie, 3, 1.5
+gingerbread_man_cookie, 2, 1
