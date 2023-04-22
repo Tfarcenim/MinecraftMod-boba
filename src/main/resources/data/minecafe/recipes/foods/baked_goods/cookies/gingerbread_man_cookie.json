@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "W": { "item": "minecraft:wheat" },
-    "P": { "item": "minecafe:gingerbread_slice" }
+    "P": { "item": "minecafe:gingerbread_square" }
   },
   "pattern": [
     "WPW"

@@ -37,3 +37,12 @@ orange_creamsicle_pie_slice, 3, 1.5
 coconut_cream_pie_slice, 3, 1.5
 banana_cream_pie_slice, 3, 1.5
 lemon_cream_pie_slice, 3, 1.5
+
+// Meat pies
+steak_pie, 4, 2
+pork_pie, 4, 2
+mutton_pie, 4, 2
+chicken_pie, 4, 2
+rabbit_pie, 4, 2
+cod_pie, 4, 2
+salmon_pie, 4, 2
