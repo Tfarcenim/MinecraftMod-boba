@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": { "item": "minecafe:funfetti_cream" },
+    "F": { "tag": "forge:crops/funfetti" },
+    "A": { "tag": "forge:crops/almond" }
+  },
+  "pattern": [
+    " C ",
+    "AFA"
+  ],
+  "result": {
+    "item": "minecafe:funfetti_macaron",
+    "count": 4
+  }
+}

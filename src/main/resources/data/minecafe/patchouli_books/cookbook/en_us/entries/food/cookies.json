@@ -46,6 +46,10 @@
     },
     {
       "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/baked_goods/cookies/oreo_cookie"
+    },
+    {
+      "type": "patchouli:crafting",
       "recipe": "minecafe:foods/baked_goods/cookies/strawberry_crinkle_cookie",
       "recipe2": "minecafe:foods/baked_goods/cookies/red_velvet_crinkle_cookie"
     },
@@ -88,6 +92,10 @@
       "type": "patchouli:crafting",
       "recipe": "minecafe:foods/baked_goods/cookies/gingersnap_cookie",
       "recipe2": "minecafe:foods/baked_goods/cookies/gingerbread_man_cookie"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/baked_goods/cookies/samoa_cookie"
     }
   ]
 }

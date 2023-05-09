@@ -285,7 +285,6 @@ public class ModCreativeTabInit {
 
     private void acceptCookies(CreativeModeTab.Output output) {
         ModItemsInit.COOKIES.forEach(reg -> output.accept(reg.get()));
-        ModItemsInit.JAM_THUMBPRINT_COOKIES.forEach(reg -> output.accept(reg.get()));
         output.accept(ModItemsInit.MACAROON.get());
     }
 

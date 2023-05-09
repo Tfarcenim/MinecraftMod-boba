@@ -291,11 +291,7 @@ public class ModItemsInit {
                         .nutrition(Integer.parseInt(args.get(1)))
                         .saturationMod(Float.parseFloat(args.get(2))).build())))
                 ).toList();
-    public static final List<RegistryObject<Item>> JAM_THUMBPRINT_COOKIES =
-            new ItemDataLoader("registration_data/jams.txt").read().stream()
-                    .map(args -> ITEMS.register(args.get(0) + "_thumbprint_cookie", () -> new Item(new Item.Properties().food(
-                            new FoodProperties.Builder().nutrition(2).saturationMod(0.5f).build())))
-                    ).toList();
+    // todo make golden and diamond macarons have special effects
 
     /**
      * Bubble Milk Teas

@@ -17,7 +17,12 @@
     {
       "type": "patchouli:crafting",
       "recipe": "minecafe:foods/breads/honey_bread",
-      "recipe2": "minecafe:foods/breads/lemon_bread"
+      "recipe2": "minecafe:foods/breads/butter_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/lemon_bread",
+      "recipe2": "minecafe:foods/breads/coffee_bread"
     },
     {
       "type": "patchouli:crafting",
@@ -28,6 +33,11 @@
       "type": "patchouli:crafting",
       "recipe": "minecafe:foods/breads/pumpkin_bread",
       "recipe2": "minecafe:foods/breads/blueberry_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/raspberry_bread",
+      "recipe2": "minecafe:foods/breads/raspberry_chocolate_bread"
     },
     {
       "type": "patchouli:crafting",
@@ -47,6 +57,11 @@
     {
       "type": "patchouli:crafting",
       "recipe": "minecafe:foods/breads/cinnamon_raisin_bread",
+      "recipe2": "minecafe:foods/breads/almond_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/chorus_fruit_bread",
       "recipe2": "minecafe:foods/breads/matcha_bread"
     },
     {
