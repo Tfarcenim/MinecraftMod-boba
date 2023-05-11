@@ -16,7 +16,13 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "minecafe:foods/pie/blackberry_pie_slice"
+      "recipe": "minecafe:foods/pie/blackberry_pie_slice",
+      "recipe2": "minecafe:foods/pie/bumbleberry_pie_slice"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/pie/peach_pie_slice",
+      "recipe2": "minecafe:foods/pie/plum_pie_slice"
     }
   ]
 }

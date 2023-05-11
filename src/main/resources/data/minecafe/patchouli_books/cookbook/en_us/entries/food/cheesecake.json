@@ -31,7 +31,28 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "minecafe:foods/cake/coconut_cheesecake_slice"
+      "recipe": "minecafe:foods/cake/coconut_cheesecake_slice",
+      "recipe2": "minecafe:foods/cake/caramel_cheesecake_slice"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/cake/chocolate_cheesecake_slice",
+      "recipe2": "minecafe:foods/cake/coffee_cheesecake_slice"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/cake/strawberry_cheesecake_slice",
+      "recipe2": "minecafe:foods/cake/pumpkin_cheesecake_slice"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/cake/funfetti_cheesecake_slice",
+      "recipe2": "minecafe:foods/cake/hot_cocoa_cheesecake_slice"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/cake/matcha_cheesecake_slice",
+      "recipe2": "minecafe:foods/cake/chorus_fruit_cheesecake_slice"
     }
   ]
 }

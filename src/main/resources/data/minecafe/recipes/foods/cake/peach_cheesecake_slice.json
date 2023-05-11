@@ -3,10 +3,12 @@
   "category": "misc",
   "key": {
     "B": { "tag": "forge:crops/peach" },
+    "J": { "item": "minecafe:peach_jam" },
     "R": { "item": "minecafe:cheesecake_slice" }
   },
   "pattern": [
     "B",
+    "J",
     "R"
   ],
   "result": {

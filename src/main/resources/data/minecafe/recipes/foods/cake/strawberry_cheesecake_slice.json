@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": { "tag": "forge:crops/cherry" },
-    "J": { "item": "minecafe:cherry_jam" },
+    "B": { "tag": "forge:crops/strawberry" },
+    "J": { "item": "minecafe:strawberry_jam" },
     "R": { "item": "minecafe:cheesecake_slice" }
   },
   "pattern": [
@@ -12,6 +12,6 @@
     "R"
   ],
   "result": {
-    "item": "minecafe:cherry_cheesecake_slice"
+    "item": "minecafe:strawberry_cheesecake_slice"
   }
 }

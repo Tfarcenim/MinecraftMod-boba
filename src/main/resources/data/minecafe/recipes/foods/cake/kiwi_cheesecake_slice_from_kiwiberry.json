@@ -3,11 +3,13 @@
   "category": "misc",
   "key": {
     "B": { "tag": "forge:crops/kiwiberry" },
+    "J": { "item": "minecafe:kiwi_jam" },
     "R": { "item": "minecafe:cheesecake_slice" }
   },
   "pattern": [
-    "BBB",
-    " R "
+    "B",
+    "J",
+    "R"
   ],
   "result": {
     "item": "minecafe:kiwi_cheesecake_slice"
