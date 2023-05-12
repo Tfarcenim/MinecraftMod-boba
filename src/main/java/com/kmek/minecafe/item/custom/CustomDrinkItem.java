@@ -68,7 +68,7 @@ public class CustomDrinkItem extends Item {
     public @NotNull ItemStack finishUsingItem(@NotNull ItemStack itemStack, @NotNull Level level, @NotNull LivingEntity livingEntity) {
         if (livingEntity instanceof Player player) {
             if (toReturnAfterUse != null) {
-                System.out.println("\n\n" + toReturnAfterUse.getDescriptionId());
+//                System.out.println("\n\n" + toReturnAfterUse.getDescriptionId());
                 player.addItem(new ItemStack(toReturnAfterUse));
             }
         }

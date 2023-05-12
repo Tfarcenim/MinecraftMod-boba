@@ -291,6 +291,7 @@ public class ModItemsInit {
                         .nutrition(Integer.parseInt(args.get(1)))
                         .saturationMod(Float.parseFloat(args.get(2))).build())))
                 ).toList();
+    public static final RegistryObject<Item> FORTUNE_COOKIE = ITEMS.register("fortune_cookie", () -> new FortuneCookieItem());
     // todo make golden and diamond macarons have special effects
 
     /**

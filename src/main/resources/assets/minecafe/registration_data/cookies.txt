@@ -27,6 +27,7 @@ chocolate_crinkle_cookie, 3, 1.5
 
 gingersnap_cookie, 3, 1.5
 gingerbread_man_cookie, 2, 1
+// fortune_cookie, 3, 1.5
 
 almond_cookie, 3, 1.5
 pecan_cookie, 3, 1.5
