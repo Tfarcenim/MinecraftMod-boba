@@ -23,6 +23,11 @@
       "type": "patchouli:crafting",
       "recipe": "minecafe:foods/pie/peach_pie_slice",
       "recipe2": "minecafe:foods/pie/plum_pie_slice"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/pie/raisin_pie_slice",
+      "recipe2": "minecafe:foods/pie/cranberry_pie_slice"
     }
   ]
 }

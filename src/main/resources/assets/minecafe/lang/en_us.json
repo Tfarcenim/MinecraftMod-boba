@@ -544,6 +544,7 @@
   "item.minecafe.hot_cocoa_cheesecake_slice": "Hot Cocoa Cheesecake",
   "item.minecafe.matcha_cheesecake_slice": "Matcha Cheesecake",
   "item.minecafe.chorus_fruit_cheesecake_slice": "Chorus Fruit Cheesecake",
+  "item.minecafe.rainbow_cheesecake_slice": "Rainbow Cheesecake",
 
   "item.minecafe.apple_pie_slice": "Apple Pie",
   "item.minecafe.blueberry_pie_slice": "Blueberry Pie",
@@ -553,7 +554,7 @@
   "item.minecafe.bumbleberry_pie_slice": "Bumbleberry Pie",
   "item.minecafe.peach_pie_slice": "Peach Pie",
   "item.minecafe.plum_pie_slice": "Plum Pie",
-
+  "item.minecafe.raisin_pie_slice": "Raisin Pie",
   "item.minecafe.chocolate_chip_cookie_pie_slice": "Chocolate Chip Cookie Pie",
   "item.minecafe.brownie_pie_slice": "Brownie Pie",
   "item.minecafe.possum_pie_slice": "Possum Pie",
@@ -570,7 +571,6 @@
   "item.minecafe.butterscotch_cinnamon_pie_slice": "Butterscotch Cinnamon Pie",
   "item.minecafe.sugar_cream_pie_slice": "Sugar Cream Pie",
   "item.minecafe.water_pie_slice": "Water Pie",
-
   "item.minecafe.strawberry_cream_pie_slice": "Strawberry Cream Pie",
   "item.minecafe.caramel_cream_pie_slice": "Caramel Cream Pie",
   "item.minecafe.vanilla_cream_pie_slice": "Vanilla Cream Pie",
@@ -582,7 +582,12 @@
   "item.minecafe.coconut_cream_pie_slice": "Coconut Cream Pie",
   "item.minecafe.banana_cream_pie_slice": "Banana Cream Pie",
   "item.minecafe.lemon_cream_pie_slice": "Lemon Meringue Pie",
-
+  "item.minecafe.mi_mud_pie_slice": "Mississippi Mud Pie",
+  "item.minecafe.cranberry_pie_slice": "Cranberry Pie",
+  "item.minecafe.peanut_pie_slice": "Peanut Pie",
+  "item.minecafe.sunflower_pie_slice": "Sunflower Pie",
+  "item.minecafe.shoofly_pie_slice": "Shoofly Pie",
+  "item.minecafe.maple_pie_slice": "Maple Pie",
   "item.minecafe.pork_pie": "Pork Pie",
   "item.minecafe.steak_pie": "Steak Pie",
   "item.minecafe.chicken_pie": "Chicken Pie",

@@ -33,6 +33,20 @@
       "type": "patchouli:crafting",
       "recipe": "minecafe:foods/pie/grasshopper_pie_slice",
       "recipe2": "minecafe:foods/pie/pecan_pie_slice"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/pie/mi_mud_pie_slice",
+      "recipe2": "minecafe:foods/pie/peanut_pie_slice"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/pie/sunflower_pie_slice",
+      "recipe2": "minecafe:foods/pie/shoofly_pie_slice"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/pie/maple_pie_slice"
     }
   ]
 }

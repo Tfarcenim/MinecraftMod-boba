@@ -19,3 +19,4 @@ chocolate_cheesecake_slice, 3, 1.5
 
 // todo needs recipe
 funfetti_cheesecake_slice, 3, 1.5
+rainbow_cheesecake_slice, 3, 1.5
