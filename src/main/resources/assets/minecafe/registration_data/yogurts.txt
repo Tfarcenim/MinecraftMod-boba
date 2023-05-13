@@ -1,0 +1,36 @@
+plain_yogurt, 4, 2
+
+// Red
+strawberry_yogurt, 4, 2
+raspberry_yogurt, 4, 2
+watermelon_yogurt, 4, 2
+cherry_yogurt, 4, 2
+
+// Orange
+orange_yogurt, 4, 2
+mango_yogurt, 4, 2
+peach_yogurt, 4, 2
+
+// Yellow
+apple_yogurt, 4, 2
+pineapple_yogurt, 4, 2
+lemon_yogurt, 4, 2
+
+// Green
+kiwi_yogurt, 4, 2
+mint_yogurt, 4, 2
+lime_yogurt, 4, 2
+
+// Purple
+blueberry_yogurt, 4, 2
+blackberry_yogurt, 4, 2
+chorus_fruit_yogurt, 4, 2
+
+// White
+coconut_yogurt, 4, 2
+vanilla_yogurt, 4, 2
+
+// Brown
+caramel_yogurt, 4, 2
+coffee_yogurt, 4, 2
+chocolate_yogurt, 4, 2

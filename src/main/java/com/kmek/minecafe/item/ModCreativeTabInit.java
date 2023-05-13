@@ -241,6 +241,7 @@ public class ModCreativeTabInit {
         acceptPie(output);
         acceptPudding(output);
         acceptCannolis(output);
+        acceptYogurts(output);
         acceptCandy(output);
         acceptSmores(output);
     }
@@ -281,6 +282,10 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.TAPIOCA_PUDDING.get());
         output.accept(ModItemsInit.FIGGY_PUDDING.get());
         output.accept(ModItemsInit.FLAN.get());
+    }
+
+    private void acceptYogurts(CreativeModeTab.Output output) {
+        ModItemsInit.YOGURTS.forEach(reg -> output.accept(reg.get()));
     }
 
     private void acceptCookies(CreativeModeTab.Output output) {

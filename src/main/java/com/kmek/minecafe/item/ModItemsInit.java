@@ -293,6 +293,13 @@ public class ModItemsInit {
                 ).toList();
     public static final RegistryObject<Item> FORTUNE_COOKIE = ITEMS.register("fortune_cookie", () -> new FortuneCookieItem());
     // todo make golden and diamond macarons have special effects
+    public static final List<RegistryObject<Item>> YOGURTS =
+            new ItemDataLoader("registration_data/yogurts.txt").read().stream()
+                    .map(args -> ITEMS.register(args.get(0), () -> new Item(new Item.Properties().food(
+                            new FoodProperties.Builder()
+                                    .nutrition(Integer.parseInt(args.get(1)))
+                                    .saturationMod(Float.parseFloat(args.get(2))).build())))
+                    ).toList();
 
     /**
      * Bubble Milk Teas
