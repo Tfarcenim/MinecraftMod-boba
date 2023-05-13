@@ -37,6 +37,8 @@ white_chocolate_chip_macadamia_cookie, 3, 1.5
 caramel_cookie, 3, 1.5
 chocolate_caramel_cookie, 3, 1.5
 
+jammy_dodger_cookie, 4, 1.5
+
 // Jam Thumbprint Cookies
 watermelon_thumbprint_cookie, 3, 1.5
 strawberry_thumbprint_cookie, 3, 1.5

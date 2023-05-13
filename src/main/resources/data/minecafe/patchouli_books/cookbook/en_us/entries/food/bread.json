@@ -7,7 +7,16 @@
     {
       "type": "patchouli:crafting",
       "recipe": "minecafe:foods/breads/croissant",
-      "recipe2": "minecafe:foods/breads/baguette"
+      "recipe2": "minecafe:foods/breads/chocolate_croissant"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/cinnamon_roll",
+      "recipe2": "minecafe:foods/breads/iced_cinnamon_roll"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/breads/baguette"
     },
     {
       "type": "patchouli:crafting",

@@ -339,6 +339,10 @@
   "item.minecafe.graham_cracker": "Graham Cracker",
 
   "item.minecafe.croissant": "Croissant",
+  "item.minecafe.chocolate_croissant": "Chocolate Croissant",
+  "item.minecafe.cinnamon_roll": "Cinnamon Roll",
+  "item.minecafe.iced_cinnamon_roll": "Iced Cinnamon Roll",
+
   "item.minecafe.baguette": "Baguette",
 
   "item.minecafe.banana_bread": "Banana Bread",
@@ -696,7 +700,6 @@
   "item.minecafe.gingersnap_cookie": "Gingersnap Cookie",
   "item.minecafe.gingerbread_man_cookie": "Gingerbread Man Cookie",
   "item.minecafe.fortune_cookie": "Fortune Cookie",
-
   "item.minecafe.apple_thumbprint_cookie": "Apple Thumbprint Cookie",
   "item.minecafe.sweet_berry_thumbprint_cookie": "Sweet Berry Thumbprint Cookie",
   "item.minecafe.glow_berry_thumbprint_cookie": "Glow Berry Thumbprint Cookie",
@@ -727,6 +730,7 @@
   "item.minecafe.gooseberry_thumbprint_cookie": "Gooseberry Thumbprint Cookie",
   "item.minecafe.strawberry_thumbprint_cookie": "Strawberry Thumbprint Cookie",
   "item.minecafe.pineapple_thumbprint_cookie": "Pineapple Thumbprint Cookie",
+  "item.minecafe.jammy_dodger_cookie": "Jammie Dodger",
 
   "item.minecafe.chocolate_macaron": "Chocolate Macaron",
   "item.minecafe.vanilla_macaron": "Vanilla Macaron",
