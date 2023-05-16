@@ -2,22 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "M": {
-      "item": "minecraft:milk_bucket"
-    },
-    "S": {
-      "tag": "forge:sugar"
-    },
-    "B": {
-      "item": "minecafe:boba_pearls"
-    },
-    "E": {
-      "item": "minecraft:egg"
-    }
+    "S": { "tag": "forge:sugar" },
+    "F": { "item": "minecafe:boba_pearls" },
+    "M": { "item": "minecraft:milk_bucket" },
+    "E": { "item": "minecraft:egg" }
   },
   "pattern": [
-    "MS",
-    "BE"
+    "SF",
+    "ME"
   ],
   "result": {
     "item": "minecafe:tapioca_pudding"

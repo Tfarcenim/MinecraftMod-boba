@@ -95,8 +95,12 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "minecafe:foods/baked_goods/cookies/samoa_cookie",
-      "recipe2": "minecafe:foods/baked_goods/cookies/fortune_cookie"
+      "recipe": "minecafe:foods/baked_goods/cookies/samoa_cookie"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecafe:foods/baked_goods/cookies/fortune_cookie",
+      "recipe2": "minecafe:foods/baked_goods/cookies/golden_fortune_cookie"
     },
     {
       "type": "patchouli:crafting",

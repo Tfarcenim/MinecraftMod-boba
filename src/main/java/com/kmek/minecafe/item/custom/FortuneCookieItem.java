@@ -2,6 +2,8 @@ package com.kmek.minecafe.item.custom;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
@@ -14,12 +16,17 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class FortuneCookieItem extends Item {
-    public FortuneCookieItem() {
-        super(new Item.Properties().food(
-                new FoodProperties.Builder()
-                        .nutrition(3)
-                        .saturationMod(1.5F)
-                        .build()));
+    public FortuneCookieItem(boolean lucky) {
+        super(lucky ?
+                new Item.Properties().food(
+                        new FoodProperties.Builder()
+                                .nutrition(3).saturationMod(1.5F).alwaysEat()
+                                .effect(() -> new MobEffectInstance(MobEffects.LUCK, 1000, 1), 1f)
+                                .build())
+                : new Item.Properties().food(
+                        new FoodProperties.Builder()
+                                .nutrition(3).saturationMod(1.5F).alwaysEat()
+                                .build()));
     }
 
     private final List<String> fortunes = List.of("Fortune will find you in the mines",

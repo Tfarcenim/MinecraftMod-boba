@@ -2,13 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "O": { "item": "minecafe:oreo" },
     "W": { "item": "minecafe:whipped_cream" },
     "C": { "tag": "forge:chocolate" },
     "V": { "item": "minecafe:vanilla_pudding" },
     "R": { "item": "minecafe:pie_crust" }
   },
   "pattern": [
-    " W ",
+    "OWO",
     "CVC",
     " R "
   ],

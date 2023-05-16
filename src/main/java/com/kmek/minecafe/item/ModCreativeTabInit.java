@@ -279,9 +279,7 @@ public class ModCreativeTabInit {
     }
 
     private void acceptPudding(CreativeModeTab.Output output) {
-        output.accept(ModItemsInit.TAPIOCA_PUDDING.get());
-        output.accept(ModItemsInit.FIGGY_PUDDING.get());
-        output.accept(ModItemsInit.FLAN.get());
+        ModItemsInit.PUDDINGS.forEach(reg -> output.accept(reg.get()));
     }
 
     private void acceptYogurts(CreativeModeTab.Output output) {
@@ -291,6 +289,7 @@ public class ModCreativeTabInit {
     private void acceptCookies(CreativeModeTab.Output output) {
         ModItemsInit.COOKIES.forEach(reg -> output.accept(reg.get()));
         output.accept(ModItemsInit.FORTUNE_COOKIE.get());
+        output.accept(ModItemsInit.GOLDEN_FORTUNE_COOKIE.get());
         output.accept(ModItemsInit.MACAROON.get());
     }
 

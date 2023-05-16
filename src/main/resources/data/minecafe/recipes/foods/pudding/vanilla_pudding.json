@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": { "tag": "forge:sugar" },
+    "F": { "tag": "forge:crops/vanilla" },
+    "M": { "item": "minecraft:milk_bucket" },
+    "E": { "item": "minecraft:egg" }
+  },
+  "pattern": [
+    "SF",
+    "ME"
+  ],
+  "result": {
+    "item": "minecafe:vanilla_pudding"
+  }
+}

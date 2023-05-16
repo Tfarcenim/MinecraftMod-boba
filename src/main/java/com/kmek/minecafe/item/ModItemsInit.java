@@ -208,14 +208,13 @@ public class ModItemsInit {
                                 .nutrition(Integer.parseInt(args.get(1)))
                                 .saturationMod(Float.parseFloat(args.get(2))).build())))
                 ).toList();
-    // Pudding
-    public static final RegistryObject<Item> TAPIOCA_PUDDING = ITEMS.register("tapioca_pudding", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
-    public static final RegistryObject<Item> FIGGY_PUDDING = ITEMS.register("figgy_pudding", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build())));
-    public static final RegistryObject<Item> FLAN = ITEMS.register("flan", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(4).saturationMod(2.5f).build())));
-    // todo chocolate vanilla caramel
+    public static final List<RegistryObject<Item>> PUDDINGS =
+            new ItemDataLoader("registration_data/puddings.txt").read().stream()
+                    .map(args -> ITEMS.register(args.get(0), () -> new Item(new Item.Properties().food(
+                            new FoodProperties.Builder()
+                                    .nutrition(Integer.parseInt(args.get(1)))
+                                    .saturationMod(Float.parseFloat(args.get(2))).build())))
+                    ).toList();
     // Candy
     public static final List<RegistryObject<Item>> CANDY =
             new ItemDataLoader("registration_data/candy.txt").read().stream()
@@ -291,7 +290,8 @@ public class ModItemsInit {
                         .nutrition(Integer.parseInt(args.get(1)))
                         .saturationMod(Float.parseFloat(args.get(2))).build())))
                 ).toList();
-    public static final RegistryObject<Item> FORTUNE_COOKIE = ITEMS.register("fortune_cookie", () -> new FortuneCookieItem());
+    public static final RegistryObject<Item> FORTUNE_COOKIE = ITEMS.register("fortune_cookie", () -> new FortuneCookieItem(false));
+    public static final RegistryObject<Item> GOLDEN_FORTUNE_COOKIE = ITEMS.register("golden_fortune_cookie", () -> new FortuneCookieItem(true));
     // todo make golden and diamond macarons have special effects
     public static final List<RegistryObject<Item>> YOGURTS =
             new ItemDataLoader("registration_data/yogurts.txt").read().stream()

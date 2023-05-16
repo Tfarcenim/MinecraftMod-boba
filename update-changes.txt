@@ -8,3 +8,6 @@ Changes for upcoming 1.5:
 - Added peanut butter, peanut butter cup, chocolate covered peanuts, peanut butter brownie
 - Added cookies
 - Add white chocolate
+- Add more cheesecakes
+- Add yogurts
+- Add pudding cups
