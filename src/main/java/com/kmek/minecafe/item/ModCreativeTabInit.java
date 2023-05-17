@@ -6,6 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 
@@ -81,7 +82,7 @@ public class ModCreativeTabInit {
         output.accept(ModBlocksInit.CRIMSON_WALL_SHELF.get());
         output.accept(ModBlocksInit.WARPED_WALL_SHELF.get());
 
-        // Crafting bench blocks
+        // Crafting station blocks
         output.accept(ModBlocksInit.WAFFLE_IRON.get());
         output.accept(ModBlocksInit.COFFEE_MACHINE.get());
         output.accept(ModBlocksInit.ESPRESSO_MACHINE.get());
@@ -92,6 +93,7 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCropsAndSeeds(CreativeModeTab.Output output) {
+        output.accept(ModItemsInit.GOLDEN_FORTUNE_COOKIE_PICKAXE.get());
         output.accept(ModItemsInit.CROP_INSPECTOR_ITEM.get());
 
         acceptFlowerSeeds(output);

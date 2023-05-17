@@ -42,10 +42,12 @@ public class ModItemsInit {
             () -> new BucketItem(ModFluids.SOURCE_COFFEE_FLUID, new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET)));
 
     /**
-     * Crop Inspector Tool
+     * Tools
      */
     public static final RegistryObject<Item> CROP_INSPECTOR_ITEM = ITEMS.register("crop_inspector",
             () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> GOLDEN_FORTUNE_COOKIE_PICKAXE = ITEMS.register("golden_fortune_cookie_pickaxe",
+            () -> new PickaxeItem(ModItemTiers.GOLDEN_FORTUNE_COOKIE, 1, -2.8F, new Item.Properties()));
 
     /**
      * Raw Crop Drops
