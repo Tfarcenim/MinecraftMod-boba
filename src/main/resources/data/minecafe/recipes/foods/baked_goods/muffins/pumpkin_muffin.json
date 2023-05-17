@@ -3,9 +3,9 @@
   "category": "misc",
   "key": {
     "B": { "item": "minecraft:pumpkin" },
-    "E": { "item": "minecraft:egg" },
+    "E": { "tag": "forge:eggs" },
     "S": { "tag": "forge:sugar" },
-    "M": { "item": "minecraft:milk_bucket" },
+    "M": { "tag": "forge:milk" },
     "W": { "item": "minecraft:wheat" }
   },
   "pattern": [

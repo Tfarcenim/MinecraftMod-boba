@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "M": { "item": "minecraft:milk_bucket" },
+    "M": { "tag": "forge:milk" },
     "S": { "tag": "forge:sugar" },
     "C": { "tag": "forge:crops/cassava" },
-    "E": { "item": "minecraft:egg" }
+    "E": { "tag": "forge:eggs" }
   },
   "pattern": [
     "MMM",

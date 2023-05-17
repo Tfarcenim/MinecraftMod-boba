@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "F": {
-      "item": "minecraft:egg"
+      "tag": "forge:eggs"
     },
     "S": {
       "tag": "forge:sugar"

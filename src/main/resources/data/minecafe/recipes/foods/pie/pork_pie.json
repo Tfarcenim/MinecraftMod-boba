@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "W": { "item": "minecraft:wheat" },
-    "E": { "item": "minecraft:egg" },
+    "E": { "tag": "forge:eggs" },
     "S": { "item": "minecraft:cooked_porkchop" },
     "B": { "tag": "forge:butter" },
     "R": { "item": "minecafe:pie_crust" }

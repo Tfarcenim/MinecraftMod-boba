@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "M": {
-      "item": "minecraft:milk_bucket"
+      "tag": "forge:milk"
     },
     "S": {
       "tag": "forge:sugar"
@@ -12,7 +12,7 @@
       "item": "minecraft:wheat"
     },
     "E": {
-      "item": "minecraft:egg"
+      "tag": "forge:eggs"
     }
   },
   "pattern": [

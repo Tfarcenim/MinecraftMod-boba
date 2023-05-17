@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "M": {
-      "item": "minecraft:milk_bucket"
+      "tag": "forge:milk"
     },
     "S": {
       "tag": "forge:sugar"
@@ -15,7 +15,7 @@
       "item": "minecafe:clear_cup"
     },
     "F": {
-      "item": "minecraft:egg"
+      "tag": "forge:eggs"
     }
   },
   "pattern": [

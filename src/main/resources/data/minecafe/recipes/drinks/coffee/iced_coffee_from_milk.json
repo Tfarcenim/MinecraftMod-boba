@@ -9,7 +9,7 @@
       "item": "minecafe:ice_cubes"
     },
     "K": {
-      "item": "minecraft:milk_bucket"
+      "tag": "forge:milk"
     },
     "M": {
       "item": "minecafe:clear_cup"

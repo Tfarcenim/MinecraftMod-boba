@@ -4,8 +4,8 @@
   "key": {
     "S": { "tag": "forge:sugar" },
     "F": { "item": "minecafe:espresso_shot" },
-    "M": { "item": "minecraft:milk_bucket" },
-    "E": { "item": "minecraft:egg" }
+    "M": { "tag": "forge:milk" },
+    "E": { "tag": "forge:eggs" }
   },
   "pattern": [
     "SF",

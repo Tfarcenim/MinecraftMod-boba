@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "E": { "item": "minecraft:egg" },
+    "E": { "tag": "forge:eggs" },
     "S": { "tag": "forge:sugar" },
     "L": { "item": "minecafe:lemon_juice" },
     "B": { "tag": "forge:butter" },

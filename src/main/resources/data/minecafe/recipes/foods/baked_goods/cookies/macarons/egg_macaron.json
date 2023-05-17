@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "C": { "item": "minecafe:custard" },
-    "F": { "item": "minecraft:egg" },
+    "F": { "tag": "forge:eggs" },
     "A": { "tag": "forge:crops/almond" }
   },
   "pattern": [

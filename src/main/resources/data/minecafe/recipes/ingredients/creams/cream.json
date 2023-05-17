@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "M": {
-      "item": "minecraft:milk_bucket"
+      "tag": "forge:milk"
     }
   },
   "pattern": [

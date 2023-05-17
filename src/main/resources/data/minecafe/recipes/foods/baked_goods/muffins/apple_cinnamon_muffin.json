@@ -4,9 +4,9 @@
   "key": {
     "B": { "item": "minecraft:apple" },
     "C": { "tag": "forge:crops/cinnamon" },
-    "E": { "item": "minecraft:egg" },
+    "E": { "tag": "forge:eggs" },
     "S": { "tag": "forge:sugar" },
-    "M": { "item": "minecraft:milk_bucket" },
+    "M": { "tag": "forge:milk" },
     "W": { "item": "minecraft:wheat" }
   },
   "pattern": [

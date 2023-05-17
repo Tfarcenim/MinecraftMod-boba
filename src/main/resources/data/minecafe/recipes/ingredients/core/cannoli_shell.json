@@ -4,7 +4,7 @@
   "key": {
     "S": { "tag": "forge:sugar" },
     "B": { "tag": "forge:butter" },
-    "E": { "item": "minecraft:egg" },
+    "E": { "tag": "forge:eggs" },
     "W": { "item": "minecraft:wheat" }
   },
   "pattern": [

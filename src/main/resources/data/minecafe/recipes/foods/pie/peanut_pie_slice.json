@@ -6,7 +6,7 @@
     "S": { "tag": "forge:sugar" },
     "B": { "tag": "forge:butter" },
     "P": { "item": "minecafe:peanut_butter" },
-    "E": { "item": "minecraft:egg" },
+    "E": { "tag": "forge:eggs" },
     "R": { "item": "minecafe:pie_crust" }
   },
   "pattern": [
