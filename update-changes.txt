@@ -11,3 +11,4 @@ Changes for upcoming 1.5:
 - Add more cheesecakes
 - Add yogurts
 - Add pudding cups
+- add fortune cookie and golden fortune cookie, and the golden fortune cookie pickaxe
