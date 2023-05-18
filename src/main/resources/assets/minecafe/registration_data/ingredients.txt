@@ -1,0 +1,37 @@
+raisins, 2, 2
+
+monkfruit_sweetener
+cream
+butter, 0, 0.2
+
+custard, 1, 0.3
+whipped_cream, 0, 0.5
+
+peanut_butter, 0, 0.2
+chocolate, 1, 0.5
+white_chocolate, 1, 0.4
+caramel
+vanilla
+cinnamon
+mint
+ginger
+
+graham_cracker, 1, 0.5
+pie_crust
+cannoli_shell
+
+ice_cubes
+
+
+boba_pearls
+matcha_powder
+
+
+// clear_cup
+// mug
+// ice_tray
+// ice_tray_water
+// ice_tray_ice
+// batter_mess
+// burnt_crisp
+// raw_waffle_batter

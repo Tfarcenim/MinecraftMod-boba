@@ -18,7 +18,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ModItemsInit {
     /**
@@ -52,21 +55,21 @@ public class ModItemsInit {
     /**
      * Raw Crop Drops
      */
-    public static final RegistryObject<Item> CASSAVA = compostable(0.65F, ITEMS.register("cassava", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0f)
-                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 1.0f)
-                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 0), 1.0f)
-                    .effect(() -> new MobEffectInstance(MobEffects.WEAKNESS, 600, 0), 1.0f)
-                    .build())) {
-        @Override
-        public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-            components.add(Component.literal("Poisonous when raw").withStyle(ChatFormatting.YELLOW));
-            super.appendHoverText(stack, level, components, flag);
-        }
-    }));
+//    public static final RegistryObject<Item> CASSAVA = compostable(0.65F, ITEMS.register("cassava", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(0).saturationMod(0f)
+//                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 1.0f)
+//                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 0), 1.0f)
+//                    .effect(() -> new MobEffectInstance(MobEffects.WEAKNESS, 600, 0), 1.0f)
+//                    .build())) {
+//        @Override
+//        public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+//            components.add(Component.literal("Poisonous when raw").withStyle(ChatFormatting.YELLOW));
+//            super.appendHoverText(stack, level, components, flag);
+//        }
+//    }));
     // Fruits
-    public static final RegistryObject<Item> COFFEE_CHERRIES = compostable(0.6F, ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties())));
-    public static final List<RegistryObject<Item>> FRUIT_ITEMS = Arrays.stream(FoodVariants.fruits)
+//    public static final RegistryObject<Item> COFFEE_CHERRIES = compostable(0.6F, ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties())));
+    public static final List<RegistryObject<Item>> CROP_ITEMS = Arrays.stream(FoodVariants.fruits)
             .filter(fruit -> fruit != FoodVariants.APPLE)
             .map(fruit -> compostable(0.65F, ITEMS.register(fruit.toString(), () -> new Item(new Item.Properties().food(
                 new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())))))
@@ -79,34 +82,45 @@ public class ModItemsInit {
     /**
      * Ingredients
      */
-    public static final RegistryObject<Item> CHOCOLATE = ITEMS.register("chocolate", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
-    public static final RegistryObject<Item> WHITE_CHOCOLATE = ITEMS.register("white_chocolate", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
-    public static final RegistryObject<Item> PEANUT_BUTTER = ITEMS.register("peanut_butter", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
-    public static final RegistryObject<Item> VANILLA = ITEMS.register("vanilla", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CARAMEL = ITEMS.register("caramel", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
-    public static final RegistryObject<Item> CINNAMON = ITEMS.register("cinnamon", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> GINGER = ITEMS.register("ginger", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MINT = ITEMS.register("mint", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
-    public static final RegistryObject<Item> MONKFRUIT_SWEETENER = ITEMS.register("monkfruit_sweetener", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> PIE_CRUST = ITEMS.register("pie_crust", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> GRAHAM_CRACKER = ITEMS.register("graham_cracker", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
-    public static final RegistryObject<Item> CUSTARD = ITEMS.register("custard", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> RAISINS = ITEMS.register("raisins", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
+    public static final List<RegistryObject<Item>> INGREDIENTS =
+            new ItemDataLoader("registration_data/ingredients.txt").read().stream()
+                    .map(args -> {
+                        if (args.size() == 1)
+                            return ITEMS.register(args.get(0), () -> new Item(new Item.Properties()));
+                        else //if (args.size() == 3)
+                            return ITEMS.register(args.get(0), () -> new Item(new Item.Properties().food(
+                                    new FoodProperties.Builder()
+                                            .nutrition(Integer.parseInt(args.get(1)))
+                                            .saturationMod(Float.parseFloat(args.get(2))).build())));
+                    }).toList();
+//    public static final RegistryObject<Item> CHOCOLATE = ITEMS.register("chocolate", () -> new Item(new Item.Properties().food(
+//                    new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+//    public static final RegistryObject<Item> WHITE_CHOCOLATE = ITEMS.register("white_chocolate", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+//    public static final RegistryObject<Item> PEANUT_BUTTER = ITEMS.register("peanut_butter", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
+//    public static final RegistryObject<Item> VANILLA = ITEMS.register("vanilla", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> CARAMEL = ITEMS.register("caramel", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
+//    public static final RegistryObject<Item> CINNAMON = ITEMS.register("cinnamon", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> GINGER = ITEMS.register("ginger", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> MINT = ITEMS.register("mint", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
+//    public static final RegistryObject<Item> MONKFRUIT_SWEETENER = ITEMS.register("monkfruit_sweetener", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> ICE_CUBES = ITEMS.register("ice_cubes", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> PIE_CRUST = ITEMS.register("pie_crust", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> GRAHAM_CRACKER = ITEMS.register("graham_cracker", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+//    public static final RegistryObject<Item> CUSTARD = ITEMS.register("custard", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(0).saturationMod(0.3f).build())));
+//    public static final RegistryObject<Item> RAISINS = ITEMS.register("raisins", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
     // Creams
-    public static final RegistryObject<Item> CREAM = ITEMS.register("cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
-    public static final RegistryObject<Item> WHIPPED_CREAM = ITEMS.register("whipped_cream", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
+//    public static final RegistryObject<Item> CREAM = ITEMS.register("cream", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(0).saturationMod(0.2f).build())));
+//    public static final RegistryObject<Item> WHIPPED_CREAM = ITEMS.register("whipped_cream", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
     public static final List<RegistryObject<Item>> CREAMS =
             new ItemDataLoader("registration_data/creams.txt").read().stream()
                 .map(args -> ITEMS.register(args.get(0) + "_cream", () -> new Item(new Item.Properties().food(
@@ -118,17 +132,17 @@ public class ModItemsInit {
             .map(args -> ITEMS.register(args.get(0) + "_jam", () -> new Item(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(1).saturationMod(0.4f).build())))
             ).toList();
-    public static final RegistryObject<Item> BOBA_PEARLS = ITEMS.register("boba_pearls", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> BOBA_PEARLS = ITEMS.register("boba_pearls", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder", () -> new Item(new Item.Properties()));
 
     /**
      * Dishes
      */
     public static final RegistryObject<Item> CLEAR_CUP = ITEMS.register("clear_cup", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MUG = ITEMS.register("mug", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ICE_TRAY = ITEMS.register("ice_tray", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> ICE_TRAY_WATER = ITEMS.register("ice_tray_water", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> ICE_TRAY_ICE = ITEMS.register("ice_tray_ice", () -> new Item(new Item.Properties().stacksTo(1).craftRemainder(ICE_TRAY.get())));
+//    public static final RegistryObject<Item> ICE_TRAY = ITEMS.register("ice_tray", () -> new Item(new Item.Properties().stacksTo(1)));
+//    public static final RegistryObject<Item> ICE_TRAY_WATER = ITEMS.register("ice_tray_water", () -> new Item(new Item.Properties().stacksTo(1)));
+//    public static final RegistryObject<Item> ICE_TRAY_ICE = ITEMS.register("ice_tray_ice", () -> new Item(new Item.Properties().stacksTo(1).craftRemainder(ICE_TRAY.get())));
 
     /**
      * Food
@@ -167,36 +181,56 @@ public class ModItemsInit {
         }
     });
     public static final RegistryObject<Item> TAIYAKI = ITEMS.register("taiyaki", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new WaffleMoldItem(TAIYAKI.get()));
+//    public static final RegistryObject<Item> TAIYAKI_MOLD = ITEMS.register("taiyaki_mold", () -> new WaffleMoldItem(TAIYAKI.get()));
     public static final RegistryObject<Item> EGG_WAFFLE = ITEMS.register("egg_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> EGG_WAFFLE_MOLD = ITEMS.register("egg_waffle_mold", () -> new WaffleMoldItem(EGG_WAFFLE.get()));
+//    public static final RegistryObject<Item> EGG_WAFFLE_MOLD = ITEMS.register("egg_waffle_mold", () -> new WaffleMoldItem(EGG_WAFFLE.get()));
     public static final RegistryObject<Item> PAW_WAFFLE = ITEMS.register("paw_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> PAW_WAFFLE_MOLD = ITEMS.register("paw_waffle_mold", () -> new WaffleMoldItem(PAW_WAFFLE.get()));
+//    public static final RegistryObject<Item> PAW_WAFFLE_MOLD = ITEMS.register("paw_waffle_mold", () -> new WaffleMoldItem(PAW_WAFFLE.get()));
     public static final RegistryObject<Item> CLASSIC_WAFFLE = ITEMS.register("classic_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> CLASSIC_WAFFLE_MOLD = ITEMS.register("classic_waffle_mold", () -> new WaffleMoldItem(CLASSIC_WAFFLE.get()));
+//    public static final RegistryObject<Item> CLASSIC_WAFFLE_MOLD = ITEMS.register("classic_waffle_mold", () -> new WaffleMoldItem(CLASSIC_WAFFLE.get()));
     public static final RegistryObject<Item> CREEPER_WAFFLE = ITEMS.register("creeper_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> CREEPER_WAFFLE_MOLD = ITEMS.register("creeper_waffle_mold", () -> new WaffleMoldItem(CREEPER_WAFFLE.get()));
+//    public static final RegistryObject<Item> CREEPER_WAFFLE_MOLD = ITEMS.register("creeper_waffle_mold", () -> new WaffleMoldItem(CREEPER_WAFFLE.get()));
     public static final RegistryObject<Item> HEART_WAFFLE = ITEMS.register("heart_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> HEART_WAFFLE_MOLD = ITEMS.register("heart_waffle_mold", () -> new WaffleMoldItem(HEART_WAFFLE.get()));
+//    public static final RegistryObject<Item> HEART_WAFFLE_MOLD = ITEMS.register("heart_waffle_mold", () -> new WaffleMoldItem(HEART_WAFFLE.get()));
     public static final RegistryObject<Item> PUMPKIN_WAFFLE = ITEMS.register("pumpkin_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> PUMPKIN_WAFFLE_MOLD = ITEMS.register("pumpkin_waffle_mold", () -> new WaffleMoldItem(PUMPKIN_WAFFLE.get()));
+//    public static final RegistryObject<Item> PUMPKIN_WAFFLE_MOLD = ITEMS.register("pumpkin_waffle_mold", () -> new WaffleMoldItem(PUMPKIN_WAFFLE.get()));
     public static final RegistryObject<Item> MUSHROOM_WAFFLE = ITEMS.register("mushroom_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> MUSHROOM_WAFFLE_MOLD = ITEMS.register("mushroom_waffle_mold", () -> new WaffleMoldItem(MUSHROOM_WAFFLE.get()));
+//    public static final RegistryObject<Item> MUSHROOM_WAFFLE_MOLD = ITEMS.register("mushroom_waffle_mold", () -> new WaffleMoldItem(MUSHROOM_WAFFLE.get()));
     public static final RegistryObject<Item> FLOWER_WAFFLE = ITEMS.register("flower_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> FLOWER_WAFFLE_MOLD = ITEMS.register("flower_waffle_mold", () -> new WaffleMoldItem(FLOWER_WAFFLE.get()));
+//    public static final RegistryObject<Item> FLOWER_WAFFLE_MOLD = ITEMS.register("flower_waffle_mold", () -> new WaffleMoldItem(FLOWER_WAFFLE.get()));
     public static final RegistryObject<Item> DIAMOND_WAFFLE = ITEMS.register("diamond_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> DIAMOND_WAFFLE_MOLD = ITEMS.register("diamond_waffle_mold", () -> new WaffleMoldItem(DIAMOND_WAFFLE.get()));
+//    public static final RegistryObject<Item> DIAMOND_WAFFLE_MOLD = ITEMS.register("diamond_waffle_mold", () -> new WaffleMoldItem(DIAMOND_WAFFLE.get()));
     public static final RegistryObject<Item> PICKAXE_WAFFLE = ITEMS.register("pickaxe_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> PICKAXE_WAFFLE_MOLD = ITEMS.register("pickaxe_waffle_mold", () -> new WaffleMoldItem(PICKAXE_WAFFLE.get()));
+//    public static final RegistryObject<Item> PICKAXE_WAFFLE_MOLD = ITEMS.register("pickaxe_waffle_mold", () -> new WaffleMoldItem(PICKAXE_WAFFLE.get()));
     public static final RegistryObject<Item> SWORD_WAFFLE = ITEMS.register("sword_waffle", () -> new WaffleItem(2, 0.8f));
-    public static final RegistryObject<Item> SWORD_WAFFLE_MOLD = ITEMS.register("sword_waffle_mold", () -> new WaffleMoldItem(SWORD_WAFFLE.get()));
+//    public static final RegistryObject<Item> SWORD_WAFFLE_MOLD = ITEMS.register("sword_waffle_mold", () -> new WaffleMoldItem(SWORD_WAFFLE.get()));
+    public static final List<RegistryObject<Item>> WAFFLES = List.of(
+            TAIYAKI, EGG_WAFFLE, PAW_WAFFLE, CLASSIC_WAFFLE, CREEPER_WAFFLE, HEART_WAFFLE, PUMPKIN_WAFFLE,
+            MUSHROOM_WAFFLE, FLOWER_WAFFLE, DIAMOND_WAFFLE, PICKAXE_WAFFLE, SWORD_WAFFLE);
+    public static final List<RegistryObject<Item>> WAFFLE_MOLDS = List.of(
+            ITEMS.register("taiyaki_mold", () -> new WaffleMoldItem(TAIYAKI.get())),
+            ITEMS.register("egg_waffle_mold", () -> new WaffleMoldItem(EGG_WAFFLE.get())),
+            ITEMS.register("paw_waffle_mold", () -> new WaffleMoldItem(PAW_WAFFLE.get())),
+            ITEMS.register("classic_waffle_mold", () -> new WaffleMoldItem(CLASSIC_WAFFLE.get())),
+            ITEMS.register("creeper_waffle_mold", () -> new WaffleMoldItem(CREEPER_WAFFLE.get())),
+            ITEMS.register("heart_waffle_mold", () -> new WaffleMoldItem(HEART_WAFFLE.get())),
+            ITEMS.register("pumpkin_waffle_mold", () -> new WaffleMoldItem(PUMPKIN_WAFFLE.get())),
+            ITEMS.register("mushroom_waffle_mold", () -> new WaffleMoldItem(MUSHROOM_WAFFLE.get())),
+            ITEMS.register("flower_waffle_mold", () -> new WaffleMoldItem(FLOWER_WAFFLE.get())),
+            ITEMS.register("diamond_waffle_mold", () -> new WaffleMoldItem(DIAMOND_WAFFLE.get())),
+            ITEMS.register("pickaxe_waffle_mold", () -> new WaffleMoldItem(PICKAXE_WAFFLE.get())),
+            ITEMS.register("sword_waffle_mold", () -> new WaffleMoldItem(SWORD_WAFFLE.get()))
+        );
+//            List.of(TAIYAKI_MOLD, EGG_WAFFLE_MOLD, PAW_WAFFLE_MOLD,
+//            CLASSIC_WAFFLE_MOLD, CREEPER_WAFFLE_MOLD, HEART_WAFFLE_MOLD, PUMPKIN_WAFFLE_MOLD, MUSHROOM_WAFFLE_MOLD,
+//            FLOWER_WAFFLE_MOLD, DIAMOND_WAFFLE_MOLD, PICKAXE_WAFFLE_MOLD, SWORD_WAFFLE_MOLD);
     // Cake
-    public static final RegistryObject<Item> CASSAVA_BIBINGKA = ITEMS.register("cassava_bibingka", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-    public static final RegistryObject<Item> COFFEE_CAKE = ITEMS.register("coffee_cake", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-    public static final List<RegistryObject<Item>> CHEESECAKES =
-            new ItemDataLoader("registration_data/cheesecakes.txt").read().stream()
+//    public static final RegistryObject<Item> CASSAVA_BIBINGKA = ITEMS.register("cassava_bibingka", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
+//    public static final RegistryObject<Item> COFFEE_CAKE = ITEMS.register("coffee_cake", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
+    public static final List<RegistryObject<Item>> CAKES =
+            new ItemDataLoader("registration_data/cakes.txt").read().stream()
                 .map(args -> ITEMS.register(args.get(0), () -> new Item(new Item.Properties().food(
                         new FoodProperties.Builder()
                                 .nutrition(Integer.parseInt(args.get(1)))
@@ -233,16 +267,16 @@ public class ModItemsInit {
                                 .nutrition(Integer.parseInt(args.get(1)))
                                 .saturationMod(Float.parseFloat(args.get(2))).build())))
                 ).toList();
-    public static final RegistryObject<Item> LEMON_BAR = ITEMS.register("lemon_bar", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-    public static final RegistryObject<Item> SOPAIPILLA_CHEESECAKE_BAR = ITEMS.register("sopaipilla_cheesecake_bar", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-    public static final RegistryObject<Item> FIG_NEWTON = ITEMS.register("fig_newton", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
-    public static final RegistryObject<Item> MACAROON = ITEMS.register("macaroon", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(2).saturationMod(0.5f).build())));
-    public static final RegistryObject<Item> TIRAMISU = ITEMS.register("tiramisu", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
+//    public static final RegistryObject<Item> LEMON_BAR = ITEMS.register("lemon_bar", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
+//    public static final RegistryObject<Item> SOPAIPILLA_CHEESECAKE_BAR = ITEMS.register("sopaipilla_cheesecake_bar", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
+//    public static final RegistryObject<Item> FIG_NEWTON = ITEMS.register("fig_newton", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
+//    public static final RegistryObject<Item> MACAROON = ITEMS.register("macaroon", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(2).saturationMod(0.5f).build())));
+//    public static final RegistryObject<Item> TIRAMISU = ITEMS.register("tiramisu", () -> new Item(new Item.Properties().food(
+//            new FoodProperties.Builder().nutrition(3).saturationMod(1.5f).build())));
     // Smores Marshmallow toasting
     public static final RegistryObject<Item> MARSHMALLOW = ITEMS.register("marshmallow", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder().nutrition(1).saturationMod(0.5f).build())));
@@ -272,7 +306,7 @@ public class ModItemsInit {
                         new FoodProperties.Builder().nutrition(5).saturationMod(2f).build())))
             ).toList();
     // Cannolis
-    public static final RegistryObject<Item> CANNOLI_SHELL = ITEMS.register("cannoli_shell", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> CANNOLI_SHELL = ITEMS.register("cannoli_shell", () -> new Item(new Item.Properties()));
     public static final List<RegistryObject<Item>> CANNOLIS =
             new ItemDataLoader("registration_data/creams.txt").read().stream()
                 .map(args -> ITEMS.register(args.get(0) + "_cannoli", () -> new Item(new Item.Properties().food(
@@ -306,10 +340,10 @@ public class ModItemsInit {
     /**
      * Bubble Milk Teas
      */
-    public static final List<RegistryObject<MilkTeaItem>> BOBA_MILK_TEAS =
+    public static final List<RegistryObject<Item>> BOBA_MILK_TEAS =
         new ItemDataLoader("registration_data/boba_milk_teas.txt").read().stream().map(
             args -> ITEMS.register(args.get(0) + "_milk_tea",
-                    () -> new MilkTeaItem(
+                    () -> (Item) new MilkTeaItem(
                             Integer.parseInt(args.get(1)),
                             Float.parseFloat(args.get(2))))
         ).toList();
@@ -369,10 +403,10 @@ public class ModItemsInit {
     public static final RegistryObject<Item> STEAMED_MILK = ITEMS.register("steamed_milk", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MILK_FOAM = ITEMS.register("milk_foam", () -> new Item(new Item.Properties()));
 
-    public static final List<RegistryObject<CoffeeItem>> COFFEES =
+    public static final List<RegistryObject<Item>> COFFEES =
             new ItemDataLoader("registration_data/coffees.txt").read().stream().map(
                     args -> ITEMS.register(args.get(0),
-                            () -> new CoffeeItem(
+                            () -> (Item) new CoffeeItem(
                                     Integer.parseInt(args.get(1)),
                                     Float.parseFloat(args.get(2)),
                                     Integer.parseInt(args.get(3)),

@@ -1,0 +1,42 @@
+// Fruits
+orange, 3, 1
+lemon, 3, 1
+lime, 3, 1
+avocado, 3, 1
+lychee, 3, 1
+banana, 3, 1
+mango, 3, 1
+cherry, 3, 1
+peach, 3, 1
+pear, 3, 1
+plum, 3, 1
+fig, 3, 1
+grape, 3, 1
+kiwi, 3, 1
+pineapple, 3, 1
+dragon_fruit, 3, 1
+passion_fruit, 3, 1
+pomegranate, 3, 1
+coconut, 3, 1
+// honeydew_melon
+mangosteen, 3, 1
+monkfruit, 3, 1
+acai, 3, 1
+starfruit, 3, 1
+strawberry, 3, 1
+white_strawberry, 3, 1
+raspberry, 3, 1
+blueberry, 3, 1
+blackberry, 3, 1
+cranberry, 3, 1
+gooseberry, 3, 1
+kiwiberry, 3, 1
+
+coffee_cherries, 2, 1
+cassava, 1, 1
+
+// Nuts
+almond, 2, 1
+pecan, 2, 1
+peanut, 2, 1
+macadamia_nut, 2, 1

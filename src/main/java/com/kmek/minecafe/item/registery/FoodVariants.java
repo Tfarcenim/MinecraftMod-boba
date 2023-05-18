@@ -34,6 +34,7 @@ public enum FoodVariants {
     MONKFRUIT,
     STARFRUIT,
     ACAI,
+    COFFEE_CHERRIES,
 
     // Bush crops
     RASPBERRY,
@@ -50,6 +51,7 @@ public enum FoodVariants {
 //    ALOE_VERA,
     MINT, // todo crop
     VANILLA,
+    CASSAVA,
 
     PECAN, // todo crops
     PEANUT,
@@ -57,16 +59,16 @@ public enum FoodVariants {
     MACADAMIA_NUT,
 
     // todo Pumpkin-style crop and block
-    HONEYDEW_MELON,
+//    HONEYDEW_MELON,
 
     // todo Full size tree?
     CINNAMON;
 
     public static final FoodVariants[] fruits = { APPLE, ORANGE, LEMON, LIME, AVOCADO, LYCHEE, BANANA, MANGO, CHERRY,
             PEACH, PEAR, PLUM, FIG, GRAPE, KIWI, PINEAPPLE, DRAGON_FRUIT, PASSION_FRUIT,
-            POMEGRANATE, COCONUT, HONEYDEW_MELON, MANGOSTEEN, MONKFRUIT, ACAI,
-            STARFRUIT, STRAWBERRY, WHITE_STRAWBERRY, RASPBERRY, BLUEBERRY, BLACKBERRY, CRANBERRY, GOOSEBERRY, KIWIBERRY
-            /*ALOE_VERA*/ };
+            POMEGRANATE, COCONUT, MANGOSTEEN, MONKFRUIT, ACAI,
+            STARFRUIT, STRAWBERRY, WHITE_STRAWBERRY, RASPBERRY, BLUEBERRY, BLACKBERRY, CRANBERRY, GOOSEBERRY, KIWIBERRY,
+            /*ALOE_VERA*/ COFFEE_CHERRIES, CASSAVA };
 
     public static final FoodVariants[] nuts = { ALMOND, PECAN, PEANUT, MACADAMIA_NUT };
 

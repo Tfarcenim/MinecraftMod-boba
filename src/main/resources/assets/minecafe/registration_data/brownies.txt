@@ -1,3 +1,4 @@
+// Brownies
 brownie, 3, 1.5
 double_chocolate_brownie, 3, 1.5
 cookie_brownie, 3, 1.5
@@ -5,3 +6,8 @@ caramel_brownie, 3, 1.5
 peanut_butter_brownie, 4, 2
 cheesecake_brownie, 3, 1.5
 blondie_brownie, 3, 1.5
+
+// Other bars
+lemon_bar, 3, 1.5
+sopaipilla_cheesecake_bar, 3, 1.5
+fig_newton, 3, 1.5
