@@ -179,12 +179,12 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.MARSHMALLOW_PUFF.get());
 
         output.accept(ModItemsInit.MARSHMALLOW_ON_STICK.get());
-        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_WARM.get());
-        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_TOASTED.get());
-        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_GOLDEN.get());
-        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_WELL_DONE.get());
-        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_BURNT.get());
-        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_SCORCHED.get());
+//        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_WARM.get());
+//        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_TOASTED.get());
+//        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_GOLDEN.get());
+//        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_WELL_DONE.get());
+//        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_BURNT.get());
+//        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_SCORCHED.get());
     }
 
     private void acceptMiscIngredients(CreativeModeTab.Output output) {
