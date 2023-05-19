@@ -3,7 +3,7 @@ package com.kmek.minecafe.item;
 import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.custom.*;
-import com.kmek.minecafe.item.registery.FoodVariants;
+import com.kmek.minecafe.item.registery.CropsEnums;
 import com.kmek.minecafe.registration.ItemDataLoader;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -69,12 +69,12 @@ public class ModItemsInit {
 //    }));
     // Fruits
 //    public static final RegistryObject<Item> COFFEE_CHERRIES = compostable(0.6F, ITEMS.register("coffee_cherries", () -> new Item(new Item.Properties())));
-    public static final List<RegistryObject<Item>> CROP_ITEMS = Arrays.stream(FoodVariants.fruits)
-            .filter(fruit -> fruit != FoodVariants.APPLE)
+    public static final List<RegistryObject<Item>> CROP_ITEMS = Arrays.stream(CropsEnums.fruits)
+            .filter(fruit -> fruit != CropsEnums.APPLE)
             .map(fruit -> compostable(0.65F, ITEMS.register(fruit.toString(), () -> new Item(new Item.Properties().food(
                 new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())))))
             .toList();
-    public static final List<RegistryObject<Item>> NUTS = Arrays.stream(FoodVariants.nuts)
+    public static final List<RegistryObject<Item>> NUTS = Arrays.stream(CropsEnums.nuts)
             .map(nut -> compostable(0.65F, ITEMS.register(nut.toString(), () -> new Item(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(2).saturationMod(1f).build())))))
             .toList();
@@ -350,46 +350,47 @@ public class ModItemsInit {
                             Float.parseFloat(args.get(2))))
         ).toList();
     // Funky tea flavors with effects
-    public static final RegistryObject<Item> GLOW_BERRY_MILK_TEA = ITEMS.register("glow_berry_milk_tea",
+    public static final List<RegistryObject<Item>> SPECIAL_BOBA_MILK_TEAS = List.of(
+    ITEMS.register("glow_berry_milk_tea",
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(2).saturationMod(0.5f)
                             .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 600, 0), 1.0f)
                             .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300, 0), 1.0f)
                             .alwaysEat().build()),
-                    Component.literal("Glowing!").withStyle(ChatFormatting.YELLOW)));
-    public static final RegistryObject<Item> PHANTOM_MILK_TEA = ITEMS.register("phantom_milk_tea",
+                    Component.literal("Glowing!").withStyle(ChatFormatting.YELLOW))),
+    ITEMS.register("phantom_milk_tea",
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(1).saturationMod(0.4f)
                             .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 700, 0), 1.0f)
                             .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 1000, 0), 1.0f)
                             .alwaysEat().build()),
-                    Component.literal("A good pick-me-up in the morning").withStyle(ChatFormatting.YELLOW)));
-    public static final RegistryObject<Item> BLAZING_MILK_TEA = ITEMS.register("blazing_milk_tea",
+                    Component.literal("A good pick-me-up in the morning").withStyle(ChatFormatting.YELLOW))),
+    ITEMS.register("blazing_milk_tea",
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(0).saturationMod(0f)
                             .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0), 1.0f)
                             .alwaysEat().build()),
-                    Component.literal("Now with authentic firey taste").withStyle(ChatFormatting.YELLOW)));
-    public static final RegistryObject<Item> DARKSIDE_MILK_TEA = ITEMS.register("darkside_milk_tea",
+                    Component.literal("Now with authentic firey taste").withStyle(ChatFormatting.YELLOW))),
+    ITEMS.register("darkside_milk_tea",
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(0).saturationMod(0f)
                             .effect(() -> new MobEffectInstance(MobEffects.DARKNESS, 800, 0), 1.0f)
                             .alwaysEat().build()),
-                    Component.literal("Join the dark side").withStyle(ChatFormatting.YELLOW)));
-    public static final RegistryObject<Item> WET_MILK_TEA = ITEMS.register("wet_milk_tea",
+                    Component.literal("Join the dark side").withStyle(ChatFormatting.YELLOW))),
+    ITEMS.register("wet_milk_tea",
             () -> new MilkTeaItem(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(0).saturationMod(0f)
                             .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 800, 0), 1.0f)
                             .effect(() -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 800, 0), 1.0f)
                             .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300, 0), 1.0f)
                             .alwaysEat().build()),
-                    Component.literal("Underwater vibes").withStyle(ChatFormatting.YELLOW)));
-    public static final RegistryObject<Item> IMAGINARY_MILK_TEA = ITEMS.register("imaginary_milk_tea",
+                    Component.literal("Underwater vibes").withStyle(ChatFormatting.YELLOW))),
+    ITEMS.register("imaginary_milk_tea",
         () -> new MilkTeaItem(new Item.Properties().food(
                 new FoodProperties.Builder().nutrition(0).saturationMod(0f)
                         .effect(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 800, 0), 1.0f)
                         .alwaysEat().build()),
-                Component.literal("It's there, I promise!").withStyle(ChatFormatting.YELLOW)));
+                Component.literal("It's there, I promise!").withStyle(ChatFormatting.YELLOW))));
 
     /**
      * Coffee Stuff
@@ -414,15 +415,13 @@ public class ModItemsInit {
                                     Integer.parseInt(args.get(3)),
                                     Integer.parseInt(args.get(4)) == 1 ? CLEAR_CUP.get() : null))
             ).toList();
-    public static final RegistryObject<Item> RED_EYE_COFFEE = ITEMS.register("red_eye_coffee",
-            () -> new CoffeeItem(0, 0, 3, null,
-                    Component.literal("Careful there!").withStyle(ChatFormatting.DARK_RED)));
-    public static final RegistryObject<Item> BLACK_EYE_COFFEE = ITEMS.register("black_eye_coffee",
-            () -> new CoffeeItem(0, 0, 4, null,
-                    Component.literal("Has a lot of caffeine...").withStyle(ChatFormatting.DARK_RED)));
-    public static final RegistryObject<Item> DEAD_EYE_COFFEE = ITEMS.register("dead_eye_coffee",
-            () -> new CoffeeItem(0, 0, 5, null,
-                    Component.literal("Too much caffeine...").withStyle(ChatFormatting.DARK_RED).withStyle(ChatFormatting.OBFUSCATED)));
+    public static final List<RegistryObject<Item>> SPECIAL_COFFEES = List.of(
+        ITEMS.register("red_eye_coffee", () -> new CoffeeItem(0, 0, 3, null,
+                    Component.literal("Careful there!").withStyle(ChatFormatting.DARK_RED))),
+        ITEMS.register("black_eye_coffee", () -> new CoffeeItem(0, 0, 4, null,
+                    Component.literal("Has a lot of caffeine...").withStyle(ChatFormatting.DARK_RED))),
+        ITEMS.register("dead_eye_coffee", () -> new CoffeeItem(0, 0, 5, null,
+                    Component.literal("Too much caffeine...").withStyle(ChatFormatting.DARK_RED).withStyle(ChatFormatting.OBFUSCATED))));
 
     // Teas
     public static final RegistryObject<Item> MATCHA_TEA = ITEMS.register("matcha_tea",

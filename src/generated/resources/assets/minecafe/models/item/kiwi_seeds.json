@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecafe:item/cannolis/honeydew_melon_cannoli"
+    "layer0": "minecafe:item/seeds/kiwi_seeds"
   }
 }

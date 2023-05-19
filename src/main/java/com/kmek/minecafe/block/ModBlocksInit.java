@@ -5,7 +5,7 @@ import com.kmek.minecafe.block.custom.*;
 import com.kmek.minecafe.block.custom.crop.*;
 import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.ModItemsInit;
-import com.kmek.minecafe.item.registery.FoodVariants;
+import com.kmek.minecafe.item.registery.CropsEnums;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -124,12 +124,12 @@ public class ModBlocksInit {
     public static final RegistryObject<Block> CASSAVA_CROP = compostable(0.5F, registerItemNameBlockItem("cassava_crop", "cassava_cutting",
             () -> new TilledCropBlock("item.minecafe.cassava_cutting", BlockBehaviour.Properties.copy(Blocks.WHEAT))));
     // Tilled Crops
-    public static final List<RegistryObject<Block>> TILLED_CROPS = Arrays.stream(FoodVariants.tilledCrops)
+    public static final List<RegistryObject<Block>> TILLED_CROPS = Arrays.stream(CropsEnums.tilledCrops)
             .map(fruit -> asCutout(compostable(0.65F, registerItemNameBlockItem(fruit + "_crop", fruit + "_seeds",
                     () -> new TilledCropBlock("item.minecafe." + fruit + "_seeds", BlockBehaviour.Properties.copy(Blocks.WHEAT))))))
             .toList();
     // Bush Fruit Crops
-    public static final List<RegistryObject<Block>> FRUIT_BUSH_CROPS = Arrays.stream(FoodVariants.bushCrops)
+    public static final List<RegistryObject<Block>> FRUIT_BUSH_CROPS = Arrays.stream(CropsEnums.bushCrops)
             .map(fruit -> compostable(0.65F, registerFruitBush(fruit.toString(), 3)))
             .toList();
 
@@ -140,8 +140,8 @@ public class ModBlocksInit {
             registerDoubleCropBlockItem("coffee", "coffee_beans_unroasted", "item.minecafe.coffee_cherries", 7));
     // Fruits
     public static final RegistryObject<Block> APPLE_CROP_BOTTOM = compostable(0.5F, registerDoubleCropBlockItem("apple", "apple_seeds", Items.APPLE, 5));
-    public static final List<RegistryObject<Block>> FRUIT_TREE_CROPS = Arrays.stream(FoodVariants.treeCrops)
-            .filter(fruit -> fruit != FoodVariants.APPLE)
+    public static final List<RegistryObject<Block>> FRUIT_TREE_CROPS = Arrays.stream(CropsEnums.treeCrops)
+            .filter(fruit -> fruit != CropsEnums.APPLE)
             .map(fruit -> compostable(0.65F, registerFruitTree(fruit.toString())))
             .toList();
 
@@ -157,8 +157,11 @@ public class ModBlocksInit {
     public static final RegistryObject<Block> JUICER = asTranslucent(registerBlockItem("juicer",
             () -> new JuicerBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion())));
 
+    public static final List<RegistryObject<Block>> CRAFTING_BLOCKS = List.of(WAFFLE_IRON, COFFEE_MACHINE,
+            ESPRESSO_MACHINE, JUICER);
+
     /**
-     * Display Blocks
+     * Decorative Blocks
      */
     public static final RegistryObject<Block> DISPLAY_CASE_CURVED = asTranslucent(registerBlockItem("display_case_curved",
             () -> new DisplayCaseBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion())));
@@ -169,10 +172,16 @@ public class ModBlocksInit {
     public static final RegistryObject<Block> CASH_REGISTER = asTranslucent(registerBlockItem("cash_register",
             () -> new CashRegisterBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(3.5f).dynamicShape().requiresCorrectToolForDrops().noOcclusion())));
 
-    // Wall Shelves
+    public static final List<RegistryObject<Block>> DECORATIVE_BLOCKS = List.of(CAKE_STAND, VASE, DISPLAY_CASE_CURVED,
+            CASH_REGISTER);
+
+    /**
+     * Wall Shelves
+     */
     public static RegistryObject<Block> registerWallShelfBlockItem(String name) {
         return registerBlockItem(name, () -> new WallShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(0.75f).dynamicShape().noOcclusion()));
     }
+
     public static final RegistryObject<Block> OAK_WALL_SHELF = registerWallShelfBlockItem("oak_wall_shelf");
     public static final RegistryObject<Block> SPRUCE_WALL_SHELF = registerWallShelfBlockItem("spruce_wall_shelf");
     public static final RegistryObject<Block> BIRCH_WALL_SHELF = registerWallShelfBlockItem("birch_wall_shelf");
@@ -182,6 +191,10 @@ public class ModBlocksInit {
     public static final RegistryObject<Block> MANGROVE_WALL_SHELF = registerWallShelfBlockItem("mangrove_wall_shelf");
     public static final RegistryObject<Block> CRIMSON_WALL_SHELF = registerWallShelfBlockItem("crimson_wall_shelf");
     public static final RegistryObject<Block> WARPED_WALL_SHELF = registerWallShelfBlockItem("warped_wall_shelf");
+
+    public static final List<RegistryObject<Block>> WALL_SHELVES = List.of(OAK_WALL_SHELF, SPRUCE_WALL_SHELF,
+            BIRCH_WALL_SHELF, JUNGLE_WALL_SHELF, ACACIA_WALL_SHELF, DARK_OAK_WALL_SHELF, MANGROVE_WALL_SHELF,
+            CRIMSON_WALL_SHELF, WARPED_WALL_SHELF);
 
     /**
      * Fluids

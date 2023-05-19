@@ -3,9 +3,7 @@
   "category": "misc",
   "key": {
     "S": { "item": "minecafe:marshmallow_on_stick",
-      "predicate": {
-        "custom_model_data": 2
-      },
+      "nbt": "{CustomModelData:1}",
       "todo fix this": "later"
     },
     "C": { "tag": "forge:chocolate" },

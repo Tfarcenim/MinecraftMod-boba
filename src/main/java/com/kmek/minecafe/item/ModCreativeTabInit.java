@@ -66,26 +66,31 @@ public class ModCreativeTabInit {
 
     private void acceptBlocks(CreativeModeTab.Output output) {
         // Decorative blocks
-        output.accept(ModBlocksInit.CAKE_STAND.get());
-        output.accept(ModBlocksInit.VASE.get());
-        output.accept(ModBlocksInit.DISPLAY_CASE_CURVED.get());
-        output.accept(ModBlocksInit.CASH_REGISTER.get());
+//        output.accept(ModBlocksInit.CAKE_STAND.get());
+//        output.accept(ModBlocksInit.VASE.get());
+//        output.accept(ModBlocksInit.DISPLAY_CASE_CURVED.get());
+//        output.accept(ModBlocksInit.CASH_REGISTER.get());
+
         // Wall Shelves
-        output.accept(ModBlocksInit.OAK_WALL_SHELF.get());
-        output.accept(ModBlocksInit.SPRUCE_WALL_SHELF.get());
-        output.accept(ModBlocksInit.BIRCH_WALL_SHELF.get());
-        output.accept(ModBlocksInit.JUNGLE_WALL_SHELF.get());
-        output.accept(ModBlocksInit.ACACIA_WALL_SHELF.get());
-        output.accept(ModBlocksInit.DARK_OAK_WALL_SHELF.get());
-        output.accept(ModBlocksInit.MANGROVE_WALL_SHELF.get());
-        output.accept(ModBlocksInit.CRIMSON_WALL_SHELF.get());
-        output.accept(ModBlocksInit.WARPED_WALL_SHELF.get());
+//        output.accept(ModBlocksInit.OAK_WALL_SHELF.get());
+//        output.accept(ModBlocksInit.SPRUCE_WALL_SHELF.get());
+//        output.accept(ModBlocksInit.BIRCH_WALL_SHELF.get());
+//        output.accept(ModBlocksInit.JUNGLE_WALL_SHELF.get());
+//        output.accept(ModBlocksInit.ACACIA_WALL_SHELF.get());
+//        output.accept(ModBlocksInit.DARK_OAK_WALL_SHELF.get());
+//        output.accept(ModBlocksInit.MANGROVE_WALL_SHELF.get());
+//        output.accept(ModBlocksInit.CRIMSON_WALL_SHELF.get());
+//        output.accept(ModBlocksInit.WARPED_WALL_SHELF.get());
 
         // Crafting station blocks
-        output.accept(ModBlocksInit.WAFFLE_IRON.get());
-        output.accept(ModBlocksInit.COFFEE_MACHINE.get());
-        output.accept(ModBlocksInit.ESPRESSO_MACHINE.get());
-        output.accept(ModBlocksInit.JUICER.get());
+//        output.accept(ModBlocksInit.WAFFLE_IRON.get());
+//        output.accept(ModBlocksInit.COFFEE_MACHINE.get());
+//        output.accept(ModBlocksInit.ESPRESSO_MACHINE.get());
+//        output.accept(ModBlocksInit.JUICER.get());
+
+        ModBlocksInit.CRAFTING_BLOCKS.forEach(reg -> output.accept(reg.get()));
+        ModBlocksInit.DECORATIVE_BLOCKS.forEach(reg -> output.accept(reg.get()));
+        ModBlocksInit.WALL_SHELVES.forEach(reg -> output.accept(reg.get()));
 
         // Fun Blocks
         output.accept(ModItemsInit.COFFEE_BUCKET.get());
@@ -321,19 +326,21 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.MATCHA_TEA.get());
 
         ModItemsInit.BOBA_MILK_TEAS.forEach(reg -> output.accept(reg.get()));
-        output.accept(ModItemsInit.BLAZING_MILK_TEA.get());
-        output.accept(ModItemsInit.GLOW_BERRY_MILK_TEA.get());
-        output.accept(ModItemsInit.WET_MILK_TEA.get());
-        output.accept(ModItemsInit.PHANTOM_MILK_TEA.get());
-        output.accept(ModItemsInit.DARKSIDE_MILK_TEA.get());
-        output.accept(ModItemsInit.IMAGINARY_MILK_TEA.get());
+        ModItemsInit.SPECIAL_BOBA_MILK_TEAS.forEach(reg -> output.accept(reg.get()));
+//        output.accept(ModItemsInit.BLAZING_MILK_TEA.get());
+//        output.accept(ModItemsInit.GLOW_BERRY_MILK_TEA.get());
+//        output.accept(ModItemsInit.WET_MILK_TEA.get());
+//        output.accept(ModItemsInit.PHANTOM_MILK_TEA.get());
+//        output.accept(ModItemsInit.DARKSIDE_MILK_TEA.get());
+//        output.accept(ModItemsInit.IMAGINARY_MILK_TEA.get());
     }
 
     private void acceptCoffeeDrinks(CreativeModeTab.Output output) {
         ModItemsInit.COFFEES.forEach(reg -> output.accept(reg.get()));
-        output.accept(ModItemsInit.RED_EYE_COFFEE.get());
-        output.accept(ModItemsInit.BLACK_EYE_COFFEE.get());
-        output.accept(ModItemsInit.DEAD_EYE_COFFEE.get());
+        ModItemsInit.SPECIAL_COFFEES.forEach(reg -> output.accept(reg.get()));
+//        output.accept(ModItemsInit.RED_EYE_COFFEE.get());
+//        output.accept(ModItemsInit.BLACK_EYE_COFFEE.get());
+//        output.accept(ModItemsInit.DEAD_EYE_COFFEE.get());
     }
 
     private void acceptFruitDrinks(CreativeModeTab.Output output) {

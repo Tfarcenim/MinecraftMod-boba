@@ -1,6 +1,6 @@
 package com.kmek.minecafe.item.registery;
 
-public enum FoodVariants {
+public enum CropsEnums {
     // Vanilla variants
     CARROT, POTATO, BEETROOT,
     APPLE, SWEET_BERRY, GLOW_BERRY, WATERMELON, CHORUS_FRUIT,
@@ -64,21 +64,21 @@ public enum FoodVariants {
     // todo Full size tree?
     CINNAMON;
 
-    public static final FoodVariants[] fruits = { APPLE, ORANGE, LEMON, LIME, AVOCADO, LYCHEE, BANANA, MANGO, CHERRY,
+    public static final CropsEnums[] fruits = { APPLE, ORANGE, LEMON, LIME, AVOCADO, LYCHEE, BANANA, MANGO, CHERRY,
             PEACH, PEAR, PLUM, FIG, GRAPE, KIWI, PINEAPPLE, DRAGON_FRUIT, PASSION_FRUIT,
             POMEGRANATE, COCONUT, MANGOSTEEN, MONKFRUIT, ACAI,
             STARFRUIT, STRAWBERRY, WHITE_STRAWBERRY, RASPBERRY, BLUEBERRY, BLACKBERRY, CRANBERRY, GOOSEBERRY, KIWIBERRY,
             /*ALOE_VERA*/ COFFEE_CHERRIES, CASSAVA };
 
-    public static final FoodVariants[] nuts = { ALMOND, PECAN, PEANUT, MACADAMIA_NUT };
+    public static final CropsEnums[] nuts = { ALMOND, PECAN, PEANUT, MACADAMIA_NUT };
 
-    public static final FoodVariants[] treeCrops = { APPLE, ORANGE, LEMON, LIME, AVOCADO, LYCHEE, BANANA, MANGO, CHERRY,
+    public static final CropsEnums[] treeCrops = { APPLE, ORANGE, LEMON, LIME, AVOCADO, LYCHEE, BANANA, MANGO, CHERRY,
             PEACH, PEAR, PLUM, FIG,
             GRAPE, KIWI, DRAGON_FRUIT, PASSION_FRUIT, POMEGRANATE, COCONUT, MANGOSTEEN, MONKFRUIT, STARFRUIT, ACAI };
 
-    public static final FoodVariants[] bushCrops = { RASPBERRY, BLUEBERRY, BLACKBERRY, CRANBERRY, GOOSEBERRY, KIWIBERRY };
+    public static final CropsEnums[] bushCrops = { RASPBERRY, BLUEBERRY, BLACKBERRY, CRANBERRY, GOOSEBERRY, KIWIBERRY };
 
-    public static final FoodVariants[] tilledCrops = { STRAWBERRY, WHITE_STRAWBERRY, PINEAPPLE };
+    public static final CropsEnums[] tilledCrops = { STRAWBERRY, WHITE_STRAWBERRY, PINEAPPLE };
 
     @Override
     public String toString() {

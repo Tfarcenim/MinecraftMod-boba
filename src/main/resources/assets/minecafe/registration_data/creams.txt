@@ -29,7 +29,7 @@ pineapple
 starfruit
 
 // Green
-honeydew_melon
+// honeydew_melon
 kiwi
 grape
 lime

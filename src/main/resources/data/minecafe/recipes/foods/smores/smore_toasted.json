@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "S": { "item": "minecafe:marshmallow_on_stick_toasted" },
+    "S": { "item": "minecafe:marshmallow_on_stick",
+      "nbt": "{CustomModelData:2}"
+    },
     "C": { "tag": "forge:chocolate" },
     "G": { "item": "minecafe:graham_cracker" }
   },
