@@ -20,8 +20,12 @@ graham_cracker, 1, 0.5
 pie_crust
 cannoli_shell
 
-ice_cubes
+fried_egg, 2, 4
 
+ice_cubes
+// ice_tray
+// ice_tray_water
+// ice_tray_ice
 
 boba_pearls
 matcha_powder
@@ -29,9 +33,6 @@ matcha_powder
 
 // clear_cup
 // mug
-// ice_tray
-// ice_tray_water
-// ice_tray_ice
 // batter_mess
 // burnt_crisp
 // raw_waffle_batter

@@ -12,3 +12,5 @@ Changes for upcoming 1.5:
 - Add yogurts
 - Add pudding cups
 - add fortune cookie and golden fortune cookie, and the golden fortune cookie pickaxe
+- add item model datagen
+- add toasts
