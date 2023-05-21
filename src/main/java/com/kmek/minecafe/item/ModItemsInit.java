@@ -344,12 +344,10 @@ public class ModItemsInit {
                     Component.literal("Has a lot of caffeine...").withStyle(ChatFormatting.DARK_RED))),
         ITEMS.register("dead_eye_coffee", () -> new CoffeeItem(0, 0, 5, null,
                     Component.literal("Too much caffeine...").withStyle(ChatFormatting.DARK_RED).withStyle(ChatFormatting.OBFUSCATED))));
-
     // Teas
     public static final RegistryObject<Item> MATCHA_TEA = ITEMS.register("matcha_tea",
             () -> new CoffeeItem(1, 0.5f, 1, null));
 
-    // Juices & lemonades
     public static final List<RegistryObject<Item>> FRUIT_JUICES =
             new ItemDataLoader("registration_data/juices.txt").read().stream()
                 .map(args -> ITEMS.register(args.get(0),
@@ -357,4 +355,11 @@ public class ModItemsInit {
                                 Integer.parseInt(args.get(1)),
                                 Float.parseFloat(args.get(2)), CLEAR_CUP.get())))
                 .toList();
+    public static final List<RegistryObject<Item>> MISC_DRINKS =
+            new ItemDataLoader("registration_data/misc_drinks.txt").read().stream()
+                    .map(args -> ITEMS.register(args.get(0),
+                            () -> (Item) new CustomDrinkItem(
+                                    Integer.parseInt(args.get(1)),
+                                    Float.parseFloat(args.get(2)), CLEAR_CUP.get())))
+                    .toList();
 }

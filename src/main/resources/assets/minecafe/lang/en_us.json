@@ -186,7 +186,6 @@
   "item.minecafe.monkfruit": "Monkfruit",
   "item.minecafe.starfruit": "Starfruit",
 
-  "item.minecafe.cassava_bibingka": "Cassava Cake",
   "item.minecafe.chocolate": "Chocolate",
   "item.minecafe.white_chocolate": "White Chocolate",
   "item.minecafe.peanut_butter": "Peanut Butter",
@@ -195,6 +194,7 @@
 
   "item.minecafe.boba_pearls": "Boba Pearls",
   "item.minecafe.matcha_powder": "Matcha Powder",
+  "item.minecafe.sprinkles": "Sprinkles",
   "item.minecafe.brown_sugar_milk_tea": "Brown Sugar Milk Tea",
   "item.minecafe.tiger_milk_tea": "Tiger Milk Tea",
   "item.minecafe.honey_milk_tea": "Honey Milk Tea",
@@ -251,6 +251,8 @@
   "item.minecafe.pineapple_milk_tea": "Pineapple Milk Tea",
 
   "item.minecafe.fried_egg": "Fried Egg",
+  "item.minecafe.guacamole": "Guacamole",
+
   "item.minecafe.matcha_tea": "Matcha Tea",
 
   "item.minecafe.raw_waffle_batter": "Raw Waffle Batter",
@@ -428,10 +430,7 @@
   "item.minecafe.cheesecake_brownie": "Cheesecake Brownie",
   "item.minecafe.lemon_bar": "Lemon Bar",
   "item.minecafe.sopaipilla_cheesecake_bar": "Sopaipilla Cheesecake Bar",
-  "item.minecafe.tiramisu": "Tiramisu",
   "item.minecafe.fig_newton": "Fig Newton",
-  "item.minecafe.macaroon": "Macaroon",
-  "item.minecafe.coffee_cake": "Coffee Cake",
 
   "item.minecafe.tapioca_pudding": "Tapioca Pudding",
   "item.minecafe.flan": "Flan",
@@ -612,6 +611,13 @@
   "item.minecafe.smore_well_done": "Smores",
   "item.minecafe.smore_burnt": "Smores",
   "item.minecafe.smore_scorched": "Smores",
+
+  "item.minecafe.tiramisu": "Tiramisu",
+  "item.minecafe.coffee_cake": "Coffee Cake",
+  "item.minecafe.cassava_bibingka": "Cassava Cake",
+  "item.minecafe.princess_cake": "Princess Cake",
+  "item.minecafe.twinkie": "Twinkie",
+  "item.minecafe.chocolate_twinkie": "Chocolate Twinkie",
 
   "item.minecafe.cheesecake_slice": "Cheesecake",
   "item.minecafe.banana_cheesecake_slice": "Banana Cheesecake",
@@ -816,6 +822,7 @@
   "item.minecafe.strawberry_thumbprint_cookie": "Strawberry Thumbprint Cookie",
   "item.minecafe.pineapple_thumbprint_cookie": "Pineapple Thumbprint Cookie",
   "item.minecafe.jammy_dodger_cookie": "Jammie Dodger",
+  "item.minecafe.macaroon": "Macaroon",
 
   "item.minecafe.chocolate_macaron": "Chocolate Macaron",
   "item.minecafe.vanilla_macaron": "Vanilla Macaron",
@@ -927,6 +934,21 @@
   "item.minecafe.acai_yogurt": "Acai Yogurt",
   "item.minecafe.cranberry_yogurt": "Cranberry Yogurt",
   "item.minecafe.gooseberry_yogurt": "Gooseberry Yogurt",
+
+  "item.minecafe.mint_water": "Mint Water",
+  "item.minecafe.lemon_water": "Lemon Water",
+
+  "item.minecafe.apple_cider": "Apple Cider",
+  "item.minecafe.eggnog": "Eggnog",
+
+  "item.minecafe.strawberry_milk": "Strawberry Milk",
+  "item.minecafe.chocolate_milk": "Chocolate Milk",
+  "item.minecafe.banana_milk": "Banana Milk",
+  "item.minecafe.blueberry_milk": "Blueberry Milk",
+  "item.minecafe.caramel_milk": "Caramel Milk",
+  "item.minecafe.chorus_fruit_milk": "Chorus Fruit Milk",
+  "item.minecafe.orange_milk": "Orange Milk",
+  "item.minecafe.matcha_milk": "Matcha Milk",
 
   "itemGroup.minecafe_blocks": "MineCafe: Blocks",
   "itemGroup.minecafe_ingredients": "MineCafe: Ingredients",

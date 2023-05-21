@@ -48,6 +48,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         ModItemsInit.INGREDIENTS.forEach(e -> simpleItem(e, "ingredients/"));
         ModItemsInit.WAFFLE_MOLDS.forEach(e -> simpleItem(e, "waffles/"));
         ModItemsInit.WAFFLES.forEach(e -> simpleItem(e, "waffles/"));
+        ModItemsInit.MISC_DRINKS.forEach(e -> simpleItem(e, "misc_drinks/"));
 
         // Band-aid solution to straggler items
         simpleItem(ModItemsInit.FORTUNE_COOKIE, "cookies/");

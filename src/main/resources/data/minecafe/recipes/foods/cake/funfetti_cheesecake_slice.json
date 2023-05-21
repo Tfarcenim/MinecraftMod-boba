@@ -2,13 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": { "tag": "forge:crops/funfetti" },
-    "J": { "item": "minecafe:funfetti_jam" },
+    "B": { "item": "minecafe:sprinkles" },
     "R": { "item": "minecafe:cheesecake_slice" }
   },
   "pattern": [
     "B",
-    "J",
     "R"
   ],
   "result": {

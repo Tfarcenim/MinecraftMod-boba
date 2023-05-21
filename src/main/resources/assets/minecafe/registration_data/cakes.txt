@@ -25,3 +25,10 @@ chocolate_cheesecake_slice, 3, 1.5
 // todo needs recipe
 funfetti_cheesecake_slice, 3, 1.5
 rainbow_cheesecake_slice, 3, 1.5
+
+// Other Cakes
+princess_cake, 3, 1.5
+
+// Snack cakes
+twinkie, 2, 1
+chocolate_twinkie, 3, 1.5
