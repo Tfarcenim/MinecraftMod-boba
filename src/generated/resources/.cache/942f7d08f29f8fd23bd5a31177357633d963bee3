@@ -1,4 +1,4 @@
-// 1.19.3	2023-05-20T20:50:32.123971	Item Models: minecafe
+// 1.19.3	2023-05-20T22:30:06.7699369	Item Models: minecafe
 cf5722ffb590e719bf0e5d9d9f9394c4e0417b0e assets/minecafe/models/item/acacia_wall_shelf.json
 9e44bbdc343de02d5e26df590228ba45cb7b88d5 assets/minecafe/models/item/acai.json
 3d7c4d99797e475007f2fe27fcc55f1d717371ee assets/minecafe/models/item/acai_cannoli.json
@@ -159,6 +159,7 @@ e729b310c4f4d7681f74e3784dcf789b05750104 assets/minecafe/models/item/cherry_maca
 7b234b9d1648cadbaa0f836aff266ca4924977e3 assets/minecafe/models/item/chocolate.json
 2dc349e10caa4c3bcaef7c8eff91a39188449225 assets/minecafe/models/item/chocolate_banana.json
 77825cf04e6f905a67a2ad0006cad592bd8cc059 assets/minecafe/models/item/chocolate_bread.json
+3c2e0d079a0eba253397bc2f005175c0ce7e12e6 assets/minecafe/models/item/chocolate_cake.json
 6c5704728bf444590e0ec992090467f5a222c1d0 assets/minecafe/models/item/chocolate_cannoli.json
 5e3c84ed140944d99e192a9df126c8f8bc0bf4b4 assets/minecafe/models/item/chocolate_caramel_cookie.json
 6c7b6025aec9560ae887ab1b7cbb8427ca8bfca6 assets/minecafe/models/item/chocolate_cheesecake_slice.json

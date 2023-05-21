@@ -197,6 +197,12 @@ public class ModBlocksInit {
             CRIMSON_WALL_SHELF, WARPED_WALL_SHELF);
 
     /**
+     * Cake Blocks
+     */
+    public static final RegistryObject<Block> CHOCOLATE_CAKE_BLOCK = registerBlockItem("chocolate_cake",
+            () -> new CakeBlock(BlockBehaviour.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL)));
+
+    /**
      * Fluids
      */
     public static final RegistryObject<LiquidBlock> COFFEE_FLUID_BLOCK = BLOCKS.register("coffee_fluid_block",

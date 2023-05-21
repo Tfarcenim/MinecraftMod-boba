@@ -224,6 +224,7 @@ public class ModCreativeTabInit {
 
     private void acceptCake(CreativeModeTab.Output output) {
         ModItemsInit.CAKES.forEach(reg -> output.accept(reg.get()));
+        output.accept(ModBlocksInit.CHOCOLATE_CAKE_BLOCK.get());
     }
 
     private void acceptPie(CreativeModeTab.Output output) {
