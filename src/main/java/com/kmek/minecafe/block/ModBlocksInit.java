@@ -199,8 +199,8 @@ public class ModBlocksInit {
     /**
      * Cake Blocks
      */
-    public static final RegistryObject<Block> CHOCOLATE_CAKE_BLOCK = registerBlockItem("chocolate_cake",
-            () -> new CakeBlock(BlockBehaviour.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL)));
+    public static final RegistryObject<Block> CHOCOLATE_CAKE_BLOCK = registerBlockItem("chocolate_cake", () -> new MyCakeBlock());
+    public static final RegistryObject<Block> CARROT_CAKE_BLOCK = registerBlockItem("carrot_cake", () -> new MyCakeBlock());
 
     /**
      * Fluids

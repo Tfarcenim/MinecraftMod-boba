@@ -1,4 +1,4 @@
-// 1.19.3	2023-05-20T22:30:06.7699369	Item Models: minecafe
+// 1.19.3	2023-05-23T18:54:33.9194156	Item Models: minecafe
 cf5722ffb590e719bf0e5d9d9f9394c4e0417b0e assets/minecafe/models/item/acacia_wall_shelf.json
 9e44bbdc343de02d5e26df590228ba45cb7b88d5 assets/minecafe/models/item/acai.json
 3d7c4d99797e475007f2fe27fcc55f1d717371ee assets/minecafe/models/item/acai_cannoli.json
@@ -130,6 +130,7 @@ a034621360dca6088e9a8edad431c526956829da assets/minecafe/models/item/caramel_can
 9ae2401ff61a1e79ac6f9aef86a493589c957386 assets/minecafe/models/item/caramel_pudding.json
 54d88f16b7fd8a190866ab8e2c38d3d2fdf07048 assets/minecafe/models/item/caramel_yogurt.json
 faef408e028219a1b1fa1f0686f1096679b29c8a assets/minecafe/models/item/carrot_bread.json
+b9a04a290c7f4a2013fd67d4bb6dc0f68902a303 assets/minecafe/models/item/carrot_cake.json
 e6057bf0af9ace2da1f4d5c0c539ee64620a3e66 assets/minecafe/models/item/carrot_cake_macaron.json
 88476b3cd4ef8df2dac0406975e77b6c9ede4645 assets/minecafe/models/item/carrot_cake_muffin.json
 b5c8e085c08e0db033d9556ae0dd4ac801f3714a assets/minecafe/models/item/carrot_juice.json

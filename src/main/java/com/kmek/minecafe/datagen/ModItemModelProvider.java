@@ -72,6 +72,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItemFromPath("coffee_bucket", "coffees/");
         itemFromExplicitPath("vanilla_flower", "block/flower/", "item/generated");
         simpleItemFromPath("chocolate_cake", "cakes/whole/");
+        simpleItemFromPath("carrot_cake", "cakes/whole/");
 
         // Seed items
         ModBlocksInit.FLOWER_CROPS.stream()

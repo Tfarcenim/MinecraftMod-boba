@@ -65,29 +65,6 @@ public class ModCreativeTabInit {
      *****************************************************************************************************************/
 
     private void acceptBlocks(CreativeModeTab.Output output) {
-        // Decorative blocks
-//        output.accept(ModBlocksInit.CAKE_STAND.get());
-//        output.accept(ModBlocksInit.VASE.get());
-//        output.accept(ModBlocksInit.DISPLAY_CASE_CURVED.get());
-//        output.accept(ModBlocksInit.CASH_REGISTER.get());
-
-        // Wall Shelves
-//        output.accept(ModBlocksInit.OAK_WALL_SHELF.get());
-//        output.accept(ModBlocksInit.SPRUCE_WALL_SHELF.get());
-//        output.accept(ModBlocksInit.BIRCH_WALL_SHELF.get());
-//        output.accept(ModBlocksInit.JUNGLE_WALL_SHELF.get());
-//        output.accept(ModBlocksInit.ACACIA_WALL_SHELF.get());
-//        output.accept(ModBlocksInit.DARK_OAK_WALL_SHELF.get());
-//        output.accept(ModBlocksInit.MANGROVE_WALL_SHELF.get());
-//        output.accept(ModBlocksInit.CRIMSON_WALL_SHELF.get());
-//        output.accept(ModBlocksInit.WARPED_WALL_SHELF.get());
-
-        // Crafting station blocks
-//        output.accept(ModBlocksInit.WAFFLE_IRON.get());
-//        output.accept(ModBlocksInit.COFFEE_MACHINE.get());
-//        output.accept(ModBlocksInit.ESPRESSO_MACHINE.get());
-//        output.accept(ModBlocksInit.JUICER.get());
-
         ModBlocksInit.CRAFTING_BLOCKS.forEach(reg -> output.accept(reg.get()));
         ModBlocksInit.DECORATIVE_BLOCKS.forEach(reg -> output.accept(reg.get()));
         ModBlocksInit.WALL_SHELVES.forEach(reg -> output.accept(reg.get()));
@@ -148,7 +125,6 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCreams(CreativeModeTab.Output output) {
-//        output.accept(ModItemsInit.WHIPPED_CREAM.get());
         ModItemsInit.CREAMS.forEach(reg -> output.accept(reg.get()));
     }
 
@@ -158,12 +134,6 @@ public class ModCreativeTabInit {
         output.accept(ModItemsInit.MARSHMALLOW_PUFF.get());
 
         output.accept(ModItemsInit.MARSHMALLOW_ON_STICK.get());
-//        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_WARM.get());
-//        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_TOASTED.get());
-//        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_GOLDEN.get());
-//        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_WELL_DONE.get());
-//        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_BURNT.get());
-//        output.accept(ModItemsInit.MARSHMALLOW_ON_STICK_SCORCHED.get());
     }
 
     private void acceptMiscIngredients(CreativeModeTab.Output output) {
@@ -225,6 +195,7 @@ public class ModCreativeTabInit {
     private void acceptCake(CreativeModeTab.Output output) {
         ModItemsInit.CAKES.forEach(reg -> output.accept(reg.get()));
         output.accept(ModBlocksInit.CHOCOLATE_CAKE_BLOCK.get());
+        output.accept(ModBlocksInit.CARROT_CAKE_BLOCK.get());
     }
 
     private void acceptPie(CreativeModeTab.Output output) {
@@ -243,7 +214,6 @@ public class ModCreativeTabInit {
         ModItemsInit.COOKIES.forEach(reg -> output.accept(reg.get()));
         output.accept(ModItemsInit.FORTUNE_COOKIE.get());
         output.accept(ModItemsInit.GOLDEN_FORTUNE_COOKIE.get());
-//        output.accept(ModItemsInit.MACAROON.get());
     }
 
     private void acceptMiscFoodItems(CreativeModeTab.Output output) {
