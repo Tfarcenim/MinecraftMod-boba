@@ -18,7 +18,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        cakeBlockState(ModBlocksInit.CARROT_CAKE_BLOCK);
+        ModBlocksInit.CAKE_BLOCKS.forEach(reg -> cakeBlockState(reg));
     }
 
     private VariantBlockStateBuilder cakeBlockState(RegistryObject<Block> block) {

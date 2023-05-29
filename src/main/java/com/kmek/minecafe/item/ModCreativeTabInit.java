@@ -193,9 +193,8 @@ public class ModCreativeTabInit {
     }
 
     private void acceptCake(CreativeModeTab.Output output) {
+        ModBlocksInit.CAKE_BLOCKS.forEach(reg -> output.accept(reg.get()));
         ModItemsInit.CAKES.forEach(reg -> output.accept(reg.get()));
-        output.accept(ModBlocksInit.CHOCOLATE_CAKE_BLOCK.get());
-        output.accept(ModBlocksInit.CARROT_CAKE_BLOCK.get());
     }
 
     private void acceptPie(CreativeModeTab.Output output) {

@@ -3,6 +3,7 @@ package com.kmek.minecafe.block;
 import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.block.custom.*;
 import com.kmek.minecafe.block.custom.crop.*;
+import com.kmek.minecafe.datagen.FileDataLoader;
 import com.kmek.minecafe.fluid.ModFluids;
 import com.kmek.minecafe.item.ModItemsInit;
 import com.kmek.minecafe.item.registery.CropsEnums;
@@ -199,8 +200,9 @@ public class ModBlocksInit {
     /**
      * Cake Blocks
      */
-    public static final RegistryObject<Block> CHOCOLATE_CAKE_BLOCK = registerBlockItem("chocolate_cake", () -> new MyCakeBlock());
-    public static final RegistryObject<Block> CARROT_CAKE_BLOCK = registerBlockItem("carrot_cake", () -> new MyCakeBlock());
+    public static final List<RegistryObject<Block>> CAKE_BLOCKS =
+            new FileDataLoader("registration_data/cake_blocks.txt").read().stream()
+                    .map(args -> registerBlockItem(args.get(0), () -> (Block) new MyCakeBlock())).toList();
 
     /**
      * Fluids
