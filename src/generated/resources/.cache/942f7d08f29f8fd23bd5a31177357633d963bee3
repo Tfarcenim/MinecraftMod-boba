@@ -1,4 +1,4 @@
-// 1.19.3	2023-06-14T17:30:04.0766407	Item Models: minecafe
+// 1.19.3	2023-06-14T20:59:06.3241151	Item Models: minecafe
 cf5722ffb590e719bf0e5d9d9f9394c4e0417b0e assets/minecafe/models/item/acacia_wall_shelf.json
 9e44bbdc343de02d5e26df590228ba45cb7b88d5 assets/minecafe/models/item/acai.json
 3d7c4d99797e475007f2fe27fcc55f1d717371ee assets/minecafe/models/item/acai_cannoli.json
@@ -451,6 +451,7 @@ cb45c9ddc610dd61d2433051a28d8191cbe92e68 assets/minecafe/models/item/lime_juice.
 267c65df86545df8e65eb6b9b8fc3fdc41b66d64 assets/minecafe/models/item/lime_seeds.json
 0bd67b86129bd4dcb58de5f2ee9196a135fc0d79 assets/minecafe/models/item/lime_thumbprint_cookie.json
 37367df656acb9397b73794b812e965d5c3c47b1 assets/minecafe/models/item/lime_yogurt.json
+00a41d49caca9e302b7b97662699b55ded004028 assets/minecafe/models/item/lunchbox.json
 59deee7278807a848f80361110c570ba2d2c084f assets/minecafe/models/item/lychee.json
 4ed587c231e19a5bd46bd1e0901402d31054a797 assets/minecafe/models/item/lychee_cannoli.json
 20a10fcc71f40c10dc952261b63f24307ee1fad8 assets/minecafe/models/item/lychee_cream.json

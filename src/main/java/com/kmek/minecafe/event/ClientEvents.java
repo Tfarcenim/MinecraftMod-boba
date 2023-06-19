@@ -22,6 +22,7 @@ public class ClientEvents {
             event.registerBlockEntityRenderer(ModBlockEntities.WALL_SHELF.get(), WallShelfBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.COFFEE_MACHINE.get(), CoffeeMachineBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.JUICER.get(), JuicerBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.LUNCHBOX.get(), LunchboxBlockEntityRenderer::new);
         }
 
         @SubscribeEvent

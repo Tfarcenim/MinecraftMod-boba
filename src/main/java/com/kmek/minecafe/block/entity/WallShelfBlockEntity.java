@@ -29,7 +29,7 @@ public class WallShelfBlockEntity extends CustomBaseBlockEntity {
                 return 0;
             }
         };
-        this.menuComparisonBlock = pBlockState.getBlock();
+        this.menuComparisonBlock = pBlockState.getBlock(); // todo decide if this is actually needed
     }
 
     @Nullable

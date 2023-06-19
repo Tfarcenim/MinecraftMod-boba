@@ -105,6 +105,7 @@ public class WaffleIronBlock extends BaseEntityBlock {
         return RenderShape.MODEL;
     }
 
+    // TODO determine if this method needs to be overridden
     @Override
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {

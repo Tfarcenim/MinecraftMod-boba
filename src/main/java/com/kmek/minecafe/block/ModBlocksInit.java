@@ -172,6 +172,8 @@ public class ModBlocksInit {
             () -> new VaseBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion())));
     public static final RegistryObject<Block> CASH_REGISTER = asTranslucent(registerBlockItem("cash_register",
             () -> new CashRegisterBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(3.5f).dynamicShape().requiresCorrectToolForDrops().noOcclusion())));
+    public static final RegistryObject<Block> LUNCHBOX = registerBlockItem("lunchbox",
+            () -> new LunchboxBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion()));
 
     public static final List<RegistryObject<Block>> DECORATIVE_BLOCKS = List.of(CAKE_STAND, VASE, DISPLAY_CASE_CURVED,
             CASH_REGISTER);
