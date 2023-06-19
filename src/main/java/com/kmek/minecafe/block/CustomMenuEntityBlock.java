@@ -74,15 +74,9 @@ public class CustomMenuEntityBlock<E extends CustomBaseBlockEntity> extends Base
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
 
-//    public void removeAndSaveInventory(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
-//        if (pState.getBlock() != pNewState.getBlock()) {
-//            BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-//            if (isBlockEntity(blockEntity)) {
-//                ((E) blockEntity).drops();
-//            }
-//        }
-//        super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
-//    }
+    public void removeWithoutDrops(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
+        super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
+    }
 
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,

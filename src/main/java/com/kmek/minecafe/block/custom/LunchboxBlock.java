@@ -4,9 +4,14 @@ import com.kmek.minecafe.block.CustomVoxelMenuEntityBlock;
 import com.kmek.minecafe.block.entity.LunchboxBlockEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.*;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -70,5 +75,31 @@ public class LunchboxBlock extends CustomVoxelMenuEntityBlock<LunchboxBlockEntit
             return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
         }
         return InteractionResult.sidedSuccess(pLevel.isClientSide());
+    }
+
+    @Override
+    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
+//        Minecraft.getInstance().player.sendSystemMessage(Component.literal("in on remove"));
+        if (pState.getBlock() != pNewState.getBlock()) {
+            BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+            if (isBlockEntity(blockEntity)) {
+                ItemStack stack = new ItemStack(this);
+                blockEntity.saveToItem(stack);
+                Containers.dropItemStack(pLevel, pPos.getX(), pPos.getY(), pPos.getZ(), stack);
+            }
+        }
+        super.removeWithoutDrops(pState, pLevel, pPos, pNewState, pIsMoving);
+    }
+
+    @Override
+    public void setPlacedBy(Level pLevel, BlockPos pPos, BlockState pState, @Nullable LivingEntity pPlacer, ItemStack pStack) {
+        if (pLevel.isClientSide()) {
+            CompoundTag tag = pStack.getTag();
+            BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+            if (isBlockEntity(blockEntity) && tag != null) {
+                blockEntity.load(tag);
+            }
+        }
+        super.setPlacedBy(pLevel, pPos, pState, pPlacer, pStack);
     }
 }

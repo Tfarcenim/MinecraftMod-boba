@@ -125,13 +125,17 @@ public class CustomBaseBlockEntity extends BlockEntity implements MenuProvider {
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
     }
 
-    // Spills the inventory of the block
-    public void drops() {
+    public SimpleContainer copyInventory() {
         SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
         for (int i = 0; i < itemHandler.getSlots(); i++) {
             inventory.setItem(i, itemHandler.getStackInSlot(i));
         }
+        return inventory;
+    }
 
+    // Spills the inventory of the block
+    public void drops() {
+        SimpleContainer inventory = copyInventory();
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 }
