@@ -16,6 +16,7 @@ public class ModBlockModelProvider extends BlockModelProvider {
     @Override
     protected void registerModels() {
         ModBlocksInit.CAKE_BLOCKS.forEach(reg -> cakeModels(reg.getId().getPath(), "block/cake/"));
+        ModBlocksInit.LUNCHBOXES.forEach(reg -> lunchboxModels(reg.getId().getPath(), "block/lunchbox/"));
     }
 
     private BlockModelBuilder cakeModelSingleFile(String name, String appendFileName, String textureFolder, String parent) {
@@ -34,5 +35,14 @@ public class ModBlockModelProvider extends BlockModelProvider {
         cakeModelSingleFile(name, "_slice4", textureFolder, "block/cake/cake_slice4");
         cakeModelSingleFile(name, "_slice5", textureFolder, "block/cake/cake_slice5");
         cakeModelSingleFile(name, "_slice6", textureFolder, "block/cake/cake_slice6");
+    }
+
+    private void lunchboxModels(String name, String textureFolder) {
+        withExistingParent("block/lunchbox/" + name,
+                new ResourceLocation(MineCafeMod.MODID, "block/lunchbox/lunchbox"))
+                .texture("outer", new ResourceLocation(MineCafeMod.MODID, textureFolder + name));
+        withExistingParent("block/lunchbox/" + name + "_open",
+                new ResourceLocation(MineCafeMod.MODID, "block/lunchbox/lunchbox_open"))
+                .texture("outer", new ResourceLocation(MineCafeMod.MODID, textureFolder + name + "_open"));
     }
 }

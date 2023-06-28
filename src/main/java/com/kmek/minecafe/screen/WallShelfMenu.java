@@ -14,7 +14,7 @@ public class WallShelfMenu extends CustomBaseMenu {
     }
 
     public WallShelfMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(id, inv, (WallShelfBlockEntity) entity, data, ((WallShelfBlockEntity) entity).menuComparisonBlock, ModMenuTypes.WALL_SHELF_MENU.get());
+        super(id, inv, (WallShelfBlockEntity) entity, data, entity.getBlockState().getBlock(), ModMenuTypes.WALL_SHELF_MENU.get());
     }
 
     @Override

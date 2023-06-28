@@ -2,6 +2,8 @@ package com.kmek.minecafe.datagen;
 
 import com.kmek.minecafe.MineCafeMod;
 import com.kmek.minecafe.block.ModBlocksInit;
+import com.kmek.minecafe.block.custom.LunchboxBlock;
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -19,6 +21,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         ModBlocksInit.CAKE_BLOCKS.forEach(reg -> cakeBlockState(reg));
+        ModBlocksInit.LUNCHBOXES.forEach(reg -> lunchboxBlockState(reg));
     }
 
     private VariantBlockStateBuilder cakeBlockState(RegistryObject<Block> block) {
@@ -31,10 +34,38 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .modelFile(models().getExistingFile(modLoc(modelName)))
                 .build();
         });
-//        return builder.partialState()
-//            .with(BlockStateProperties.BITES, 0)
-//                .modelForState()
-//                .modelFile(models().getExistingFile(modLoc("block/cake/" + block.getId().getPath())))
-//                .addModel();
+    }
+
+    private VariantBlockStateBuilder lunchboxBlockState(RegistryObject<Block> block) {
+        VariantBlockStateBuilder builder = getVariantBuilder((LunchboxBlock) block.get());
+        return builder.forAllStates(state -> {
+            boolean open = state.getValue(BlockStateProperties.OPEN);
+            Direction direction = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            String modelName = "block/lunchbox/" + block.getId().getPath();
+            if (open) {
+                modelName += "_open";
+            }
+            return ConfiguredModel.builder()
+                    .modelFile(models().getExistingFile(modLoc(modelName)))
+                    .rotationY(directionToRotationY(direction))
+                    .build();
+        });
+    }
+
+    private int directionToRotationY(Direction dir) {
+        switch(dir) {
+            case EAST -> {
+                return 90;
+            }
+            case SOUTH -> {
+                return 180;
+            }
+            case WEST -> {
+                return 270;
+            }
+            default -> {
+                return 0;
+            }
+        }
     }
 }

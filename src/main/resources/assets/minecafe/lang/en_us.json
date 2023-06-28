@@ -3,7 +3,6 @@
   "block.minecafe.cake_stand": "Cake Stand",
   "block.minecafe.vase": "Vase",
   "block.minecafe.cash_register": "Cash Register",
-  "block.minecafe.lunchbox": "Lunchbox",
 
   "block.minecafe.oak_wall_shelf": "Oak Wall Shelf",
   "block.minecafe.spruce_wall_shelf": "Spruce Wall Shelf",
@@ -14,6 +13,10 @@
   "block.minecafe.mangrove_wall_shelf": "Mangrove Wall Shelf",
   "block.minecafe.crimson_wall_shelf": "Crimson Wall Shelf",
   "block.minecafe.warped_wall_shelf": "Warped Wall Shelf",
+
+  "block.minecafe.red_lunchbox": "Red Lunchbox",
+  "block.minecafe.creeper_lunchbox": "Creeper Lunchbox",
+  "block.minecafe.end_lunchbox": "End Lunchbox",
 
   "block.minecafe.waffle_iron": "Waffle Iron",
   "block.minecafe.coffee_machine": "Coffee Machine",

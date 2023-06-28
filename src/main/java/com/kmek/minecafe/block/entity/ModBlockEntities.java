@@ -51,7 +51,9 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<LunchboxBlockEntity>> LUNCHBOX =
             BLOCK_ENTITIES.register("lunchbox", () ->
                     BlockEntityType.Builder.of(LunchboxBlockEntity::new,
-                            ModBlocksInit.LUNCHBOX.get()).build(null));
+                            ModBlocksInit.RED_LUNCHBOX.get(),
+                            ModBlocksInit.CREEPER_LUNCHBOX.get(),
+                            ModBlocksInit.END_LUNCHBOX.get()).build(null));
 
     /**
      * Crafting Station Block Entities

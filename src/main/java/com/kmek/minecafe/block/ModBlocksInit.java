@@ -172,11 +172,21 @@ public class ModBlocksInit {
             () -> new VaseBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(0.5f).dynamicShape().noOcclusion())));
     public static final RegistryObject<Block> CASH_REGISTER = asTranslucent(registerBlockItem("cash_register",
             () -> new CashRegisterBlock(BlockBehaviour.Properties.of(Material.DIRT).destroyTime(3.5f).dynamicShape().requiresCorrectToolForDrops().noOcclusion())));
-    public static final RegistryObject<Block> LUNCHBOX = registerBlockItem("lunchbox",
-            () -> new LunchboxBlock(BlockBehaviour.Properties.of(Material.PLANT).noOcclusion().instabreak().sound(SoundType.METAL)));
 
     public static final List<RegistryObject<Block>> DECORATIVE_BLOCKS = List.of(CAKE_STAND, VASE, DISPLAY_CASE_CURVED,
             CASH_REGISTER);
+
+    /**
+     * Lunchboxes
+     */
+    public static final RegistryObject<Block> RED_LUNCHBOX = registerBlockItem("red_lunchbox",
+            () -> new LunchboxBlock(BlockBehaviour.Properties.of(Material.PLANT).noOcclusion().instabreak().sound(SoundType.METAL)));
+    public static final RegistryObject<Block> CREEPER_LUNCHBOX = registerBlockItem("creeper_lunchbox",
+            () -> new LunchboxBlock(BlockBehaviour.Properties.of(Material.PLANT).noOcclusion().instabreak().sound(SoundType.METAL)));
+    public static final RegistryObject<Block> END_LUNCHBOX = registerBlockItem("end_lunchbox",
+            () -> new LunchboxBlock(BlockBehaviour.Properties.of(Material.PLANT).noOcclusion().instabreak().sound(SoundType.METAL)));
+
+    public static final List<RegistryObject<Block>> LUNCHBOXES = List.of(RED_LUNCHBOX, CREEPER_LUNCHBOX, END_LUNCHBOX);
 
     /**
      * Wall Shelves

@@ -1,6 +1,5 @@
 package com.kmek.minecafe.screen;
 
-import com.kmek.minecafe.block.ModBlocksInit;
 import com.kmek.minecafe.block.entity.LunchboxBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
@@ -15,7 +14,7 @@ public class LunchboxMenu extends CustomBaseMenu {
     }
 
     public LunchboxMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(id, inv, (LunchboxBlockEntity) entity, data, ModBlocksInit.LUNCHBOX.get(), ModMenuTypes.LUNCHBOX_MENU.get());
+        super(id, inv, (LunchboxBlockEntity) entity, data, entity.getBlockState().getBlock(), ModMenuTypes.LUNCHBOX_MENU.get());
     }
 
     @Override

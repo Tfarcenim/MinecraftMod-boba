@@ -1,4 +1,4 @@
-// 1.19.3	2023-06-14T20:59:06.3241151	Item Models: minecafe
+// 1.19.3	2023-06-21T22:16:30.2931384	Item Models: minecafe
 cf5722ffb590e719bf0e5d9d9f9394c4e0417b0e assets/minecafe/models/item/acacia_wall_shelf.json
 9e44bbdc343de02d5e26df590228ba45cb7b88d5 assets/minecafe/models/item/acai.json
 3d7c4d99797e475007f2fe27fcc55f1d717371ee assets/minecafe/models/item/acai_cannoli.json
@@ -265,6 +265,7 @@ fc7057a8461f398c93f6952c45f07e4b447379a4 assets/minecafe/models/item/cranberry_j
 981e6695c1c9b61374f57eb03e0ea137d2055b45 assets/minecafe/models/item/cranberry_thumbprint_cookie.json
 a02dd165061f1e6a68d1e50b15286def3a090cfd assets/minecafe/models/item/cranberry_yogurt.json
 b4ab0d78331da0b0326f78549acfba97dcdcaa97 assets/minecafe/models/item/cream.json
+93d556745069683575ba460fb15b6d31c170f4ab assets/minecafe/models/item/creeper_lunchbox.json
 af843d536e8648b1b245e92999e6d65b084487ec assets/minecafe/models/item/creeper_waffle.json
 dd74ae31ce173c6e819f62f93a991bfd4723dfea assets/minecafe/models/item/creeper_waffle_mold.json
 b24cdc6ed31c32e7cc451c1670a25d6f30e26385 assets/minecafe/models/item/crimson_wall_shelf.json
@@ -302,6 +303,7 @@ bf73abb7472a0db1d75fd143fa79a554ac1e7bb1 assets/minecafe/models/item/dragon_frui
 4013a111b03998c9ebe64c7acc2eb04dbb6f3b53 assets/minecafe/models/item/egg_toast.json
 467c293cd38233426700d3d15500d2fb0cc9eb6c assets/minecafe/models/item/egg_waffle.json
 c3049740b73c4479f9737dea3d1e8950e31c4b51 assets/minecafe/models/item/egg_waffle_mold.json
+431e854d9cd69ff54d726ff4e3569914913bcdd9 assets/minecafe/models/item/end_lunchbox.json
 84b04fbf7f8e3da70e882d72e51f04f82b148283 assets/minecafe/models/item/espresso.json
 3fa887dd551b9550eecb3e7a2837c95726d02efa assets/minecafe/models/item/espresso_machine.json
 ce56da7b7d1e981f1369806b3156efafa6dbb17d assets/minecafe/models/item/espresso_shot.json
@@ -451,7 +453,6 @@ cb45c9ddc610dd61d2433051a28d8191cbe92e68 assets/minecafe/models/item/lime_juice.
 267c65df86545df8e65eb6b9b8fc3fdc41b66d64 assets/minecafe/models/item/lime_seeds.json
 0bd67b86129bd4dcb58de5f2ee9196a135fc0d79 assets/minecafe/models/item/lime_thumbprint_cookie.json
 37367df656acb9397b73794b812e965d5c3c47b1 assets/minecafe/models/item/lime_yogurt.json
-00a41d49caca9e302b7b97662699b55ded004028 assets/minecafe/models/item/lunchbox.json
 59deee7278807a848f80361110c570ba2d2c084f assets/minecafe/models/item/lychee.json
 4ed587c231e19a5bd46bd1e0901402d31054a797 assets/minecafe/models/item/lychee_cannoli.json
 20a10fcc71f40c10dc952261b63f24307ee1fad8 assets/minecafe/models/item/lychee_cream.json
@@ -710,6 +711,7 @@ be0b61d9a90172b2f6a07d3ece73c78341d4016f assets/minecafe/models/item/raspberry_t
 1a9bbce875e5bc56dc673a89e4d7198700d684b2 assets/minecafe/models/item/raspberry_yogurt.json
 903915e6dbc667112496b2f00d528b6cee408f2e assets/minecafe/models/item/raw_waffle_batter.json
 28c96cb2629e27726b3a22b1064cf9dc7a7039b0 assets/minecafe/models/item/red_eye_coffee.json
+c3db41b45386e08dc7906c361c60087ffa7c14f3 assets/minecafe/models/item/red_lunchbox.json
 2102ccbcc5cfc73d57b006b73873e72c1523a513 assets/minecafe/models/item/red_tulip_seeds.json
 3e3e4166456bebd97a8f661f7e1103ee90c2e677 assets/minecafe/models/item/red_velvet_cake.json
 1dfd191ff77a36090efe894ad8bf402aa72560b2 assets/minecafe/models/item/red_velvet_cookie.json

@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class WallShelfBlockEntity extends CustomBaseBlockEntity {
-    public final Block menuComparisonBlock;
     public WallShelfBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(pPos, pBlockState, ModBlockEntities.WALL_SHELF.get(), 12, 0, "Wall Shelf");
         this.data = new ContainerData() {
@@ -29,7 +28,6 @@ public class WallShelfBlockEntity extends CustomBaseBlockEntity {
                 return 0;
             }
         };
-        this.menuComparisonBlock = pBlockState.getBlock(); // todo decide if this is actually needed
     }
 
     @Nullable

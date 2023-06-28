@@ -4,11 +4,10 @@ import com.kmek.minecafe.block.CustomVoxelMenuEntityBlock;
 import com.kmek.minecafe.block.entity.LunchboxBlockEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.*;
+import net.minecraft.world.Containers;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -68,15 +67,27 @@ public class LunchboxBlock extends CustomVoxelMenuEntityBlock<LunchboxBlockEntit
 //            pPlayer.sendSystemMessage(Component.literal("crouch down"));
             BlockState updated = pState.cycle(OPEN);
             pLevel.setBlock(pPos, updated, 3);
-        } else if (!pLevel.isClientSide() && Minecraft.getInstance().options.keySprint.isDown()) {
-//            pPlayer.sendSystemMessage(Component.literal("sprint down"));
-            // todo idea eventually pick up lunchbox as item
+        } else if (Minecraft.getInstance().options.keySprint.isDown()) {
+            BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+            if (isBlockEntity(blockEntity)) {
+                if (!pLevel.isClientSide()) {
+                    // Place item in player inventory
+                    ItemStack stack = new ItemStack(this);
+                    blockEntity.saveToItem(stack);
+                    pPlayer.addItem(stack);
+
+                    // Remove block
+                    pLevel.removeBlockEntity(pPos);
+                    pLevel.removeBlock(pPos, false);
+                }
+            }
         } else {
             return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
         }
         return InteractionResult.sidedSuccess(pLevel.isClientSide());
     }
 
+    // Save inventory to an item stack
     @Override
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
 //        Minecraft.getInstance().player.sendSystemMessage(Component.literal("in on remove"));
@@ -91,6 +102,7 @@ public class LunchboxBlock extends CustomVoxelMenuEntityBlock<LunchboxBlockEntit
         super.removeWithoutDrops(pState, pLevel, pPos, pNewState, pIsMoving);
     }
 
+    // Get saved inventory from an item stack
     @Override
     public void setPlacedBy(Level pLevel, BlockPos pPos, BlockState pState, @Nullable LivingEntity pPlacer, ItemStack pStack) {
         if (pLevel.isClientSide()) {
